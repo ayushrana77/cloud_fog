@@ -1,0 +1,137 @@
+
+====================================================================================================
+Cloud Node Log - Cloud-NA
+Started at: 2025-05-21 20:29:45
+Node Configuration:
+    MIPS: 9000
+    Memory: 9024 MB
+    Bandwidth: 2000 Mbps
+    Location: 39.0997, -94.5786
+====================================================================================================
+
+[2025-05-21 20:29:45.309] Calculated processing time: 123.52ms for task size 300MB
+Resource Utilization:
+    Active Tasks: 0
+    Memory Used: 0MB/9024MB (0.0%)
+    MIPS Used: 0/9000 (0.0%)
+    Bandwidth Used: 0Mbps/2000Mbps (0.0%)
+----------------------------------------------------------------------------------------------------
+[2025-05-21 20:29:45.309] Starting task processing
+Task Details:
+    Task ID: 2869493738560
+    Processing Time: 123.52ms
+    Memory Required: 4070MB
+    MIPS Required: 1111.6996856329479
+    Bandwidth Required: 100Mbps
+Resource Utilization:
+    Active Tasks: 0
+    Memory Used: 0MB/9024MB (0.0%)
+    MIPS Used: 0/9000 (0.0%)
+    Bandwidth Used: 0Mbps/2000Mbps (0.0%)
+----------------------------------------------------------------------------------------------------
+[2025-05-21 20:29:45.310] Calculated processing time: 82.93ms for task size 130MB
+Resource Utilization:
+    Active Tasks: 1
+    Memory Used: 4070MB/9024MB (45.1%)
+    MIPS Used: 1111.6996856329479/9000 (12.4%)
+    Bandwidth Used: 100Mbps/2000Mbps (5.0%)
+Performance Metrics:
+    Total Tasks Processed: 1
+    Average Processing Time: 123.52ms
+    Average Transmission Time: 84.95ms
+----------------------------------------------------------------------------------------------------
+[2025-05-21 20:29:45.310] Starting task processing
+Task Details:
+    Task ID: 2869493739264
+    Processing Time: 82.93ms
+    Memory Required: 2681MB
+    MIPS Required: 746.3932197576379
+    Bandwidth Required: 100Mbps
+Resource Utilization:
+    Active Tasks: 1
+    Memory Used: 4070MB/9024MB (45.1%)
+    MIPS Used: 1111.6996856329479/9000 (12.4%)
+    Bandwidth Used: 100Mbps/2000Mbps (5.0%)
+Performance Metrics:
+    Total Tasks Processed: 1
+    Average Processing Time: 123.52ms
+    Average Transmission Time: 84.95ms
+----------------------------------------------------------------------------------------------------
+[2025-05-21 20:29:45.313] Task 2869493738560 started parallel processing. Expected time: 123.52ms
+Resource Utilization:
+    Active Tasks: 2
+    Memory Used: 6751MB/9024MB (74.8%)
+    MIPS Used: 1858.0929053905857/9000 (20.6%)
+    Bandwidth Used: 200Mbps/2000Mbps (10.0%)
+Performance Metrics:
+    Total Tasks Processed: 2
+    Average Processing Time: 103.23ms
+    Average Transmission Time: 66.83ms
+----------------------------------------------------------------------------------------------------
+[2025-05-21 20:29:45.314] Task 2869493739264 started parallel processing. Expected time: 82.93ms
+Resource Utilization:
+    Active Tasks: 2
+    Memory Used: 6751MB/9024MB (74.8%)
+    MIPS Used: 1858.0929053905857/9000 (20.6%)
+    Bandwidth Used: 200Mbps/2000Mbps (10.0%)
+Performance Metrics:
+    Total Tasks Processed: 2
+    Average Processing Time: 103.23ms
+    Average Transmission Time: 66.83ms
+----------------------------------------------------------------------------------------------------
+[2025-05-21 20:29:45.400] Task 2869493739264 completed parallel processing. Processing time: 82.93ms. Remaining active tasks: 1, Total Memory Used: 4070MB/9024MB, Total MIPS Used: 1111.6996856329479/9000, Total Bandwidth Used: 100Mbps/2000Mbps
+Resource Utilization:
+    Active Tasks: 1
+    Memory Used: 4070MB/9024MB (45.1%)
+    MIPS Used: 1111.6996856329479/9000 (12.4%)
+    Bandwidth Used: 100Mbps/2000Mbps (5.0%)
+Performance Metrics:
+    Total Tasks Processed: 2
+    Average Processing Time: 103.23ms
+    Average Transmission Time: 66.83ms
+----------------------------------------------------------------------------------------------------
+[2025-05-21 20:29:45.400] Task completed
+Task Details:
+    Task ID: 2869493739264
+    Processing Time: 82.93ms
+    Memory Required: 2681MB
+    MIPS Required: 746.3932197576379
+    Bandwidth Required: 100Mbps
+Resource Utilization:
+    Active Tasks: 1
+    Memory Used: 4070MB/9024MB (45.1%)
+    MIPS Used: 1111.6996856329479/9000 (12.4%)
+    Bandwidth Used: 100Mbps/2000Mbps (5.0%)
+Performance Metrics:
+    Total Tasks Processed: 2
+    Average Processing Time: 103.23ms
+    Average Transmission Time: 66.83ms
+----------------------------------------------------------------------------------------------------
+[2025-05-21 20:29:45.447] Task 2869493738560 completed parallel processing. Processing time: 123.52ms. Remaining active tasks: 0, Total Memory Used: 0MB/9024MB, Total MIPS Used: 0/9000, Total Bandwidth Used: 0Mbps/2000Mbps
+Resource Utilization:
+    Active Tasks: 0
+    Memory Used: 0MB/9024MB (0.0%)
+    MIPS Used: 0/9000 (0.0%)
+    Bandwidth Used: 0Mbps/2000Mbps (0.0%)
+Performance Metrics:
+    Total Tasks Processed: 2
+    Average Processing Time: 103.23ms
+    Average Transmission Time: 66.83ms
+----------------------------------------------------------------------------------------------------
+[2025-05-21 20:29:45.447] Task completed
+Task Details:
+    Task ID: 2869493738560
+    Processing Time: 123.52ms
+    Memory Required: 4070MB
+    MIPS Required: 1111.6996856329479
+    Bandwidth Required: 100Mbps
+Resource Utilization:
+    Active Tasks: 0
+    Memory Used: 0MB/9024MB (0.0%)
+    MIPS Used: 0/9000 (0.0%)
+    Bandwidth Used: 0Mbps/2000Mbps (0.0%)
+Performance Metrics:
+    Total Tasks Processed: 2
+    Average Processing Time: 103.23ms
+    Average Transmission Time: 66.83ms
+----------------------------------------------------------------------------------------------------

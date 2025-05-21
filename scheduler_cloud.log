@@ -1,0 +1,86 @@
+
+================================================================================
+Scheduler Log - CLOUD Mode
+Started at: 2025-05-21 20:29:45
+================================================================================
+
+[2025-05-21 20:29:45.307] Scheduling task 1
+[2025-05-21 20:29:45.307] Calculated distance: 11823.72km between locations
+[2025-05-21 20:29:45.308] Calculated distance: 4825.17km between locations
+[2025-05-21 20:29:45.308] Node Cloud-AS score: 10.72 (Distance: 4825.17km)
+[2025-05-21 20:29:45.308] Node Cloud-NA score: 118.24 (Distance: 11823.72km)
+[2025-05-21 20:29:45.308] Selected node: Cloud-AS with score: 10.72
+[2025-05-21 20:29:45.308] Task 1 added to queue of Cloud-AS
+[2025-05-21 20:29:45.308] Scheduling task 2
+[2025-05-21 20:29:45.308] Calculated distance: 11813.83km between locations
+[2025-05-21 20:29:45.308] Calculated distance: 4825.67km between locations
+[2025-05-21 20:29:45.308] Node Cloud-AS score: 10.72 (Distance: 4825.67km)
+[2025-05-21 20:29:45.308] Node Cloud-NA score: 118.14 (Distance: 11813.83km)
+[2025-05-21 20:29:45.308] Selected node: Cloud-AS with score: 10.72
+[2025-05-21 20:29:45.308] Task 2 added to queue of Cloud-AS
+[2025-05-21 20:29:45.309] Scheduling task 3
+[2025-05-21 20:29:45.309] Calculated distance: 2019.22km between locations
+[2025-05-21 20:29:45.309] Calculated distance: 16099.08km between locations
+[2025-05-21 20:29:45.309] Node Cloud-NA score: 20.19 (Distance: 2019.22km)
+[2025-05-21 20:29:45.309] Node Cloud-AS score: 35.78 (Distance: 16099.08km)
+[2025-05-21 20:29:45.309] Selected node: Cloud-NA with score: 20.19
+[2025-05-21 20:29:45.309] Task 3 added to queue of Cloud-NA
+[2025-05-21 20:29:45.309] Scheduling task 4
+[2025-05-21 20:29:45.309] Calculated distance: 11819.66km between locations
+[2025-05-21 20:29:45.309] Calculated distance: 4817.13km between locations
+[2025-05-21 20:29:45.309] Node Cloud-AS score: 10.70 (Distance: 4817.13km)
+[2025-05-21 20:29:45.309] Node Cloud-NA score: 118.20 (Distance: 11819.66km)
+[2025-05-21 20:29:45.309] Selected node: Cloud-AS with score: 10.70
+[2025-05-21 20:29:45.309] Task 4 added to queue of Cloud-AS
+[2025-05-21 20:29:45.310] Scheduling task 5
+[2025-05-21 20:29:45.310] Calculated distance: 1005.24km between locations
+[2025-05-21 20:29:45.310] Calculated distance: 15517.01km between locations
+[2025-05-21 20:29:45.310] Node Cloud-NA score: 10.05 (Distance: 1005.24km)
+[2025-05-21 20:29:45.310] Node Cloud-AS score: 34.48 (Distance: 15517.01km)
+[2025-05-21 20:29:45.310] Selected node: Cloud-NA with score: 10.05
+[2025-05-21 20:29:45.310] Task 5 added to queue of Cloud-NA
+[2025-05-21 20:29:45.310] Scheduling task 6
+[2025-05-21 20:29:45.310] Calculated distance: 11819.66km between locations
+[2025-05-21 20:29:45.310] Calculated distance: 4817.13km between locations
+[2025-05-21 20:29:45.310] Node Cloud-AS score: 10.70 (Distance: 4817.13km)
+[2025-05-21 20:29:45.310] Node Cloud-NA score: 118.20 (Distance: 11819.66km)
+[2025-05-21 20:29:45.310] Selected node: Cloud-AS with score: 10.70
+[2025-05-21 20:29:45.310] Task 6 added to queue of Cloud-AS
+[2025-05-21 20:29:45.311] Scheduling task 7
+[2025-05-21 20:29:45.311] Calculated distance: 11823.72km between locations
+[2025-05-21 20:29:45.311] Calculated distance: 4825.17km between locations
+[2025-05-21 20:29:45.311] Node Cloud-AS score: 10.72 (Distance: 4825.17km)
+[2025-05-21 20:29:45.311] Node Cloud-NA score: 118.24 (Distance: 11823.72km)
+[2025-05-21 20:29:45.311] Selected node: Cloud-AS with score: 10.72
+[2025-05-21 20:29:45.311] Task 7 added to queue of Cloud-AS
+[2025-05-21 20:29:45.311] Scheduling task 8
+[2025-05-21 20:29:45.311] Calculated distance: 11813.16km between locations
+[2025-05-21 20:29:45.311] Calculated distance: 4819.59km between locations
+[2025-05-21 20:29:45.312] Node Cloud-AS score: 10.71 (Distance: 4819.59km)
+[2025-05-21 20:29:45.312] Node Cloud-NA score: 118.13 (Distance: 11813.16km)
+[2025-05-21 20:29:45.312] Selected node: Cloud-AS with score: 10.71
+[2025-05-21 20:29:45.312] Task 8 added to queue of Cloud-AS
+[2025-05-21 20:29:45.312] Scheduling task 9
+[2025-05-21 20:29:45.312] Calculated distance: 11819.33km between locations
+[2025-05-21 20:29:45.312] Calculated distance: 4818.10km between locations
+[2025-05-21 20:29:45.312] Node Cloud-AS score: 10.71 (Distance: 4818.10km)
+[2025-05-21 20:29:45.312] Node Cloud-NA score: 118.19 (Distance: 11819.33km)
+[2025-05-21 20:29:45.312] Selected node: Cloud-AS with score: 10.71
+[2025-05-21 20:29:45.312] Task 9 added to queue of Cloud-AS
+[2025-05-21 20:29:45.313] Scheduling task 10
+[2025-05-21 20:29:45.313] Calculated distance: 11833.05km between locations
+[2025-05-21 20:29:45.313] Calculated distance: 4806.07km between locations
+[2025-05-21 20:29:45.313] Node Cloud-AS score: 10.68 (Distance: 4806.07km)
+[2025-05-21 20:29:45.313] Node Cloud-NA score: 118.33 (Distance: 11833.05km)
+[2025-05-21 20:29:45.313] Selected node: Cloud-AS with score: 10.68
+[2025-05-21 20:29:45.313] Task 10 added to queue of Cloud-AS
+[2025-05-21 20:29:45.400] Task 5 completed on Cloud-NA. Total time: 131.64ms, Memory used: 2681MB, Bandwidth used: 100Mbps
+[2025-05-21 20:29:45.416] Task 2 completed on Cloud-AS. Total time: 194.14ms, Memory used: 1753MB, Bandwidth used: 100Mbps
+[2025-05-21 20:29:45.447] Task 3 completed on Cloud-NA. Total time: 208.47ms, Memory used: 4070MB, Bandwidth used: 100Mbps
+[2025-05-21 20:29:45.448] Task 1 completed on Cloud-AS. Total time: 242.73ms, Memory used: 2903MB, Bandwidth used: 100Mbps
+[2025-05-21 20:29:45.448] Task 4 completed on Cloud-AS. Total time: 273.12ms, Memory used: 4178MB, Bandwidth used: 100Mbps
+[2025-05-21 20:29:45.509] Task 10 completed on Cloud-AS. Total time: 212.76ms, Memory used: 1241MB, Bandwidth used: 100Mbps
+[2025-05-21 20:29:45.541] Task 6 completed on Cloud-AS. Total time: 192.98ms, Memory used: 1578MB, Bandwidth used: 100Mbps
+[2025-05-21 20:29:45.557] Task 7 completed on Cloud-AS. Total time: 209.91ms, Memory used: 1519MB, Bandwidth used: 100Mbps
+[2025-05-21 20:29:45.620] Task 9 completed on Cloud-AS. Total time: 277.57ms, Memory used: 4260MB, Bandwidth used: 100Mbps
+[2025-05-21 20:29:45.620] Task 8 completed on Cloud-AS. Total time: 223.47ms, Memory used: 1549MB, Bandwidth used: 100Mbps
