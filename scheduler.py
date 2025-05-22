@@ -32,7 +32,10 @@ class Scheduler:
                 'processing_times': [],
                 'transmission_times': [],
                 'queue_times': [],
-                'total_times': []
+                'total_times': [],
+                'response_times': [],  # Added response times tracking
+                'power_consumption': [],  # Track power consumption history
+                'energy_consumption': 0.0  # Track total energy consumption
             } for node in self.nodes
         }
         
@@ -44,21 +47,126 @@ class Scheduler:
         """Write header to log file."""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         header = f"""
-{'='*80}
+{'='*100}
 Scheduler Log - {self.mode.upper()} Mode
 Started at: {timestamp}
-{'='*80}
+Configuration:
+    Number of Nodes: {len(self.nodes)}
+    Node Types: {', '.join(node.name for node in self.nodes)}
+{'='*100}
 """
         self.log_file.write(header)
         self.log_file.flush()
         
-    def _log_activity(self, message):
-        """Log activity to file."""
+    def _log_activity(self, message, task_id=None, task_info=None):
+        """Log activity to file with detailed information."""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
+        
+        # Base log entry
         log_entry = f"\n[{timestamp}] {message}"
+        
+        # Add task details if provided
+        if task_id and task_info:
+            log_entry += f"\nTask Details:"
+            log_entry += f"\n    Task ID: {task_id}"
+            log_entry += f"\n    Node: {task_info.get('node_name', 'N/A')}"
+            
+            # Timing Metrics Section
+            log_entry += f"\n    Timing Metrics:"
+            log_entry += f"\n        Total Time: {task_info.get('total_time', 0):.2f}ms"
+            log_entry += f"\n        Response Time: {task_info.get('response_time', 0):.2f}ms"
+            log_entry += f"\n        Processing Time: {task_info.get('processing_time', 0):.2f}ms"
+            log_entry += f"\n        Queue Time: {task_info.get('queue_time', 0):.2f}ms"
+            log_entry += f"\n        Transmission Time: {task_info.get('transmission_time', 0):.2f}ms"
+            
+            # Resource Usage Section
+            log_entry += f"\n    Resource Usage:"
+            log_entry += f"\n        Memory Used: {task_info.get('memory_used', 0)}MB"
+            log_entry += f"\n        Bandwidth Used: {task_info.get('bandwidth_used', 0)}Mbps"
+            log_entry += f"\n        RAM Required: {task_info.get('ram_required', 0)}MB"
+            log_entry += f"\n        Task Size: {task_info.get('task_size', 0)}MB"
+            
+            # Network Metrics Section
+            log_entry += f"\n    Network Metrics:"
+            log_entry += f"\n        Distance: {task_info.get('distance_km', 0):.2f}km"
+            log_entry += f"\n        Queue Size: {task_info.get('queue_size', 0)}"
+            
+            # System Load Section
+            log_entry += f"\n    System Load:"
+            log_entry += f"\n        System Load: {task_info.get('system_load', 0)*100:.1f}%"
+            log_entry += f"\n        Bandwidth Utilization: {task_info.get('bandwidth_utilization', 0)*100:.1f}%"
+            log_entry += f"\n        MIPS Utilization: {task_info.get('mips_utilization', 0)*100:.1f}%"
+        
+        # Add system-wide metrics
+        total_tasks = sum(len(queue) for queue in self.task_queues.values())
+        total_processed = sum(self.processed_tasks.values())
+        
+        # Calculate total power consumption
+        total_power = 0
+        total_energy = 0
+        node_power_info = {}
+        
+        for node in self.nodes:
+            node_stats = node.get_stats()
+            power_info = node_stats.get('power_consumption', {})
+            node_power = power_info.get('current_power', 0)
+            node_energy = power_info.get('total_energy', 0)
+            
+            total_power += node_power
+            total_energy += node_energy
+            node_power_info[node.name] = {
+                'current_power': node_power,
+                'total_energy': node_energy,
+                'cpu_power': power_info.get('cpu_power', 0),
+                'memory_power': power_info.get('memory_power', 0),
+                'network_power': power_info.get('network_power', 0)
+            }
+            
+            # Update node metrics
+            self.node_metrics[node.name]['power_consumption'].append(node_power)
+            self.node_metrics[node.name]['energy_consumption'] = node_energy
+        
+        log_entry += f"\nSystem Status:"
+        log_entry += f"\n    Total Tasks in Queue: {total_tasks}"
+        log_entry += f"\n    Total Tasks Processed: {total_processed}"
+        log_entry += f"\n    Active Nodes: {sum(1 for node in self.nodes if len(self.task_queues[node.name]) > 0)}"
+        
+        # Add power consumption information
+        log_entry += f"\nPower Consumption:"
+        log_entry += f"\n    Total System Power: {total_power:.2f}W"
+        log_entry += f"\n    Total Energy Consumed: {total_energy:.2f}kWh"
+        
+        # Add node-specific metrics
+        log_entry += f"\nNode Status:"
+        for node in self.nodes:
+            queue_size = len(self.task_queues[node.name])
+            processed = self.processed_tasks[node.name]
+            metrics = self.node_metrics[node.name]
+            power_info = node_power_info[node.name]
+            
+            avg_processing = sum(metrics['processing_times']) / len(metrics['processing_times']) if metrics['processing_times'] else 0
+            avg_queue = sum(metrics['queue_times']) / len(metrics['queue_times']) if metrics['queue_times'] else 0
+            avg_response = sum(metrics['response_times']) / len(metrics['response_times']) if metrics['response_times'] else 0
+            avg_total = sum(metrics['total_times']) / len(metrics['total_times']) if metrics['total_times'] else 0
+            avg_power = sum(metrics['power_consumption']) / len(metrics['power_consumption']) if metrics['power_consumption'] else 0
+            
+            log_entry += f"\n    {node.name}:"
+            log_entry += f"\n        Queue Size: {queue_size}"
+            log_entry += f"\n        Tasks Processed: {processed}"
+            log_entry += f"\n        Average Processing Time: {avg_processing:.2f}ms"
+            log_entry += f"\n        Average Queue Time: {avg_queue:.2f}ms"
+            log_entry += f"\n        Average Response Time: {avg_response:.2f}ms"
+            log_entry += f"\n        Average Total Time: {avg_total:.2f}ms"
+            log_entry += f"\n        Current Power: {power_info['current_power']:.2f}W"
+            log_entry += f"\n        Total Energy: {power_info['total_energy']:.2f}kWh"
+            log_entry += f"\n        CPU Power: {power_info['cpu_power']:.2f}W"
+            log_entry += f"\n        Memory Power: {power_info['memory_power']:.2f}W"
+            log_entry += f"\n        Network Power: {power_info['network_power']:.2f}W"
+        
+        log_entry += "\n" + "-"*100
         self.log_file.write(log_entry)
         self.log_file.flush()
-        
+
     def calculate_distance(self, loc1, loc2):
         """Calculate distance between two locations using Haversine formula."""
         if not loc1 or not loc2 or 'lat' not in loc1 or 'lon' not in loc1 or 'lat' not in loc2 or 'lon' not in loc2:
@@ -220,11 +328,30 @@ Started at: {timestamp}
 
     async def schedule_task(self, task):
         """Schedule a task to the optimal node."""
-        # Generate task ID
-        task_id = self.next_task_id
-        self.next_task_id += 1
+        # Get task ID from task data if available, otherwise generate new one
+        if isinstance(task, dict):
+            task_id = task.get('TaskID', self.next_task_id)
+            task_size = task.get('Size', 1.0)
+            task_memory = task.get('Memory', 512)
+            task_bandwidth = task.get('Bandwidth', 100)
+            task_location = task.get('GeoLocation', None)
+        else:
+            task_id = getattr(task, 'task_id', self.next_task_id)
+            task_size = getattr(task, 'size', 1.0)
+            task_memory = getattr(task, 'ram_required', 512)
+            task_bandwidth = getattr(task, 'bandwidth_required', 100)
+            task_location = getattr(task, 'source_location', None) or getattr(task, 'location', None)
         
-        self._log_activity(f"Scheduling task {task_id}")
+        # Only increment next_task_id if we generated a new ID
+        if task_id == self.next_task_id:
+            self.next_task_id += 1
+        
+        self._log_activity(f"Scheduling task {task_id}", task_id, {
+            'task_size': task_size,
+            'task_memory': task_memory,
+            'task_bandwidth': task_bandwidth,
+            'task_location': task_location
+        })
         
         # Select the best node
         selected_node = self.select_node(task)
@@ -234,7 +361,13 @@ Started at: {timestamp}
         
         # Add task to queue
         self.task_queues[selected_node.name].append((task_id, task, start_time))
-        self._log_activity(f"Task {task_id} added to queue of {selected_node.name}")
+        self._log_activity(f"Task {task_id} added to queue of {selected_node.name}", task_id, {
+            'node_name': selected_node.name,
+            'queue_position': len(self.task_queues[selected_node.name]),
+            'task_size': task_size,
+            'task_memory': task_memory,
+            'task_bandwidth': task_bandwidth
+        })
         
         # Process the task
         result = await selected_node.process_task(task)
@@ -243,50 +376,94 @@ Started at: {timestamp}
         self.task_queues[selected_node.name].remove((task_id, task, start_time))
         self.processed_tasks[selected_node.name] += 1
         
-        # Calculate queue time
-        queue_time = (time.time() - start_time) * 1000  # Convert to milliseconds
+        # Calculate times
+        end_time = time.time()
+        queue_time = (end_time - start_time) * 1000  # Convert to milliseconds
+        response_time = queue_time + result['processing_time']  # Response time includes queue and processing
         
         # Update node metrics
         self.node_metrics[selected_node.name]['processing_times'].append(result['processing_time'])
         self.node_metrics[selected_node.name]['transmission_times'].append(result.get('transmission_time', 0))
         self.node_metrics[selected_node.name]['queue_times'].append(queue_time)
         self.node_metrics[selected_node.name]['total_times'].append(result['total_time'])
+        self.node_metrics[selected_node.name]['response_times'].append(response_time)
         
-        self._log_activity(f"Task {task_id} completed on {selected_node.name}. "
-                          f"Total time: {result['total_time']:.2f}ms, "
-                          f"Memory used: {result['memory_used']}MB, "
-                          f"Bandwidth used: {result['bandwidth_used']}Mbps")
-        
-        return {
+        # Log task completion with detailed information
+        task_completion_info = {
             'task_id': task_id,
             'node_name': selected_node.name,
-            'distance_km': result.get('distance_km', 0),
-            'transmission_time': result.get('transmission_time', 0),
-            'processing_time': result['processing_time'],
             'queue_time': queue_time,
-            'total_time': result.get('total_time', result['processing_time'] + queue_time),
+            'processing_time': result['processing_time'],
+            'transmission_time': result.get('transmission_time', 0),
+            'total_time': result['total_time'],
+            'response_time': response_time,
+            'memory_used': result['memory_used'],
+            'bandwidth_used': result['bandwidth_used'],
+            'task_size': task_size,
+            'task_memory': task_memory,
+            'task_bandwidth': task_bandwidth,
+            'distance_km': result.get('distance_km', 0),
             'queue_size': len(self.task_queues[selected_node.name]),
             'system_load': self.calculate_system_load(selected_node),
             'bandwidth_utilization': self.calculate_bandwidth_utilization(selected_node),
-            'mips_utilization': self.calculate_mips_utilization(selected_node),
-            'memory_used': result['memory_used'],
-            'bandwidth_used': result['bandwidth_used'],
-            'ram_required': result['ram_required'],
-            'task_size': result['task_size']
+            'mips_utilization': self.calculate_mips_utilization(selected_node)
         }
+        
+        self._log_activity(
+            f"Task {task_id} completed on {selected_node.name}\n"
+            f"Task Details:\n"
+            f"    ID: {task_id}\n"
+            f"    Size: {task_size}MB\n"
+            f"    Memory Required: {task_memory}MB\n"
+            f"    Bandwidth Required: {task_bandwidth}Mbps\n"
+            f"Timing Metrics:\n"
+            f"    Queue Time: {queue_time:.2f}ms\n"
+            f"    Processing Time: {result['processing_time']:.2f}ms\n"
+            f"    Transmission Time: {result.get('transmission_time', 0):.2f}ms\n"
+            f"    Total Time: {result['total_time']:.2f}ms\n"
+            f"    Response Time: {response_time:.2f}ms\n"
+            f"Resource Usage:\n"
+            f"    Memory Used: {result['memory_used']}MB\n"
+            f"    Bandwidth Used: {result['bandwidth_used']}Mbps\n"
+            f"    Distance: {result.get('distance_km', 0):.2f}km",
+            task_id,
+            task_completion_info
+        )
+        
+        return task_completion_info
 
     def get_stats(self):
         """Get comprehensive statistics for all nodes."""
         stats = {}
+        total_processing_time = 0
+        total_transmission_time = 0
+        total_queue_time = 0
+        total_response_time = 0
+        total_tasks = 0
+        total_power = 0
+        total_energy = 0
+        
         for node in self.nodes:
             metrics = self.node_metrics[node.name]
             node_stats = node.get_stats()
+            power_info = node_stats.get('power_consumption', {})
             
             # Calculate averages from actual metrics
             avg_processing = sum(metrics['processing_times']) / len(metrics['processing_times']) if metrics['processing_times'] else 0
             avg_transmission = sum(metrics['transmission_times']) / len(metrics['transmission_times']) if metrics['transmission_times'] else 0
             avg_queue = sum(metrics['queue_times']) / len(metrics['queue_times']) if metrics['queue_times'] else 0
             avg_total = sum(metrics['total_times']) / len(metrics['total_times']) if metrics['total_times'] else 0
+            avg_response = sum(metrics['response_times']) / len(metrics['response_times']) if metrics['response_times'] else 0
+            avg_power = sum(metrics['power_consumption']) / len(metrics['power_consumption']) if metrics['power_consumption'] else 0
+            
+            # Update totals
+            total_processing_time += sum(metrics['processing_times'])
+            total_transmission_time += sum(metrics['transmission_times'])
+            total_queue_time += sum(metrics['queue_times'])
+            total_response_time += sum(metrics['response_times'])
+            total_tasks += self.processed_tasks[node.name]
+            total_power += power_info.get('current_power', 0)
+            total_energy += power_info.get('total_energy', 0)
             
             # Calculate memory utilization based on current tasks
             total_memory_used = sum(task['memory'] for task in node.current_tasks)
@@ -311,19 +488,100 @@ Started at: {timestamp}
                 'avg_processing_time': avg_processing,
                 'avg_transmission_time': avg_transmission,
                 'avg_queue_time': avg_queue,
+                'avg_response_time': avg_response,
                 'avg_total_time': avg_total,
                 'bandwidth_utilization': bandwidth_utilization,
                 'mips_utilization': mips_utilization,
                 'memory_utilization': memory_utilization,
-                'current_tasks': len(node.current_tasks)
+                'current_tasks': len(node.current_tasks),
+                'min_processing_time': min(metrics['processing_times']) if metrics['processing_times'] else 0,
+                'max_processing_time': max(metrics['processing_times']) if metrics['processing_times'] else 0,
+                'min_queue_time': min(metrics['queue_times']) if metrics['queue_times'] else 0,
+                'max_queue_time': max(metrics['queue_times']) if metrics['queue_times'] else 0,
+                'min_response_time': min(metrics['response_times']) if metrics['response_times'] else 0,
+                'max_response_time': max(metrics['response_times']) if metrics['response_times'] else 0,
+                'avg_power': avg_power,
+                'total_energy': power_info.get('total_energy', 0)
             })
             
             stats[node.node_id] = node_stats
             self._log_activity(f"Stats for {node.name}: {node_stats}")
+        
+        # Add system-wide statistics
+        if total_tasks > 0:
+            stats['system'] = {
+                'total_tasks': total_tasks,
+                'avg_processing_time': total_processing_time / total_tasks,
+                'avg_transmission_time': total_transmission_time / total_tasks,
+                'avg_queue_time': total_queue_time / total_tasks,
+                'avg_response_time': total_response_time / total_tasks,
+                'total_processing_time': total_processing_time,
+                'total_transmission_time': total_transmission_time,
+                'total_queue_time': total_queue_time,
+                'total_response_time': total_response_time,
+                'active_nodes': sum(1 for node in self.nodes if len(self.task_queues[node.name]) > 0),
+                'total_queue_size': sum(len(queue) for queue in self.task_queues.values()),
+                'total_power': total_power,
+                'total_energy': total_energy,
+                'avg_power_per_node': total_power / len(self.nodes) if self.nodes else 0,
+                'avg_energy_per_node': total_energy / len(self.nodes) if self.nodes else 0
+            }
         
         return stats
         
     def __del__(self):
         """Cleanup when object is destroyed."""
         if hasattr(self, 'log_file'):
+            # Write summary before closing
+            stats = self.get_stats()
+            if 'system' in stats:
+                summary = f"""
+{'='*100}
+SCHEDULER SUMMARY REPORT - {self.mode.upper()} Mode
+{'='*100}
+
+System-wide Statistics:
+    Total Tasks Processed: {stats['system']['total_tasks']}
+    Total Processing Time: {stats['system']['total_processing_time']:.2f}ms
+    Total Queue Time: {stats['system']['total_queue_time']:.2f}ms
+    Total Transmission Time: {stats['system']['total_transmission_time']:.2f}ms
+    Total Response Time: {stats['system']['total_response_time']:.2f}ms
+
+Power Consumption Summary:
+    Total System Power: {stats['system']['total_power']:.2f}W
+    Total Energy Consumed: {stats['system']['total_energy']:.2f}kWh
+    Average Power per Node: {stats['system']['avg_power_per_node']:.2f}W
+    Average Energy per Node: {stats['system']['avg_energy_per_node']:.2f}kWh
+
+Average Metrics:
+    Processing Time: {stats['system']['avg_processing_time']:.2f}ms
+    Queue Time: {stats['system']['avg_queue_time']:.2f}ms
+    Transmission Time: {stats['system']['avg_transmission_time']:.2f}ms
+    Response Time: {stats['system']['avg_response_time']:.2f}ms
+
+Node Performance:
+"""
+                for node_id, node_stats in stats.items():
+                    if node_id != 'system':
+                        node = next(n for n in self.nodes if n.node_id == node_id)
+                        summary += f"""
+    {node.name}:
+        Tasks Processed: {node_stats['total_processed']}
+        Average Processing Time: {node_stats['avg_processing_time']:.2f}ms
+        Average Queue Time: {node_stats['avg_queue_time']:.2f}ms
+        Average Response Time: {node_stats['avg_response_time']:.2f}ms
+        Processing Time Range: {node_stats['min_processing_time']:.2f}ms - {node_stats['max_processing_time']:.2f}ms
+        Queue Time Range: {node_stats['min_queue_time']:.2f}ms - {node_stats['max_queue_time']:.2f}ms
+        Response Time Range: {node_stats['min_response_time']:.2f}ms - {node_stats['max_response_time']:.2f}ms
+        Current Queue Size: {node_stats['queue_size']}
+        System Load: {node_stats['system_load']*100:.1f}%
+        Memory Utilization: {node_stats['memory_utilization']*100:.1f}%
+        MIPS Utilization: {node_stats['mips_utilization']*100:.1f}%
+        Bandwidth Utilization: {node_stats['bandwidth_utilization']*100:.1f}%
+        Average Power: {node_stats['avg_power']:.2f}W
+        Total Energy: {node_stats['total_energy']:.2f}kWh
+"""
+                summary += f"\n{'='*100}"
+                self.log_file.write(summary)
+                self.log_file.flush()
             self.log_file.close() 

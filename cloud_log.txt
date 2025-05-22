@@ -1,20 +1,20 @@
 
 Cloud Node Status Log
-Started at: 2025-05-21 20:29:43
+Started at: 2025-05-22 21:51:33
 ================================================================================
 
 ================================================================================
-Processing Details - 2025-05-21 20:29:45.620
+Processing Details - 2025-05-22 21:51:38.115
 Node: Cloud-AS
 Task ID: 1
 
 Processing Metrics:
     Distance to Node: 4825.17 km
-    Transmission Time: 114.97 ms
-    Processing Time: 127.76 ms
-    Queue Time: 139.77 ms
-    Total Time: 242.73 ms
-    Memory Used: 2903 MB
+    Transmission Time: 122.04 ms
+    Processing Time: 123.94 ms
+    Queue Time: 131.31 ms
+    Total Time: 246.03 ms
+    Memory Used: 2701 MB
     Concurrent Tasks: 0 tasks
 
 Node Status:
@@ -34,21 +34,21 @@ Resource Availability:
 Performance Metrics:
     Average Processing Time: 0.0 ms
     Average Queue Time: 0.0 ms
-    Processing Rate: 3.9 tasks/sec
+    Processing Rate: 1.7 tasks/sec
 ================================================================================
 
 ================================================================================
-Processing Details - 2025-05-21 20:29:45.620
+Processing Details - 2025-05-22 21:51:38.115
 Node: Cloud-AS
 Task ID: 2
 
 Processing Metrics:
     Distance to Node: 4825.67 km
-    Transmission Time: 105.91 ms
-    Processing Time: 88.24 ms
-    Queue Time: 107.32 ms
-    Total Time: 194.14 ms
-    Memory Used: 1753 MB
+    Transmission Time: 104.11 ms
+    Processing Time: 123.55 ms
+    Queue Time: 130.35 ms
+    Total Time: 227.71 ms
+    Memory Used: 4147 MB
     Concurrent Tasks: 0 tasks
 
 Node Status:
@@ -68,21 +68,21 @@ Resource Availability:
 Performance Metrics:
     Average Processing Time: 0.0 ms
     Average Queue Time: 0.0 ms
-    Processing Rate: 3.9 tasks/sec
+    Processing Rate: 1.7 tasks/sec
 ================================================================================
 
 ================================================================================
-Processing Details - 2025-05-21 20:29:45.620
+Processing Details - 2025-05-22 21:51:38.115
 Node: Cloud-NA
 Task ID: 3
 
 Processing Metrics:
     Distance to Node: 2019.22 km
-    Transmission Time: 84.95 ms
-    Processing Time: 123.52 ms
-    Queue Time: 138.53 ms
-    Total Time: 208.47 ms
-    Memory Used: 4070 MB
+    Transmission Time: 71.18 ms
+    Processing Time: 91.33 ms
+    Queue Time: 103.14 ms
+    Total Time: 162.56 ms
+    Memory Used: 2145 MB
     Concurrent Tasks: 0 tasks
 
 Node Status:
@@ -102,21 +102,21 @@ Resource Availability:
 Performance Metrics:
     Average Processing Time: 0.0 ms
     Average Queue Time: 0.0 ms
-    Processing Rate: 1.0 tasks/sec
+    Processing Rate: 0.4 tasks/sec
 ================================================================================
 
 ================================================================================
-Processing Details - 2025-05-21 20:29:45.621
+Processing Details - 2025-05-22 21:51:38.115
 Node: Cloud-AS
 Task ID: 4
 
 Processing Metrics:
     Distance to Node: 4817.13 km
-    Transmission Time: 141.17 ms
-    Processing Time: 131.95 ms
-    Queue Time: 138.31 ms
-    Total Time: 273.12 ms
-    Memory Used: 4178 MB
+    Transmission Time: 130.35 ms
+    Processing Time: 102.12 ms
+    Queue Time: 117.83 ms
+    Total Time: 232.52 ms
+    Memory Used: 1445 MB
     Concurrent Tasks: 0 tasks
 
 Node Status:
@@ -136,21 +136,21 @@ Resource Availability:
 Performance Metrics:
     Average Processing Time: 0.0 ms
     Average Queue Time: 0.0 ms
-    Processing Rate: 3.9 tasks/sec
+    Processing Rate: 1.7 tasks/sec
 ================================================================================
 
 ================================================================================
-Processing Details - 2025-05-21 20:29:45.621
+Processing Details - 2025-05-22 21:51:38.116
 Node: Cloud-NA
 Task ID: 5
 
 Processing Metrics:
     Distance to Node: 1005.24 km
-    Transmission Time: 48.70 ms
-    Processing Time: 82.93 ms
-    Queue Time: 90.38 ms
-    Total Time: 131.64 ms
-    Memory Used: 2681 MB
+    Transmission Time: 48.94 ms
+    Processing Time: 94.84 ms
+    Queue Time: 102.03 ms
+    Total Time: 143.82 ms
+    Memory Used: 3258 MB
     Concurrent Tasks: 0 tasks
 
 Node Status:
@@ -170,21 +170,21 @@ Resource Availability:
 Performance Metrics:
     Average Processing Time: 0.0 ms
     Average Queue Time: 0.0 ms
-    Processing Rate: 1.0 tasks/sec
+    Processing Rate: 0.4 tasks/sec
 ================================================================================
 
 ================================================================================
-Processing Details - 2025-05-21 20:29:45.621
+Processing Details - 2025-05-22 21:51:38.116
 Node: Cloud-AS
 Task ID: 6
 
 Processing Metrics:
     Distance to Node: 4817.13 km
-    Transmission Time: 108.76 ms
-    Processing Time: 84.23 ms
-    Queue Time: 230.23 ms
-    Total Time: 192.98 ms
-    Memory Used: 1578 MB
+    Transmission Time: 119.41 ms
+    Processing Time: 115.84 ms
+    Queue Time: 401.10 ms
+    Total Time: 507.56 ms
+    Memory Used: 4217 MB
     Concurrent Tasks: 0 tasks
 
 Node Status:
@@ -204,21 +204,21 @@ Resource Availability:
 Performance Metrics:
     Average Processing Time: 0.0 ms
     Average Queue Time: 0.0 ms
-    Processing Rate: 3.9 tasks/sec
+    Processing Rate: 1.7 tasks/sec
 ================================================================================
 
 ================================================================================
-Processing Details - 2025-05-21 20:29:45.621
+Processing Details - 2025-05-22 21:51:38.116
 Node: Cloud-AS
 Task ID: 7
 
 Processing Metrics:
     Distance to Node: 4825.17 km
-    Transmission Time: 111.55 ms
-    Processing Time: 98.36 ms
-    Queue Time: 245.59 ms
-    Total Time: 209.91 ms
-    Memory Used: 1519 MB
+    Transmission Time: 124.88 ms
+    Processing Time: 107.12 ms
+    Queue Time: 239.95 ms
+    Total Time: 358.50 ms
+    Memory Used: 2338 MB
     Concurrent Tasks: 0 tasks
 
 Node Status:
@@ -238,21 +238,21 @@ Resource Availability:
 Performance Metrics:
     Average Processing Time: 0.0 ms
     Average Queue Time: 0.0 ms
-    Processing Rate: 3.9 tasks/sec
+    Processing Rate: 1.7 tasks/sec
 ================================================================================
 
 ================================================================================
-Processing Details - 2025-05-21 20:29:45.621
+Processing Details - 2025-05-22 21:51:38.116
 Node: Cloud-AS
 Task ID: 8
 
 Processing Metrics:
     Distance to Node: 4819.59 km
-    Transmission Time: 128.95 ms
-    Processing Time: 94.52 ms
-    Queue Time: 308.15 ms
-    Total Time: 223.47 ms
-    Memory Used: 1549 MB
+    Transmission Time: 123.24 ms
+    Processing Time: 118.73 ms
+    Queue Time: 255.21 ms
+    Total Time: 367.74 ms
+    Memory Used: 4271 MB
     Concurrent Tasks: 0 tasks
 
 Node Status:
@@ -272,21 +272,21 @@ Resource Availability:
 Performance Metrics:
     Average Processing Time: 0.0 ms
     Average Queue Time: 0.0 ms
-    Processing Rate: 3.9 tasks/sec
+    Processing Rate: 1.7 tasks/sec
 ================================================================================
 
 ================================================================================
-Processing Details - 2025-05-21 20:29:45.622
+Processing Details - 2025-05-22 21:51:38.116
 Node: Cloud-AS
 Task ID: 9
 
 Processing Metrics:
     Distance to Node: 4818.10 km
-    Transmission Time: 119.62 ms
-    Processing Time: 157.96 ms
-    Queue Time: 307.34 ms
-    Total Time: 277.57 ms
-    Memory Used: 4260 MB
+    Transmission Time: 121.44 ms
+    Processing Time: 145.56 ms
+    Queue Time: 398.60 ms
+    Total Time: 504.67 ms
+    Memory Used: 3741 MB
     Concurrent Tasks: 0 tasks
 
 Node Status:
@@ -306,21 +306,21 @@ Resource Availability:
 Performance Metrics:
     Average Processing Time: 0.0 ms
     Average Queue Time: 0.0 ms
-    Processing Rate: 3.9 tasks/sec
+    Processing Rate: 1.7 tasks/sec
 ================================================================================
 
 ================================================================================
-Processing Details - 2025-05-21 20:29:45.622
+Processing Details - 2025-05-22 21:51:38.116
 Node: Cloud-AS
 Task ID: 10
 
 Processing Metrics:
     Distance to Node: 4806.07 km
-    Transmission Time: 116.69 ms
-    Processing Time: 96.07 ms
-    Queue Time: 196.55 ms
-    Total Time: 212.76 ms
-    Memory Used: 1241 MB
+    Transmission Time: 111.12 ms
+    Processing Time: 100.87 ms
+    Queue Time: 237.36 ms
+    Total Time: 336.00 ms
+    Memory Used: 1671 MB
     Concurrent Tasks: 0 tasks
 
 Node Status:
@@ -340,9 +340,9 @@ Resource Availability:
 Performance Metrics:
     Average Processing Time: 0.0 ms
     Average Queue Time: 0.0 ms
-    Processing Rate: 3.9 tasks/sec
+    Processing Rate: 1.7 tasks/sec
 ================================================================================
 
 Processing Complete
-Duration: 2.1 seconds
+Duration: 4.7 seconds
 ================================================================================

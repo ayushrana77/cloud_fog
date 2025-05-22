@@ -1,86 +1,3635 @@
 
-================================================================================
+====================================================================================================
 Scheduler Log - CLOUD Mode
-Started at: 2025-05-21 20:29:45
-================================================================================
+Started at: 2025-05-22 21:51:37
+Configuration:
+    Number of Nodes: 2
+    Node Types: Cloud-NA, Cloud-AS
+====================================================================================================
 
-[2025-05-21 20:29:45.307] Scheduling task 1
-[2025-05-21 20:29:45.307] Calculated distance: 11823.72km between locations
-[2025-05-21 20:29:45.308] Calculated distance: 4825.17km between locations
-[2025-05-21 20:29:45.308] Node Cloud-AS score: 10.72 (Distance: 4825.17km)
-[2025-05-21 20:29:45.308] Node Cloud-NA score: 118.24 (Distance: 11823.72km)
-[2025-05-21 20:29:45.308] Selected node: Cloud-AS with score: 10.72
-[2025-05-21 20:29:45.308] Task 1 added to queue of Cloud-AS
-[2025-05-21 20:29:45.308] Scheduling task 2
-[2025-05-21 20:29:45.308] Calculated distance: 11813.83km between locations
-[2025-05-21 20:29:45.308] Calculated distance: 4825.67km between locations
-[2025-05-21 20:29:45.308] Node Cloud-AS score: 10.72 (Distance: 4825.67km)
-[2025-05-21 20:29:45.308] Node Cloud-NA score: 118.14 (Distance: 11813.83km)
-[2025-05-21 20:29:45.308] Selected node: Cloud-AS with score: 10.72
-[2025-05-21 20:29:45.308] Task 2 added to queue of Cloud-AS
-[2025-05-21 20:29:45.309] Scheduling task 3
-[2025-05-21 20:29:45.309] Calculated distance: 2019.22km between locations
-[2025-05-21 20:29:45.309] Calculated distance: 16099.08km between locations
-[2025-05-21 20:29:45.309] Node Cloud-NA score: 20.19 (Distance: 2019.22km)
-[2025-05-21 20:29:45.309] Node Cloud-AS score: 35.78 (Distance: 16099.08km)
-[2025-05-21 20:29:45.309] Selected node: Cloud-NA with score: 20.19
-[2025-05-21 20:29:45.309] Task 3 added to queue of Cloud-NA
-[2025-05-21 20:29:45.309] Scheduling task 4
-[2025-05-21 20:29:45.309] Calculated distance: 11819.66km between locations
-[2025-05-21 20:29:45.309] Calculated distance: 4817.13km between locations
-[2025-05-21 20:29:45.309] Node Cloud-AS score: 10.70 (Distance: 4817.13km)
-[2025-05-21 20:29:45.309] Node Cloud-NA score: 118.20 (Distance: 11819.66km)
-[2025-05-21 20:29:45.309] Selected node: Cloud-AS with score: 10.70
-[2025-05-21 20:29:45.309] Task 4 added to queue of Cloud-AS
-[2025-05-21 20:29:45.310] Scheduling task 5
-[2025-05-21 20:29:45.310] Calculated distance: 1005.24km between locations
-[2025-05-21 20:29:45.310] Calculated distance: 15517.01km between locations
-[2025-05-21 20:29:45.310] Node Cloud-NA score: 10.05 (Distance: 1005.24km)
-[2025-05-21 20:29:45.310] Node Cloud-AS score: 34.48 (Distance: 15517.01km)
-[2025-05-21 20:29:45.310] Selected node: Cloud-NA with score: 10.05
-[2025-05-21 20:29:45.310] Task 5 added to queue of Cloud-NA
-[2025-05-21 20:29:45.310] Scheduling task 6
-[2025-05-21 20:29:45.310] Calculated distance: 11819.66km between locations
-[2025-05-21 20:29:45.310] Calculated distance: 4817.13km between locations
-[2025-05-21 20:29:45.310] Node Cloud-AS score: 10.70 (Distance: 4817.13km)
-[2025-05-21 20:29:45.310] Node Cloud-NA score: 118.20 (Distance: 11819.66km)
-[2025-05-21 20:29:45.310] Selected node: Cloud-AS with score: 10.70
-[2025-05-21 20:29:45.310] Task 6 added to queue of Cloud-AS
-[2025-05-21 20:29:45.311] Scheduling task 7
-[2025-05-21 20:29:45.311] Calculated distance: 11823.72km between locations
-[2025-05-21 20:29:45.311] Calculated distance: 4825.17km between locations
-[2025-05-21 20:29:45.311] Node Cloud-AS score: 10.72 (Distance: 4825.17km)
-[2025-05-21 20:29:45.311] Node Cloud-NA score: 118.24 (Distance: 11823.72km)
-[2025-05-21 20:29:45.311] Selected node: Cloud-AS with score: 10.72
-[2025-05-21 20:29:45.311] Task 7 added to queue of Cloud-AS
-[2025-05-21 20:29:45.311] Scheduling task 8
-[2025-05-21 20:29:45.311] Calculated distance: 11813.16km between locations
-[2025-05-21 20:29:45.311] Calculated distance: 4819.59km between locations
-[2025-05-21 20:29:45.312] Node Cloud-AS score: 10.71 (Distance: 4819.59km)
-[2025-05-21 20:29:45.312] Node Cloud-NA score: 118.13 (Distance: 11813.16km)
-[2025-05-21 20:29:45.312] Selected node: Cloud-AS with score: 10.71
-[2025-05-21 20:29:45.312] Task 8 added to queue of Cloud-AS
-[2025-05-21 20:29:45.312] Scheduling task 9
-[2025-05-21 20:29:45.312] Calculated distance: 11819.33km between locations
-[2025-05-21 20:29:45.312] Calculated distance: 4818.10km between locations
-[2025-05-21 20:29:45.312] Node Cloud-AS score: 10.71 (Distance: 4818.10km)
-[2025-05-21 20:29:45.312] Node Cloud-NA score: 118.19 (Distance: 11819.33km)
-[2025-05-21 20:29:45.312] Selected node: Cloud-AS with score: 10.71
-[2025-05-21 20:29:45.312] Task 9 added to queue of Cloud-AS
-[2025-05-21 20:29:45.313] Scheduling task 10
-[2025-05-21 20:29:45.313] Calculated distance: 11833.05km between locations
-[2025-05-21 20:29:45.313] Calculated distance: 4806.07km between locations
-[2025-05-21 20:29:45.313] Node Cloud-AS score: 10.68 (Distance: 4806.07km)
-[2025-05-21 20:29:45.313] Node Cloud-NA score: 118.33 (Distance: 11833.05km)
-[2025-05-21 20:29:45.313] Selected node: Cloud-AS with score: 10.68
-[2025-05-21 20:29:45.313] Task 10 added to queue of Cloud-AS
-[2025-05-21 20:29:45.400] Task 5 completed on Cloud-NA. Total time: 131.64ms, Memory used: 2681MB, Bandwidth used: 100Mbps
-[2025-05-21 20:29:45.416] Task 2 completed on Cloud-AS. Total time: 194.14ms, Memory used: 1753MB, Bandwidth used: 100Mbps
-[2025-05-21 20:29:45.447] Task 3 completed on Cloud-NA. Total time: 208.47ms, Memory used: 4070MB, Bandwidth used: 100Mbps
-[2025-05-21 20:29:45.448] Task 1 completed on Cloud-AS. Total time: 242.73ms, Memory used: 2903MB, Bandwidth used: 100Mbps
-[2025-05-21 20:29:45.448] Task 4 completed on Cloud-AS. Total time: 273.12ms, Memory used: 4178MB, Bandwidth used: 100Mbps
-[2025-05-21 20:29:45.509] Task 10 completed on Cloud-AS. Total time: 212.76ms, Memory used: 1241MB, Bandwidth used: 100Mbps
-[2025-05-21 20:29:45.541] Task 6 completed on Cloud-AS. Total time: 192.98ms, Memory used: 1578MB, Bandwidth used: 100Mbps
-[2025-05-21 20:29:45.557] Task 7 completed on Cloud-AS. Total time: 209.91ms, Memory used: 1519MB, Bandwidth used: 100Mbps
-[2025-05-21 20:29:45.620] Task 9 completed on Cloud-AS. Total time: 277.57ms, Memory used: 4260MB, Bandwidth used: 100Mbps
-[2025-05-21 20:29:45.620] Task 8 completed on Cloud-AS. Total time: 223.47ms, Memory used: 1549MB, Bandwidth used: 100Mbps
+[2025-05-22 21:51:37.710] Scheduling task 1
+Task Details:
+    Task ID: 1
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 270MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+Power Consumption:
+    Total System Power: 160.00W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.710] Calculated distance: 11823.72km between locations
+System Status:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+Power Consumption:
+    Total System Power: 160.00W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.710] Calculated distance: 4825.17km between locations
+System Status:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+Power Consumption:
+    Total System Power: 160.00W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.710] Node Cloud-AS score: 10.72 (Distance: 4825.17km)
+System Status:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+Power Consumption:
+    Total System Power: 160.00W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.710] Node Cloud-NA score: 118.24 (Distance: 11823.72km)
+System Status:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+Power Consumption:
+    Total System Power: 160.00W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.710] Selected node: Cloud-AS with score: 10.72
+System Status:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+Power Consumption:
+    Total System Power: 160.00W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.710] Task 1 added to queue of Cloud-AS
+Task Details:
+    Task ID: 1
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 270MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 160.00W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.711] Scheduling task 2
+Task Details:
+    Task ID: 2
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 80MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 202.98W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 122.98W
+        Total Energy: 0.00kWh
+        CPU Power: 68.59W
+        Memory Power: 43.95W
+        Network Power: 10.44W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.711] Calculated distance: 11813.83km between locations
+System Status:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 202.98W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 122.98W
+        Total Energy: 0.00kWh
+        CPU Power: 68.59W
+        Memory Power: 43.95W
+        Network Power: 10.44W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.711] Calculated distance: 4825.67km between locations
+System Status:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 202.98W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 122.98W
+        Total Energy: 0.00kWh
+        CPU Power: 68.59W
+        Memory Power: 43.95W
+        Network Power: 10.44W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.711] Node Cloud-AS score: 10.72 (Distance: 4825.67km)
+System Status:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 202.98W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 122.98W
+        Total Energy: 0.00kWh
+        CPU Power: 68.59W
+        Memory Power: 43.95W
+        Network Power: 10.44W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.711] Node Cloud-NA score: 118.14 (Distance: 11813.83km)
+System Status:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 202.98W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 122.98W
+        Total Energy: 0.00kWh
+        CPU Power: 68.59W
+        Memory Power: 43.95W
+        Network Power: 10.44W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.711] Selected node: Cloud-AS with score: 10.72
+System Status:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 202.98W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 122.98W
+        Total Energy: 0.00kWh
+        CPU Power: 68.59W
+        Memory Power: 43.95W
+        Network Power: 10.44W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.711] Task 2 added to queue of Cloud-AS
+Task Details:
+    Task ID: 2
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 80MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 202.98W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 122.98W
+        Total Energy: 0.00kWh
+        CPU Power: 68.59W
+        Memory Power: 43.95W
+        Network Power: 10.44W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.711] Scheduling task 3
+Task Details:
+    Task ID: 3
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 258.72W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.711] Calculated distance: 2019.22km between locations
+System Status:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 258.72W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.711] Calculated distance: 16099.08km between locations
+System Status:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 258.72W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.712] Node Cloud-NA score: 20.19 (Distance: 2019.22km)
+System Status:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 258.72W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.712] Node Cloud-AS score: 35.78 (Distance: 16099.08km)
+System Status:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 258.72W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.712] Selected node: Cloud-NA with score: 20.19
+System Status:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 258.72W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.712] Task 3 added to queue of Cloud-NA
+Task Details:
+    Task ID: 3
+    Node: Cloud-NA
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 258.72W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.712] Scheduling task 4
+Task Details:
+    Task ID: 4
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 293.44W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.712] Calculated distance: 11819.66km between locations
+System Status:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 293.44W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.712] Calculated distance: 4817.13km between locations
+System Status:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 293.44W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.712] Node Cloud-AS score: 10.70 (Distance: 4817.13km)
+System Status:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 293.44W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.712] Node Cloud-NA score: 118.20 (Distance: 11819.66km)
+System Status:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 293.44W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.712] Selected node: Cloud-AS with score: 10.70
+System Status:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 293.44W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.712] Task 4 added to queue of Cloud-AS
+Task Details:
+    Task ID: 4
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 293.44W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 178.72W
+        Total Energy: 0.00kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.713] Scheduling task 5
+Task Details:
+    Task ID: 5
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 130MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 322.01W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.713] Calculated distance: 1005.24km between locations
+System Status:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 322.01W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.713] Calculated distance: 15517.01km between locations
+System Status:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 322.01W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.713] Node Cloud-NA score: 10.05 (Distance: 1005.24km)
+System Status:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 322.01W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.713] Node Cloud-AS score: 34.48 (Distance: 15517.01km)
+System Status:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 322.01W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.713] Selected node: Cloud-NA with score: 10.05
+System Status:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 322.01W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.713] Task 5 added to queue of Cloud-NA
+Task Details:
+    Task ID: 5
+    Node: Cloud-NA
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 130MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 322.01W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 114.72W
+        Total Energy: 0.00kWh
+        CPU Power: 63.70W
+        Memory Power: 39.02W
+        Network Power: 12.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.713] Scheduling task 6
+Task Details:
+    Task ID: 6
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 126MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.713] Calculated distance: 11819.66km between locations
+System Status:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.713] Calculated distance: 4817.13km between locations
+System Status:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.714] Node Cloud-AS score: 10.70 (Distance: 4817.13km)
+System Status:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.714] Node Cloud-NA score: 118.20 (Distance: 11819.66km)
+System Status:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.714] Selected node: Cloud-AS with score: 10.70
+System Status:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.714] Task 6 added to queue of Cloud-AS
+Task Details:
+    Task ID: 6
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 126MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.714] Scheduling task 7
+Task Details:
+    Task ID: 7
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.714] Calculated distance: 11823.72km between locations
+System Status:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.714] Calculated distance: 4825.17km between locations
+System Status:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.714] Node Cloud-AS score: 10.72 (Distance: 4825.17km)
+System Status:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.714] Node Cloud-NA score: 118.24 (Distance: 11823.72km)
+System Status:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.714] Selected node: Cloud-AS with score: 10.72
+System Status:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.714] Task 7 added to queue of Cloud-AS
+Task Details:
+    Task ID: 7
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 5
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.715] Scheduling task 8
+Task Details:
+    Task ID: 8
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 5
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.715] Calculated distance: 11813.16km between locations
+System Status:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 5
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.715] Calculated distance: 4819.59km between locations
+System Status:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 5
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.715] Node Cloud-AS score: 10.71 (Distance: 4819.59km)
+System Status:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 5
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.715] Node Cloud-NA score: 118.13 (Distance: 11813.16km)
+System Status:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 5
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.715] Selected node: Cloud-AS with score: 10.71
+System Status:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 5
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.715] Task 8 added to queue of Cloud-AS
+Task Details:
+    Task ID: 8
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 6
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.715] Scheduling task 9
+Task Details:
+    Task ID: 9
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 6
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.716] Calculated distance: 11819.33km between locations
+System Status:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 6
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.716] Calculated distance: 4818.10km between locations
+System Status:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 6
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.716] Node Cloud-AS score: 10.71 (Distance: 4818.10km)
+System Status:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 6
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.716] Node Cloud-NA score: 118.19 (Distance: 11819.33km)
+System Status:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 6
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.716] Selected node: Cloud-AS with score: 10.71
+System Status:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 6
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.716] Task 9 added to queue of Cloud-AS
+Task Details:
+    Task ID: 9
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 7
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.716] Scheduling task 10
+Task Details:
+    Task ID: 10
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 7
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.716] Calculated distance: 11833.05km between locations
+System Status:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 7
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.716] Calculated distance: 4806.07km between locations
+System Status:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 7
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.717] Node Cloud-AS score: 10.68 (Distance: 4806.07km)
+System Status:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 7
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.717] Node Cloud-NA score: 118.33 (Distance: 11833.05km)
+System Status:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 7
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.717] Selected node: Cloud-AS with score: 10.68
+System Status:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 7
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.717] Task 10 added to queue of Cloud-AS
+Task Details:
+    Task ID: 10
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 10
+    Total Tasks Processed: 0
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 367.12W
+    Total Energy Consumed: 0.00kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 159.83W
+        Total Energy: 0.00kWh
+        CPU Power: 77.93W
+        Memory Power: 67.90W
+        Network Power: 14.00W
+    Cloud-AS:
+        Queue Size: 8
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.00kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.815] Task 3 completed on Cloud-NA
+Task Details:
+    ID: 3
+    Size: 300MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 103.14ms
+    Processing Time: 91.33ms
+    Transmission Time: 71.18ms
+    Total Time: 162.56ms
+    Response Time: 194.47ms
+Resource Usage:
+    Memory Used: 2145MB
+    Bandwidth Used: 33715.92225929533Mbps
+    Distance: 2019.22km
+Task Details:
+    Task ID: 3
+    Node: Cloud-NA
+    Timing Metrics:
+        Total Time: 162.56ms
+        Response Time: 194.47ms
+        Processing Time: 91.33ms
+        Queue Time: 103.14ms
+        Transmission Time: 71.18ms
+    Resource Usage:
+        Memory Used: 2145MB
+        Bandwidth Used: 33715.92225929533Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 2019.22km
+        Queue Size: 1
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 1
+    Active Nodes: 2
+Power Consumption:
+    Total System Power: 287.29W
+    Total Energy Consumed: 0.01kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 1
+        Tasks Processed: 1
+        Average Processing Time: 91.33ms
+        Average Queue Time: 103.14ms
+        Average Response Time: 194.47ms
+        Average Total Time: 162.56ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 8
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.01kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.815] Task 5 completed on Cloud-NA
+Task Details:
+    ID: 5
+    Size: 130MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 102.03ms
+    Processing Time: 94.84ms
+    Transmission Time: 48.94ms
+    Total Time: 143.82ms
+    Response Time: 196.87ms
+Resource Usage:
+    Memory Used: 3258MB
+    Bandwidth Used: 21251.638317028002Mbps
+    Distance: 1005.24km
+Task Details:
+    Task ID: 5
+    Node: Cloud-NA
+    Timing Metrics:
+        Total Time: 143.82ms
+        Response Time: 196.87ms
+        Processing Time: 94.84ms
+        Queue Time: 102.03ms
+        Transmission Time: 48.94ms
+    Resource Usage:
+        Memory Used: 3258MB
+        Bandwidth Used: 21251.638317028002Mbps
+        RAM Required: 0MB
+        Task Size: 130MB
+    Network Metrics:
+        Distance: 1005.24km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 2
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 287.29W
+    Total Energy Consumed: 0.01kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 2
+        Average Processing Time: 93.09ms
+        Average Queue Time: 102.58ms
+        Average Response Time: 195.67ms
+        Average Total Time: 153.19ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 8
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 207.29W
+        Total Energy: 0.01kWh
+        CPU Power: 102.44W
+        Memory Power: 93.52W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.830] Task 4 completed on Cloud-AS
+Task Details:
+    ID: 4
+    Size: 300MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 117.83ms
+    Processing Time: 102.12ms
+    Transmission Time: 130.35ms
+    Total Time: 232.52ms
+    Response Time: 219.95ms
+Resource Usage:
+    Memory Used: 1445MB
+    Bandwidth Used: 18411.786745576905Mbps
+    Distance: 4817.13km
+Task Details:
+    Task ID: 4
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 232.52ms
+        Response Time: 219.95ms
+        Processing Time: 102.12ms
+        Queue Time: 117.83ms
+        Transmission Time: 130.35ms
+    Resource Usage:
+        Memory Used: 1445MB
+        Bandwidth Used: 18411.786745576905Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 4817.13km
+        Queue Size: 7
+    System Load:
+        System Load: 75.9%
+        Bandwidth Utilization: 1448.3%
+        MIPS Utilization: 11346.9%
+System Status:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 3
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 258.72W
+    Total Energy Consumed: 0.01kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 2
+        Average Processing Time: 93.09ms
+        Average Queue Time: 102.58ms
+        Average Response Time: 195.67ms
+        Average Total Time: 153.19ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 7
+        Tasks Processed: 1
+        Average Processing Time: 102.12ms
+        Average Queue Time: 117.83ms
+        Average Response Time: 219.95ms
+        Average Total Time: 232.52ms
+        Current Power: 178.72W
+        Total Energy: 0.01kWh
+        CPU Power: 87.12W
+        Memory Power: 80.71W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.842] Task 2 completed on Cloud-AS
+Task Details:
+    ID: 2
+    Size: 80MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 130.35ms
+    Processing Time: 123.55ms
+    Transmission Time: 104.11ms
+    Total Time: 227.71ms
+    Response Time: 253.90ms
+Resource Usage:
+    Memory Used: 4147MB
+    Bandwidth Used: 6147.192045635237Mbps
+    Distance: 4825.67km
+Task Details:
+    Task ID: 2
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 227.71ms
+        Response Time: 253.90ms
+        Processing Time: 123.55ms
+        Queue Time: 130.35ms
+        Transmission Time: 104.11ms
+    Resource Usage:
+        Memory Used: 4147MB
+        Bandwidth Used: 6147.192045635237Mbps
+        RAM Required: 0MB
+        Task Size: 80MB
+    Network Metrics:
+        Distance: 4825.67km
+        Queue Size: 6
+    System Load:
+        System Load: 91.8%
+        Bandwidth Utilization: 1302.6%
+        MIPS Utilization: 12537.2%
+System Status:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 4
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 283.74W
+    Total Energy Consumed: 0.01kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 2
+        Average Processing Time: 93.09ms
+        Average Queue Time: 102.58ms
+        Average Response Time: 195.67ms
+        Average Total Time: 153.19ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 6
+        Tasks Processed: 2
+        Average Processing Time: 112.84ms
+        Average Queue Time: 124.09ms
+        Average Response Time: 236.93ms
+        Average Total Time: 230.11ms
+        Current Power: 203.74W
+        Total Energy: 0.01kWh
+        CPU Power: 99.01W
+        Memory Power: 93.40W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.842] Task 1 completed on Cloud-AS
+Task Details:
+    ID: 1
+    Size: 270MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 131.31ms
+    Processing Time: 123.94ms
+    Transmission Time: 122.04ms
+    Total Time: 246.03ms
+    Response Time: 255.25ms
+Resource Usage:
+    Memory Used: 2701MB
+    Bandwidth Used: 17698.775145311774Mbps
+    Distance: 4825.17km
+Task Details:
+    Task ID: 1
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 246.03ms
+        Response Time: 255.25ms
+        Processing Time: 123.94ms
+        Queue Time: 131.31ms
+        Transmission Time: 122.04ms
+    Resource Usage:
+        Memory Used: 2701MB
+        Bandwidth Used: 17698.775145311774Mbps
+        RAM Required: 0MB
+        Task Size: 270MB
+    Network Metrics:
+        Distance: 4825.17km
+        Queue Size: 5
+    System Load:
+        System Load: 91.8%
+        Bandwidth Utilization: 1320.4%
+        MIPS Utilization: 12948.5%
+System Status:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 5
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 283.74W
+    Total Energy Consumed: 0.01kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 2
+        Average Processing Time: 93.09ms
+        Average Queue Time: 102.58ms
+        Average Response Time: 195.67ms
+        Average Total Time: 153.19ms
+        Current Power: 80.00W
+        Total Energy: 0.00kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 5
+        Tasks Processed: 3
+        Average Processing Time: 116.54ms
+        Average Queue Time: 126.50ms
+        Average Response Time: 243.04ms
+        Average Total Time: 235.42ms
+        Current Power: 203.74W
+        Total Energy: 0.01kWh
+        CPU Power: 99.01W
+        Memory Power: 93.40W
+        Network Power: 11.33W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.954] Task 10 completed on Cloud-AS
+Task Details:
+    ID: 10
+    Size: 170MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 237.36ms
+    Processing Time: 100.87ms
+    Transmission Time: 111.12ms
+    Total Time: 336.00ms
+    Response Time: 338.23ms
+Resource Usage:
+    Memory Used: 1671MB
+    Bandwidth Used: 12239.399412247663Mbps
+    Distance: 4806.07km
+Task Details:
+    Task ID: 10
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 336.00ms
+        Response Time: 338.23ms
+        Processing Time: 100.87ms
+        Queue Time: 237.36ms
+        Transmission Time: 111.12ms
+    Resource Usage:
+        Memory Used: 1671MB
+        Bandwidth Used: 12239.399412247663Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 4806.07km
+        Queue Size: 4
+    System Load:
+        System Load: 88.8%
+        Bandwidth Utilization: 1299.0%
+        MIPS Utilization: 12513.4%
+System Status:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 6
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 271.56W
+    Total Energy Consumed: 0.02kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 2
+        Average Processing Time: 93.09ms
+        Average Queue Time: 102.58ms
+        Average Response Time: 195.67ms
+        Average Total Time: 153.19ms
+        Current Power: 80.00W
+        Total Energy: 0.01kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 4
+        Tasks Processed: 4
+        Average Processing Time: 112.62ms
+        Average Queue Time: 154.21ms
+        Average Response Time: 266.83ms
+        Average Total Time: 260.56ms
+        Current Power: 191.56W
+        Total Energy: 0.01kWh
+        CPU Power: 89.64W
+        Memory Power: 91.03W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.954] Task 7 completed on Cloud-AS
+Task Details:
+    ID: 7
+    Size: 170MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 239.95ms
+    Processing Time: 107.12ms
+    Transmission Time: 124.88ms
+    Total Time: 358.50ms
+    Response Time: 347.07ms
+Resource Usage:
+    Memory Used: 2338MB
+    Bandwidth Used: 10890.270762384118Mbps
+    Distance: 4825.17km
+Task Details:
+    Task ID: 7
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 358.50ms
+        Response Time: 347.07ms
+        Processing Time: 107.12ms
+        Queue Time: 239.95ms
+        Transmission Time: 124.88ms
+    Resource Usage:
+        Memory Used: 2338MB
+        Bandwidth Used: 10890.270762384118Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 4825.17km
+        Queue Size: 3
+    System Load:
+        System Load: 88.8%
+        Bandwidth Utilization: 1316.7%
+        MIPS Utilization: 12391.0%
+System Status:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 7
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 271.56W
+    Total Energy Consumed: 0.02kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 2
+        Average Processing Time: 93.09ms
+        Average Queue Time: 102.58ms
+        Average Response Time: 195.67ms
+        Average Total Time: 153.19ms
+        Current Power: 80.00W
+        Total Energy: 0.01kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 3
+        Tasks Processed: 5
+        Average Processing Time: 111.52ms
+        Average Queue Time: 171.36ms
+        Average Response Time: 282.88ms
+        Average Total Time: 280.15ms
+        Current Power: 191.56W
+        Total Energy: 0.01kWh
+        CPU Power: 89.64W
+        Memory Power: 91.03W
+        Network Power: 10.89W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:37.970] Task 8 completed on Cloud-AS
+Task Details:
+    ID: 8
+    Size: 170MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 255.21ms
+    Processing Time: 118.73ms
+    Transmission Time: 123.24ms
+    Total Time: 367.74ms
+    Response Time: 373.94ms
+Resource Usage:
+    Memory Used: 4271MB
+    Bandwidth Used: 11035.825754388998Mbps
+    Distance: 4819.59km
+Task Details:
+    Task ID: 8
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 367.74ms
+        Response Time: 373.94ms
+        Processing Time: 118.73ms
+        Queue Time: 255.21ms
+        Transmission Time: 123.24ms
+    Resource Usage:
+        Memory Used: 4271MB
+        Bandwidth Used: 11035.825754388998Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 4819.59km
+        Queue Size: 2
+    System Load:
+        System Load: 41.5%
+        Bandwidth Utilization: 1325.4%
+        MIPS Utilization: 12524.5%
+System Status:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 8
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 215.44W
+    Total Energy Consumed: 0.02kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 2
+        Average Processing Time: 93.09ms
+        Average Queue Time: 102.58ms
+        Average Response Time: 195.67ms
+        Average Total Time: 153.19ms
+        Current Power: 80.00W
+        Total Energy: 0.01kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 2
+        Tasks Processed: 6
+        Average Processing Time: 112.72ms
+        Average Queue Time: 185.34ms
+        Average Response Time: 298.06ms
+        Average Total Time: 294.75ms
+        Current Power: 135.44W
+        Total Energy: 0.01kWh
+        CPU Power: 71.83W
+        Memory Power: 53.16W
+        Network Power: 10.44W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:38.115] Task 9 completed on Cloud-AS
+Task Details:
+    ID: 9
+    Size: 300MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 398.60ms
+    Processing Time: 145.56ms
+    Transmission Time: 121.44ms
+    Total Time: 504.67ms
+    Response Time: 544.17ms
+Resource Usage:
+    Memory Used: 3741MB
+    Bandwidth Used: 19762.878648447608Mbps
+    Distance: 4818.10km
+Task Details:
+    Task ID: 9
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 504.67ms
+        Response Time: 544.17ms
+        Processing Time: 145.56ms
+        Queue Time: 398.60ms
+        Transmission Time: 121.44ms
+    Resource Usage:
+        Memory Used: 3741MB
+        Bandwidth Used: 19762.878648447608Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 4818.10km
+        Queue Size: 1
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 9
+    Active Nodes: 1
+Power Consumption:
+    Total System Power: 160.00W
+    Total Energy Consumed: 0.03kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 2
+        Average Processing Time: 93.09ms
+        Average Queue Time: 102.58ms
+        Average Response Time: 195.67ms
+        Average Total Time: 153.19ms
+        Current Power: 80.00W
+        Total Energy: 0.01kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 1
+        Tasks Processed: 7
+        Average Processing Time: 117.41ms
+        Average Queue Time: 215.80ms
+        Average Response Time: 333.22ms
+        Average Total Time: 324.74ms
+        Current Power: 80.00W
+        Total Energy: 0.02kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:38.115] Task 6 completed on Cloud-AS
+Task Details:
+    ID: 6
+    Size: 126MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 401.10ms
+    Processing Time: 115.84ms
+    Transmission Time: 119.41ms
+    Total Time: 507.56ms
+    Response Time: 516.94ms
+Resource Usage:
+    Memory Used: 4217MB
+    Bandwidth Used: 8441.38232017895Mbps
+    Distance: 4817.13km
+Task Details:
+    Task ID: 6
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 507.56ms
+        Response Time: 516.94ms
+        Processing Time: 115.84ms
+        Queue Time: 401.10ms
+        Transmission Time: 119.41ms
+    Resource Usage:
+        Memory Used: 4217MB
+        Bandwidth Used: 8441.38232017895Mbps
+        RAM Required: 0MB
+        Task Size: 126MB
+    Network Metrics:
+        Distance: 4817.13km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+System Status:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 10
+    Active Nodes: 0
+Power Consumption:
+    Total System Power: 160.00W
+    Total Energy Consumed: 0.03kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 2
+        Average Processing Time: 93.09ms
+        Average Queue Time: 102.58ms
+        Average Response Time: 195.67ms
+        Average Total Time: 153.19ms
+        Current Power: 80.00W
+        Total Energy: 0.01kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 0
+        Tasks Processed: 8
+        Average Processing Time: 117.22ms
+        Average Queue Time: 238.97ms
+        Average Response Time: 356.18ms
+        Average Total Time: 347.59ms
+        Current Power: 80.00W
+        Total Energy: 0.02kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:38.118] Stats for Cloud-NA: {'node_id': 0, 'name': 'Cloud-NA', 'total_processed': 2, 'avg_processing_time': 93.08870028669529, 'avg_transmission_time': 60.0601944365053, 'avg_queue_time': 102.58269309997559, 'memory_utilization': 0.0, 'mips_utilization': 0, 'bandwidth_utilization': 0, 'current_tasks': 0, 'queue_size': 0, 'system_load': 0, 'used_memory': 0, 'used_mips': 0, 'used_bandwidth': 0, 'available_memory': 9024, 'available_mips': 9000, 'available_bandwidth': 2000, 'power_consumption': {'current_power': 80.0, 'cpu_power': 50.0, 'memory_power': 20.0, 'network_power': 10.0, 'total_energy': 0.01046166998472536, 'average_power': 118.21623231294822, 'peak_power': 159.82554625622137}, 'avg_response_time': 195.67139338667084, 'avg_total_time': 153.18871062591055, 'min_processing_time': 91.33310474028663, 'max_processing_time': 94.84429583310393, 'min_queue_time': 102.02527046203613, 'max_queue_time': 103.14011573791504, 'min_response_time': 194.47322047820165, 'max_response_time': 196.86956629514006, 'avg_power': 120.99896303972086, 'total_energy': 0.01046166998472536}
+System Status:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 10
+    Active Nodes: 0
+Power Consumption:
+    Total System Power: 160.00W
+    Total Energy Consumed: 0.03kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 2
+        Average Processing Time: 93.09ms
+        Average Queue Time: 102.58ms
+        Average Response Time: 195.67ms
+        Average Total Time: 153.19ms
+        Current Power: 80.00W
+        Total Energy: 0.01kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 0
+        Tasks Processed: 8
+        Average Processing Time: 117.22ms
+        Average Queue Time: 238.97ms
+        Average Response Time: 356.18ms
+        Average Total Time: 347.59ms
+        Current Power: 80.00W
+        Total Energy: 0.02kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+----------------------------------------------------------------------------------------------------
+[2025-05-22 21:51:38.118] Stats for Cloud-AS: {'node_id': 1, 'name': 'Cloud-AS', 'total_processed': 8, 'avg_processing_time': 117.21597088566016, 'avg_transmission_time': 119.57392468409951, 'avg_queue_time': 238.96515369415283, 'memory_utilization': 0.0, 'mips_utilization': 0, 'bandwidth_utilization': 0, 'current_tasks': 0, 'queue_size': 0, 'system_load': 0, 'used_memory': 0, 'used_mips': 0, 'used_bandwidth': 0, 'available_memory': 9024, 'available_mips': 9000, 'available_bandwidth': 9000, 'power_consumption': {'current_power': 80.0, 'cpu_power': 49.99999999999999, 'memory_power': 20.0, 'network_power': 10.0, 'total_energy': 0.019589550039718757, 'average_power': 183.5285787352938, 'peak_power': 207.2944479785662}, 'avg_response_time': 356.181124579813, 'avg_total_time': 347.5914135331691, 'min_processing_time': 100.87035470562796, 'max_processing_time': 145.56350128613508, 'min_queue_time': 117.83123016357422, 'max_queue_time': 401.0961055755615, 'min_response_time': 219.95354385791308, 'max_response_time': 544.1667021986107, 'avg_power': 177.63821193691481, 'total_energy': 0.019589550039718757}
+System Status:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 10
+    Active Nodes: 0
+Power Consumption:
+    Total System Power: 160.00W
+    Total Energy Consumed: 0.03kWh
+Node Status:
+    Cloud-NA:
+        Queue Size: 0
+        Tasks Processed: 2
+        Average Processing Time: 93.09ms
+        Average Queue Time: 102.58ms
+        Average Response Time: 195.67ms
+        Average Total Time: 153.19ms
+        Current Power: 80.00W
+        Total Energy: 0.01kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+    Cloud-AS:
+        Queue Size: 0
+        Tasks Processed: 8
+        Average Processing Time: 117.22ms
+        Average Queue Time: 238.97ms
+        Average Response Time: 356.18ms
+        Average Total Time: 347.59ms
+        Current Power: 80.00W
+        Total Energy: 0.02kWh
+        CPU Power: 50.00W
+        Memory Power: 20.00W
+        Network Power: 10.00W
+----------------------------------------------------------------------------------------------------
+====================================================================================================
+SCHEDULER SUMMARY REPORT - CLOUD Mode
+====================================================================================================
+
+System-wide Statistics:
+    Total Tasks Processed: 10
+    Total Processing Time: 1123.91ms
+    Total Queue Time: 2116.89ms
+    Total Transmission Time: 1076.71ms
+    Total Response Time: 3240.79ms
+
+Power Consumption Summary:
+    Total System Power: 160.00W
+    Total Energy Consumed: 0.03kWh
+    Average Power per Node: 80.00W
+    Average Energy per Node: 0.02kWh
+
+Average Metrics:
+    Processing Time: 112.39ms
+    Queue Time: 211.69ms
+    Transmission Time: 107.67ms
+    Response Time: 324.08ms
+
+Node Performance:
+
+    Cloud-NA:
+        Tasks Processed: 2
+        Average Processing Time: 93.09ms
+        Average Queue Time: 102.58ms
+        Average Response Time: 195.67ms
+        Processing Time Range: 91.33ms - 94.84ms
+        Queue Time Range: 102.03ms - 103.14ms
+        Response Time Range: 194.47ms - 196.87ms
+        Current Queue Size: 0
+        System Load: 0.0%
+        Memory Utilization: 0.0%
+        MIPS Utilization: 0.0%
+        Bandwidth Utilization: 0.0%
+        Average Power: 121.00W
+        Total Energy: 0.01kWh
+
+    Cloud-AS:
+        Tasks Processed: 8
+        Average Processing Time: 117.22ms
+        Average Queue Time: 238.97ms
+        Average Response Time: 356.18ms
+        Processing Time Range: 100.87ms - 145.56ms
+        Queue Time Range: 117.83ms - 401.10ms
+        Response Time Range: 219.95ms - 544.17ms
+        Current Queue Size: 0
+        System Load: 0.0%
+        Memory Utilization: 0.0%
+        MIPS Utilization: 0.0%
+        Bandwidth Utilization: 0.0%
+        Average Power: 177.64W
+        Total Energy: 0.02kWh
+
+====================================================================================================
