@@ -43,31 +43,47 @@ CLOUD_SERVICES_CONFIG = [
     }
 ]
 
-# Fog node configurations
+# Fog Nodes Configuration
 FOG_NODES_CONFIG = [
-    # Fog Node 1 - North America
     {
-        "name": "Fog-NA-1",
-        "mips": 50000,  # Half of cloud MIPS
-        "bandwidth": 10000,  # 10 Gbps
-        "memory": 51200,  # Half of cloud memory
-        "location": {"lat": 40.7128, "lon": -74.0060},  # New York
+        "name": "Fog-SG1",
+        "mips": 5000,  # Lower than cloud but still powerful
+        "bandwidth": 1000,  # 1 Gbps
+        "memory": 8192,  # 8GB
+        "location": {
+            "lat": 4.3521,
+            "lon": 97.8198
+        }
     },
-    # Fog Node 2 - North America
     {
-        "name": "Fog-NA-2",
-        "mips": 50000,
-        "bandwidth": 10000,
-        "memory": 51200,
-        "location": {"lat": 34.0522, "lon": -118.2437},  # Los Angeles
+        "name": "Fog-SG2",
+        "mips": 4000,
+        "bandwidth": 800,
+        "memory": 6144,  # 6GB
+        "location": {
+            "lat": 10.3521,
+            "lon": 108.8198
+        }
     },
-    # Fog Node 3 - Asia
     {
-        "name": "Fog-AS-1",
-        "mips": 100000,
-        "bandwidth": 25000,
-        "memory": 101200,
-        "location": {"lat": 35.6762, "lon": 139.6503},  # Tokyo
+        "name": "Fog-KC1",
+        "mips": 5000,
+        "bandwidth": 1000,
+        "memory": 8192,
+        "location": {
+            "lat": 32.0997,
+            "lon": -98.5786
+        }
+    },
+    {
+        "name": "Fog-KC2",
+        "mips": 4000,
+        "bandwidth": 800,
+        "memory": 6144,
+        "location": {
+            "lat": 45.0997,
+            "lon": -85.5786
+        }
     }
 ]
 

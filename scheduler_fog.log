@@ -1,0 +1,1077 @@
+
+====================================================================================================
+Scheduler Log - FOG Mode
+Started at: 2025-05-23 20:53:48
+Configuration:
+    Number of Nodes: 4
+    Node Types: Fog-SG1, Fog-SG2, Fog-KC1, Fog-KC2
+    Cloud Nodes: 0
+    Fog Nodes: 4
+====================================================================================================
+
+[2025-05-23 20:53:48.068] Scheduling task 1
+Task Details:
+    Task ID: 1
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 270MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.068] Calculated distance: 14678.39km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.069] Calculated distance: 13896.70km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.069] Calculated distance: 1879.45km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.069] Calculated distance: 271.71km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.069] Node Fog-KC2 score: 6.79 (Distance: 271.71km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.070] Node Fog-KC1 score: 37.59 (Distance: 1879.45km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.070] Selected node: Fog-KC2 with score: 6.79
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.070] Task 1 added to queue of Fog-KC2
+Task Details:
+    Task ID: 1
+    Node: Fog-KC2
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 270MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.072] Scheduling task 2
+Task Details:
+    Task ID: 2
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 80MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.073] Calculated distance: 1651.28km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.073] Calculated distance: 2946.50km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.073] Calculated distance: 16026.17km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.074] Calculated distance: 14465.66km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.074] Node Fog-SG1 score: 33.03 (Distance: 1651.28km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.074] Node Fog-SG2 score: 73.66 (Distance: 2946.50km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.074] Selected node: Fog-SG1 with score: 33.03
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.075] Task 2 added to queue of Fog-SG1
+Task Details:
+    Task ID: 2
+    Node: Fog-SG1
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 80MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.075] Scheduling task 3
+Task Details:
+    Task ID: 3
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.076] Calculated distance: 15670.47km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.076] Calculated distance: 15109.33km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.077] Calculated distance: 2392.70km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.077] Calculated distance: 1661.24km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.077] Node Fog-KC2 score: 41.53 (Distance: 1661.24km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.078] Node Fog-KC1 score: 47.85 (Distance: 2392.70km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.078] Selected node: Fog-KC2 with score: 41.53
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.078] Task 3 added to queue of Fog-KC2
+Task Details:
+    Task ID: 3
+    Node: Fog-KC2
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.079] Scheduling task 4
+Task Details:
+    Task ID: 4
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.079] Calculated distance: 4150.88km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.080] Calculated distance: 4472.90km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.080] Calculated distance: 12645.51km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.080] Calculated distance: 10990.76km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.081] Node Fog-SG1 score: 83.02 (Distance: 4150.88km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.081] Node Fog-SG2 score: 111.82 (Distance: 4472.90km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.081] Selected node: Fog-SG1 with score: 83.02
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.081] Task 4 added to queue of Fog-SG1
+Task Details:
+    Task ID: 4
+    Node: Fog-SG1
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.082] Scheduling task 5
+Task Details:
+    Task ID: 5
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 130MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.082] Calculated distance: 15236.92km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.082] Calculated distance: 14434.56km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.083] Calculated distance: 1586.32km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.083] Calculated distance: 752.68km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.083] Node Fog-KC2 score: 18.82 (Distance: 752.68km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.084] Node Fog-KC1 score: 31.73 (Distance: 1586.32km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.084] Selected node: Fog-KC2 with score: 18.82
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.084] Task 5 added to queue of Fog-KC2
+Task Details:
+    Task ID: 5
+    Node: Fog-KC2
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 130MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.085] Scheduling task 6
+Task Details:
+    Task ID: 6
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 126MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.085] Calculated distance: 2520.47km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.085] Calculated distance: 1228.84km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.085] Calculated distance: 13817.43km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.086] Calculated distance: 13403.01km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.087] Node Fog-SG2 score: 30.72 (Distance: 1228.84km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.087] Node Fog-SG1 score: 50.41 (Distance: 2520.47km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.088] Selected node: Fog-SG2 with score: 30.72
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.088] Task 6 added to queue of Fog-SG2
+Task Details:
+    Task ID: 6
+    Node: Fog-SG2
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 126MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.089] Scheduling task 7
+Task Details:
+    Task ID: 7
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.089] Calculated distance: 8354.04km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.090] Calculated distance: 6974.24km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.090] Calculated distance: 7987.33km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.090] Calculated distance: 8236.72km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.090] Node Fog-SG2 score: 174.36 (Distance: 6974.24km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.090] Node Fog-KC1 score: 159.75 (Distance: 7987.33km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.091] Selected node: Fog-KC1 with score: 159.75
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.091] Task 7 added to queue of Fog-KC1
+Task Details:
+    Task ID: 7
+    Node: Fog-KC1
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.091] Scheduling task 8
+Task Details:
+    Task ID: 8
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.091] Calculated distance: 4973.02km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.092] Calculated distance: 6192.23km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.092] Calculated distance: 19213.01km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.092] Calculated distance: 17800.26km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.092] Node Fog-SG1 score: 99.46 (Distance: 4973.02km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.092] Node Fog-SG2 score: 154.81 (Distance: 6192.23km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.092] Selected node: Fog-SG1 with score: 99.46
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.093] Task 8 added to queue of Fog-SG1
+Task Details:
+    Task ID: 8
+    Node: Fog-SG1
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.093] Scheduling task 9
+Task Details:
+    Task ID: 9
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.093] Calculated distance: 4151.79km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.093] Calculated distance: 4474.01km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.094] Calculated distance: 12645.23km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.094] Calculated distance: 10990.33km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.094] Node Fog-SG1 score: 83.04 (Distance: 4151.79km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.094] Node Fog-SG2 score: 111.85 (Distance: 4474.01km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.094] Selected node: Fog-SG1 with score: 83.04
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.094] Task 9 added to queue of Fog-SG1
+Task Details:
+    Task ID: 9
+    Node: Fog-SG1
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.095] Scheduling task 10
+Task Details:
+    Task ID: 10
+    Node: N/A
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.095] Calculated distance: 4139.24km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.095] Calculated distance: 4464.14km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.095] Calculated distance: 12658.85km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.096] Calculated distance: 11004.17km between locations
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.096] Node Fog-SG1 score: 82.78 (Distance: 4139.24km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.096] Node Fog-SG2 score: 111.60 (Distance: 4464.14km)
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.096] Selected node: Fog-SG1 with score: 82.78
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.096] Task 10 added to queue of Fog-SG1
+Task Details:
+    Task ID: 10
+    Node: Fog-SG1
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 0.00ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.180] Task 2 completed on Fog-SG1
+Task Details:
+    ID: 2
+    Size: 80MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 105.63ms
+    Processing Time: 79.34ms
+    Transmission Time: 50.92ms
+    Total Time: 130.41ms
+    Response Time: 184.97ms
+Resource Usage:
+    Memory Used: 1827MB
+    Bandwidth Used: 12568.481341776991Mbps
+    Distance: 1651.28km
+Task Details:
+    Task ID: 2
+    Node: Fog-SG1
+    Timing Metrics:
+        Total Time: 130.41ms
+        Response Time: 184.97ms
+        Processing Time: 79.34ms
+        Queue Time: 105.63ms
+        Transmission Time: 50.92ms
+    Resource Usage:
+        Memory Used: 1827MB
+        Bandwidth Used: 12568.481341776991Mbps
+        RAM Required: 0MB
+        Task Size: 80MB
+    Network Metrics:
+        Distance: 1651.28km
+        Queue Size: 4
+    System Load:
+        System Load: 84.6%
+        Bandwidth Utilization: 5092.1%
+        MIPS Utilization: 15867.1%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.227] Task 4 completed on Fog-SG1
+Task Details:
+    ID: 4
+    Size: 300MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 146.02ms
+    Processing Time: 122.44ms
+    Transmission Time: 111.17ms
+    Total Time: 233.72ms
+    Response Time: 268.46ms
+Resource Usage:
+    Memory Used: 1007MB
+    Bandwidth Used: 21588.573226154145Mbps
+    Distance: 4150.88km
+Task Details:
+    Task ID: 4
+    Node: Fog-SG1
+    Timing Metrics:
+        Total Time: 233.72ms
+        Response Time: 268.46ms
+        Processing Time: 122.44ms
+        Queue Time: 146.02ms
+        Transmission Time: 111.17ms
+    Resource Usage:
+        Memory Used: 1007MB
+        Bandwidth Used: 21588.573226154145Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 4150.88km
+        Queue Size: 3
+    System Load:
+        System Load: 13.0%
+        Bandwidth Utilization: 8104.5%
+        MIPS Utilization: 20177.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.228] Task 8 completed on Fog-SG1
+Task Details:
+    ID: 8
+    Size: 170MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 135.36ms
+    Processing Time: 124.47ms
+    Transmission Time: 132.26ms
+    Total Time: 256.80ms
+    Response Time: 259.83ms
+Resource Usage:
+    Memory Used: 4862MB
+    Bandwidth Used: 10283.08167666777Mbps
+    Distance: 4973.02km
+Task Details:
+    Task ID: 8
+    Node: Fog-SG1
+    Timing Metrics:
+        Total Time: 256.80ms
+        Response Time: 259.83ms
+        Processing Time: 124.47ms
+        Queue Time: 135.36ms
+        Transmission Time: 132.26ms
+    Resource Usage:
+        Memory Used: 4862MB
+        Bandwidth Used: 10283.08167666777Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 4973.02km
+        Queue Size: 2
+    System Load:
+        System Load: 13.0%
+        Bandwidth Utilization: 9811.6%
+        MIPS Utilization: 21749.7%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.243] Task 6 completed on Fog-SG2
+Task Details:
+    ID: 6
+    Size: 126MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 154.40ms
+    Processing Time: 140.92ms
+    Transmission Time: 45.47ms
+    Total Time: 186.49ms
+    Response Time: 295.32ms
+Resource Usage:
+    Memory Used: 3919MB
+    Bandwidth Used: 22169.184402504874Mbps
+    Distance: 1228.84km
+Task Details:
+    Task ID: 6
+    Node: Fog-SG2
+    Timing Metrics:
+        Total Time: 186.49ms
+        Response Time: 295.32ms
+        Processing Time: 140.92ms
+        Queue Time: 154.40ms
+        Transmission Time: 45.47ms
+    Resource Usage:
+        Memory Used: 3919MB
+        Bandwidth Used: 22169.184402504874Mbps
+        RAM Required: 0MB
+        Task Size: 126MB
+    Network Metrics:
+        Distance: 1228.84km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.258] Task 7 completed on Fog-KC1
+Task Details:
+    ID: 7
+    Size: 170MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 167.58ms
+    Processing Time: 146.51ms
+    Transmission Time: 265.30ms
+    Total Time: 411.87ms
+    Response Time: 314.10ms
+Resource Usage:
+    Memory Used: 2997MB
+    Bandwidth Used: 5126.368016378386Mbps
+    Distance: 7987.33km
+Task Details:
+    Task ID: 7
+    Node: Fog-KC1
+    Timing Metrics:
+        Total Time: 411.87ms
+        Response Time: 314.10ms
+        Processing Time: 146.51ms
+        Queue Time: 167.58ms
+        Transmission Time: 265.30ms
+    Resource Usage:
+        Memory Used: 2997MB
+        Bandwidth Used: 5126.368016378386Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 7987.33km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.275] Task 10 completed on Fog-SG1
+Task Details:
+    ID: 10
+    Size: 170MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 178.35ms
+    Processing Time: 80.12ms
+    Transmission Time: 100.42ms
+    Total Time: 263.18ms
+    Response Time: 258.46ms
+Resource Usage:
+    Memory Used: 1061MB
+    Bandwidth Used: 13542.787304673811Mbps
+    Distance: 4139.24km
+Task Details:
+    Task ID: 10
+    Node: Fog-SG1
+    Timing Metrics:
+        Total Time: 263.18ms
+        Response Time: 258.46ms
+        Processing Time: 80.12ms
+        Queue Time: 178.35ms
+        Transmission Time: 100.42ms
+    Resource Usage:
+        Memory Used: 1061MB
+        Bandwidth Used: 13542.787304673811Mbps
+        RAM Required: 0MB
+        Task Size: 170MB
+    Network Metrics:
+        Distance: 4139.24km
+        Queue Size: 1
+    System Load:
+        System Load: 28.5%
+        Bandwidth Utilization: 9869.2%
+        MIPS Utilization: 20318.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.322] Task 1 completed on Fog-KC2
+Task Details:
+    ID: 1
+    Size: 270MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 251.81ms
+    Processing Time: 224.18ms
+    Transmission Time: 43.05ms
+    Total Time: 267.45ms
+    Response Time: 475.99ms
+Resource Usage:
+    Memory Used: 4965MB
+    Bandwidth Used: 50177.91900590315Mbps
+    Distance: 271.71km
+Task Details:
+    Task ID: 1
+    Node: Fog-KC2
+    Timing Metrics:
+        Total Time: 267.45ms
+        Response Time: 475.99ms
+        Processing Time: 224.18ms
+        Queue Time: 251.81ms
+        Transmission Time: 43.05ms
+    Resource Usage:
+        Memory Used: 4965MB
+        Bandwidth Used: 50177.91900590315Mbps
+        RAM Required: 0MB
+        Task Size: 270MB
+    Network Metrics:
+        Distance: 271.71km
+        Queue Size: 2
+    System Load:
+        System Load: 67.0%
+        Bandwidth Utilization: 5380.9%
+        MIPS Utilization: 56044.8%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.368] Task 9 completed on Fog-SG1
+Task Details:
+    ID: 9
+    Size: 300MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 273.53ms
+    Processing Time: 135.21ms
+    Transmission Time: 123.96ms
+    Total Time: 393.23ms
+    Response Time: 408.74ms
+Resource Usage:
+    Memory Used: 2334MB
+    Bandwidth Used: 19360.59694685524Mbps
+    Distance: 4151.79km
+Task Details:
+    Task ID: 9
+    Node: Fog-SG1
+    Timing Metrics:
+        Total Time: 393.23ms
+        Response Time: 408.74ms
+        Processing Time: 135.21ms
+        Queue Time: 273.53ms
+        Transmission Time: 123.96ms
+    Resource Usage:
+        Memory Used: 2334MB
+        Bandwidth Used: 19360.59694685524Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 4151.79km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.448] Task 5 completed on Fog-KC2
+Task Details:
+    ID: 5
+    Size: 130MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 363.75ms
+    Processing Time: 128.05ms
+    Transmission Time: 36.95ms
+    Total Time: 386.49ms
+    Response Time: 491.81ms
+Resource Usage:
+    Memory Used: 2466MB
+    Bandwidth Used: 28148.95730010541Mbps
+    Distance: 752.68km
+Task Details:
+    Task ID: 5
+    Node: Fog-KC2
+    Timing Metrics:
+        Total Time: 386.49ms
+        Response Time: 491.81ms
+        Processing Time: 128.05ms
+        Queue Time: 363.75ms
+        Transmission Time: 36.95ms
+    Resource Usage:
+        Memory Used: 2466MB
+        Bandwidth Used: 28148.95730010541Mbps
+        RAM Required: 0MB
+        Task Size: 130MB
+    Network Metrics:
+        Distance: 752.68km
+        Queue Size: 1
+    System Load:
+        System Load: 26.9%
+        Bandwidth Utilization: 4999.6%
+        MIPS Utilization: 44029.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.510] Task 3 completed on Fog-KC2
+Task Details:
+    ID: 3
+    Size: 300MB
+    Memory Required: 512MB
+    Bandwidth Required: 100Mbps
+Timing Metrics:
+    Queue Time: 432.21ms
+    Processing Time: 186.70ms
+    Transmission Time: 76.56ms
+    Total Time: 505.44ms
+    Response Time: 618.91ms
+Resource Usage:
+    Memory Used: 1652MB
+    Bandwidth Used: 31349.04903870734Mbps
+    Distance: 1661.24km
+Task Details:
+    Task ID: 3
+    Node: Fog-KC2
+    Timing Metrics:
+        Total Time: 505.44ms
+        Response Time: 618.91ms
+        Processing Time: 186.70ms
+        Queue Time: 432.21ms
+        Transmission Time: 76.56ms
+    Resource Usage:
+        Memory Used: 1652MB
+        Bandwidth Used: 31349.04903870734Mbps
+        RAM Required: 0MB
+        Task Size: 300MB
+    Network Metrics:
+        Distance: 1661.24km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.523] Stats for Fog-SG1: {'node_id': 0, 'name': 'Fog-SG1', 'total_processed': 5, 'avg_processing_time': 108.31376406569898, 'avg_transmission_time': 103.74652045250647, 'avg_queue_time': 167.78020858764648, 'memory_utilization': 0.0, 'mips_utilization': 0, 'bandwidth_utilization': 0, 'current_tasks': 0, 'queue_size': 0, 'system_load': 0, 'used_memory': 0, 'used_mips': 0, 'used_bandwidth': 0, 'available_memory': 8192, 'available_mips': 5000, 'available_bandwidth': 1000, 'power_consumption': {'current_power': 35.0, 'cpu_power': 20.0, 'memory_power': 10.0, 'network_power': 5.0, 'total_energy': 0.007497630051440993, 'average_power': 69.3434050022568, 'peak_power': 104.67771515493064}, 'avg_response_time': 276.0939726533455, 'avg_total_time': 255.46724786659416, 'min_processing_time': 79.33531086947173, 'max_processing_time': 135.20843967678533, 'min_queue_time': 105.63325881958008, 'max_queue_time': 273.53382110595703, 'min_response_time': 184.9685696890518, 'max_response_time': 408.7422607827424, 'avg_power': 0, 'total_energy': 0.007497630051440993}
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.524] Stats for Fog-SG2: {'node_id': 1, 'name': 'Fog-SG2', 'total_processed': 1, 'avg_processing_time': 140.9210123285431, 'avg_transmission_time': 45.46851980202335, 'avg_queue_time': 154.39891815185547, 'memory_utilization': 0.0, 'mips_utilization': 0, 'bandwidth_utilization': 0, 'current_tasks': 0, 'queue_size': 0, 'system_load': 0, 'used_memory': 0, 'used_mips': 0, 'used_bandwidth': 0, 'available_memory': 6144, 'available_mips': 4000, 'available_bandwidth': 800, 'power_consumption': {'current_power': 35.0, 'cpu_power': 20.0, 'memory_power': 10.0, 'network_power': 5.0, 'total_energy': 0.005987433485308813, 'average_power': 49.55111255664819, 'peak_power': 74.28800390295011}, 'avg_response_time': 295.31993048039857, 'avg_total_time': 186.49014477094732, 'min_processing_time': 140.9210123285431, 'max_processing_time': 140.9210123285431, 'min_queue_time': 154.39891815185547, 'max_queue_time': 154.39891815185547, 'min_response_time': 295.31993048039857, 'max_response_time': 295.31993048039857, 'avg_power': 0, 'total_energy': 0.005987433485308813}
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.527] Stats for Fog-KC1: {'node_id': 2, 'name': 'Fog-KC1', 'total_processed': 1, 'avg_processing_time': 146.51401089833433, 'avg_transmission_time': 265.295038447278, 'avg_queue_time': 167.58322715759277, 'memory_utilization': 0.0, 'mips_utilization': 0, 'bandwidth_utilization': 0, 'current_tasks': 0, 'queue_size': 0, 'system_load': 0, 'used_memory': 0, 'used_mips': 0, 'used_bandwidth': 0, 'available_memory': 8192, 'available_mips': 5000, 'available_bandwidth': 1000, 'power_consumption': {'current_power': 35.0, 'cpu_power': 20.0, 'memory_power': 10.0, 'network_power': 5.0, 'total_energy': 0.005680157304769087, 'average_power': 43.32437722843794, 'peak_power': 63.354909934366745}, 'avg_response_time': 314.0972380559271, 'avg_total_time': 411.8650777117012, 'min_processing_time': 146.51401089833433, 'max_processing_time': 146.51401089833433, 'min_queue_time': 167.58322715759277, 'max_queue_time': 167.58322715759277, 'min_response_time': 314.0972380559271, 'max_response_time': 314.0972380559271, 'avg_power': 0, 'total_energy': 0.005680157304769087}
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.528] Stats for Fog-KC2: {'node_id': 3, 'name': 'Fog-KC2', 'total_processed': 3, 'avg_processing_time': 179.64369737575421, 'avg_transmission_time': 52.18349186228497, 'avg_queue_time': 349.2581049601237, 'memory_utilization': 0.0, 'mips_utilization': 0, 'bandwidth_utilization': 0, 'current_tasks': 0, 'queue_size': 0, 'system_load': 0, 'used_memory': 0, 'used_mips': 0, 'used_bandwidth': 0, 'available_memory': 6144, 'available_mips': 4000, 'available_bandwidth': 800, 'power_consumption': {'current_power': 35.0, 'cpu_power': 20.0, 'memory_power': 10.0, 'network_power': 5.0, 'total_energy': 0.009307016240294428, 'average_power': 80.1371786477549, 'peak_power': 91.99003159108665}, 'avg_response_time': 528.901802335878, 'avg_total_time': 386.4592012873963, 'min_processing_time': 128.054434882351, 'max_processing_time': 224.17939515534616, 'min_queue_time': 251.80745124816895, 'max_queue_time': 432.21426010131836, 'min_response_time': 475.9868464035151, 'max_response_time': 618.9115221908839, 'avg_power': 0, 'total_energy': 0.009307016240294428}
+----------------------------------------------------------------------------------------------------
+====================================================================================================
+SCHEDULER SUMMARY REPORT - FOG Mode
+====================================================================================================
+
+System-wide Statistics:
+    Total Tasks Processed: 10
+    Total Processing Time: 1367.93ms
+    Total Queue Time: 2208.66ms
+    Total Transmission Time: 986.05ms
+    Total Response Time: 3576.59ms
+
+Power Consumption Summary:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.03kWh
+    Average Power per Node: 35.00W
+    Average Energy per Node: 0.01kWh
+
+Average Metrics:
+    Processing Time: 136.79ms
+    Queue Time: 220.87ms
+    Transmission Time: 98.60ms
+    Response Time: 357.66ms
+
+Node Performance:
+
+    Fog-SG1:
+        Tasks Processed: 5
+        Average Processing Time: 108.31ms
+        Average Queue Time: 167.78ms
+        Average Response Time: 276.09ms
+        Current Queue Size: 0
+        System Load: 0.0%
+        Memory Utilization: 0.0%
+        MIPS Utilization: 0.0%
+        Bandwidth Utilization: 0.0%
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+
+    Fog-SG2:
+        Tasks Processed: 1
+        Average Processing Time: 140.92ms
+        Average Queue Time: 154.40ms
+        Average Response Time: 295.32ms
+        Current Queue Size: 0
+        System Load: 0.0%
+        Memory Utilization: 0.0%
+        MIPS Utilization: 0.0%
+        Bandwidth Utilization: 0.0%
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+
+    Fog-KC1:
+        Tasks Processed: 1
+        Average Processing Time: 146.51ms
+        Average Queue Time: 167.58ms
+        Average Response Time: 314.10ms
+        Current Queue Size: 0
+        System Load: 0.0%
+        Memory Utilization: 0.0%
+        MIPS Utilization: 0.0%
+        Bandwidth Utilization: 0.0%
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+
+    Fog-KC2:
+        Tasks Processed: 3
+        Average Processing Time: 179.64ms
+        Average Queue Time: 349.26ms
+        Average Response Time: 528.90ms
+        Current Queue Size: 0
+        System Load: 0.0%
+        Memory Utilization: 0.0%
+        MIPS Utilization: 0.0%
+        Bandwidth Utilization: 0.0%
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+
+====================================================================================================

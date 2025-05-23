@@ -1,7 +1,7 @@
 
 ====================================================================================================
 Cloud Node Log - Cloud-AS
-Started at: 2025-05-22 21:51:37
+Started at: 2025-05-23 20:48:37
 Node Configuration:
     MIPS: 9000
     Memory: 9024 MB
@@ -9,7 +9,7 @@ Node Configuration:
     Location: 1.3521, 103.8198
 ====================================================================================================
 
-[2025-05-22 21:51:37.711] Calculated processing time: 123.94ms for task size 270MB
+[2025-05-23 20:48:37.610] Calculated processing time: 130.73ms for task size 270MB
 Power Consumption:
     Total Power: 80.00W
     CPU Power: 50.00W (0.0% utilization)
@@ -26,14 +26,14 @@ Resource Utilization:
     MIPS: 0.0%
     Bandwidth: 0.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.711] Starting task processing
+[2025-05-23 20:48:37.610] Starting task processing
 Task Details:
-    Task ID: 1507943152640
+    Task ID: 2548143590464
     Node: Cloud-AS
     Timing Metrics:
         Total Time: 0.00ms
         Response Time: 0.00ms
-        Processing Time: 123.94ms
+        Processing Time: 130.73ms
         Queue Time: 0.00ms
         Transmission Time: 0.00ms
     Resource Usage:
@@ -64,31 +64,31 @@ Resource Utilization:
     MIPS: 0.0%
     Bandwidth: 0.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.711] Calculated processing time: 123.55ms for task size 80MB
+[2025-05-23 20:48:37.612] Calculated processing time: 108.57ms for task size 80MB
 Power Consumption:
-    Total Power: 122.98W
-    CPU Power: 68.59W (12.4% utilization)
-    Memory Power: 43.95W (29.9% utilization)
+    Total Power: 133.63W
+    CPU Power: 69.61W (13.1% utilization)
+    Memory Power: 53.58W (42.0% utilization)
     Network Power: 10.44W (1.1% utilization)
 Node Metrics:
     Tasks Processed: 1
     Current Queue Size: 1
     Active Tasks: 1
-    Throughput: 8.07 tasks/second
-    Average Task Interval: 123.94ms
+    Throughput: 7.65 tasks/second
+    Average Task Interval: 130.73ms
 Resource Utilization:
-    Memory: 29.9%
-    MIPS: 12.4%
+    Memory: 42.0%
+    MIPS: 13.1%
     Bandwidth: 1.1%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.711] Starting task processing
+[2025-05-23 20:48:37.612] Starting task processing
 Task Details:
-    Task ID: 1507943152000
+    Task ID: 2548143592576
     Node: Cloud-AS
     Timing Metrics:
         Total Time: 0.00ms
         Response Time: 0.00ms
-        Processing Time: 123.55ms
+        Processing Time: 108.57ms
         Queue Time: 0.00ms
         Transmission Time: 0.00ms
     Resource Usage:
@@ -104,46 +104,46 @@ Task Details:
         Bandwidth Utilization: 0.0%
         MIPS Utilization: 0.0%
 Power Consumption:
-    Total Power: 122.98W
-    CPU Power: 68.59W (12.4% utilization)
-    Memory Power: 43.95W (29.9% utilization)
+    Total Power: 133.63W
+    CPU Power: 69.61W (13.1% utilization)
+    Memory Power: 53.58W (42.0% utilization)
     Network Power: 10.44W (1.1% utilization)
 Node Metrics:
     Tasks Processed: 1
     Current Queue Size: 1
     Active Tasks: 1
-    Throughput: 8.07 tasks/second
-    Average Task Interval: 123.94ms
+    Throughput: 7.65 tasks/second
+    Average Task Interval: 130.73ms
 Resource Utilization:
-    Memory: 29.9%
-    MIPS: 12.4%
+    Memory: 42.0%
+    MIPS: 13.1%
     Bandwidth: 1.1%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.712] Calculated processing time: 102.12ms for task size 300MB
+[2025-05-23 20:48:37.615] Calculated processing time: 119.62ms for task size 300MB
 Power Consumption:
-    Total Power: 178.72W
-    CPU Power: 87.12W (24.7% utilization)
-    Memory Power: 80.71W (75.9% utilization)
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
     Network Power: 10.89W (2.2% utilization)
 Node Metrics:
     Tasks Processed: 2
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 8.08 tasks/second
-    Average Task Interval: 123.74ms
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
 Resource Utilization:
-    Memory: 75.9%
-    MIPS: 24.7%
+    Memory: 90.1%
+    MIPS: 23.9%
     Bandwidth: 2.2%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.713] Starting task processing
+[2025-05-23 20:48:37.615] Starting task processing
 Task Details:
-    Task ID: 1507943150848
+    Task ID: 2548143593344
     Node: Cloud-AS
     Timing Metrics:
         Total Time: 0.00ms
         Response Time: 0.00ms
-        Processing Time: 102.12ms
+        Processing Time: 119.62ms
         Queue Time: 0.00ms
         Transmission Time: 0.00ms
     Resource Usage:
@@ -159,46 +159,29 @@ Task Details:
         Bandwidth Utilization: 0.0%
         MIPS Utilization: 0.0%
 Power Consumption:
-    Total Power: 178.72W
-    CPU Power: 87.12W (24.7% utilization)
-    Memory Power: 80.71W (75.9% utilization)
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
     Network Power: 10.89W (2.2% utilization)
 Node Metrics:
     Tasks Processed: 2
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 8.08 tasks/second
-    Average Task Interval: 123.74ms
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
 Resource Utilization:
-    Memory: 75.9%
-    MIPS: 24.7%
+    Memory: 90.1%
+    MIPS: 23.9%
     Bandwidth: 2.2%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.714] Calculated processing time: 115.84ms for task size 126MB
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.714] Starting task processing
+[2025-05-23 20:48:37.615] Waiting for resources
 Task Details:
-    Task ID: 1507943149696
+    Task ID: 2548143593344
     Node: Cloud-AS
     Timing Metrics:
         Total Time: 0.00ms
         Response Time: 0.00ms
-        Processing Time: 115.84ms
+        Processing Time: 119.62ms
         Queue Time: 0.00ms
         Transmission Time: 0.00ms
     Resource Usage:
@@ -214,1822 +197,1533 @@ Task Details:
         Bandwidth Utilization: 0.0%
         MIPS Utilization: 0.0%
 Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.714] Waiting for resources
-Task Details:
-    Task ID: 1507943149696
-    Node: Cloud-AS
-    Timing Metrics:
-        Total Time: 0.00ms
-        Response Time: 0.00ms
-        Processing Time: 115.84ms
-        Queue Time: 0.00ms
-        Transmission Time: 0.00ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 0.00km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.714] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.715] Calculated processing time: 107.12ms for task size 170MB
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.715] Starting task processing
-Task Details:
-    Task ID: 1507943149120
-    Node: Cloud-AS
-    Timing Metrics:
-        Total Time: 0.00ms
-        Response Time: 0.00ms
-        Processing Time: 107.12ms
-        Queue Time: 0.00ms
-        Transmission Time: 0.00ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 0.00km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.715] Waiting for resources
-Task Details:
-    Task ID: 1507943149120
-    Node: Cloud-AS
-    Timing Metrics:
-        Total Time: 0.00ms
-        Response Time: 0.00ms
-        Processing Time: 107.12ms
-        Queue Time: 0.00ms
-        Transmission Time: 0.00ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 0.00km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.715] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.715] Calculated processing time: 118.73ms for task size 170MB
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.715] Starting task processing
-Task Details:
-    Task ID: 1507943148544
-    Node: Cloud-AS
-    Timing Metrics:
-        Total Time: 0.00ms
-        Response Time: 0.00ms
-        Processing Time: 118.73ms
-        Queue Time: 0.00ms
-        Transmission Time: 0.00ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 0.00km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.715] Waiting for resources
-Task Details:
-    Task ID: 1507943148544
-    Node: Cloud-AS
-    Timing Metrics:
-        Total Time: 0.00ms
-        Response Time: 0.00ms
-        Processing Time: 118.73ms
-        Queue Time: 0.00ms
-        Transmission Time: 0.00ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 0.00km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.715] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.716] Calculated processing time: 145.56ms for task size 300MB
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.716] Starting task processing
-Task Details:
-    Task ID: 1507943146944
-    Node: Cloud-AS
-    Timing Metrics:
-        Total Time: 0.00ms
-        Response Time: 0.00ms
-        Processing Time: 145.56ms
-        Queue Time: 0.00ms
-        Transmission Time: 0.00ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 0.00km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.716] Waiting for resources
-Task Details:
-    Task ID: 1507943146944
-    Node: Cloud-AS
-    Timing Metrics:
-        Total Time: 0.00ms
-        Response Time: 0.00ms
-        Processing Time: 145.56ms
-        Queue Time: 0.00ms
-        Transmission Time: 0.00ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 0.00km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.716] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.717] Calculated processing time: 100.87ms for task size 170MB
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.717] Starting task processing
-Task Details:
-    Task ID: 1507943146624
-    Node: Cloud-AS
-    Timing Metrics:
-        Total Time: 0.00ms
-        Response Time: 0.00ms
-        Processing Time: 100.87ms
-        Queue Time: 0.00ms
-        Transmission Time: 0.00ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 0.00km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.717] Waiting for resources
-Task Details:
-    Task ID: 1507943146624
-    Node: Cloud-AS
-    Timing Metrics:
-        Total Time: 0.00ms
-        Response Time: 0.00ms
-        Processing Time: 100.87ms
-        Queue Time: 0.00ms
-        Transmission Time: 0.00ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 0.00km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.717] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.717] Task 1507943152640 started parallel processing. Expected time: 123.94ms
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.717] Task 1507943152000 started parallel processing. Expected time: 123.55ms
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.717] Task 1507943150848 started parallel processing. Expected time: 102.12ms
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.717] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.717] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.717] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.717] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.722] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.723] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.723] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.723] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.723] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.726] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.726] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.726] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.726] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.726] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.727] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.727] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.727] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.727] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.727] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.730] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.730] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.730] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.731] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.731] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.738] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.739] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.739] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.739] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.739] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.742] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.742] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.742] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.742] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.742] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.757] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.758] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.758] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.758] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.758] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.773] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.773] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.773] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.773] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.774] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.790] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.790] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.790] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.790] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.790] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.806] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.807] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.807] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.807] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.807] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.814] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.814] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.814] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.814] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.815] Waiting for resources. Active tasks: 3, Total Memory Used: 8293MB/9024MB, Total MIPS Used: 3146.496665948015/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 207.29W
-    CPU Power: 102.44W (35.0% utilization)
-    Memory Power: 93.52W (91.9% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 91.9%
-    MIPS: 35.0%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.830] Waiting for resources. Active tasks: 2, Total Memory Used: 6848MB/9024MB, Total MIPS Used: 2227.395842698965/9000, Total Bandwidth Used: 200Mbps/9000Mbps
-Power Consumption:
-    Total Power: 178.72W
-    CPU Power: 87.12W (24.7% utilization)
-    Memory Power: 80.71W (75.9% utilization)
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
     Network Power: 10.89W (2.2% utilization)
 Node Metrics:
-    Tasks Processed: 3
+    Tasks Processed: 2
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
 Resource Utilization:
-    Memory: 75.9%
-    MIPS: 24.7%
+    Memory: 90.1%
+    MIPS: 23.9%
     Bandwidth: 2.2%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.830] Waiting for resources. Active tasks: 2, Total Memory Used: 6848MB/9024MB, Total MIPS Used: 2227.395842698965/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+[2025-05-23 20:48:37.615] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
 Power Consumption:
-    Total Power: 178.72W
-    CPU Power: 87.12W (24.7% utilization)
-    Memory Power: 80.71W (75.9% utilization)
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
     Network Power: 10.89W (2.2% utilization)
 Node Metrics:
-    Tasks Processed: 3
+    Tasks Processed: 2
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
 Resource Utilization:
-    Memory: 75.9%
-    MIPS: 24.7%
+    Memory: 90.1%
+    MIPS: 23.9%
     Bandwidth: 2.2%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.830] Waiting for resources. Active tasks: 2, Total Memory Used: 6848MB/9024MB, Total MIPS Used: 2227.395842698965/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+[2025-05-23 20:48:37.619] Calculated processing time: 83.11ms for task size 126MB
 Power Consumption:
-    Total Power: 178.72W
-    CPU Power: 87.12W (24.7% utilization)
-    Memory Power: 80.71W (75.9% utilization)
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
     Network Power: 10.89W (2.2% utilization)
 Node Metrics:
-    Tasks Processed: 3
+    Tasks Processed: 2
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
 Resource Utilization:
-    Memory: 75.9%
-    MIPS: 24.7%
+    Memory: 90.1%
+    MIPS: 23.9%
     Bandwidth: 2.2%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.830] Waiting for resources. Active tasks: 2, Total Memory Used: 6848MB/9024MB, Total MIPS Used: 2227.395842698965/9000, Total Bandwidth Used: 200Mbps/9000Mbps
-Power Consumption:
-    Total Power: 178.72W
-    CPU Power: 87.12W (24.7% utilization)
-    Memory Power: 80.71W (75.9% utilization)
-    Network Power: 10.89W (2.2% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 2
-    Active Tasks: 2
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 75.9%
-    MIPS: 24.7%
-    Bandwidth: 2.2%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.830] Waiting for resources. Active tasks: 2, Total Memory Used: 6848MB/9024MB, Total MIPS Used: 2227.395842698965/9000, Total Bandwidth Used: 200Mbps/9000Mbps
-Power Consumption:
-    Total Power: 178.72W
-    CPU Power: 87.12W (24.7% utilization)
-    Memory Power: 80.71W (75.9% utilization)
-    Network Power: 10.89W (2.2% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 2
-    Active Tasks: 2
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 75.9%
-    MIPS: 24.7%
-    Bandwidth: 2.2%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.830] Task 1507943150848 completed parallel processing. Processing time: 102.12ms. Remaining active tasks: 2, Total Memory Used: 6848MB/9024MB, Total MIPS Used: 2227.395842698965/9000, Total Bandwidth Used: 200Mbps/9000Mbps
-Power Consumption:
-    Total Power: 178.72W
-    CPU Power: 87.12W (24.7% utilization)
-    Memory Power: 80.71W (75.9% utilization)
-    Network Power: 10.89W (2.2% utilization)
-Node Metrics:
-    Tasks Processed: 3
-    Current Queue Size: 2
-    Active Tasks: 2
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
-Resource Utilization:
-    Memory: 75.9%
-    MIPS: 24.7%
-    Bandwidth: 2.2%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.830] Task completed
+[2025-05-23 20:48:37.619] Starting task processing
 Task Details:
-    Task ID: 1507943150848
+    Task ID: 2548143594176
     Node: Cloud-AS
     Timing Metrics:
-        Total Time: 232.52ms
+        Total Time: 0.00ms
         Response Time: 0.00ms
-        Processing Time: 102.12ms
-        Queue Time: 0.05ms
-        Transmission Time: 130.35ms
+        Processing Time: 83.11ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
     Resource Usage:
         Memory Used: 0MB
         Bandwidth Used: 0Mbps
         RAM Required: 0MB
         Task Size: 0MB
     Network Metrics:
-        Distance: 4817.13km
-        Queue Size: 2
+        Distance: 0.00km
+        Queue Size: 0
     System Load:
         System Load: 0.0%
         Bandwidth Utilization: 0.0%
         MIPS Utilization: 0.0%
 Power Consumption:
-    Total Power: 178.72W
-    CPU Power: 87.12W (24.7% utilization)
-    Memory Power: 80.71W (75.9% utilization)
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
     Network Power: 10.89W (2.2% utilization)
 Node Metrics:
-    Tasks Processed: 3
+    Tasks Processed: 2
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 8.58 tasks/second
-    Average Task Interval: 116.54ms
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
 Resource Utilization:
-    Memory: 75.9%
-    MIPS: 24.7%
+    Memory: 90.1%
+    MIPS: 23.9%
     Bandwidth: 2.2%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.841] Waiting for resources. Active tasks: 1, Total Memory Used: 1671MB/9024MB, Total MIPS Used: 907.8331923506516/9000, Total Bandwidth Used: 100Mbps/9000Mbps
+[2025-05-23 20:48:37.619] Waiting for resources
+Task Details:
+    Task ID: 2548143594176
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 83.11ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 0MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
 Power Consumption:
-    Total Power: 110.39W
-    CPU Power: 65.13W (10.1% utilization)
-    Memory Power: 34.81W (18.5% utilization)
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.619] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.621] Calculated processing time: 128.48ms for task size 170MB
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.621] Starting task processing
+Task Details:
+    Task ID: 2548143594496
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 128.48ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 0MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.621] Waiting for resources
+Task Details:
+    Task ID: 2548143594496
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 128.48ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 0MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.621] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.622] Calculated processing time: 106.08ms for task size 170MB
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.622] Starting task processing
+Task Details:
+    Task ID: 2548143594880
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 106.08ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 0MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.622] Waiting for resources
+Task Details:
+    Task ID: 2548143594880
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 106.08ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 0MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.623] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.624] Calculated processing time: 147.92ms for task size 300MB
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.624] Starting task processing
+Task Details:
+    Task ID: 2548143595264
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 147.92ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 0MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.624] Waiting for resources
+Task Details:
+    Task ID: 2548143595264
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 147.92ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 0MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.624] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.627] Calculated processing time: 131.45ms for task size 170MB
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.627] Starting task processing
+Task Details:
+    Task ID: 2548143594112
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 131.45ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 0MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.627] Waiting for resources
+Task Details:
+    Task ID: 2548143594112
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 131.45ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 0MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.627] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.628] Task 2548143590464 started parallel processing. Expected time: 130.73ms
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.628] Task 2548143592576 started parallel processing. Expected time: 108.57ms
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.628] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.628] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.628] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.629] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.629] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.629] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.642] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.643] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.643] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.643] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.643] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.643] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.659] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.659] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.659] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.659] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.659] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.659] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.674] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.675] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.675] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.675] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.675] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.675] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.690] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.690] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.690] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.690] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.691] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.691] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.705] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.706] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.706] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.706] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.706] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.706] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.707] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.707] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.707] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.707] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.707] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.707] Waiting for resources. Active tasks: 2, Total Memory Used: 8134MB/9024MB, Total MIPS Used: 2153.6357482295643/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 188.89W
+    CPU Power: 85.89W (23.9% utilization)
+    Memory Power: 92.11W (90.1% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 90.1%
+    MIPS: 23.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.721] Waiting for resources. Active tasks: 1, Total Memory Used: 3788MB/9024MB, Total MIPS Used: 1176.5389100007333/9000, Total Bandwidth Used: 100Mbps/9000Mbps
+Power Consumption:
+    Total Power: 133.63W
+    CPU Power: 69.61W (13.1% utilization)
+    Memory Power: 53.58W (42.0% utilization)
     Network Power: 10.44W (1.1% utilization)
+Node Metrics:
+    Tasks Processed: 2
+    Current Queue Size: 1
+    Active Tasks: 1
+    Throughput: 8.36 tasks/second
+    Average Task Interval: 119.65ms
+Resource Utilization:
+    Memory: 42.0%
+    MIPS: 13.1%
+    Bandwidth: 1.1%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.721] Waiting for resources. Active tasks: 2, Total Memory Used: 5198MB/9024MB, Total MIPS Used: 1924.5013827881908/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 159.05W
+    CPU Power: 82.08W (21.4% utilization)
+    Memory Power: 66.08W (57.6% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 3
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 9.31 tasks/second
+    Average Task Interval: 107.47ms
+Resource Utilization:
+    Memory: 57.6%
+    MIPS: 21.4%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.721] Waiting for resources. Active tasks: 3, Total Memory Used: 7754MB/9024MB, Total MIPS Used: 2879.2488227590216/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
+    Network Power: 11.33W (3.3% utilization)
 Node Metrics:
     Tasks Processed: 4
-    Current Queue Size: 1
-    Active Tasks: 1
-    Throughput: 8.88 tasks/second
-    Average Task Interval: 112.62ms
-Resource Utilization:
-    Memory: 18.5%
-    MIPS: 10.1%
-    Bandwidth: 1.1%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.841] Waiting for resources. Active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 6
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 85.9%
+    MIPS: 32.0%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.841] Task 1507943152000 completed parallel processing. Processing time: 123.55ms. Remaining active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+[2025-05-23 20:48:37.721] Waiting for resources. Active tasks: 3, Total Memory Used: 7754MB/9024MB, Total MIPS Used: 2879.2488227590216/9000, Total Bandwidth Used: 300Mbps/9000Mbps
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 4
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 85.9%
+    MIPS: 32.0%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.841] Task 1507943146624 started parallel processing. Expected time: 100.87ms
+[2025-05-23 20:48:37.722] Task 2548143594176 started parallel processing. Expected time: 83.11ms
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 4
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 85.9%
+    MIPS: 32.0%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.841] Task 1507943149120 started parallel processing. Expected time: 107.12ms
+[2025-05-23 20:48:37.722] Task 2548143594880 started parallel processing. Expected time: 106.08ms
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 4
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 85.9%
+    MIPS: 32.0%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.841] Task 1507943148544 started parallel processing. Expected time: 118.73ms
+[2025-05-23 20:48:37.737] Waiting for resources. Active tasks: 3, Total Memory Used: 7754MB/9024MB, Total MIPS Used: 2879.2488227590216/9000, Total Bandwidth Used: 300Mbps/9000Mbps
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 4
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 85.9%
+    MIPS: 32.0%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.841] Task completed
+[2025-05-23 20:48:37.738] Waiting for resources. Active tasks: 3, Total Memory Used: 7754MB/9024MB, Total MIPS Used: 2879.2488227590216/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 4
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
+Resource Utilization:
+    Memory: 85.9%
+    MIPS: 32.0%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.738] Waiting for resources. Active tasks: 3, Total Memory Used: 7754MB/9024MB, Total MIPS Used: 2879.2488227590216/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 4
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
+Resource Utilization:
+    Memory: 85.9%
+    MIPS: 32.0%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.738] Waiting for resources. Active tasks: 3, Total Memory Used: 7754MB/9024MB, Total MIPS Used: 2879.2488227590216/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 4
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
+Resource Utilization:
+    Memory: 85.9%
+    MIPS: 32.0%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.738] Task 2548143592576 completed parallel processing. Processing time: 108.57ms. Remaining active tasks: 3, Total Memory Used: 7754MB/9024MB, Total MIPS Used: 2879.2488227590216/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 4
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
+Resource Utilization:
+    Memory: 85.9%
+    MIPS: 32.0%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.738] Task completed
 Task Details:
-    Task ID: 1507943152000
+    Task ID: 2548143592576
     Node: Cloud-AS
     Timing Metrics:
-        Total Time: 227.71ms
+        Total Time: 210.85ms
         Response Time: 0.00ms
-        Processing Time: 123.55ms
-        Queue Time: 0.05ms
-        Transmission Time: 104.11ms
+        Processing Time: 108.57ms
+        Queue Time: 0.10ms
+        Transmission Time: 102.18ms
     Resource Usage:
         Memory Used: 0MB
         Bandwidth Used: 0Mbps
@@ -2043,48 +1737,252 @@ Task Details:
         Bandwidth Utilization: 0.0%
         MIPS Utilization: 0.0%
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 4
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 85.9%
+    MIPS: 32.0%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.842] Task 1507943152640 completed parallel processing. Processing time: 123.94ms. Remaining active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+[2025-05-23 20:48:37.739] Waiting for resources. Active tasks: 3, Total Memory Used: 7754MB/9024MB, Total MIPS Used: 2879.2488227590216/9000, Total Bandwidth Used: 300Mbps/9000Mbps
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 4
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 85.9%
+    MIPS: 32.0%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.842] Task completed
+[2025-05-23 20:48:37.739] Waiting for resources. Active tasks: 3, Total Memory Used: 7754MB/9024MB, Total MIPS Used: 2879.2488227590216/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 4
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
+Resource Utilization:
+    Memory: 85.9%
+    MIPS: 32.0%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.739] Waiting for resources. Active tasks: 3, Total Memory Used: 7754MB/9024MB, Total MIPS Used: 2879.2488227590216/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 4
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
+Resource Utilization:
+    Memory: 85.9%
+    MIPS: 32.0%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.740] Waiting for resources. Active tasks: 3, Total Memory Used: 7754MB/9024MB, Total MIPS Used: 2879.2488227590216/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 198.06W
+    CPU Power: 97.99W (32.0% utilization)
+    Memory Power: 88.74W (85.9% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 4
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
+Resource Utilization:
+    Memory: 85.9%
+    MIPS: 32.0%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.754] Waiting for resources. Active tasks: 2, Total Memory Used: 3966MB/9024MB, Total MIPS Used: 1702.7099127582883/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 144.43W
+    CPU Power: 78.38W (18.9% utilization)
+    Memory Power: 55.16W (43.9% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 4
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 9.34 tasks/second
+    Average Task Interval: 107.12ms
+Resource Utilization:
+    Memory: 43.9%
+    MIPS: 18.9%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.754] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 96.2%
+    MIPS: 31.8%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.755] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 96.2%
+    MIPS: 31.8%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.755] Task 2548143594496 started parallel processing. Expected time: 128.48ms
+Power Consumption:
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 96.2%
+    MIPS: 31.8%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.755] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 96.2%
+    MIPS: 31.8%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.770] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 96.2%
+    MIPS: 31.8%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.770] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 96.2%
+    MIPS: 31.8%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.771] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 96.2%
+    MIPS: 31.8%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.771] Task 2548143590464 completed parallel processing. Processing time: 130.73ms. Remaining active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+Power Consumption:
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
+    Network Power: 11.33W (3.3% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 3
+    Active Tasks: 3
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 96.2%
+    MIPS: 31.8%
+    Bandwidth: 3.3%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.771] Task completed
 Task Details:
-    Task ID: 1507943152640
+    Task ID: 2548143590464
     Node: Cloud-AS
     Timing Metrics:
-        Total Time: 246.03ms
+        Total Time: 252.44ms
         Response Time: 0.00ms
-        Processing Time: 123.94ms
-        Queue Time: 0.05ms
-        Transmission Time: 122.04ms
+        Processing Time: 130.73ms
+        Queue Time: 0.11ms
+        Transmission Time: 121.61ms
     Resource Usage:
         Memory Used: 0MB
         Bandwidth Used: 0Mbps
@@ -2098,341 +1996,634 @@ Task Details:
         Bandwidth Utilization: 0.0%
         MIPS Utilization: 0.0%
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 5
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 96.2%
+    MIPS: 31.8%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.858] Waiting for resources. Active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+[2025-05-23 20:48:37.773] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 5
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 96.2%
+    MIPS: 31.8%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.858] Waiting for resources. Active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+[2025-05-23 20:48:37.773] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 5
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 96.2%
+    MIPS: 31.8%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.873] Waiting for resources. Active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+[2025-05-23 20:48:37.773] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 5
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 96.2%
+    MIPS: 31.8%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.873] Waiting for resources. Active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+[2025-05-23 20:48:37.785] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 5
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 96.2%
+    MIPS: 31.8%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.889] Waiting for resources. Active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+[2025-05-23 20:48:37.786] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 5
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 96.2%
+    MIPS: 31.8%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.890] Waiting for resources. Active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+[2025-05-23 20:48:37.786] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 5
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 96.2%
+    MIPS: 31.8%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.905] Waiting for resources. Active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+[2025-05-23 20:48:37.802] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 5
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 96.2%
+    MIPS: 31.8%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.906] Waiting for resources. Active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+[2025-05-23 20:48:37.802] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 5
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 96.2%
+    MIPS: 31.8%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.921] Waiting for resources. Active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+[2025-05-23 20:48:37.803] Waiting for resources. Active tasks: 3, Total Memory Used: 8683MB/9024MB, Total MIPS Used: 2859.039053739588/9000, Total Bandwidth Used: 300Mbps/9000Mbps
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
+    Total Power: 205.96W
+    CPU Power: 97.65W (31.8% utilization)
+    Memory Power: 96.98W (96.2% utilization)
     Network Power: 11.33W (3.3% utilization)
 Node Metrics:
-    Tasks Processed: 6
+    Tasks Processed: 5
     Current Queue Size: 3
     Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
 Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
+    Memory: 96.2%
+    MIPS: 31.8%
     Bandwidth: 3.3%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.922] Waiting for resources. Active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
+[2025-05-23 20:48:37.817] Waiting for resources. Active tasks: 2, Total Memory Used: 7273MB/9024MB, Total MIPS Used: 2111.0765809521304/9000, Total Bandwidth Used: 200Mbps/9000Mbps
 Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 6
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
-Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.938] Waiting for resources. Active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 6
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
-Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.938] Waiting for resources. Active tasks: 3, Total Memory Used: 8280MB/9024MB, Total MIPS Used: 2940.4236098263/9000, Total Bandwidth Used: 300Mbps/9000Mbps
-Power Consumption:
-    Total Power: 203.74W
-    CPU Power: 99.01W (32.7% utilization)
-    Memory Power: 93.40W (91.8% utilization)
-    Network Power: 11.33W (3.3% utilization)
-Node Metrics:
-    Tasks Processed: 6
-    Current Queue Size: 3
-    Active Tasks: 3
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
-Resource Utilization:
-    Memory: 91.8%
-    MIPS: 32.7%
-    Bandwidth: 3.3%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.954] Waiting for resources. Active tasks: 1, Total Memory Used: 4271MB/9024MB, Total MIPS Used: 1068.5467520115355/9000, Total Bandwidth Used: 100Mbps/9000Mbps
-Power Consumption:
-    Total Power: 136.12W
-    CPU Power: 67.81W (11.9% utilization)
-    Memory Power: 57.86W (47.3% utilization)
-    Network Power: 10.44W (1.1% utilization)
-Node Metrics:
-    Tasks Processed: 6
-    Current Queue Size: 1
-    Active Tasks: 1
-    Throughput: 8.87 tasks/second
-    Average Task Interval: 112.72ms
-Resource Utilization:
-    Memory: 47.3%
-    MIPS: 11.9%
-    Bandwidth: 1.1%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.954] Task 1507943146624 completed parallel processing. Processing time: 100.87ms. Remaining active tasks: 2, Total Memory Used: 8012MB/9024MB, Total MIPS Used: 2378.6182635867513/9000, Total Bandwidth Used: 200Mbps/9000Mbps
-Power Consumption:
-    Total Power: 191.56W
-    CPU Power: 89.64W (26.4% utilization)
-    Memory Power: 91.03W (88.8% utilization)
+    Total Power: 180.55W
+    CPU Power: 85.18W (23.5% utilization)
+    Memory Power: 84.48W (80.6% utilization)
     Network Power: 10.89W (2.2% utilization)
 Node Metrics:
-    Tasks Processed: 7
+    Tasks Processed: 5
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 8.52 tasks/second
-    Average Task Interval: 117.41ms
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
 Resource Utilization:
-    Memory: 88.8%
-    MIPS: 26.4%
+    Memory: 80.6%
+    MIPS: 23.5%
     Bandwidth: 2.2%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.954] Task 1507943149120 completed parallel processing. Processing time: 107.12ms. Remaining active tasks: 2, Total Memory Used: 8012MB/9024MB, Total MIPS Used: 2378.6182635867513/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+[2025-05-23 20:48:37.817] Waiting for resources. Active tasks: 2, Total Memory Used: 7273MB/9024MB, Total MIPS Used: 2111.0765809521304/9000, Total Bandwidth Used: 200Mbps/9000Mbps
 Power Consumption:
-    Total Power: 191.56W
-    CPU Power: 89.64W (26.4% utilization)
-    Memory Power: 91.03W (88.8% utilization)
+    Total Power: 180.55W
+    CPU Power: 85.18W (23.5% utilization)
+    Memory Power: 84.48W (80.6% utilization)
     Network Power: 10.89W (2.2% utilization)
 Node Metrics:
-    Tasks Processed: 7
+    Tasks Processed: 5
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 8.52 tasks/second
-    Average Task Interval: 117.41ms
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
 Resource Utilization:
-    Memory: 88.8%
-    MIPS: 26.4%
+    Memory: 80.6%
+    MIPS: 23.5%
     Bandwidth: 2.2%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.954] Task 1507943146944 started parallel processing. Expected time: 145.56ms
+[2025-05-23 20:48:37.817] Waiting for resources. Active tasks: 2, Total Memory Used: 7273MB/9024MB, Total MIPS Used: 2111.0765809521304/9000, Total Bandwidth Used: 200Mbps/9000Mbps
 Power Consumption:
-    Total Power: 191.56W
-    CPU Power: 89.64W (26.4% utilization)
-    Memory Power: 91.03W (88.8% utilization)
+    Total Power: 180.55W
+    CPU Power: 85.18W (23.5% utilization)
+    Memory Power: 84.48W (80.6% utilization)
     Network Power: 10.89W (2.2% utilization)
 Node Metrics:
-    Tasks Processed: 7
+    Tasks Processed: 5
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 8.52 tasks/second
-    Average Task Interval: 117.41ms
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
 Resource Utilization:
-    Memory: 88.8%
-    MIPS: 26.4%
+    Memory: 80.6%
+    MIPS: 23.5%
     Bandwidth: 2.2%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.954] Task completed
+[2025-05-23 20:48:37.818] Task 2548143594176 completed parallel processing. Processing time: 83.11ms. Remaining active tasks: 2, Total Memory Used: 7273MB/9024MB, Total MIPS Used: 2111.0765809521304/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 180.55W
+    CPU Power: 85.18W (23.5% utilization)
+    Memory Power: 84.48W (80.6% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 80.6%
+    MIPS: 23.5%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.818] Task completed
 Task Details:
-    Task ID: 1507943146624
+    Task ID: 2548143594176
     Node: Cloud-AS
     Timing Metrics:
-        Total Time: 336.00ms
+        Total Time: 296.24ms
         Response Time: 0.00ms
-        Processing Time: 100.87ms
-        Queue Time: 124.01ms
-        Transmission Time: 111.12ms
+        Processing Time: 83.11ms
+        Queue Time: 102.27ms
+        Transmission Time: 110.86ms
     Resource Usage:
         Memory Used: 0MB
         Bandwidth Used: 0Mbps
         RAM Required: 0MB
         Task Size: 0MB
     Network Metrics:
-        Distance: 4806.07km
+        Distance: 4817.13km
         Queue Size: 2
     System Load:
         System Load: 0.0%
         Bandwidth Utilization: 0.0%
         MIPS Utilization: 0.0%
 Power Consumption:
-    Total Power: 191.56W
-    CPU Power: 89.64W (26.4% utilization)
-    Memory Power: 91.03W (88.8% utilization)
+    Total Power: 180.55W
+    CPU Power: 85.18W (23.5% utilization)
+    Memory Power: 84.48W (80.6% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 80.6%
+    MIPS: 23.5%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.819] Waiting for resources. Active tasks: 2, Total Memory Used: 7273MB/9024MB, Total MIPS Used: 2111.0765809521304/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 180.55W
+    CPU Power: 85.18W (23.5% utilization)
+    Memory Power: 84.48W (80.6% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 80.6%
+    MIPS: 23.5%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.819] Waiting for resources. Active tasks: 2, Total Memory Used: 7273MB/9024MB, Total MIPS Used: 2111.0765809521304/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 180.55W
+    CPU Power: 85.18W (23.5% utilization)
+    Memory Power: 84.48W (80.6% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 80.6%
+    MIPS: 23.5%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.820] Waiting for resources. Active tasks: 2, Total Memory Used: 7273MB/9024MB, Total MIPS Used: 2111.0765809521304/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 180.55W
+    CPU Power: 85.18W (23.5% utilization)
+    Memory Power: 84.48W (80.6% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 80.6%
+    MIPS: 23.5%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.833] Waiting for resources. Active tasks: 1, Total Memory Used: 4717MB/9024MB, Total MIPS Used: 1156.3291409812994/9000, Total Bandwidth Used: 100Mbps/9000Mbps
+Power Consumption:
+    Total Power: 141.53W
+    CPU Power: 69.27W (12.8% utilization)
+    Memory Power: 61.82W (52.3% utilization)
+    Network Power: 10.44W (1.1% utilization)
+Node Metrics:
+    Tasks Processed: 5
+    Current Queue Size: 1
+    Active Tasks: 1
+    Throughput: 8.98 tasks/second
+    Average Task Interval: 111.39ms
+Resource Utilization:
+    Memory: 52.3%
+    MIPS: 12.8%
+    Bandwidth: 1.1%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.834] Waiting for resources. Active tasks: 2, Total Memory Used: 8292MB/9024MB, Total MIPS Used: 2339.3448810688087/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 193.39W
+    CPU Power: 88.99W (26.0% utilization)
+    Memory Power: 93.51W (91.9% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 6
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.72 tasks/second
+    Average Task Interval: 114.74ms
+Resource Utilization:
+    Memory: 91.9%
+    MIPS: 26.0%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.834] Task 2548143594880 completed parallel processing. Processing time: 106.08ms. Remaining active tasks: 2, Total Memory Used: 8292MB/9024MB, Total MIPS Used: 2339.3448810688087/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 193.39W
+    CPU Power: 88.99W (26.0% utilization)
+    Memory Power: 93.51W (91.9% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 6
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.72 tasks/second
+    Average Task Interval: 114.74ms
+Resource Utilization:
+    Memory: 91.9%
+    MIPS: 26.0%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.834] Task 2548143594112 started parallel processing. Expected time: 131.45ms
+Power Consumption:
+    Total Power: 193.39W
+    CPU Power: 88.99W (26.0% utilization)
+    Memory Power: 93.51W (91.9% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 6
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.72 tasks/second
+    Average Task Interval: 114.74ms
+Resource Utilization:
+    Memory: 91.9%
+    MIPS: 26.0%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.835] Task completed
+Task Details:
+    Task ID: 2548143594880
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 334.57ms
+        Response Time: 0.00ms
+        Processing Time: 106.08ms
+        Queue Time: 98.92ms
+        Transmission Time: 129.57ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 0MB
+    Network Metrics:
+        Distance: 4819.59km
+        Queue Size: 2
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+Power Consumption:
+    Total Power: 193.39W
+    CPU Power: 88.99W (26.0% utilization)
+    Memory Power: 93.51W (91.9% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 6
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.72 tasks/second
+    Average Task Interval: 114.74ms
+Resource Utilization:
+    Memory: 91.9%
+    MIPS: 26.0%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.836] Waiting for resources. Active tasks: 2, Total Memory Used: 8292MB/9024MB, Total MIPS Used: 2339.3448810688087/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 193.39W
+    CPU Power: 88.99W (26.0% utilization)
+    Memory Power: 93.51W (91.9% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 6
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.72 tasks/second
+    Average Task Interval: 114.74ms
+Resource Utilization:
+    Memory: 91.9%
+    MIPS: 26.0%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.836] Waiting for resources. Active tasks: 2, Total Memory Used: 8292MB/9024MB, Total MIPS Used: 2339.3448810688087/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 193.39W
+    CPU Power: 88.99W (26.0% utilization)
+    Memory Power: 93.51W (91.9% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 6
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.72 tasks/second
+    Average Task Interval: 114.74ms
+Resource Utilization:
+    Memory: 91.9%
+    MIPS: 26.0%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.849] Waiting for resources. Active tasks: 2, Total Memory Used: 8292MB/9024MB, Total MIPS Used: 2339.3448810688087/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 193.39W
+    CPU Power: 88.99W (26.0% utilization)
+    Memory Power: 93.51W (91.9% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 6
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.72 tasks/second
+    Average Task Interval: 114.74ms
+Resource Utilization:
+    Memory: 91.9%
+    MIPS: 26.0%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.849] Waiting for resources. Active tasks: 2, Total Memory Used: 8292MB/9024MB, Total MIPS Used: 2339.3448810688087/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 193.39W
+    CPU Power: 88.99W (26.0% utilization)
+    Memory Power: 93.51W (91.9% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 6
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.72 tasks/second
+    Average Task Interval: 114.74ms
+Resource Utilization:
+    Memory: 91.9%
+    MIPS: 26.0%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.865] Waiting for resources. Active tasks: 2, Total Memory Used: 8292MB/9024MB, Total MIPS Used: 2339.3448810688087/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 193.39W
+    CPU Power: 88.99W (26.0% utilization)
+    Memory Power: 93.51W (91.9% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 6
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.72 tasks/second
+    Average Task Interval: 114.74ms
+Resource Utilization:
+    Memory: 91.9%
+    MIPS: 26.0%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.865] Waiting for resources. Active tasks: 2, Total Memory Used: 8292MB/9024MB, Total MIPS Used: 2339.3448810688087/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 193.39W
+    CPU Power: 88.99W (26.0% utilization)
+    Memory Power: 93.51W (91.9% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 6
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.72 tasks/second
+    Average Task Interval: 114.74ms
+Resource Utilization:
+    Memory: 91.9%
+    MIPS: 26.0%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.881] Waiting for resources. Active tasks: 2, Total Memory Used: 8292MB/9024MB, Total MIPS Used: 2339.3448810688087/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 193.39W
+    CPU Power: 88.99W (26.0% utilization)
+    Memory Power: 93.51W (91.9% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 6
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.72 tasks/second
+    Average Task Interval: 114.74ms
+Resource Utilization:
+    Memory: 91.9%
+    MIPS: 26.0%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.881] Waiting for resources. Active tasks: 2, Total Memory Used: 8292MB/9024MB, Total MIPS Used: 2339.3448810688087/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 193.39W
+    CPU Power: 88.99W (26.0% utilization)
+    Memory Power: 93.51W (91.9% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 6
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.72 tasks/second
+    Average Task Interval: 114.74ms
+Resource Utilization:
+    Memory: 91.9%
+    MIPS: 26.0%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.897] Waiting for resources. Active tasks: 1, Total Memory Used: 3575MB/9024MB, Total MIPS Used: 1183.0157400875091/9000, Total Bandwidth Used: 100Mbps/9000Mbps
+Power Consumption:
+    Total Power: 131.85W
+    CPU Power: 69.72W (13.1% utilization)
+    Memory Power: 51.69W (39.6% utilization)
+    Network Power: 10.44W (1.1% utilization)
+Node Metrics:
+    Tasks Processed: 6
+    Current Queue Size: 1
+    Active Tasks: 1
+    Throughput: 8.72 tasks/second
+    Average Task Interval: 114.74ms
+Resource Utilization:
+    Memory: 39.6%
+    MIPS: 13.1%
+    Bandwidth: 1.1%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.897] Task 2548143594496 completed parallel processing. Processing time: 128.48ms. Remaining active tasks: 2, Total Memory Used: 5435MB/9024MB, Total MIPS Used: 2259.580136253099/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 166.73W
+    CPU Power: 87.66W (25.1% utilization)
+    Memory Power: 68.18W (60.2% utilization)
     Network Power: 10.89W (2.2% utilization)
 Node Metrics:
     Tasks Processed: 7
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 8.52 tasks/second
-    Average Task Interval: 117.41ms
+    Throughput: 8.66 tasks/second
+    Average Task Interval: 115.43ms
 Resource Utilization:
-    Memory: 88.8%
-    MIPS: 26.4%
+    Memory: 60.2%
+    MIPS: 25.1%
     Bandwidth: 2.2%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.954] Task completed
+[2025-05-23 20:48:37.898] Task 2548143593344 started parallel processing. Expected time: 119.62ms
+Power Consumption:
+    Total Power: 166.73W
+    CPU Power: 87.66W (25.1% utilization)
+    Memory Power: 68.18W (60.2% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 7
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.66 tasks/second
+    Average Task Interval: 115.43ms
+Resource Utilization:
+    Memory: 60.2%
+    MIPS: 25.1%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.898] Task completed
 Task Details:
-    Task ID: 1507943149120
+    Task ID: 2548143594496
     Node: Cloud-AS
     Timing Metrics:
-        Total Time: 358.50ms
+        Total Time: 373.45ms
         Response Time: 0.00ms
-        Processing Time: 107.12ms
-        Queue Time: 126.50ms
-        Transmission Time: 124.88ms
+        Processing Time: 128.48ms
+        Queue Time: 133.40ms
+        Transmission Time: 111.57ms
     Resource Usage:
         Memory Used: 0MB
         Bandwidth Used: 0Mbps
@@ -2446,154 +2637,277 @@ Task Details:
         Bandwidth Utilization: 0.0%
         MIPS Utilization: 0.0%
 Power Consumption:
-    Total Power: 191.56W
-    CPU Power: 89.64W (26.4% utilization)
-    Memory Power: 91.03W (88.8% utilization)
+    Total Power: 166.73W
+    CPU Power: 87.66W (25.1% utilization)
+    Memory Power: 68.18W (60.2% utilization)
     Network Power: 10.89W (2.2% utilization)
 Node Metrics:
     Tasks Processed: 7
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 8.52 tasks/second
-    Average Task Interval: 117.41ms
+    Throughput: 8.66 tasks/second
+    Average Task Interval: 115.43ms
 Resource Utilization:
-    Memory: 88.8%
-    MIPS: 26.4%
+    Memory: 60.2%
+    MIPS: 25.1%
     Bandwidth: 2.2%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.970] Waiting for resources. Active tasks: 1, Total Memory Used: 3741MB/9024MB, Total MIPS Used: 1310.0715115752157/9000, Total Bandwidth Used: 100Mbps/9000Mbps
+[2025-05-23 20:48:37.899] Waiting for resources. Active tasks: 2, Total Memory Used: 5435MB/9024MB, Total MIPS Used: 2259.580136253099/9000, Total Bandwidth Used: 200Mbps/9000Mbps
 Power Consumption:
-    Total Power: 135.44W
-    CPU Power: 71.83W (14.6% utilization)
-    Memory Power: 53.16W (41.5% utilization)
+    Total Power: 166.73W
+    CPU Power: 87.66W (25.1% utilization)
+    Memory Power: 68.18W (60.2% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 7
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.66 tasks/second
+    Average Task Interval: 115.43ms
+Resource Utilization:
+    Memory: 60.2%
+    MIPS: 25.1%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.912] Waiting for resources. Active tasks: 2, Total Memory Used: 5435MB/9024MB, Total MIPS Used: 2259.580136253099/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 166.73W
+    CPU Power: 87.66W (25.1% utilization)
+    Memory Power: 68.18W (60.2% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 7
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.66 tasks/second
+    Average Task Interval: 115.43ms
+Resource Utilization:
+    Memory: 60.2%
+    MIPS: 25.1%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.928] Waiting for resources. Active tasks: 2, Total Memory Used: 5435MB/9024MB, Total MIPS Used: 2259.580136253099/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 166.73W
+    CPU Power: 87.66W (25.1% utilization)
+    Memory Power: 68.18W (60.2% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 7
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.66 tasks/second
+    Average Task Interval: 115.43ms
+Resource Utilization:
+    Memory: 60.2%
+    MIPS: 25.1%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.944] Waiting for resources. Active tasks: 2, Total Memory Used: 5435MB/9024MB, Total MIPS Used: 2259.580136253099/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 166.73W
+    CPU Power: 87.66W (25.1% utilization)
+    Memory Power: 68.18W (60.2% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 7
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.66 tasks/second
+    Average Task Interval: 115.43ms
+Resource Utilization:
+    Memory: 60.2%
+    MIPS: 25.1%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.960] Waiting for resources. Active tasks: 2, Total Memory Used: 5435MB/9024MB, Total MIPS Used: 2259.580136253099/9000, Total Bandwidth Used: 200Mbps/9000Mbps
+Power Consumption:
+    Total Power: 166.73W
+    CPU Power: 87.66W (25.1% utilization)
+    Memory Power: 68.18W (60.2% utilization)
+    Network Power: 10.89W (2.2% utilization)
+Node Metrics:
+    Tasks Processed: 7
+    Current Queue Size: 2
+    Active Tasks: 2
+    Throughput: 8.66 tasks/second
+    Average Task Interval: 115.43ms
+Resource Utilization:
+    Memory: 60.2%
+    MIPS: 25.1%
+    Bandwidth: 2.2%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:37.976] Waiting for resources. Active tasks: 1, Total Memory Used: 1860MB/9024MB, Total MIPS Used: 1076.5643961655899/9000, Total Bandwidth Used: 100Mbps/9000Mbps
+Power Consumption:
+    Total Power: 114.88W
+    CPU Power: 67.94W (12.0% utilization)
+    Memory Power: 36.49W (20.6% utilization)
     Network Power: 10.44W (1.1% utilization)
 Node Metrics:
     Tasks Processed: 7
     Current Queue Size: 1
     Active Tasks: 1
-    Throughput: 8.52 tasks/second
-    Average Task Interval: 117.41ms
+    Throughput: 8.66 tasks/second
+    Average Task Interval: 115.43ms
 Resource Utilization:
-    Memory: 41.5%
-    MIPS: 14.6%
+    Memory: 20.6%
+    MIPS: 12.0%
     Bandwidth: 1.1%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.970] Task 1507943148544 completed parallel processing. Processing time: 118.73ms. Remaining active tasks: 1, Total Memory Used: 3741MB/9024MB, Total MIPS Used: 1310.0715115752157/9000, Total Bandwidth Used: 100Mbps/9000Mbps
+[2025-05-23 20:48:37.976] Task 2548143594112 completed parallel processing. Processing time: 131.45ms. Remaining active tasks: 1, Total Memory Used: 1860MB/9024MB, Total MIPS Used: 1076.5643961655899/9000, Total Bandwidth Used: 100Mbps/9000Mbps
 Power Consumption:
-    Total Power: 135.44W
-    CPU Power: 71.83W (14.6% utilization)
-    Memory Power: 53.16W (41.5% utilization)
+    Total Power: 114.88W
+    CPU Power: 67.94W (12.0% utilization)
+    Memory Power: 36.49W (20.6% utilization)
     Network Power: 10.44W (1.1% utilization)
 Node Metrics:
     Tasks Processed: 7
     Current Queue Size: 1
     Active Tasks: 1
-    Throughput: 8.52 tasks/second
-    Average Task Interval: 117.41ms
+    Throughput: 8.66 tasks/second
+    Average Task Interval: 115.43ms
 Resource Utilization:
-    Memory: 41.5%
-    MIPS: 14.6%
+    Memory: 20.6%
+    MIPS: 12.0%
     Bandwidth: 1.1%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.970] Task completed
+[2025-05-23 20:48:37.976] Task completed
 Task Details:
-    Task ID: 1507943148544
+    Task ID: 2548143594112
     Node: Cloud-AS
     Timing Metrics:
-        Total Time: 367.74ms
+        Total Time: 458.43ms
         Response Time: 0.00ms
-        Processing Time: 118.73ms
-        Queue Time: 125.78ms
-        Transmission Time: 123.24ms
+        Processing Time: 131.45ms
+        Queue Time: 206.66ms
+        Transmission Time: 120.32ms
     Resource Usage:
         Memory Used: 0MB
         Bandwidth Used: 0Mbps
         RAM Required: 0MB
         Task Size: 0MB
     Network Metrics:
-        Distance: 4819.59km
+        Distance: 4806.07km
         Queue Size: 1
     System Load:
         System Load: 0.0%
         Bandwidth Utilization: 0.0%
         MIPS Utilization: 0.0%
 Power Consumption:
-    Total Power: 135.44W
-    CPU Power: 71.83W (14.6% utilization)
-    Memory Power: 53.16W (41.5% utilization)
+    Total Power: 114.88W
+    CPU Power: 67.94W (12.0% utilization)
+    Memory Power: 36.49W (20.6% utilization)
     Network Power: 10.44W (1.1% utilization)
 Node Metrics:
     Tasks Processed: 7
     Current Queue Size: 1
     Active Tasks: 1
-    Throughput: 8.52 tasks/second
-    Average Task Interval: 117.41ms
+    Throughput: 8.66 tasks/second
+    Average Task Interval: 115.43ms
 Resource Utilization:
-    Memory: 41.5%
-    MIPS: 14.6%
+    Memory: 20.6%
+    MIPS: 12.0%
     Bandwidth: 1.1%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:37.986] Task 1507943149696 started parallel processing. Expected time: 115.84ms
+[2025-05-23 20:48:37.978] Task 2548143595264 started parallel processing. Expected time: 147.92ms
 Power Consumption:
-    Total Power: 190.65W
-    CPU Power: 89.21W (26.1% utilization)
-    Memory Power: 90.55W (88.2% utilization)
+    Total Power: 180.89W
+    CPU Power: 90.13W (26.8% utilization)
+    Memory Power: 79.87W (74.8% utilization)
     Network Power: 10.89W (2.2% utilization)
 Node Metrics:
     Tasks Processed: 8
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 8.53 tasks/second
-    Average Task Interval: 117.22ms
+    Throughput: 8.37 tasks/second
+    Average Task Interval: 119.49ms
 Resource Utilization:
-    Memory: 88.2%
-    MIPS: 26.1%
+    Memory: 74.8%
+    MIPS: 26.8%
     Bandwidth: 2.2%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:38.114] Task 1507943146944 completed parallel processing. Processing time: 145.56ms. Remaining active tasks: 1, Total Memory Used: 4217MB/9024MB, Total MIPS Used: 1042.5581164180003/9000, Total Bandwidth Used: 100Mbps/9000Mbps
+[2025-05-23 20:48:38.023] Task 2548143593344 completed parallel processing. Processing time: 119.62ms. Remaining active tasks: 1, Total Memory Used: 4893MB/9024MB, Total MIPS Used: 1331.2470060157686/9000, Total Bandwidth Used: 100Mbps/9000Mbps
 Power Consumption:
-    Total Power: 135.21W
-    CPU Power: 67.38W (11.6% utilization)
-    Memory Power: 57.38W (46.7% utilization)
+    Total Power: 146.01W
+    CPU Power: 72.19W (14.8% utilization)
+    Memory Power: 63.38W (54.2% utilization)
     Network Power: 10.44W (1.1% utilization)
 Node Metrics:
     Tasks Processed: 8
     Current Queue Size: 1
     Active Tasks: 1
-    Throughput: 8.53 tasks/second
-    Average Task Interval: 117.22ms
+    Throughput: 8.37 tasks/second
+    Average Task Interval: 119.49ms
 Resource Utilization:
-    Memory: 46.7%
-    MIPS: 11.6%
+    Memory: 54.2%
+    MIPS: 14.8%
     Bandwidth: 1.1%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:38.114] Task 1507943149696 completed parallel processing. Processing time: 115.84ms. Remaining active tasks: 0, Total Memory Used: 0MB/9024MB, Total MIPS Used: 0/9000, Total Bandwidth Used: 0Mbps/9000Mbps
+[2025-05-23 20:48:38.023] Task completed
+Task Details:
+    Task ID: 2548143593344
+    Node: Cloud-AS
+    Timing Metrics:
+        Total Time: 525.57ms
+        Response Time: 0.00ms
+        Processing Time: 119.62ms
+        Queue Time: 282.13ms
+        Transmission Time: 123.82ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 0MB
+    Network Metrics:
+        Distance: 4817.13km
+        Queue Size: 1
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+Power Consumption:
+    Total Power: 146.01W
+    CPU Power: 72.19W (14.8% utilization)
+    Memory Power: 63.38W (54.2% utilization)
+    Network Power: 10.44W (1.1% utilization)
+Node Metrics:
+    Tasks Processed: 8
+    Current Queue Size: 1
+    Active Tasks: 1
+    Throughput: 8.37 tasks/second
+    Average Task Interval: 119.49ms
+Resource Utilization:
+    Memory: 54.2%
+    MIPS: 14.8%
+    Bandwidth: 1.1%
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:48:38.135] Task 2548143595264 completed parallel processing. Processing time: 147.92ms. Remaining active tasks: 0, Total Memory Used: 0MB/9024MB, Total MIPS Used: 0/9000, Total Bandwidth Used: 0Mbps/9000Mbps
 Power Consumption:
     Total Power: 80.00W
-    CPU Power: 50.00W (-0.0% utilization)
+    CPU Power: 50.00W (0.0% utilization)
     Memory Power: 20.00W (0.0% utilization)
     Network Power: 10.00W (0.0% utilization)
 Node Metrics:
     Tasks Processed: 8
     Current Queue Size: 0
     Active Tasks: 0
-    Throughput: 8.53 tasks/second
-    Average Task Interval: 117.22ms
+    Throughput: 8.37 tasks/second
+    Average Task Interval: 119.49ms
 Resource Utilization:
     Memory: 0.0%
-    MIPS: -0.0%
+    MIPS: 0.0%
     Bandwidth: 0.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:38.114] Task completed
+[2025-05-23 20:48:38.135] Task completed
 Task Details:
-    Task ID: 1507943146944
+    Task ID: 2548143595264
     Node: Cloud-AS
     Timing Metrics:
-        Total Time: 504.67ms
+        Total Time: 631.94ms
         Response Time: 0.00ms
-        Processing Time: 145.56ms
-        Queue Time: 237.66ms
-        Transmission Time: 121.44ms
+        Processing Time: 147.92ms
+        Queue Time: 353.80ms
+        Transmission Time: 130.22ms
     Resource Usage:
         Memory Used: 0MB
         Bandwidth Used: 0Mbps
@@ -2608,56 +2922,18 @@ Task Details:
         MIPS Utilization: 0.0%
 Power Consumption:
     Total Power: 80.00W
-    CPU Power: 50.00W (-0.0% utilization)
+    CPU Power: 50.00W (0.0% utilization)
     Memory Power: 20.00W (0.0% utilization)
     Network Power: 10.00W (0.0% utilization)
 Node Metrics:
     Tasks Processed: 8
     Current Queue Size: 0
     Active Tasks: 0
-    Throughput: 8.53 tasks/second
-    Average Task Interval: 117.22ms
+    Throughput: 8.37 tasks/second
+    Average Task Interval: 119.49ms
 Resource Utilization:
     Memory: 0.0%
-    MIPS: -0.0%
-    Bandwidth: 0.0%
-----------------------------------------------------------------------------------------------------
-[2025-05-22 21:51:38.115] Task completed
-Task Details:
-    Task ID: 1507943149696
-    Node: Cloud-AS
-    Timing Metrics:
-        Total Time: 507.56ms
-        Response Time: 0.00ms
-        Processing Time: 115.84ms
-        Queue Time: 272.31ms
-        Transmission Time: 119.41ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 4817.13km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 80.00W
-    CPU Power: 50.00W (-0.0% utilization)
-    Memory Power: 20.00W (0.0% utilization)
-    Network Power: 10.00W (0.0% utilization)
-Node Metrics:
-    Tasks Processed: 8
-    Current Queue Size: 0
-    Active Tasks: 0
-    Throughput: 8.53 tasks/second
-    Average Task Interval: 117.22ms
-Resource Utilization:
-    Memory: 0.0%
-    MIPS: -0.0%
+    MIPS: 0.0%
     Bandwidth: 0.0%
 ----------------------------------------------------------------------------------------------------
 ====================================================================================================
@@ -2666,24 +2942,24 @@ SUMMARY REPORT - Cloud-AS
 
 Task Processing Summary:
     Total Tasks Processed: 8
-    Total Processing Time: 937.73ms
-    Total Queue Time: 886.41ms
-    Total Transmission Time: 956.59ms
+    Total Processing Time: 955.94ms
+    Total Queue Time: 1177.40ms
+    Total Transmission Time: 950.15ms
 
 Power Consumption Summary:
     Total Energy Consumed: 0.02 kWh
-    Average Power: 182.62W
-    Peak Power: 207.29W
+    Average Power: 173.98W
+    Peak Power: 205.96W
     Current Power: 80.00W
     CPU Power: 50.00W
     Memory Power: 20.00W
     Network Power: 10.00W
 
 Average Metrics:
-    Processing Time: 117.22ms
-    Queue Time: 110.80ms
-    Transmission Time: 119.57ms
-    Total Time per Task: 347.59ms
+    Processing Time: 119.49ms
+    Queue Time: 147.18ms
+    Transmission Time: 118.77ms
+    Total Time per Task: 385.44ms
 
 Resource Utilization Summary:
     Peak Memory Usage: 0MB
@@ -2699,8 +2975,8 @@ Queue Analysis:
     Average Queue Size: 0.0 tasks
     Maximum Queue Size: 1
     Queue Time Distribution:
-        Min Queue Time: 0.05ms
-        Max Queue Time: 272.31ms
-        Average Queue Time: 110.80ms
+        Min Queue Time: 0.10ms
+        Max Queue Time: 353.80ms
+        Average Queue Time: 147.18ms
 
 ====================================================================================================

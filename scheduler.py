@@ -12,13 +12,16 @@ from config import CLOUD_SERVICES_CONFIG, FOG_NODES_CONFIG, EARTH_RADIUS_KM
 class Scheduler:
     """Scheduler for selecting optimal server (cloud or fog) based on location and load."""
     
-    def __init__(self, mode='cloud'):
-        """Initialize the scheduler with cloud or fog nodes."""
+    def __init__(self, mode='hybrid'):
+        """Initialize the scheduler with cloud and/or fog nodes."""
         self.mode = mode
-        if mode == 'cloud':
-            self.nodes = [CloudNode(i) for i in range(len(CLOUD_SERVICES_CONFIG))]
-        else:  # fog mode
-            self.nodes = [FogNode(i) for i in range(len(FOG_NODES_CONFIG))]
+        self.nodes = []
+        
+        # Initialize nodes based on mode
+        if mode in ['cloud', 'hybrid']:
+            self.nodes.extend([CloudNode(i) for i in range(len(CLOUD_SERVICES_CONFIG))])
+        if mode in ['fog', 'hybrid']:
+            self.nodes.extend([FogNode(i) for i in range(len(FOG_NODES_CONFIG))])
             
         self.current_time = 0.0
         self.task_queues = {node.name: deque() for node in self.nodes}
@@ -39,12 +42,13 @@ class Scheduler:
             } for node in self.nodes
         }
         
-        # Initialize log file
+        # Initialize log files
         self.log_file = open(f'scheduler_{mode}.log', 'w', encoding='utf-8')
+        self.system_log_file = open(f'system_{mode}.log', 'w', encoding='utf-8')
         self._write_log_header()
         
     def _write_log_header(self):
-        """Write header to log file."""
+        """Write header to log files."""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         header = f"""
 {'='*100}
@@ -53,11 +57,86 @@ Started at: {timestamp}
 Configuration:
     Number of Nodes: {len(self.nodes)}
     Node Types: {', '.join(node.name for node in self.nodes)}
+    Cloud Nodes: {sum(1 for node in self.nodes if isinstance(node, CloudNode))}
+    Fog Nodes: {sum(1 for node in self.nodes if isinstance(node, FogNode))}
 {'='*100}
 """
         self.log_file.write(header)
+        self.system_log_file.write(header)
         self.log_file.flush()
+        self.system_log_file.flush()
+
+    def _log_system_status(self):
+        """Log system-wide status to the system log file."""
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
         
+        # Calculate system-wide metrics
+        total_tasks = sum(len(queue) for queue in self.task_queues.values())
+        total_processed = sum(self.processed_tasks.values())
+        
+        # Calculate total power consumption
+        total_power = 0
+        total_energy = 0
+        node_power_info = {}
+        
+        for node in self.nodes:
+            node_stats = node.get_stats()
+            power_info = node_stats.get('power_consumption', {})
+            node_power = power_info.get('current_power', 0)
+            node_energy = power_info.get('total_energy', 0)
+            
+            total_power += node_power
+            total_energy += node_energy
+            node_power_info[node.name] = {
+                'current_power': node_power,
+                'total_energy': node_energy,
+                'cpu_power': power_info.get('cpu_power', 0),
+                'memory_power': power_info.get('memory_power', 0),
+                'network_power': power_info.get('network_power', 0)
+            }
+        
+        # Create system status log entry
+        log_entry = f"\n[{timestamp}] System Status Update\n"
+        log_entry += f"System-wide Statistics:\n"
+        log_entry += f"    Total Tasks in Queue: {total_tasks}\n"
+        log_entry += f"    Total Tasks Processed: {total_processed}\n"
+        log_entry += f"    Active Nodes: {sum(1 for node in self.nodes if len(self.task_queues[node.name]) > 0)}\n"
+        
+        # Add power consumption information
+        log_entry += f"\nPower Consumption:\n"
+        log_entry += f"    Total System Power: {total_power:.2f}W\n"
+        log_entry += f"    Total Energy Consumed: {total_energy:.2f}kWh\n"
+        
+        # Add node-specific metrics
+        log_entry += f"\nNode Status:\n"
+        for node in self.nodes:
+            queue_size = len(self.task_queues[node.name])
+            processed = self.processed_tasks[node.name]
+            metrics = self.node_metrics[node.name]
+            power_info = node_power_info[node.name]
+            
+            avg_processing = sum(metrics['processing_times']) / len(metrics['processing_times']) if metrics['processing_times'] else 0
+            avg_queue = sum(metrics['queue_times']) / len(metrics['queue_times']) if metrics['queue_times'] else 0
+            avg_response = sum(metrics['response_times']) / len(metrics['response_times']) if metrics['response_times'] else 0
+            avg_total = sum(metrics['total_times']) / len(metrics['total_times']) if metrics['total_times'] else 0
+            
+            log_entry += f"    {node.name}:\n"
+            log_entry += f"        Queue Size: {queue_size}\n"
+            log_entry += f"        Tasks Processed: {processed}\n"
+            log_entry += f"        Average Processing Time: {avg_processing:.2f}ms\n"
+            log_entry += f"        Average Queue Time: {avg_queue:.2f}ms\n"
+            log_entry += f"        Average Response Time: {avg_response:.2f}ms\n"
+            log_entry += f"        Average Total Time: {avg_total:.2f}ms\n"
+            log_entry += f"        Current Power: {power_info['current_power']:.2f}W\n"
+            log_entry += f"        Total Energy: {power_info['total_energy']:.2f}kWh\n"
+            log_entry += f"        CPU Power: {power_info['cpu_power']:.2f}W\n"
+            log_entry += f"        Memory Power: {power_info['memory_power']:.2f}W\n"
+            log_entry += f"        Network Power: {power_info['network_power']:.2f}W\n"
+        
+        log_entry += "\n" + "-"*100
+        self.system_log_file.write(log_entry)
+        self.system_log_file.flush()
+
     def _log_activity(self, message, task_id=None, task_info=None):
         """Log activity to file with detailed information."""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
@@ -97,75 +176,12 @@ Configuration:
             log_entry += f"\n        Bandwidth Utilization: {task_info.get('bandwidth_utilization', 0)*100:.1f}%"
             log_entry += f"\n        MIPS Utilization: {task_info.get('mips_utilization', 0)*100:.1f}%"
         
-        # Add system-wide metrics
-        total_tasks = sum(len(queue) for queue in self.task_queues.values())
-        total_processed = sum(self.processed_tasks.values())
-        
-        # Calculate total power consumption
-        total_power = 0
-        total_energy = 0
-        node_power_info = {}
-        
-        for node in self.nodes:
-            node_stats = node.get_stats()
-            power_info = node_stats.get('power_consumption', {})
-            node_power = power_info.get('current_power', 0)
-            node_energy = power_info.get('total_energy', 0)
-            
-            total_power += node_power
-            total_energy += node_energy
-            node_power_info[node.name] = {
-                'current_power': node_power,
-                'total_energy': node_energy,
-                'cpu_power': power_info.get('cpu_power', 0),
-                'memory_power': power_info.get('memory_power', 0),
-                'network_power': power_info.get('network_power', 0)
-            }
-            
-            # Update node metrics
-            self.node_metrics[node.name]['power_consumption'].append(node_power)
-            self.node_metrics[node.name]['energy_consumption'] = node_energy
-        
-        log_entry += f"\nSystem Status:"
-        log_entry += f"\n    Total Tasks in Queue: {total_tasks}"
-        log_entry += f"\n    Total Tasks Processed: {total_processed}"
-        log_entry += f"\n    Active Nodes: {sum(1 for node in self.nodes if len(self.task_queues[node.name]) > 0)}"
-        
-        # Add power consumption information
-        log_entry += f"\nPower Consumption:"
-        log_entry += f"\n    Total System Power: {total_power:.2f}W"
-        log_entry += f"\n    Total Energy Consumed: {total_energy:.2f}kWh"
-        
-        # Add node-specific metrics
-        log_entry += f"\nNode Status:"
-        for node in self.nodes:
-            queue_size = len(self.task_queues[node.name])
-            processed = self.processed_tasks[node.name]
-            metrics = self.node_metrics[node.name]
-            power_info = node_power_info[node.name]
-            
-            avg_processing = sum(metrics['processing_times']) / len(metrics['processing_times']) if metrics['processing_times'] else 0
-            avg_queue = sum(metrics['queue_times']) / len(metrics['queue_times']) if metrics['queue_times'] else 0
-            avg_response = sum(metrics['response_times']) / len(metrics['response_times']) if metrics['response_times'] else 0
-            avg_total = sum(metrics['total_times']) / len(metrics['total_times']) if metrics['total_times'] else 0
-            avg_power = sum(metrics['power_consumption']) / len(metrics['power_consumption']) if metrics['power_consumption'] else 0
-            
-            log_entry += f"\n    {node.name}:"
-            log_entry += f"\n        Queue Size: {queue_size}"
-            log_entry += f"\n        Tasks Processed: {processed}"
-            log_entry += f"\n        Average Processing Time: {avg_processing:.2f}ms"
-            log_entry += f"\n        Average Queue Time: {avg_queue:.2f}ms"
-            log_entry += f"\n        Average Response Time: {avg_response:.2f}ms"
-            log_entry += f"\n        Average Total Time: {avg_total:.2f}ms"
-            log_entry += f"\n        Current Power: {power_info['current_power']:.2f}W"
-            log_entry += f"\n        Total Energy: {power_info['total_energy']:.2f}kWh"
-            log_entry += f"\n        CPU Power: {power_info['cpu_power']:.2f}W"
-            log_entry += f"\n        Memory Power: {power_info['memory_power']:.2f}W"
-            log_entry += f"\n        Network Power: {power_info['network_power']:.2f}W"
-        
         log_entry += "\n" + "-"*100
         self.log_file.write(log_entry)
         self.log_file.flush()
+        
+        # Log system status separately
+        self._log_system_status()
 
     def calculate_distance(self, loc1, loc2):
         """Calculate distance between two locations using Haversine formula."""
@@ -570,18 +586,18 @@ Node Performance:
         Average Processing Time: {node_stats['avg_processing_time']:.2f}ms
         Average Queue Time: {node_stats['avg_queue_time']:.2f}ms
         Average Response Time: {node_stats['avg_response_time']:.2f}ms
-        Processing Time Range: {node_stats['min_processing_time']:.2f}ms - {node_stats['max_processing_time']:.2f}ms
-        Queue Time Range: {node_stats['min_queue_time']:.2f}ms - {node_stats['max_queue_time']:.2f}ms
-        Response Time Range: {node_stats['min_response_time']:.2f}ms - {node_stats['max_response_time']:.2f}ms
         Current Queue Size: {node_stats['queue_size']}
         System Load: {node_stats['system_load']*100:.1f}%
         Memory Utilization: {node_stats['memory_utilization']*100:.1f}%
         MIPS Utilization: {node_stats['mips_utilization']*100:.1f}%
         Bandwidth Utilization: {node_stats['bandwidth_utilization']*100:.1f}%
-        Average Power: {node_stats['avg_power']:.2f}W
-        Total Energy: {node_stats['total_energy']:.2f}kWh
+        Current Power: {node_stats['power_consumption']['current_power']:.2f}W
+        Total Energy: {node_stats['power_consumption']['total_energy']:.2f}kWh
 """
                 summary += f"\n{'='*100}"
                 self.log_file.write(summary)
+                self.system_log_file.write(summary)
                 self.log_file.flush()
-            self.log_file.close() 
+                self.system_log_file.flush()
+            self.log_file.close()
+            self.system_log_file.close() 

@@ -1,0 +1,6433 @@
+
+====================================================================================================
+Scheduler Log - FOG Mode
+Started at: 2025-05-23 20:53:48
+Configuration:
+    Number of Nodes: 4
+    Node Types: Fog-SG1, Fog-SG2, Fog-KC1, Fog-KC2
+    Cloud Nodes: 0
+    Fog Nodes: 4
+====================================================================================================
+
+[2025-05-23 20:53:48.068] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.069] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.069] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.069] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.069] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.070] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.070] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.070] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 0
+    Active Nodes: 0
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.070] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.072] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+
+Power Consumption:
+    Total System Power: 192.76W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.073] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+
+Power Consumption:
+    Total System Power: 192.76W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.073] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+
+Power Consumption:
+    Total System Power: 192.76W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.073] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+
+Power Consumption:
+    Total System Power: 192.76W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.074] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+
+Power Consumption:
+    Total System Power: 192.76W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.074] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+
+Power Consumption:
+    Total System Power: 192.76W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.074] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+
+Power Consumption:
+    Total System Power: 192.76W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.074] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 0
+    Active Nodes: 1
+
+Power Consumption:
+    Total System Power: 192.76W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.075] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 192.76W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.076] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.076] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.076] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.077] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.077] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.077] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.078] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.078] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.078] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.079] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.079] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.080] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.080] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.080] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.081] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.081] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.081] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.081] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 210.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 52.27W
+        Total Energy: 0.00kWh
+        CPU Power: 26.35W
+        Memory Power: 18.92W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.082] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.082] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.083] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.083] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.083] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.083] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.084] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.084] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.084] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.085] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.085] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.085] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.086] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.086] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.087] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.087] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.088] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 0
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.088] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 3
+
+Power Consumption:
+    Total System Power: 226.74W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.089] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 3
+
+Power Consumption:
+    Total System Power: 266.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.090] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 3
+
+Power Consumption:
+    Total System Power: 266.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.090] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 3
+
+Power Consumption:
+    Total System Power: 266.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.090] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 3
+
+Power Consumption:
+    Total System Power: 266.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.090] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 3
+
+Power Consumption:
+    Total System Power: 266.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.090] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 3
+
+Power Consumption:
+    Total System Power: 266.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.090] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 3
+
+Power Consumption:
+    Total System Power: 266.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.091] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 0
+    Active Nodes: 3
+
+Power Consumption:
+    Total System Power: 266.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.091] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 266.03W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.091] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 294.38W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.091] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 294.38W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.092] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 294.38W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.092] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 294.38W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.092] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 294.38W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.092] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 294.38W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.092] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 294.38W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.092] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 294.38W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.093] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 294.38W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 68.98W
+        Total Energy: 0.00kWh
+        CPU Power: 36.14W
+        Memory Power: 23.84W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.093] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.093] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.093] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.094] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.094] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.094] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.094] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.094] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.094] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.095] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.095] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.095] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.095] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.096] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.096] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.096] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.096] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 4
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.096] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 10
+    Total Tasks Processed: 0
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 330.08W
+    Total Energy Consumed: 0.00kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 5
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 104.68W
+        Total Energy: 0.00kWh
+        CPU Power: 46.10W
+        Memory Power: 47.58W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.181] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 9
+    Total Tasks Processed: 1
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 326.40W
+    Total Energy Consumed: 0.01kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 4
+        Tasks Processed: 1
+        Average Processing Time: 79.34ms
+        Average Queue Time: 105.63ms
+        Average Response Time: 184.97ms
+        Average Total Time: 130.41ms
+        Current Power: 101.00W
+        Total Energy: 0.00kWh
+        CPU Power: 46.16W
+        Memory Power: 43.84W
+        Network Power: 11.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.227] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 8
+    Total Tasks Processed: 2
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 273.99W
+    Total Energy Consumed: 0.01kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 3
+        Tasks Processed: 2
+        Average Processing Time: 100.89ms
+        Average Queue Time: 125.83ms
+        Average Response Time: 226.72ms
+        Average Total Time: 182.06ms
+        Current Power: 48.59W
+        Total Energy: 0.00kWh
+        CPU Power: 26.41W
+        Memory Power: 15.18W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.228] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 7
+    Total Tasks Processed: 3
+    Active Nodes: 4
+
+Power Consumption:
+    Total System Power: 273.99W
+    Total Energy Consumed: 0.01kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 3
+        Average Processing Time: 108.75ms
+        Average Queue Time: 129.01ms
+        Average Response Time: 237.75ms
+        Average Total Time: 206.97ms
+        Current Power: 48.59W
+        Total Energy: 0.00kWh
+        CPU Power: 26.41W
+        Memory Power: 15.18W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 74.29W
+        Total Energy: 0.00kWh
+        CPU Power: 31.27W
+        Memory Power: 35.51W
+        Network Power: 7.50W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.243] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 6
+    Total Tasks Processed: 4
+    Active Nodes: 3
+
+Power Consumption:
+    Total System Power: 258.92W
+    Total Energy Consumed: 0.01kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 3
+        Average Processing Time: 108.75ms
+        Average Queue Time: 129.01ms
+        Average Response Time: 237.75ms
+        Average Total Time: 206.97ms
+        Current Power: 72.80W
+        Total Energy: 0.00kWh
+        CPU Power: 37.23W
+        Memory Power: 26.58W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 140.92ms
+        Average Queue Time: 154.40ms
+        Average Response Time: 295.32ms
+        Average Total Time: 186.49ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 1
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 63.35W
+        Total Energy: 0.00kWh
+        CPU Power: 31.72W
+        Memory Power: 24.63W
+        Network Power: 7.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.259] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 5
+    Total Tasks Processed: 5
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 230.56W
+    Total Energy Consumed: 0.02kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 2
+        Tasks Processed: 3
+        Average Processing Time: 108.75ms
+        Average Queue Time: 129.01ms
+        Average Response Time: 237.75ms
+        Average Total Time: 206.97ms
+        Current Power: 72.80W
+        Total Energy: 0.00kWh
+        CPU Power: 37.23W
+        Memory Power: 26.58W
+        Network Power: 9.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 140.92ms
+        Average Queue Time: 154.40ms
+        Average Response Time: 295.32ms
+        Average Total Time: 186.49ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 146.51ms
+        Average Queue Time: 167.58ms
+        Average Response Time: 314.10ms
+        Average Total Time: 411.87ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.00kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.275] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 4
+    Total Tasks Processed: 6
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 216.97W
+    Total Energy Consumed: 0.02kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 4
+        Average Processing Time: 101.59ms
+        Average Queue Time: 141.34ms
+        Average Response Time: 242.93ms
+        Average Total Time: 221.03ms
+        Current Power: 59.21W
+        Total Energy: 0.00kWh
+        CPU Power: 30.82W
+        Memory Power: 21.40W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 140.92ms
+        Average Queue Time: 154.40ms
+        Average Response Time: 295.32ms
+        Average Total Time: 186.49ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 146.51ms
+        Average Queue Time: 167.58ms
+        Average Response Time: 314.10ms
+        Average Total Time: 411.87ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 3
+        Tasks Processed: 0
+        Average Processing Time: 0.00ms
+        Average Queue Time: 0.00ms
+        Average Response Time: 0.00ms
+        Average Total Time: 0.00ms
+        Current Power: 87.76W
+        Total Energy: 0.01kWh
+        CPU Power: 37.93W
+        Memory Power: 42.32W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.322] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 3
+    Total Tasks Processed: 7
+    Active Nodes: 2
+
+Power Consumption:
+    Total System Power: 221.20W
+    Total Energy Consumed: 0.02kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 1
+        Tasks Processed: 4
+        Average Processing Time: 101.59ms
+        Average Queue Time: 141.34ms
+        Average Response Time: 242.93ms
+        Average Total Time: 221.03ms
+        Current Power: 59.21W
+        Total Energy: 0.01kWh
+        CPU Power: 30.82W
+        Memory Power: 21.40W
+        Network Power: 7.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 140.92ms
+        Average Queue Time: 154.40ms
+        Average Response Time: 295.32ms
+        Average Total Time: 186.49ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 146.51ms
+        Average Queue Time: 167.58ms
+        Average Response Time: 314.10ms
+        Average Total Time: 411.87ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 1
+        Average Processing Time: 224.18ms
+        Average Queue Time: 251.81ms
+        Average Response Time: 475.99ms
+        Average Total Time: 267.45ms
+        Current Power: 91.99W
+        Total Energy: 0.01kWh
+        CPU Power: 45.18W
+        Memory Power: 36.81W
+        Network Power: 10.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.368] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 2
+    Total Tasks Processed: 8
+    Active Nodes: 1
+
+Power Consumption:
+    Total System Power: 196.99W
+    Total Energy Consumed: 0.02kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 5
+        Average Processing Time: 108.31ms
+        Average Queue Time: 167.78ms
+        Average Response Time: 276.09ms
+        Average Total Time: 255.47ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 140.92ms
+        Average Queue Time: 154.40ms
+        Average Response Time: 295.32ms
+        Average Total Time: 186.49ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 146.51ms
+        Average Queue Time: 167.58ms
+        Average Response Time: 314.10ms
+        Average Total Time: 411.87ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 2
+        Tasks Processed: 1
+        Average Processing Time: 224.18ms
+        Average Queue Time: 251.81ms
+        Average Response Time: 475.99ms
+        Average Total Time: 267.45ms
+        Current Power: 91.99W
+        Total Energy: 0.01kWh
+        CPU Power: 45.18W
+        Memory Power: 36.81W
+        Network Power: 10.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.448] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 1
+    Total Tasks Processed: 9
+    Active Nodes: 1
+
+Power Consumption:
+    Total System Power: 168.19W
+    Total Energy Consumed: 0.03kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 5
+        Average Processing Time: 108.31ms
+        Average Queue Time: 167.78ms
+        Average Response Time: 276.09ms
+        Average Total Time: 255.47ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 140.92ms
+        Average Queue Time: 154.40ms
+        Average Response Time: 295.32ms
+        Average Total Time: 186.49ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 146.51ms
+        Average Queue Time: 167.58ms
+        Average Response Time: 314.10ms
+        Average Total Time: 411.87ms
+        Current Power: 35.00W
+        Total Energy: 0.00kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 1
+        Tasks Processed: 2
+        Average Processing Time: 176.12ms
+        Average Queue Time: 307.78ms
+        Average Response Time: 483.90ms
+        Average Total Time: 326.97ms
+        Current Power: 63.19W
+        Total Energy: 0.01kWh
+        CPU Power: 34.94W
+        Memory Power: 20.76W
+        Network Power: 7.50W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.511] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 10
+    Active Nodes: 0
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.03kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 5
+        Average Processing Time: 108.31ms
+        Average Queue Time: 167.78ms
+        Average Response Time: 276.09ms
+        Average Total Time: 255.47ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 140.92ms
+        Average Queue Time: 154.40ms
+        Average Response Time: 295.32ms
+        Average Total Time: 186.49ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 146.51ms
+        Average Queue Time: 167.58ms
+        Average Response Time: 314.10ms
+        Average Total Time: 411.87ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 0
+        Tasks Processed: 3
+        Average Processing Time: 179.64ms
+        Average Queue Time: 349.26ms
+        Average Response Time: 528.90ms
+        Average Total Time: 386.46ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.523] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 10
+    Active Nodes: 0
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.03kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 5
+        Average Processing Time: 108.31ms
+        Average Queue Time: 167.78ms
+        Average Response Time: 276.09ms
+        Average Total Time: 255.47ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 140.92ms
+        Average Queue Time: 154.40ms
+        Average Response Time: 295.32ms
+        Average Total Time: 186.49ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 146.51ms
+        Average Queue Time: 167.58ms
+        Average Response Time: 314.10ms
+        Average Total Time: 411.87ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 0
+        Tasks Processed: 3
+        Average Processing Time: 179.64ms
+        Average Queue Time: 349.26ms
+        Average Response Time: 528.90ms
+        Average Total Time: 386.46ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.524] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 10
+    Active Nodes: 0
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.03kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 5
+        Average Processing Time: 108.31ms
+        Average Queue Time: 167.78ms
+        Average Response Time: 276.09ms
+        Average Total Time: 255.47ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 140.92ms
+        Average Queue Time: 154.40ms
+        Average Response Time: 295.32ms
+        Average Total Time: 186.49ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 146.51ms
+        Average Queue Time: 167.58ms
+        Average Response Time: 314.10ms
+        Average Total Time: 411.87ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 0
+        Tasks Processed: 3
+        Average Processing Time: 179.64ms
+        Average Queue Time: 349.26ms
+        Average Response Time: 528.90ms
+        Average Total Time: 386.46ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.527] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 10
+    Active Nodes: 0
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.03kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 5
+        Average Processing Time: 108.31ms
+        Average Queue Time: 167.78ms
+        Average Response Time: 276.09ms
+        Average Total Time: 255.47ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 140.92ms
+        Average Queue Time: 154.40ms
+        Average Response Time: 295.32ms
+        Average Total Time: 186.49ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 146.51ms
+        Average Queue Time: 167.58ms
+        Average Response Time: 314.10ms
+        Average Total Time: 411.87ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 0
+        Tasks Processed: 3
+        Average Processing Time: 179.64ms
+        Average Queue Time: 349.26ms
+        Average Response Time: 528.90ms
+        Average Total Time: 386.46ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+[2025-05-23 20:53:48.529] System Status Update
+System-wide Statistics:
+    Total Tasks in Queue: 0
+    Total Tasks Processed: 10
+    Active Nodes: 0
+
+Power Consumption:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.03kWh
+
+Node Status:
+    Fog-SG1:
+        Queue Size: 0
+        Tasks Processed: 5
+        Average Processing Time: 108.31ms
+        Average Queue Time: 167.78ms
+        Average Response Time: 276.09ms
+        Average Total Time: 255.47ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-SG2:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 140.92ms
+        Average Queue Time: 154.40ms
+        Average Response Time: 295.32ms
+        Average Total Time: 186.49ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC1:
+        Queue Size: 0
+        Tasks Processed: 1
+        Average Processing Time: 146.51ms
+        Average Queue Time: 167.58ms
+        Average Response Time: 314.10ms
+        Average Total Time: 411.87ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+    Fog-KC2:
+        Queue Size: 0
+        Tasks Processed: 3
+        Average Processing Time: 179.64ms
+        Average Queue Time: 349.26ms
+        Average Response Time: 528.90ms
+        Average Total Time: 386.46ms
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+        CPU Power: 20.00W
+        Memory Power: 10.00W
+        Network Power: 5.00W
+
+----------------------------------------------------------------------------------------------------
+====================================================================================================
+SCHEDULER SUMMARY REPORT - FOG Mode
+====================================================================================================
+
+System-wide Statistics:
+    Total Tasks Processed: 10
+    Total Processing Time: 1367.93ms
+    Total Queue Time: 2208.66ms
+    Total Transmission Time: 986.05ms
+    Total Response Time: 3576.59ms
+
+Power Consumption Summary:
+    Total System Power: 140.00W
+    Total Energy Consumed: 0.03kWh
+    Average Power per Node: 35.00W
+    Average Energy per Node: 0.01kWh
+
+Average Metrics:
+    Processing Time: 136.79ms
+    Queue Time: 220.87ms
+    Transmission Time: 98.60ms
+    Response Time: 357.66ms
+
+Node Performance:
+
+    Fog-SG1:
+        Tasks Processed: 5
+        Average Processing Time: 108.31ms
+        Average Queue Time: 167.78ms
+        Average Response Time: 276.09ms
+        Current Queue Size: 0
+        System Load: 0.0%
+        Memory Utilization: 0.0%
+        MIPS Utilization: 0.0%
+        Bandwidth Utilization: 0.0%
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+
+    Fog-SG2:
+        Tasks Processed: 1
+        Average Processing Time: 140.92ms
+        Average Queue Time: 154.40ms
+        Average Response Time: 295.32ms
+        Current Queue Size: 0
+        System Load: 0.0%
+        Memory Utilization: 0.0%
+        MIPS Utilization: 0.0%
+        Bandwidth Utilization: 0.0%
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+
+    Fog-KC1:
+        Tasks Processed: 1
+        Average Processing Time: 146.51ms
+        Average Queue Time: 167.58ms
+        Average Response Time: 314.10ms
+        Current Queue Size: 0
+        System Load: 0.0%
+        Memory Utilization: 0.0%
+        MIPS Utilization: 0.0%
+        Bandwidth Utilization: 0.0%
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+
+    Fog-KC2:
+        Tasks Processed: 3
+        Average Processing Time: 179.64ms
+        Average Queue Time: 349.26ms
+        Average Response Time: 528.90ms
+        Current Queue Size: 0
+        System Load: 0.0%
+        Memory Utilization: 0.0%
+        MIPS Utilization: 0.0%
+        Bandwidth Utilization: 0.0%
+        Current Power: 35.00W
+        Total Energy: 0.01kWh
+
+====================================================================================================

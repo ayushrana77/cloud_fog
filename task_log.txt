@@ -1,16 +1,16 @@
 
 Task Processing Log
-Started at: 2025-05-22 21:51:33
+Started at: 2025-05-23 20:53:45
 ================================================================================
 
 ================================================================================
-Task Details - 2025-05-22 21:51:38.115
+Task Details - 2025-05-23 20:53:48.512
 Task ID: 1
 Size: 270 MB
 MIPS Required: 900.0 MIPS
 RAM Required: 500 MB
 Bandwidth Required: 100 Mbps
-Location: 33.6382797, 72.83865311
+Location: 43.6382797, -82.83865311
 Raw Task Data: {
     "ID": "71fac031-74d8-4d69-a47b-67a41db9d59e",
     "Size": 270,
@@ -29,8 +29,8 @@ Raw Task Data: {
     "CurrentAllocatedMips": null,
     "BeingInstantiated": true,
     "GeoLocation": {
-        "latitude": 33.6382797,
-        "longitude": 72.83865311
+        "latitude": 43.6382797,
+        "longitude": -82.83865311
     },
     "DataType": "Large",
     "DataPercentage": 100,
@@ -52,13 +52,13 @@ Raw Task Data: {
 ================================================================================
 
 ================================================================================
-Task Details - 2025-05-22 21:51:38.115
+Task Details - 2025-05-23 20:53:48.512
 Task ID: 2
 Size: 80 MB
 MIPS Required: 50.0 MIPS
 RAM Required: 100 MB
 Bandwidth Required: 20 Mbps
-Location: 33.74430192, 72.94457212
+Location: 3.74430192, 82.94457212
 Raw Task Data: {
     "ID": "b9ef1785-8a7e-45bc-bf84-3721ee2a63fb",
     "Size": 80,
@@ -77,8 +77,8 @@ Raw Task Data: {
     "CurrentAllocatedMips": null,
     "BeingInstantiated": true,
     "GeoLocation": {
-        "latitude": 33.74430192,
-        "longitude": 72.94457212
+        "latitude": 3.74430192,
+        "longitude": 82.94457212
     },
     "DataType": "SmallTextual",
     "DataPercentage": 100,
@@ -100,7 +100,7 @@ Raw Task Data: {
 ================================================================================
 
 ================================================================================
-Task Details - 2025-05-22 21:51:38.115
+Task Details - 2025-05-23 20:53:48.513
 Task ID: 3
 Size: 300 MB
 MIPS Required: 120.0 MIPS
@@ -148,7 +148,7 @@ Raw Task Data: {
 ================================================================================
 
 ================================================================================
-Task Details - 2025-05-22 21:51:38.115
+Task Details - 2025-05-23 20:53:48.513
 Task ID: 4
 Size: 300 MB
 MIPS Required: 1200.0 MIPS
@@ -196,7 +196,7 @@ Raw Task Data: {
 ================================================================================
 
 ================================================================================
-Task Details - 2025-05-22 21:51:38.116
+Task Details - 2025-05-23 20:53:48.514
 Task ID: 5
 Size: 130 MB
 MIPS Required: 200.0 MIPS
@@ -244,13 +244,13 @@ Raw Task Data: {
 ================================================================================
 
 ================================================================================
-Task Details - 2025-05-22 21:51:38.116
+Task Details - 2025-05-23 20:53:48.514
 Task ID: 6
 Size: 126 MB
 MIPS Required: 200.0 MIPS
 RAM Required: 500 MB
 Bandwidth Required: 100 Mbps
-Location: 33.70274783, 73.0236825
+Location: 9.70274783, 120.0236825
 Raw Task Data: {
     "ID": "c65b0962-f60b-4c97-9eae-8eacf5d6d973",
     "Size": 126,
@@ -269,8 +269,8 @@ Raw Task Data: {
     "CurrentAllocatedMips": null,
     "BeingInstantiated": true,
     "GeoLocation": {
-        "latitude": 33.70274783,
-        "longitude": 73.0236825
+        "latitude": 9.70274783,
+        "longitude": 120.0236825
     },
     "DataType": "Abrupt",
     "DataPercentage": 100,
@@ -292,13 +292,13 @@ Raw Task Data: {
 ================================================================================
 
 ================================================================================
-Task Details - 2025-05-22 21:51:38.116
+Task Details - 2025-05-23 20:53:48.515
 Task ID: 7
 Size: 170 MB
 MIPS Required: 700.0 MIPS
 RAM Required: 200 MB
 Bandwidth Required: 80 Mbps
-Location: 33.6382797, 72.83865311
+Location: 33.6382797, 172.83865311
 Raw Task Data: {
     "ID": "85b4422a-6130-4b76-be02-d989fa9f59d5",
     "Size": 170,
@@ -318,7 +318,7 @@ Raw Task Data: {
     "BeingInstantiated": true,
     "GeoLocation": {
         "latitude": 33.6382797,
-        "longitude": 72.83865311
+        "longitude": 172.83865311
     },
     "DataType": "Bulk",
     "DataPercentage": 100,
@@ -340,13 +340,13 @@ Raw Task Data: {
 ================================================================================
 
 ================================================================================
-Task Details - 2025-05-22 21:51:38.116
+Task Details - 2025-05-23 20:53:48.515
 Task ID: 8
 Size: 170 MB
 MIPS Required: 100.0 MIPS
 RAM Required: 200 MB
 Bandwidth Required: 80 Mbps
-Location: 33.76693095, 73.05696932
+Location: -33.76693095, 73.05696932
 Raw Task Data: {
     "ID": "108cab39-4e30-4d5a-b20a-3d52d5470766",
     "Size": 170,
@@ -365,7 +365,7 @@ Raw Task Data: {
     "CurrentAllocatedMips": null,
     "BeingInstantiated": true,
     "GeoLocation": {
-        "latitude": 33.76693095,
+        "latitude": -33.76693095,
         "longitude": 73.05696932
     },
     "DataType": "Medical",
@@ -388,7 +388,7 @@ Raw Task Data: {
 ================================================================================
 
 ================================================================================
-Task Details - 2025-05-22 21:51:38.116
+Task Details - 2025-05-23 20:53:48.516
 Task ID: 9
 Size: 300 MB
 MIPS Required: 250.0 MIPS
@@ -436,7 +436,7 @@ Raw Task Data: {
 ================================================================================
 
 ================================================================================
-Task Details - 2025-05-22 21:51:38.116
+Task Details - 2025-05-23 20:53:48.516
 Task ID: 10
 Size: 170 MB
 MIPS Required: 100.0 MIPS
@@ -484,5 +484,5 @@ Raw Task Data: {
 ================================================================================
 
 Processing Complete
-Duration: 4.7 seconds
+Duration: 2.8 seconds
 ================================================================================

@@ -17,8 +17,8 @@
         "CurrentAllocatedMips": null,
         "BeingInstantiated": true,
         "GeoLocation": {
-            "latitude": 33.6382797,
-            "longitude": 72.83865311
+            "latitude": 43.6382797,
+            "longitude": -82.83865311
         },
         "DataType": "Large",
         "DataPercentage": 100,
@@ -55,8 +55,8 @@
         "CurrentAllocatedMips": null,
         "BeingInstantiated": true,
         "GeoLocation": {
-            "latitude": 33.74430192,
-            "longitude": 72.94457212
+            "latitude": 3.74430192,
+            "longitude": 82.94457212
         },
         "DataType": "SmallTextual",
         "DataPercentage": 100,
@@ -207,8 +207,8 @@
         "CurrentAllocatedMips": null,
         "BeingInstantiated": true,
         "GeoLocation": {
-            "latitude": 33.70274783,
-            "longitude": 73.0236825
+            "latitude": 9.70274783,
+            "longitude": 120.0236825
         },
         "DataType": "Abrupt",
         "DataPercentage": 100,
@@ -246,7 +246,7 @@
         "BeingInstantiated": true,
         "GeoLocation": {
             "latitude": 33.6382797,
-            "longitude": 72.83865311
+            "longitude": 172.83865311
         },
         "DataType": "Bulk",
         "DataPercentage": 100,
@@ -283,7 +283,7 @@
         "CurrentAllocatedMips": null,
         "BeingInstantiated": true,
         "GeoLocation": {
-            "latitude": 33.76693095,
+            "latitude": -33.76693095,
             "longitude": 73.05696932
         },
         "DataType": "Medical",
