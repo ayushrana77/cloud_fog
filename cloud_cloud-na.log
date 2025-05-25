@@ -1,7 +1,7 @@
 
 ====================================================================================================
 Cloud Node Log - Cloud-NA
-Started at: 2025-05-23 20:48:37
+Started at: 2025-05-25 20:10:14
 Node Configuration:
     MIPS: 9000
     Memory: 9024 MB
@@ -9,7 +9,7 @@ Node Configuration:
     Location: 39.0997, -94.5786
 ====================================================================================================
 
-[2025-05-23 20:48:37.613] Calculated processing time: 110.22ms for task size 300MB
+[2025-05-25 20:10:14.464] Calculated processing time: 89.69ms for task size 270MB
 Power Consumption:
     Total Power: 80.00W
     CPU Power: 50.00W (0.0% utilization)
@@ -26,14 +26,14 @@ Resource Utilization:
     MIPS: 0.0%
     Bandwidth: 0.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-23 20:48:37.613] Starting task processing
+[2025-05-25 20:10:14.464] Starting task processing
 Task Details:
-    Task ID: 2548143592960
+    Task ID: 1511104034304
     Node: Cloud-NA
     Timing Metrics:
         Total Time: 0.00ms
         Response Time: 0.00ms
-        Processing Time: 110.22ms
+        Processing Time: 89.69ms
         Queue Time: 0.00ms
         Transmission Time: 0.00ms
     Resource Usage:
@@ -64,31 +64,31 @@ Resource Utilization:
     MIPS: 0.0%
     Bandwidth: 0.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-23 20:48:37.617] Calculated processing time: 77.42ms for task size 130MB
+[2025-05-25 20:10:14.466] Calculated processing time: 84.13ms for task size 170MB
 Power Consumption:
-    Total Power: 128.51W
-    CPU Power: 66.53W (11.0% utilization)
-    Memory Power: 49.98W (37.5% utilization)
+    Total Power: 118.46W
+    CPU Power: 63.45W (9.0% utilization)
+    Memory Power: 43.01W (28.8% utilization)
     Network Power: 12.00W (5.0% utilization)
 Node Metrics:
     Tasks Processed: 1
     Current Queue Size: 1
     Active Tasks: 1
-    Throughput: 9.07 tasks/second
-    Average Task Interval: 110.22ms
+    Throughput: 11.15 tasks/second
+    Average Task Interval: 89.69ms
 Resource Utilization:
-    Memory: 37.5%
-    MIPS: 11.0%
+    Memory: 28.8%
+    MIPS: 9.0%
     Bandwidth: 5.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-23 20:48:37.617] Starting task processing
+[2025-05-25 20:10:14.467] Starting task processing
 Task Details:
-    Task ID: 2548143593664
+    Task ID: 1511104103936
     Node: Cloud-NA
     Timing Metrics:
         Total Time: 0.00ms
         Response Time: 0.00ms
-        Processing Time: 77.42ms
+        Processing Time: 84.13ms
         Queue Time: 0.00ms
         Transmission Time: 0.00ms
     Resource Usage:
@@ -104,163 +104,163 @@ Task Details:
         Bandwidth Utilization: 0.0%
         MIPS Utilization: 0.0%
 Power Consumption:
-    Total Power: 128.51W
-    CPU Power: 66.53W (11.0% utilization)
-    Memory Power: 49.98W (37.5% utilization)
+    Total Power: 118.46W
+    CPU Power: 63.45W (9.0% utilization)
+    Memory Power: 43.01W (28.8% utilization)
     Network Power: 12.00W (5.0% utilization)
 Node Metrics:
     Tasks Processed: 1
     Current Queue Size: 1
     Active Tasks: 1
-    Throughput: 9.07 tasks/second
-    Average Task Interval: 110.22ms
+    Throughput: 11.15 tasks/second
+    Average Task Interval: 89.69ms
 Resource Utilization:
-    Memory: 37.5%
-    MIPS: 11.0%
+    Memory: 28.8%
+    MIPS: 9.0%
     Bandwidth: 5.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-23 20:48:37.628] Task 2548143592960 started parallel processing. Expected time: 110.22ms
+[2025-05-25 20:10:14.468] Task 1511104034304 started parallel processing. Expected time: 89.69ms
 Power Consumption:
-    Total Power: 163.00W
-    CPU Power: 78.14W (18.8% utilization)
-    Memory Power: 70.86W (63.6% utilization)
+    Total Power: 149.21W
+    CPU Power: 76.07W (17.4% utilization)
+    Memory Power: 59.14W (48.9% utilization)
     Network Power: 14.00W (10.0% utilization)
 Node Metrics:
     Tasks Processed: 2
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 10.66 tasks/second
-    Average Task Interval: 93.82ms
+    Throughput: 11.51 tasks/second
+    Average Task Interval: 86.91ms
 Resource Utilization:
-    Memory: 63.6%
-    MIPS: 18.8%
+    Memory: 48.9%
+    MIPS: 17.4%
     Bandwidth: 10.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-23 20:48:37.628] Task 2548143593664 started parallel processing. Expected time: 77.42ms
+[2025-05-25 20:10:14.468] Task 1511104103936 started parallel processing. Expected time: 84.13ms
 Power Consumption:
-    Total Power: 163.00W
-    CPU Power: 78.14W (18.8% utilization)
-    Memory Power: 70.86W (63.6% utilization)
+    Total Power: 149.21W
+    CPU Power: 76.07W (17.4% utilization)
+    Memory Power: 59.14W (48.9% utilization)
     Network Power: 14.00W (10.0% utilization)
 Node Metrics:
     Tasks Processed: 2
     Current Queue Size: 2
     Active Tasks: 2
-    Throughput: 10.66 tasks/second
-    Average Task Interval: 93.82ms
+    Throughput: 11.51 tasks/second
+    Average Task Interval: 86.91ms
 Resource Utilization:
-    Memory: 63.6%
-    MIPS: 18.8%
+    Memory: 48.9%
+    MIPS: 17.4%
     Bandwidth: 10.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-23 20:48:37.706] Task 2548143593664 completed parallel processing. Processing time: 77.42ms. Remaining active tasks: 1, Total Memory Used: 3382MB/9024MB, Total MIPS Used: 991.9519681822966/9000, Total Bandwidth Used: 100Mbps/2000Mbps
+[2025-05-25 20:10:14.555] Task 1511104103936 completed parallel processing. Processing time: 84.13ms. Remaining active tasks: 1, Total Memory Used: 2595MB/9024MB, Total MIPS Used: 807.2360046086009/9000, Total Bandwidth Used: 100Mbps/2000Mbps
 Power Consumption:
-    Total Power: 123.59W
-    CPU Power: 61.61W (7.7% utilization)
-    Memory Power: 49.98W (37.5% utilization)
+    Total Power: 117.63W
+    CPU Power: 62.62W (8.4% utilization)
+    Memory Power: 43.01W (28.8% utilization)
     Network Power: 12.00W (5.0% utilization)
 Node Metrics:
     Tasks Processed: 2
     Current Queue Size: 1
     Active Tasks: 1
-    Throughput: 10.66 tasks/second
-    Average Task Interval: 93.82ms
+    Throughput: 11.51 tasks/second
+    Average Task Interval: 86.91ms
 Resource Utilization:
-    Memory: 37.5%
-    MIPS: 7.7%
+    Memory: 28.8%
+    MIPS: 8.4%
     Bandwidth: 5.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-23 20:48:37.706] Task completed
+[2025-05-25 20:10:14.900] Task completed
 Task Details:
-    Task ID: 2548143593664
+    Task ID: 1511104103936
     Node: Cloud-NA
     Timing Metrics:
-        Total Time: 120.95ms
+        Total Time: 359.75ms
         Response Time: 0.00ms
-        Processing Time: 77.42ms
-        Queue Time: 0.12ms
-        Transmission Time: 43.41ms
+        Processing Time: 84.13ms
+        Queue Time: 0.05ms
+        Transmission Time: 275.57ms
     Resource Usage:
         Memory Used: 0MB
         Bandwidth Used: 0Mbps
         RAM Required: 0MB
         Task Size: 0MB
     Network Metrics:
-        Distance: 1005.24km
+        Distance: 7930.68km
         Queue Size: 1
     System Load:
         System Load: 0.0%
         Bandwidth Utilization: 0.0%
         MIPS Utilization: 0.0%
 Power Consumption:
-    Total Power: 123.59W
-    CPU Power: 61.61W (7.7% utilization)
-    Memory Power: 49.98W (37.5% utilization)
+    Total Power: 117.63W
+    CPU Power: 62.62W (8.4% utilization)
+    Memory Power: 43.01W (28.8% utilization)
     Network Power: 12.00W (5.0% utilization)
 Node Metrics:
     Tasks Processed: 2
     Current Queue Size: 1
     Active Tasks: 1
-    Throughput: 10.66 tasks/second
-    Average Task Interval: 93.82ms
+    Throughput: 11.51 tasks/second
+    Average Task Interval: 86.91ms
 Resource Utilization:
-    Memory: 37.5%
-    MIPS: 7.7%
+    Memory: 28.8%
+    MIPS: 8.4%
     Bandwidth: 5.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-23 20:48:37.739] Task 2548143592960 completed parallel processing. Processing time: 110.22ms. Remaining active tasks: 0, Total Memory Used: 0MB/9024MB, Total MIPS Used: 0/9000, Total Bandwidth Used: 0Mbps/2000Mbps
+[2025-05-25 20:10:14.919] Task 1511104034304 completed parallel processing. Processing time: 89.69ms. Remaining active tasks: 0, Total Memory Used: 0MB/9024MB, Total MIPS Used: 0/9000, Total Bandwidth Used: 0Mbps/2000Mbps
 Power Consumption:
-    Total Power: 75.08W
-    CPU Power: 45.08W (-3.3% utilization)
+    Total Power: 79.17W
+    CPU Power: 49.17W (-0.6% utilization)
     Memory Power: 20.00W (0.0% utilization)
     Network Power: 10.00W (0.0% utilization)
 Node Metrics:
     Tasks Processed: 2
     Current Queue Size: 0
     Active Tasks: 0
-    Throughput: 10.66 tasks/second
-    Average Task Interval: 93.82ms
+    Throughput: 11.51 tasks/second
+    Average Task Interval: 86.91ms
 Resource Utilization:
     Memory: 0.0%
-    MIPS: -3.3%
+    MIPS: -0.6%
     Bandwidth: 0.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-23 20:48:37.739] Task completed
+[2025-05-25 20:10:14.921] Task completed
 Task Details:
-    Task ID: 2548143592960
+    Task ID: 1511104034304
     Node: Cloud-NA
     Timing Metrics:
-        Total Time: 190.30ms
+        Total Time: 149.22ms
         Response Time: 0.00ms
-        Processing Time: 110.22ms
-        Queue Time: 0.09ms
-        Transmission Time: 79.99ms
+        Processing Time: 89.69ms
+        Queue Time: 0.05ms
+        Transmission Time: 59.48ms
     Resource Usage:
         Memory Used: 0MB
         Bandwidth Used: 0Mbps
         RAM Required: 0MB
         Task Size: 0MB
     Network Metrics:
-        Distance: 2019.22km
+        Distance: 1100.60km
         Queue Size: 0
     System Load:
         System Load: 0.0%
         Bandwidth Utilization: 0.0%
         MIPS Utilization: 0.0%
 Power Consumption:
-    Total Power: 75.08W
-    CPU Power: 45.08W (-3.3% utilization)
+    Total Power: 79.17W
+    CPU Power: 49.17W (-0.6% utilization)
     Memory Power: 20.00W (0.0% utilization)
     Network Power: 10.00W (0.0% utilization)
 Node Metrics:
     Tasks Processed: 2
     Current Queue Size: 0
     Active Tasks: 0
-    Throughput: 10.66 tasks/second
-    Average Task Interval: 93.82ms
+    Throughput: 11.51 tasks/second
+    Average Task Interval: 86.91ms
 Resource Utilization:
     Memory: 0.0%
-    MIPS: -3.3%
+    MIPS: -0.6%
     Bandwidth: 0.0%
 ----------------------------------------------------------------------------------------------------
 ====================================================================================================
@@ -269,24 +269,24 @@ SUMMARY REPORT - Cloud-NA
 
 Task Processing Summary:
     Total Tasks Processed: 2
-    Total Processing Time: 187.63ms
-    Total Queue Time: 0.21ms
-    Total Transmission Time: 123.40ms
+    Total Processing Time: 173.83ms
+    Total Queue Time: 0.10ms
+    Total Transmission Time: 335.04ms
 
 Power Consumption Summary:
-    Total Energy Consumed: 0.01 kWh
-    Average Power: 121.10W
-    Peak Power: 163.00W
-    Current Power: 75.08W
-    CPU Power: 45.08W
+    Total Energy Consumed: 0.23 kWh
+    Average Power: 107.14W
+    Peak Power: 149.21W
+    Current Power: 79.17W
+    CPU Power: 49.17W
     Memory Power: 20.00W
     Network Power: 10.00W
 
 Average Metrics:
-    Processing Time: 93.82ms
-    Queue Time: 0.11ms
-    Transmission Time: 61.70ms
-    Total Time per Task: 155.63ms
+    Processing Time: 86.91ms
+    Queue Time: 0.05ms
+    Transmission Time: 167.52ms
+    Total Time per Task: 254.49ms
 
 Resource Utilization Summary:
     Peak Memory Usage: 0MB
@@ -302,8 +302,8 @@ Queue Analysis:
     Average Queue Size: 0.0 tasks
     Maximum Queue Size: 1
     Queue Time Distribution:
-        Min Queue Time: 0.09ms
-        Max Queue Time: 0.12ms
-        Average Queue Time: 0.11ms
+        Min Queue Time: 0.05ms
+        Max Queue Time: 0.05ms
+        Average Queue Time: 0.05ms
 
 ====================================================================================================

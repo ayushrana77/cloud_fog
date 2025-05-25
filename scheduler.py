@@ -42,17 +42,28 @@ class Scheduler:
             } for node in self.nodes
         }
         
-        # Initialize log files
-        self.log_file = open(f'scheduler_{mode}.log', 'w', encoding='utf-8')
-        self.system_log_file = open(f'system_{mode}.log', 'w', encoding='utf-8')
+        # Initialize log files with separate names for cloud and fog
+        if mode == 'hybrid':
+            self.cloud_log_file = open('cloud_summary.log', 'w', encoding='utf-8')
+            self.fog_log_file = open('fog_summary.log', 'w', encoding='utf-8')
+            self.log_file = open('scheduler_hybrid.log', 'w', encoding='utf-8')
+            self.system_log_file = open('system_hybrid.log', 'w', encoding='utf-8')
+        else:
+            self.log_file = open(f'scheduler_{mode}.log', 'w', encoding='utf-8')
+            self.system_log_file = open(f'system_{mode}.log', 'w', encoding='utf-8')
+        
         self._write_log_header()
         
     def _write_log_header(self):
         """Write header to log files."""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        header = f"""
+        
+        # Create different header styles for FOG and CLOUD modes
+        if self.mode.upper() == 'FOG':
+            header = f"""
 {'='*100}
-Scheduler Log - {self.mode.upper()} Mode
+{'#'*40} FOG COMPUTING LOG {'#'*40}
+{'='*100}
 Started at: {timestamp}
 Configuration:
     Number of Nodes: {len(self.nodes)}
@@ -61,6 +72,33 @@ Configuration:
     Fog Nodes: {sum(1 for node in self.nodes if isinstance(node, FogNode))}
 {'='*100}
 """
+        elif self.mode.upper() == 'CLOUD':
+            header = f"""
+{'='*100}
+{'@'*40} CLOUD COMPUTING LOG {'@'*40}
+{'='*100}
+Started at: {timestamp}
+Configuration:
+    Number of Nodes: {len(self.nodes)}
+    Node Types: {', '.join(node.name for node in self.nodes)}
+    Cloud Nodes: {sum(1 for node in self.nodes if isinstance(node, CloudNode))}
+    Fog Nodes: {sum(1 for node in self.nodes if isinstance(node, FogNode))}
+{'='*100}
+"""
+        else:
+            header = f"""
+{'='*100}
+{'*'*40} SCHEDULER LOG - {self.mode.upper()} MODE {'*'*40}
+{'='*100}
+Started at: {timestamp}
+Configuration:
+    Number of Nodes: {len(self.nodes)}
+    Node Types: {', '.join(node.name for node in self.nodes)}
+    Cloud Nodes: {sum(1 for node in self.nodes if isinstance(node, CloudNode))}
+    Fog Nodes: {sum(1 for node in self.nodes if isinstance(node, FogNode))}
+{'='*100}
+"""
+        
         self.log_file.write(header)
         self.system_log_file.write(header)
         self.log_file.flush()
@@ -288,15 +326,27 @@ Configuration:
         else:
             source_location = getattr(task, 'source_location', None) or getattr(task, 'location', None)
         
+        # Filter nodes based on mode
+        available_nodes = []
+        if self.mode == 'cloud':
+            available_nodes = [node for node in self.nodes if isinstance(node, CloudNode)]
+        elif self.mode == 'fog':
+            available_nodes = [node for node in self.nodes if isinstance(node, FogNode)]
+        else:  # hybrid mode
+            available_nodes = self.nodes
+            
+        if not available_nodes:
+            raise Exception(f"No available nodes for mode: {self.mode}")
+            
         if not source_location:
             # If no location, use the least loaded node
-            selected_node = min(self.nodes, key=lambda x: len(self.task_queues[x.name]))
+            selected_node = min(available_nodes, key=lambda x: len(self.task_queues[x.name]))
             self._log_activity(f"No location provided. Selected least loaded node: {selected_node.name}")
             return selected_node
         
-        # Calculate distances to all nodes
+        # Calculate distances to all available nodes
         node_distances = []
-        for node in self.nodes:
+        for node in available_nodes:
             distance = self.calculate_distance(source_location, node.location)
             node_distances.append((node, distance))
         
@@ -551,36 +601,48 @@ Configuration:
             # Write summary before closing
             stats = self.get_stats()
             if 'system' in stats:
-                summary = f"""
+                # Create separate summaries for Cloud and Fog
+                cloud_summary = f"""
 {'='*100}
-SCHEDULER SUMMARY REPORT - {self.mode.upper()} Mode
+{'@'*40} CLOUD COMPUTING SUMMARY REPORT {'@'*40}
 {'='*100}
 
 System-wide Statistics:
-    Total Tasks Processed: {stats['system']['total_tasks']}
-    Total Processing Time: {stats['system']['total_processing_time']:.2f}ms
-    Total Queue Time: {stats['system']['total_queue_time']:.2f}ms
-    Total Transmission Time: {stats['system']['total_transmission_time']:.2f}ms
-    Total Response Time: {stats['system']['total_response_time']:.2f}ms
+    Total Tasks Processed: {sum(stats[node_id]['total_processed'] for node_id in stats if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), CloudNode))}
+    Total Processing Time: {sum(stats[node_id]['avg_processing_time'] * stats[node_id]['total_processed'] for node_id in stats if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), CloudNode)):.2f}ms
+    Total Queue Time: {sum(stats[node_id]['avg_queue_time'] * stats[node_id]['total_processed'] for node_id in stats if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), CloudNode)):.2f}ms
+    Total Response Time: {sum(stats[node_id]['avg_response_time'] * stats[node_id]['total_processed'] for node_id in stats if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), CloudNode)):.2f}ms
 
 Power Consumption Summary:
-    Total System Power: {stats['system']['total_power']:.2f}W
-    Total Energy Consumed: {stats['system']['total_energy']:.2f}kWh
-    Average Power per Node: {stats['system']['avg_power_per_node']:.2f}W
-    Average Energy per Node: {stats['system']['avg_energy_per_node']:.2f}kWh
-
-Average Metrics:
-    Processing Time: {stats['system']['avg_processing_time']:.2f}ms
-    Queue Time: {stats['system']['avg_queue_time']:.2f}ms
-    Transmission Time: {stats['system']['avg_transmission_time']:.2f}ms
-    Response Time: {stats['system']['avg_response_time']:.2f}ms
+    Total System Power: {sum(stats[node_id]['power_consumption']['current_power'] for node_id in stats if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), CloudNode)):.2f}W
+    Total Energy Consumed: {sum(stats[node_id]['power_consumption']['total_energy'] for node_id in stats if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), CloudNode)):.2f}kWh
 
 Node Performance:
 """
-                for node_id, node_stats in stats.items():
-                    if node_id != 'system':
-                        node = next(n for n in self.nodes if n.node_id == node_id)
-                        summary += f"""
+                fog_summary = f"""
+{'='*100}
+{'#'*40} FOG COMPUTING SUMMARY REPORT {'#'*40}
+{'='*100}
+
+System-wide Statistics:
+    Total Tasks Processed: {sum(stats[node_id]['total_processed'] for node_id in stats if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), FogNode))}
+    Total Processing Time: {sum(stats[node_id]['avg_processing_time'] * stats[node_id]['total_processed'] for node_id in stats if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), FogNode)):.2f}ms
+    Total Queue Time: {sum(stats[node_id]['avg_queue_time'] * stats[node_id]['total_processed'] for node_id in stats if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), FogNode)):.2f}ms
+    Total Response Time: {sum(stats[node_id]['avg_response_time'] * stats[node_id]['total_processed'] for node_id in stats if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), FogNode)):.2f}ms
+
+Power Consumption Summary:
+    Total System Power: {sum(stats[node_id]['power_consumption']['current_power'] for node_id in stats if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), FogNode)):.2f}W
+    Total Energy Consumed: {sum(stats[node_id]['power_consumption']['total_energy'] for node_id in stats if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), FogNode)):.2f}kWh
+
+Node Performance:
+"""
+
+                # Add Cloud nodes to cloud summary
+                cloud_nodes = [(node, stats[node_id]) for node_id, node_stats in stats.items() 
+                             if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), CloudNode)]
+                
+                for node, node_stats in cloud_nodes:
+                    cloud_summary += f"""
     {node.name}:
         Tasks Processed: {node_stats['total_processed']}
         Average Processing Time: {node_stats['avg_processing_time']:.2f}ms
@@ -594,10 +656,44 @@ Node Performance:
         Current Power: {node_stats['power_consumption']['current_power']:.2f}W
         Total Energy: {node_stats['power_consumption']['total_energy']:.2f}kWh
 """
-                summary += f"\n{'='*100}"
-                self.log_file.write(summary)
-                self.system_log_file.write(summary)
+                cloud_summary += f"\n{'='*100}"
+
+                # Add Fog nodes to fog summary
+                fog_nodes = [(node, stats[node_id]) for node_id, node_stats in stats.items() 
+                           if node_id != 'system' and isinstance(next(n for n in self.nodes if n.node_id == node_id), FogNode)]
+                
+                for node, node_stats in fog_nodes:
+                    fog_summary += f"""
+    {node.name}:
+        Tasks Processed: {node_stats['total_processed']}
+        Average Processing Time: {node_stats['avg_processing_time']:.2f}ms
+        Average Queue Time: {node_stats['avg_queue_time']:.2f}ms
+        Average Response Time: {node_stats['avg_response_time']:.2f}ms
+        Current Queue Size: {node_stats['queue_size']}
+        System Load: {node_stats['system_load']*100:.1f}%
+        Memory Utilization: {node_stats['memory_utilization']*100:.1f}%
+        MIPS Utilization: {node_stats['mips_utilization']*100:.1f}%
+        Bandwidth Utilization: {node_stats['bandwidth_utilization']*100:.1f}%
+        Current Power: {node_stats['power_consumption']['current_power']:.2f}W
+        Total Energy: {node_stats['power_consumption']['total_energy']:.2f}kWh
+"""
+                fog_summary += f"\n{'='*100}"
+
+                # Write summaries to appropriate files
+                if self.mode == 'hybrid':
+                    self.cloud_log_file.write(cloud_summary)
+                    self.fog_log_file.write(fog_summary)
+                    self.log_file.write(cloud_summary + "\n\n" + fog_summary)
+                elif self.mode == 'cloud':
+                    self.log_file.write(cloud_summary)
+                else:  # fog mode
+                    self.log_file.write(fog_summary)
+                
                 self.log_file.flush()
-                self.system_log_file.flush()
+                if self.mode == 'hybrid':
+                    self.cloud_log_file.flush()
+                    self.fog_log_file.flush()
+                    self.cloud_log_file.close()
+                    self.fog_log_file.close()
             self.log_file.close()
             self.system_log_file.close() 

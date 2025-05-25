@@ -1,7 +1,7 @@
 
 ====================================================================================================
 Fog Node Log - Fog-SG2
-Started at: 2025-05-23 20:53:48
+Started at: 2025-05-25 20:10:14
 Node Configuration:
     MIPS: 4000
     Memory: 6144 MB
@@ -9,7 +9,7 @@ Node Configuration:
     Location: 10.3521, 108.8198
 ====================================================================================================
 
-[2025-05-23 20:53:48.088] Calculated processing time: 140.92ms for task size 126MB
+[2025-05-25 20:10:14.466] Calculated processing time: 110.28ms for task size 126MB
 Power Consumption:
     Total Power: 35.00W
     CPU Power: 20.00W (0.0% utilization)
@@ -26,14 +26,14 @@ Resource Utilization:
     MIPS: 0.0%
     Bandwidth: 0.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-23 20:53:48.089] Starting task processing
+[2025-05-25 20:10:14.466] Starting task processing
 Task Details:
-    Task ID: 2228432078912
+    Task ID: 1511104103616
     Node: Fog-SG2
     Timing Metrics:
         Total Time: 0.00ms
         Response Time: 0.00ms
-        Processing Time: 140.92ms
+        Processing Time: 110.28ms
         Queue Time: 0.00ms
         Transmission Time: 0.00ms
     Resource Usage:
@@ -64,24 +64,24 @@ Resource Utilization:
     MIPS: 0.0%
     Bandwidth: 0.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-23 20:53:48.097] Task 2228432078912 started parallel processing. Expected time: 140.92ms
+[2025-05-25 20:10:14.468] Task 1511104103616 started parallel processing. Expected time: 110.28ms
 Power Consumption:
-    Total Power: 74.29W
-    CPU Power: 31.27W (14.1% utilization)
-    Memory Power: 35.51W (63.8% utilization)
+    Total Power: 63.35W
+    CPU Power: 28.82W (11.0% utilization)
+    Memory Power: 27.02W (42.6% utilization)
     Network Power: 7.50W (12.5% utilization)
 Node Metrics:
     Tasks Processed: 1
     Current Queue Size: 0
     Active Tasks: 1
-    Throughput: 7.10 tasks/second
-    Average Task Interval: 140.92ms
+    Throughput: 9.07 tasks/second
+    Average Task Interval: 110.28ms
 Resource Utilization:
-    Memory: 63.8%
-    MIPS: 14.1%
+    Memory: 42.6%
+    MIPS: 11.0%
     Bandwidth: 12.5%
 ----------------------------------------------------------------------------------------------------
-[2025-05-23 20:53:48.242] Task 2228432078912 completed parallel processing. Processing time: 140.92ms. Remaining active tasks: 0, Total Memory Used: 0MB/6144MB, Total MIPS Used: 0/4000, Total Bandwidth Used: 0Mbps/800Mbps
+[2025-05-25 20:10:14.920] Task 1511104103616 completed parallel processing. Processing time: 110.28ms. Remaining active tasks: 0, Total Memory Used: 0MB/6144MB, Total MIPS Used: 0/4000, Total Bandwidth Used: 0Mbps/800Mbps
 Power Consumption:
     Total Power: 35.00W
     CPU Power: 20.00W (0.0% utilization)
@@ -91,23 +91,23 @@ Node Metrics:
     Tasks Processed: 1
     Current Queue Size: 0
     Active Tasks: 0
-    Throughput: 7.10 tasks/second
-    Average Task Interval: 140.92ms
+    Throughput: 9.07 tasks/second
+    Average Task Interval: 110.28ms
 Resource Utilization:
     Memory: 0.0%
     MIPS: 0.0%
     Bandwidth: 0.0%
 ----------------------------------------------------------------------------------------------------
-[2025-05-23 20:53:48.242] Task completed
+[2025-05-25 20:10:14.923] Task completed
 Task Details:
-    Task ID: 2228432078912
+    Task ID: 1511104103616
     Node: Fog-SG2
     Timing Metrics:
-        Total Time: 186.49ms
+        Total Time: 163.31ms
         Response Time: 0.00ms
-        Processing Time: 140.92ms
-        Queue Time: 0.10ms
-        Transmission Time: 45.47ms
+        Processing Time: 110.28ms
+        Queue Time: 0.04ms
+        Transmission Time: 52.98ms
     Resource Usage:
         Memory Used: 0MB
         Bandwidth Used: 0Mbps
@@ -129,8 +129,8 @@ Node Metrics:
     Tasks Processed: 1
     Current Queue Size: 0
     Active Tasks: 0
-    Throughput: 7.10 tasks/second
-    Average Task Interval: 140.92ms
+    Throughput: 9.07 tasks/second
+    Average Task Interval: 110.28ms
 Resource Utilization:
     Memory: 0.0%
     MIPS: 0.0%
@@ -142,24 +142,24 @@ SUMMARY REPORT - Fog-SG2
 
 Task Processing Summary:
     Total Tasks Processed: 1
-    Total Processing Time: 140.92ms
-    Total Queue Time: 0.10ms
-    Total Transmission Time: 45.47ms
+    Total Processing Time: 110.28ms
+    Total Queue Time: 0.04ms
+    Total Transmission Time: 52.98ms
 
 Power Consumption Summary:
-    Total Energy Consumed: 0.01 kWh
-    Average Power: 49.03W
-    Peak Power: 74.29W
+    Total Energy Consumed: 0.10 kWh
+    Average Power: 39.72W
+    Peak Power: 63.35W
     Current Power: 35.00W
     CPU Power: 20.00W
     Memory Power: 10.00W
     Network Power: 5.00W
 
 Average Metrics:
-    Processing Time: 140.92ms
-    Queue Time: 0.10ms
-    Transmission Time: 45.47ms
-    Total Time per Task: 186.49ms
+    Processing Time: 110.28ms
+    Queue Time: 0.04ms
+    Transmission Time: 52.98ms
+    Total Time per Task: 163.31ms
 
 Resource Utilization Summary:
     Peak Memory Usage: 0MB
@@ -175,8 +175,8 @@ Queue Analysis:
     Average Queue Size: 0.0 tasks
     Maximum Queue Size: 1
     Queue Time Distribution:
-        Min Queue Time: 0.10ms
-        Max Queue Time: 0.10ms
-        Average Queue Time: 0.10ms
+        Min Queue Time: 0.04ms
+        Max Queue Time: 0.04ms
+        Average Queue Time: 0.04ms
 
 ====================================================================================================
