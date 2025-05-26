@@ -47,9 +47,9 @@ CLOUD_SERVICES_CONFIG = [
 FOG_NODES_CONFIG = [
     {
         "name": "Fog-SG1",
-        "mips": 2000,  # Lower than cloud but still powerful
+        "mips": 1000,  # Lower than cloud but still powerful
         "bandwidth": 1000,  # 1 Gbps
-        "memory": 4096,  # 8GB
+        "memory": 2048,  # 8GB
         "location": {
             "lat": 4.3521,
             "lon": 97.8198

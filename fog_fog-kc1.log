@@ -1,10 +1,182 @@
 
 ====================================================================================================
 Fog Node Log - Fog-KC1
-Started at: 2025-05-25 20:10:14
+Started at: 2025-05-26 14:19:50
 Node Configuration:
     MIPS: 5000
     Memory: 8192 MB
     Bandwidth: 1000 Mbps
     Location: 32.0997, -98.5786
+====================================================================================================
+
+[2025-05-26 14:19:50.498] Calculated processing time: 146.35ms for task size 170MB
+Power Consumption:
+    Total Power: 35.00W
+    CPU Power: 20.00W (0.0% utilization)
+    Memory Power: 10.00W (0.0% utilization)
+    Network Power: 5.00W (0.0% utilization)
+Node Metrics:
+    Tasks Processed: 0
+    Current Queue Size: 0
+    Active Tasks: 0
+    Throughput: 0.00 tasks/second
+    Average Task Interval: N/A
+Resource Utilization:
+    Memory: 0.0%
+    MIPS: 0.0%
+    Bandwidth: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-26 14:19:50.498] Starting task processing
+Task Details:
+    Task ID: 1431298778432
+    Node: Fog-KC1
+    Timing Metrics:
+        Total Time: 0.00ms
+        Response Time: 0.00ms
+        Processing Time: 146.35ms
+        Queue Time: 0.00ms
+        Transmission Time: 0.00ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 0MB
+    Network Metrics:
+        Distance: 0.00km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+Power Consumption:
+    Total Power: 35.00W
+    CPU Power: 20.00W (0.0% utilization)
+    Memory Power: 10.00W (0.0% utilization)
+    Network Power: 5.00W (0.0% utilization)
+Node Metrics:
+    Tasks Processed: 0
+    Current Queue Size: 0
+    Active Tasks: 0
+    Throughput: 0.00 tasks/second
+    Average Task Interval: N/A
+Resource Utilization:
+    Memory: 0.0%
+    MIPS: 0.0%
+    Bandwidth: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-26 14:19:50.498] Task 1431298778432 started parallel processing. Expected time: 146.35ms
+Power Consumption:
+    Total Power: 72.26W
+    CPU Power: 31.71W (14.6% utilization)
+    Memory Power: 33.55W (58.9% utilization)
+    Network Power: 7.00W (10.0% utilization)
+Node Metrics:
+    Tasks Processed: 1
+    Current Queue Size: 0
+    Active Tasks: 1
+    Throughput: 6.83 tasks/second
+    Average Task Interval: 146.35ms
+Resource Utilization:
+    Memory: 58.9%
+    MIPS: 14.6%
+    Bandwidth: 10.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-26 14:19:50.657] Task 1431298778432 completed parallel processing. Processing time: 146.35ms. Remaining active tasks: 0, Total Memory Used: 0MB/8192MB, Total MIPS Used: 0/5000, Total Bandwidth Used: 0Mbps/1000Mbps
+Power Consumption:
+    Total Power: 35.00W
+    CPU Power: 20.00W (0.0% utilization)
+    Memory Power: 10.00W (0.0% utilization)
+    Network Power: 5.00W (0.0% utilization)
+Node Metrics:
+    Tasks Processed: 1
+    Current Queue Size: 0
+    Active Tasks: 0
+    Throughput: 6.83 tasks/second
+    Average Task Interval: 146.35ms
+Resource Utilization:
+    Memory: 0.0%
+    MIPS: 0.0%
+    Bandwidth: 0.0%
+----------------------------------------------------------------------------------------------------
+[2025-05-26 14:19:50.657] Task completed
+Task Details:
+    Task ID: 1431298778432
+    Node: Fog-KC1
+    Timing Metrics:
+        Total Time: 184.35ms
+        Response Time: 0.00ms
+        Processing Time: 146.35ms
+        Queue Time: 0.04ms
+        Transmission Time: 37.95ms
+    Resource Usage:
+        Memory Used: 0MB
+        Bandwidth Used: 0Mbps
+        RAM Required: 0MB
+        Task Size: 0MB
+    Network Metrics:
+        Distance: 286.95km
+        Queue Size: 0
+    System Load:
+        System Load: 0.0%
+        Bandwidth Utilization: 0.0%
+        MIPS Utilization: 0.0%
+Power Consumption:
+    Total Power: 35.00W
+    CPU Power: 20.00W (0.0% utilization)
+    Memory Power: 10.00W (0.0% utilization)
+    Network Power: 5.00W (0.0% utilization)
+Node Metrics:
+    Tasks Processed: 1
+    Current Queue Size: 0
+    Active Tasks: 0
+    Throughput: 6.83 tasks/second
+    Average Task Interval: 146.35ms
+Resource Utilization:
+    Memory: 0.0%
+    MIPS: 0.0%
+    Bandwidth: 0.0%
+----------------------------------------------------------------------------------------------------
+====================================================================================================
+SUMMARY REPORT - Fog-KC1
+====================================================================================================
+
+Task Processing Summary:
+    Total Tasks Processed: 1
+    Total Processing Time: 146.35ms
+    Total Queue Time: 0.04ms
+    Total Transmission Time: 37.95ms
+
+Power Consumption Summary:
+    Total Energy Consumed: 0.10 kWh
+    Average Power: 41.21W
+    Peak Power: 72.26W
+    Current Power: 35.00W
+    CPU Power: 20.00W
+    Memory Power: 10.00W
+    Network Power: 5.00W
+
+Average Metrics:
+    Processing Time: 146.35ms
+    Queue Time: 0.04ms
+    Transmission Time: 37.95ms
+    Total Time per Task: 184.35ms
+
+Resource Utilization Summary:
+    Peak Memory Usage: 0MB
+    Peak MIPS Usage: 0
+    Peak Bandwidth Usage: 0Mbps
+
+Performance Summary:
+    Average Memory per Task: 0.00MB
+    Average MIPS per Task: 0.00
+    Average Bandwidth per Task: 0.00Mbps
+
+Queue Analysis:
+    Average Queue Size: 0.0 tasks
+    Maximum Queue Size: 1
+    Queue Time Distribution:
+        Min Queue Time: 0.04ms
+        Max Queue Time: 0.04ms
+        Average Queue Time: 0.04ms
+
 ====================================================================================================

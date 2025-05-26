@@ -359,8 +359,8 @@
         "CurrentAllocatedMips": null,
         "BeingInstantiated": true,
         "GeoLocation": {
-            "latitude": 33.58553272,
-            "longitude": 73.05820695
+            "latitude": 32.58553272,
+            "longitude": -95.5786
         },
         "DataType": "LocationBased",
         "DataPercentage": 100,

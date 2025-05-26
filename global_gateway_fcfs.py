@@ -691,9 +691,54 @@ Configuration:
                 log_entry += f"        Current Power: {current_power:.2f}W\n"
                 log_entry += f"        Total Energy: {total_energy:.2f}kWh\n"
         
+        # Add Final Statistics Summary
+        log_entry += f"\nFinal Statistics Summary:\n"
+        log_entry += f"    Total Tasks Completed: {total_tasks}\n"
+        log_entry += f"    Cloud Tasks: {cloud_tasks} ({cloud_tasks/total_tasks*100:.1f}%)\n"
+        log_entry += f"    Fog Tasks: {fog_tasks} ({fog_tasks/total_tasks*100:.1f}%)\n"
+        
+        # Calculate average metrics across all tasks
+        avg_processing = sum(r.get('processing_time', 0) for r in results) / total_tasks
+        avg_queue = sum(r.get('queue_time', 0) for r in results) / total_tasks
+        avg_response = sum(r.get('response_time', 0) for r in results) / total_tasks
+        avg_power = sum(r.get('current_power', 0) for r in results) / total_tasks
+        
+        log_entry += f"\n    Average Metrics Across All Tasks:\n"
+        log_entry += f"        Average Processing Time: {avg_processing:.2f}ms\n"
+        log_entry += f"        Average Queue Time: {avg_queue:.2f}ms\n"
+        log_entry += f"        Average Response Time: {avg_response:.2f}ms\n"
+        log_entry += f"        Average Power Consumption: {avg_power:.2f}W\n"
+        
+        # Calculate performance metrics
+        min_processing = min(r.get('processing_time', 0) for r in results)
+        max_processing = max(r.get('processing_time', 0) for r in results)
+        min_response = min(r.get('response_time', 0) for r in results)
+        max_response = max(r.get('response_time', 0) for r in results)
+        
+        log_entry += f"\n    Performance Metrics:\n"
+        log_entry += f"        Fastest Processing Time: {min_processing:.2f}ms\n"
+        log_entry += f"        Slowest Processing Time: {max_processing:.2f}ms\n"
+        log_entry += f"        Fastest Response Time: {min_response:.2f}ms\n"
+        log_entry += f"        Slowest Response Time: {max_response:.2f}ms\n"
+        
+        # Calculate energy efficiency
+        total_processing_time = sum(r.get('processing_time', 0) for r in results)
+        energy_per_task = total_energy / total_tasks
+        energy_per_ms = total_energy / (total_processing_time / 1000)  # kWh per second
+        
+        log_entry += f"\n    Energy Efficiency:\n"
+        log_entry += f"        Energy per Task: {energy_per_task:.4f}kWh\n"
+        log_entry += f"        Energy per Second: {energy_per_ms:.4f}kWh\n"
+        
         log_entry += "\n" + "-"*100
         self.log_file.write(log_entry)
         self.log_file.flush()
+        
+        # Also print to console
+        print("\n" + "="*100)
+        print("SYSTEM STATUS UPDATE")
+        print("="*100)
+        print(log_entry)
 
     def _calculate_avg_time(self, results: List[Dict[str, Any]], node_name: str, time_field: str) -> float:
         """Calculate average time for a specific node and time field."""
