@@ -1,309 +1,60 @@
-
-====================================================================================================
-Fog Node Log - Fog-KC2
-Started at: 2025-05-26 14:19:50
-Node Configuration:
-    MIPS: 4000
-    Memory: 6144 MB
-    Bandwidth: 800 Mbps
-    Location: 45.0997, -85.5786
-====================================================================================================
-
-[2025-05-26 14:19:50.495] Calculated processing time: 189.10ms for task size 300MB
-Power Consumption:
-    Total Power: 35.00W
-    CPU Power: 20.00W (0.0% utilization)
-    Memory Power: 10.00W (0.0% utilization)
-    Network Power: 5.00W (0.0% utilization)
-Node Metrics:
-    Tasks Processed: 0
-    Current Queue Size: 0
-    Active Tasks: 0
-    Throughput: 0.00 tasks/second
-    Average Task Interval: N/A
-Resource Utilization:
-    Memory: 0.0%
-    MIPS: 0.0%
-    Bandwidth: 0.0%
-----------------------------------------------------------------------------------------------------
-[2025-05-26 14:19:50.495] Starting task processing
-Task Details:
-    Task ID: 1431298777280
-    Node: Fog-KC2
-    Timing Metrics:
-        Total Time: 0.00ms
-        Response Time: 0.00ms
-        Processing Time: 189.10ms
-        Queue Time: 0.00ms
-        Transmission Time: 0.00ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 0.00km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 35.00W
-    CPU Power: 20.00W (0.0% utilization)
-    Memory Power: 10.00W (0.0% utilization)
-    Network Power: 5.00W (0.0% utilization)
-Node Metrics:
-    Tasks Processed: 0
-    Current Queue Size: 0
-    Active Tasks: 0
-    Throughput: 0.00 tasks/second
-    Average Task Interval: N/A
-Resource Utilization:
-    Memory: 0.0%
-    MIPS: 0.0%
-    Bandwidth: 0.0%
-----------------------------------------------------------------------------------------------------
-[2025-05-26 14:19:50.496] Calculated processing time: 109.91ms for task size 130MB
-Power Consumption:
-    Total Power: 66.26W
-    CPU Power: 35.13W (18.9% utilization)
-    Memory Power: 23.63W (34.1% utilization)
-    Network Power: 7.50W (12.5% utilization)
-Node Metrics:
-    Tasks Processed: 1
-    Current Queue Size: 0
-    Active Tasks: 1
-    Throughput: 5.29 tasks/second
-    Average Task Interval: 189.10ms
-Resource Utilization:
-    Memory: 34.1%
-    MIPS: 18.9%
-    Bandwidth: 12.5%
-----------------------------------------------------------------------------------------------------
-[2025-05-26 14:19:50.496] Starting task processing
-Task Details:
-    Task ID: 1431298777984
-    Node: Fog-KC2
-    Timing Metrics:
-        Total Time: 0.00ms
-        Response Time: 0.00ms
-        Processing Time: 109.91ms
-        Queue Time: 0.00ms
-        Transmission Time: 0.00ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 0.00km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 66.26W
-    CPU Power: 35.13W (18.9% utilization)
-    Memory Power: 23.63W (34.1% utilization)
-    Network Power: 7.50W (12.5% utilization)
-Node Metrics:
-    Tasks Processed: 1
-    Current Queue Size: 0
-    Active Tasks: 1
-    Throughput: 5.29 tasks/second
-    Average Task Interval: 189.10ms
-Resource Utilization:
-    Memory: 34.1%
-    MIPS: 18.9%
-    Bandwidth: 12.5%
-----------------------------------------------------------------------------------------------------
-[2025-05-26 14:19:50.498] Task 1431298777280 started parallel processing. Expected time: 189.10ms
-Power Consumption:
-    Total Power: 87.02W
-    CPU Power: 43.92W (29.9% utilization)
-    Memory Power: 33.10W (57.7% utilization)
-    Network Power: 10.00W (25.0% utilization)
-Node Metrics:
-    Tasks Processed: 2
-    Current Queue Size: 0
-    Active Tasks: 2
-    Throughput: 6.69 tasks/second
-    Average Task Interval: 149.51ms
-Resource Utilization:
-    Memory: 57.7%
-    MIPS: 29.9%
-    Bandwidth: 25.0%
-----------------------------------------------------------------------------------------------------
-[2025-05-26 14:19:50.498] Task 1431298777984 started parallel processing. Expected time: 109.91ms
-Power Consumption:
-    Total Power: 87.02W
-    CPU Power: 43.92W (29.9% utilization)
-    Memory Power: 33.10W (57.7% utilization)
-    Network Power: 10.00W (25.0% utilization)
-Node Metrics:
-    Tasks Processed: 2
-    Current Queue Size: 0
-    Active Tasks: 2
-    Throughput: 6.69 tasks/second
-    Average Task Interval: 149.51ms
-Resource Utilization:
-    Memory: 57.7%
-    MIPS: 29.9%
-    Bandwidth: 25.0%
-----------------------------------------------------------------------------------------------------
-[2025-05-26 14:19:50.624] Task 1431298777984 completed parallel processing. Processing time: 109.91ms. Remaining active tasks: 1, Total Memory Used: 2094MB/6144MB, Total MIPS Used: 756.4001164994808/4000, Total Bandwidth Used: 100Mbps/800Mbps
-Power Consumption:
-    Total Power: 59.93W
-    CPU Power: 28.79W (11.0% utilization)
-    Memory Power: 23.63W (34.1% utilization)
-    Network Power: 7.50W (12.5% utilization)
-Node Metrics:
-    Tasks Processed: 2
-    Current Queue Size: 0
-    Active Tasks: 1
-    Throughput: 6.69 tasks/second
-    Average Task Interval: 149.51ms
-Resource Utilization:
-    Memory: 34.1%
-    MIPS: 11.0%
-    Bandwidth: 12.5%
-----------------------------------------------------------------------------------------------------
-[2025-05-26 14:19:50.625] Task completed
-Task Details:
-    Task ID: 1431298777984
-    Node: Fog-KC2
-    Timing Metrics:
-        Total Time: 152.49ms
-        Response Time: 0.00ms
-        Processing Time: 109.91ms
-        Queue Time: 0.04ms
-        Transmission Time: 42.53ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 752.68km
-        Queue Size: 1
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 59.93W
-    CPU Power: 28.79W (11.0% utilization)
-    Memory Power: 23.63W (34.1% utilization)
-    Network Power: 7.50W (12.5% utilization)
-Node Metrics:
-    Tasks Processed: 2
-    Current Queue Size: 0
-    Active Tasks: 1
-    Throughput: 6.69 tasks/second
-    Average Task Interval: 149.51ms
-Resource Utilization:
-    Memory: 34.1%
-    MIPS: 11.0%
-    Bandwidth: 12.5%
-----------------------------------------------------------------------------------------------------
-[2025-05-26 14:19:50.690] Task 1431298777280 completed parallel processing. Processing time: 189.10ms. Remaining active tasks: 0, Total Memory Used: 0MB/6144MB, Total MIPS Used: 0/4000, Total Bandwidth Used: 0Mbps/800Mbps
-Power Consumption:
-    Total Power: 28.66W
-    CPU Power: 13.66W (-7.9% utilization)
-    Memory Power: 10.00W (0.0% utilization)
-    Network Power: 5.00W (0.0% utilization)
-Node Metrics:
-    Tasks Processed: 2
-    Current Queue Size: 0
-    Active Tasks: 0
-    Throughput: 6.69 tasks/second
-    Average Task Interval: 149.51ms
-Resource Utilization:
-    Memory: 0.0%
-    MIPS: -7.9%
-    Bandwidth: 0.0%
-----------------------------------------------------------------------------------------------------
-[2025-05-26 14:19:50.690] Task completed
-Task Details:
-    Task ID: 1431298777280
-    Node: Fog-KC2
-    Timing Metrics:
-        Total Time: 264.13ms
-        Response Time: 0.00ms
-        Processing Time: 189.10ms
-        Queue Time: 0.04ms
-        Transmission Time: 74.98ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 1661.24km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 28.66W
-    CPU Power: 13.66W (-7.9% utilization)
-    Memory Power: 10.00W (0.0% utilization)
-    Network Power: 5.00W (0.0% utilization)
-Node Metrics:
-    Tasks Processed: 2
-    Current Queue Size: 0
-    Active Tasks: 0
-    Throughput: 6.69 tasks/second
-    Average Task Interval: 149.51ms
-Resource Utilization:
-    Memory: 0.0%
-    MIPS: -7.9%
-    Bandwidth: 0.0%
-----------------------------------------------------------------------------------------------------
-====================================================================================================
-SUMMARY REPORT - Fog-KC2
-====================================================================================================
-
-Task Processing Summary:
-    Total Tasks Processed: 2
-    Total Processing Time: 299.01ms
-    Total Queue Time: 0.09ms
-    Total Transmission Time: 117.52ms
-
-Power Consumption Summary:
-    Total Energy Consumed: 0.08 kWh
-    Average Power: 52.95W
-    Peak Power: 87.02W
-    Current Power: 28.66W
-    CPU Power: 13.66W
-    Memory Power: 10.00W
-    Network Power: 5.00W
-
-Average Metrics:
-    Processing Time: 149.51ms
-    Queue Time: 0.04ms
-    Transmission Time: 58.76ms
-    Total Time per Task: 208.31ms
-
-Resource Utilization Summary:
-    Peak Memory Usage: 0MB
-    Peak MIPS Usage: 0
-    Peak Bandwidth Usage: 0Mbps
-
-Performance Summary:
-    Average Memory per Task: 0.00MB
-    Average MIPS per Task: 0.00
-    Average Bandwidth per Task: 0.00Mbps
-
-Queue Analysis:
-    Average Queue Size: 0.0 tasks
-    Maximum Queue Size: 1
-    Queue Time Distribution:
-        Min Queue Time: 0.04ms
-        Max Queue Time: 0.04ms
-        Average Queue Time: 0.04ms
-
-====================================================================================================
+2025-06-03 09:27:48,596 - INFO - Initialized Fog Node: Fog-KC2
+2025-06-03 09:27:48,596 - INFO - Resources: MIPS=4000, Memory=4144, Bandwidth=4000
+2025-06-03 09:27:48,596 - INFO - Location: {'lat': 45.0997, 'lon': -85.5786}
+2025-06-03 09:27:48,722 - INFO - Attempting to assign task Tuple-5 to Fog-KC2
+2025-06-03 09:27:48,722 - INFO - Resource check for task Tuple-5 on Fog-KC2:
+2025-06-03 09:27:48,723 - INFO -   Required MIPS: 200.0, Available: 4000
+2025-06-03 09:27:48,723 - INFO -   Required Memory: 500, Available: 4144
+2025-06-03 09:27:48,723 - INFO -   Required Bandwidth: 100, Available: 4000
+2025-06-03 09:27:48,723 - INFO -   Can handle: True
+2025-06-03 09:27:48,723 - INFO - Task Tuple-5 assigned to Fog-KC2
+2025-06-03 09:27:48,723 - INFO - Processing time: 0.03 seconds
+2025-06-03 09:27:48,723 - INFO - Transmission time: 0.16 seconds
+2025-06-03 09:27:48,723 - INFO - Resources allocated: MIPS=200.0, Memory=500, Bandwidth=100
+2025-06-03 09:27:48,723 - INFO - Current load: 5.00%
+2025-06-03 09:27:48,723 - INFO - Starting processing of task Tuple-5 on Fog-KC2
+2025-06-03 09:27:48,723 - INFO - Expected processing time: 0.03 seconds
+2025-06-03 09:27:48,730 - INFO - Attempting to assign task Tuple-3 to Fog-KC2
+2025-06-03 09:27:48,730 - INFO - Resource check for task Tuple-3 on Fog-KC2:
+2025-06-03 09:27:48,730 - INFO -   Required MIPS: 120.0, Available: 3800.0
+2025-06-03 09:27:48,730 - INFO -   Required Memory: 1024, Available: 3644
+2025-06-03 09:27:48,730 - INFO -   Required Bandwidth: 150, Available: 3900
+2025-06-03 09:27:48,730 - INFO -   Can handle: True
+2025-06-03 09:27:48,730 - INFO - Task Tuple-3 assigned to Fog-KC2
+2025-06-03 09:27:48,730 - INFO - Processing time: 0.07 seconds
+2025-06-03 09:27:48,730 - INFO - Transmission time: 0.35 seconds
+2025-06-03 09:27:48,731 - INFO - Resources allocated: MIPS=120.0, Memory=1024, Bandwidth=150
+2025-06-03 09:27:48,731 - INFO - Current load: 8.00%
+2025-06-03 09:27:48,731 - INFO - Starting processing of task Tuple-3 on Fog-KC2
+2025-06-03 09:27:48,732 - INFO - Expected processing time: 0.07 seconds
+2025-06-03 09:27:48,737 - INFO - Attempting to assign task Tuple-13823 to Fog-KC2
+2025-06-03 09:27:48,737 - INFO - Resource check for task Tuple-13823 on Fog-KC2:
+2025-06-03 09:27:48,737 - INFO -   Required MIPS: 100.0, Available: 3680.0
+2025-06-03 09:27:48,737 - INFO -   Required Memory: 200, Available: 2620
+2025-06-03 09:27:48,737 - INFO -   Required Bandwidth: 80, Available: 3750
+2025-06-03 09:27:48,737 - INFO -   Can handle: True
+2025-06-03 09:27:48,737 - INFO - Task Tuple-13823 assigned to Fog-KC2
+2025-06-03 09:27:48,737 - INFO - Processing time: 0.04 seconds
+2025-06-03 09:27:48,737 - INFO - Transmission time: 0.20 seconds
+2025-06-03 09:27:48,737 - INFO - Resources allocated: MIPS=100.0, Memory=200, Bandwidth=80
+2025-06-03 09:27:48,737 - INFO - Current load: 10.50%
+2025-06-03 09:27:48,737 - INFO - Starting processing of task Tuple-13823 on Fog-KC2
+2025-06-03 09:27:48,738 - INFO - Expected processing time: 0.04 seconds
+2025-06-03 09:27:48,762 - INFO - Task Tuple-5 completed on Fog-KC2
+2025-06-03 09:27:48,763 - INFO - Resources released: MIPS=200.0, Memory=500, Bandwidth=100
+2025-06-03 09:27:48,763 - INFO - Current load: 5.50%
+2025-06-03 09:27:48,763 - INFO - Completed tasks: 1
+2025-06-03 09:27:48,763 - INFO - Checking queued tasks on Fog-KC2
+2025-06-03 09:27:48,763 - INFO - Current queue size: 0
+2025-06-03 09:27:48,781 - INFO - Task Tuple-13823 completed on Fog-KC2
+2025-06-03 09:27:48,782 - INFO - Resources released: MIPS=100.0, Memory=200, Bandwidth=80
+2025-06-03 09:27:48,782 - INFO - Current load: 3.00%
+2025-06-03 09:27:48,782 - INFO - Completed tasks: 2
+2025-06-03 09:27:48,783 - INFO - Checking queued tasks on Fog-KC2
+2025-06-03 09:27:48,783 - INFO - Current queue size: 0
+2025-06-03 09:27:48,807 - INFO - Task Tuple-3 completed on Fog-KC2
+2025-06-03 09:27:48,807 - INFO - Resources released: MIPS=120.0, Memory=1024, Bandwidth=150
+2025-06-03 09:27:48,808 - INFO - Current load: 0.00%
+2025-06-03 09:27:48,808 - INFO - Completed tasks: 3
+2025-06-03 09:27:48,808 - INFO - Checking queued tasks on Fog-KC2
+2025-06-03 09:27:48,809 - INFO - Current queue size: 0

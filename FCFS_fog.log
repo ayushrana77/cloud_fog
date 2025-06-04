@@ -1,0 +1,81 @@
+2025-06-01 11:12:04,602 - INFO - Number of tasks received: 10
+2025-06-01 11:12:04,603 - INFO - Total Tasks to Process: 10
+2025-06-01 11:12:04,603 - INFO - Fog node created: Fog-SG1 (MIPS=4000, RAM=1096, BW=2000, Location={'lat': 4.3521, 'lon': 97.8198})
+2025-06-01 11:12:04,603 - INFO - Fog node created: Fog-KC2 (MIPS=2000, RAM=2144, BW=2000, Location={'lat': 45.0997, 'lon': -85.5786})
+2025-06-01 11:12:04,640 - INFO - 
+Task Completed: Tuple-9
+2025-06-01 11:12:04,640 - INFO -   Completed at: Fog-SG1
+2025-06-01 11:12:04,640 - INFO -   Transmission Time: 0.30s
+2025-06-01 11:12:04,640 - INFO -   Queue Time: 0.00s
+2025-06-01 11:12:04,640 - INFO -   Processing Time: 0.03s
+2025-06-01 11:12:04,640 - INFO -   Total Time: 0.33s
+2025-06-01 11:12:04,718 - INFO - 
+Task Completed: Tuple-4
+2025-06-01 11:12:04,718 - INFO -   Completed at: Fog-SG1
+2025-06-01 11:12:04,718 - INFO -   Transmission Time: 0.61s
+2025-06-01 11:12:04,718 - INFO -   Queue Time: 0.01s
+2025-06-01 11:12:04,718 - INFO -   Processing Time: 0.07s
+2025-06-01 11:12:04,718 - INFO -   Total Time: 0.70s
+2025-06-01 11:12:04,747 - INFO - 
+Task Completed: Tuple-7169
+2025-06-01 11:12:04,747 - INFO -   Completed at: Fog-KC2
+2025-06-01 11:12:04,747 - INFO -   Transmission Time: 0.34s
+2025-06-01 11:12:04,747 - INFO -   Queue Time: 0.00s
+2025-06-01 11:12:04,747 - INFO -   Processing Time: 0.09s
+2025-06-01 11:12:04,748 - INFO -   Total Time: 0.43s
+2025-06-01 11:12:04,776 - INFO - 
+Task Completed: Tuple-5
+2025-06-01 11:12:04,776 - INFO -   Completed at: Fog-KC2
+2025-06-01 11:12:04,776 - INFO -   Transmission Time: 0.30s
+2025-06-01 11:12:04,776 - INFO -   Queue Time: 0.00s
+2025-06-01 11:12:04,776 - INFO -   Processing Time: 0.07s
+2025-06-01 11:12:04,776 - INFO -   Total Time: 0.36s
+2025-06-01 11:12:04,795 - INFO - 
+Task Completed: Tuple-1076
+2025-06-01 11:12:04,795 - INFO -   Completed at: Fog-SG1
+2025-06-01 11:12:04,795 - INFO -   Transmission Time: 0.58s
+2025-06-01 11:12:04,795 - INFO -   Queue Time: 0.07s
+2025-06-01 11:12:04,795 - INFO -   Processing Time: 0.07s
+2025-06-01 11:12:04,795 - INFO -   Total Time: 0.73s
+2025-06-01 11:12:04,817 - INFO - 
+Task Completed: Tuple-1
+2025-06-01 11:12:04,817 - INFO -   Completed at: Fog-SG1
+2025-06-01 11:12:04,817 - INFO -   Transmission Time: 0.20s
+2025-06-01 11:12:04,817 - INFO -   Queue Time: 0.10s
+2025-06-01 11:12:04,817 - INFO -   Processing Time: 0.02s
+2025-06-01 11:12:04,817 - INFO -   Total Time: 0.32s
+2025-06-01 11:12:04,831 - INFO - 
+Task Completed: Tuple-13823
+2025-06-01 11:12:04,832 - INFO -   Completed at: Fog-KC2
+2025-06-01 11:12:04,832 - INFO -   Transmission Time: 0.39s
+2025-06-01 11:12:04,832 - INFO -   Queue Time: 0.00s
+2025-06-01 11:12:04,832 - INFO -   Processing Time: 0.09s
+2025-06-01 11:12:04,832 - INFO -   Total Time: 0.48s
+2025-06-01 11:12:04,839 - INFO - 
+Task Completed: Tuple-11620
+2025-06-01 11:12:04,839 - INFO -   Completed at: Fog-SG1
+2025-06-01 11:12:04,839 - INFO -   Transmission Time: 0.39s
+2025-06-01 11:12:04,839 - INFO -   Queue Time: 0.11s
+2025-06-01 11:12:04,839 - INFO -   Processing Time: 0.04s
+2025-06-01 11:12:04,839 - INFO -   Total Time: 0.55s
+2025-06-01 11:12:04,878 - INFO - 
+Task Completed: Tuple-3
+2025-06-01 11:12:04,878 - INFO -   Completed at: Fog-KC2
+2025-06-01 11:12:04,878 - INFO -   Transmission Time: 0.66s
+2025-06-01 11:12:04,879 - INFO -   Queue Time: 0.00s
+2025-06-01 11:12:04,879 - INFO -   Processing Time: 0.15s
+2025-06-01 11:12:04,879 - INFO -   Total Time: 0.81s
+2025-06-01 11:12:04,913 - INFO - 
+Task Completed: Tuple-0
+2025-06-01 11:12:04,913 - INFO -   Completed at: Fog-KC2
+2025-06-01 11:12:04,913 - INFO -   Transmission Time: 0.57s
+2025-06-01 11:12:04,913 - INFO -   Queue Time: 0.01s
+2025-06-01 11:12:04,913 - INFO -   Processing Time: 0.14s
+2025-06-01 11:12:04,913 - INFO -   Total Time: 0.72s
+2025-06-01 11:12:04,977 - INFO - 
+=== Final Overall Statistics ===
+2025-06-01 11:12:04,977 - INFO - Total Tasks Completed: 10
+2025-06-01 11:12:04,977 - INFO - Average Transmission Time: 0.44s
+2025-06-01 11:12:04,977 - INFO - Average Queue Time: 0.03s
+2025-06-01 11:12:04,978 - INFO - Average Processing Time: 0.08s
+2025-06-01 11:12:04,978 - INFO - Average Total Time: 0.54s

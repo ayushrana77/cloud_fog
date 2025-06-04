@@ -1,0 +1,292 @@
+2025-06-03 09:27:48,610 - INFO - Number of tasks received: 10
+2025-06-03 09:27:48,611 - INFO - Total Tasks to Process: 10
+2025-06-03 09:27:48,611 - INFO - Fog node created: Fog-SG1 (MIPS=4000, RAM=1096, BW=2000, Location={'lat': 4.3521, 'lon': 97.8198})
+2025-06-03 09:27:48,611 - INFO - Fog node created: Fog-KC2 (MIPS=4000, RAM=4144, BW=4000, Location={'lat': 45.0997, 'lon': -85.5786})
+2025-06-03 09:27:48,611 - INFO - Cloud node created: Cloud-NA (MIPS=4000, RAM=1096, BW=2000, Location={'lat': 39.0997, 'lon': -94.5786})
+2025-06-03 09:27:48,611 - INFO - Cloud node created: Cloud-AS (MIPS=2000, RAM=2024, BW=2000, Location={'lat': 1.3521, 'lon': 103.8198})
+2025-06-03 09:27:48,614 - INFO - 
+Task Tuple-9 - Distance Calculations:
+2025-06-03 09:27:48,614 - INFO - Fog Node Distances:
+2025-06-03 09:27:48,614 - INFO -   Fog-SG1: 2520.47 km
+2025-06-03 09:27:48,614 - INFO -   Fog-KC2: 13403.01 km
+2025-06-03 09:27:48,614 - INFO - Cloud Node Distances:
+2025-06-03 09:27:48,614 - INFO -   Cloud-AS: 2018.03 km
+2025-06-03 09:27:48,614 - INFO -   Cloud-NA: 13516.54 km
+2025-06-03 09:27:48,614 - INFO - 
+Attempting to assign task Tuple-9 to nearest fog node Fog-SG1 (2520.47 km)
+2025-06-03 09:27:48,616 - INFO - Task successfully assigned to fog node Fog-SG1
+2025-06-03 09:27:48,620 - INFO - 
+Task Tuple-4 - Distance Calculations:
+2025-06-03 09:27:48,620 - INFO - Fog Node Distances:
+2025-06-03 09:27:48,620 - INFO -   Fog-SG1: 4150.88 km
+2025-06-03 09:27:48,621 - INFO -   Fog-KC2: 10990.76 km
+2025-06-03 09:27:48,621 - INFO - Cloud Node Distances:
+2025-06-03 09:27:48,621 - INFO -   Cloud-AS: 4817.13 km
+2025-06-03 09:27:48,621 - INFO -   Cloud-NA: 11819.66 km
+2025-06-03 09:27:48,621 - INFO - 
+Task Tuple-4 is a cloud task - attempting cloud nodes directly
+2025-06-03 09:27:48,621 - INFO - Attempting to assign task to cloud node Cloud-AS (4817.13 km)
+2025-06-03 09:27:48,631 - INFO - Task successfully assigned to cloud node Cloud-AS
+2025-06-03 09:27:48,651 - INFO - 
+Task Tuple-1076 - Distance Calculations:
+2025-06-03 09:27:48,651 - INFO - Fog Node Distances:
+2025-06-03 09:27:48,651 - INFO -   Fog-SG1: 4151.79 km
+2025-06-03 09:27:48,651 - INFO -   Fog-KC2: 10990.33 km
+2025-06-03 09:27:48,651 - INFO - Cloud Node Distances:
+2025-06-03 09:27:48,651 - INFO -   Cloud-AS: 4818.10 km
+2025-06-03 09:27:48,651 - INFO -   Cloud-NA: 11819.33 km
+2025-06-03 09:27:48,652 - INFO - 
+Attempting to assign task Tuple-1076 to nearest fog node Fog-SG1 (4151.79 km)
+2025-06-03 09:27:48,653 - INFO - Fog node Fog-SG1 cannot handle task - attempting cloud fallback
+2025-06-03 09:27:48,656 - INFO - Attempting to assign task to cloud node Cloud-AS (4818.10 km)
+2025-06-03 09:27:48,658 - INFO - 
+Task Completed: Tuple-9
+2025-06-03 09:27:48,658 - INFO -   Completed at: Fog-SG1
+2025-06-03 09:27:48,658 - INFO -   Transmission Time: 0.29s
+2025-06-03 09:27:48,658 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,659 - INFO -   Processing Time: 0.03s
+2025-06-03 09:27:48,659 - INFO - Cloud node Cloud-AS cannot handle task immediately - queuing
+2025-06-03 09:27:48,659 - INFO -   Total Time: 0.32s
+2025-06-03 09:27:48,659 - INFO -   ------------------------------
+2025-06-03 09:27:48,664 - INFO - 
+Task Tuple-7169 - Distance Calculations:
+2025-06-03 09:27:48,664 - INFO - Fog Node Distances:
+2025-06-03 09:27:48,664 - INFO -   Fog-KC2: 8236.72 km
+2025-06-03 09:27:48,665 - INFO -   Fog-SG1: 8354.04 km
+2025-06-03 09:27:48,665 - INFO - Cloud Node Distances:
+2025-06-03 09:27:48,665 - INFO -   Cloud-NA: 7930.68 km
+2025-06-03 09:27:48,665 - INFO -   Cloud-AS: 7992.13 km
+2025-06-03 09:27:48,665 - INFO - 
+Task Tuple-7169 is a cloud task - attempting cloud nodes directly
+2025-06-03 09:27:48,665 - INFO - Attempting to assign task to cloud node Cloud-NA (7930.68 km)
+2025-06-03 09:27:48,670 - INFO - Task successfully assigned to cloud node Cloud-NA
+2025-06-03 09:27:48,707 - INFO - 
+Task Tuple-11620 - Distance Calculations:
+2025-06-03 09:27:48,707 - INFO - Fog Node Distances:
+2025-06-03 09:27:48,708 - INFO -   Fog-SG1: 4973.02 km
+2025-06-03 09:27:48,708 - INFO -   Fog-KC2: 17800.26 km
+2025-06-03 09:27:48,708 - INFO - Cloud Node Distances:
+2025-06-03 09:27:48,708 - INFO -   Cloud-AS: 5058.38 km
+2025-06-03 09:27:48,708 - INFO -   Cloud-NA: 18761.63 km
+2025-06-03 09:27:48,708 - INFO - 
+Attempting to assign task Tuple-11620 to nearest fog node Fog-SG1 (4973.02 km)
+2025-06-03 09:27:48,710 - INFO - Task successfully assigned to fog node Fog-SG1
+2025-06-03 09:27:48,713 - INFO - 
+Task Completed: Tuple-7169
+2025-06-03 09:27:48,713 - INFO -   Completed at: Cloud-NA
+2025-06-03 09:27:48,713 - INFO -   Transmission Time: 0.40s
+2025-06-03 09:27:48,713 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,714 - INFO -   Processing Time: 0.04s
+2025-06-03 09:27:48,714 - INFO -   Total Time: 0.44s
+2025-06-03 09:27:48,714 - INFO -   ------------------------------
+2025-06-03 09:27:48,716 - INFO - 
+Task Tuple-1 - Distance Calculations:
+2025-06-03 09:27:48,716 - INFO - Fog Node Distances:
+2025-06-03 09:27:48,716 - INFO -   Fog-SG1: 1651.28 km
+2025-06-03 09:27:48,716 - INFO -   Fog-KC2: 14465.66 km
+2025-06-03 09:27:48,716 - INFO - Cloud Node Distances:
+2025-06-03 09:27:48,716 - INFO -   Cloud-AS: 2333.94 km
+2025-06-03 09:27:48,716 - INFO -   Cloud-NA: 15244.28 km
+2025-06-03 09:27:48,717 - INFO - 
+Attempting to assign task Tuple-1 to nearest fog node Fog-SG1 (1651.28 km)
+2025-06-03 09:27:48,717 - INFO - Task successfully assigned to fog node Fog-SG1
+2025-06-03 09:27:48,722 - INFO - 
+Task Tuple-5 - Distance Calculations:
+2025-06-03 09:27:48,722 - INFO - Fog Node Distances:
+2025-06-03 09:27:48,722 - INFO -   Fog-KC2: 752.68 km
+2025-06-03 09:27:48,722 - INFO -   Fog-SG1: 15236.92 km
+2025-06-03 09:27:48,722 - INFO - Cloud Node Distances:
+2025-06-03 09:27:48,722 - INFO -   Cloud-NA: 1005.24 km
+2025-06-03 09:27:48,722 - INFO -   Cloud-AS: 15517.01 km
+2025-06-03 09:27:48,722 - INFO - 
+Attempting to assign task Tuple-5 to nearest fog node Fog-KC2 (752.68 km)
+2025-06-03 09:27:48,723 - INFO - Task successfully assigned to fog node Fog-KC2
+2025-06-03 09:27:48,729 - INFO - 
+Task Tuple-3 - Distance Calculations:
+2025-06-03 09:27:48,729 - INFO - Fog Node Distances:
+2025-06-03 09:27:48,729 - INFO -   Fog-KC2: 1661.24 km
+2025-06-03 09:27:48,729 - INFO -   Fog-SG1: 15670.47 km
+2025-06-03 09:27:48,729 - INFO - Cloud Node Distances:
+2025-06-03 09:27:48,730 - INFO -   Cloud-NA: 2019.22 km
+2025-06-03 09:27:48,730 - INFO -   Cloud-AS: 16099.08 km
+2025-06-03 09:27:48,730 - INFO - 
+Attempting to assign task Tuple-3 to nearest fog node Fog-KC2 (1661.24 km)
+2025-06-03 09:27:48,731 - INFO - Task successfully assigned to fog node Fog-KC2
+2025-06-03 09:27:48,736 - INFO - 
+Task Tuple-13823 - Distance Calculations:
+2025-06-03 09:27:48,736 - INFO - Fog Node Distances:
+2025-06-03 09:27:48,736 - INFO -   Fog-KC2: 1636.10 km
+2025-06-03 09:27:48,736 - INFO -   Fog-SG1: 15671.17 km
+2025-06-03 09:27:48,736 - INFO - Cloud Node Distances:
+2025-06-03 09:27:48,737 - INFO -   Cloud-NA: 729.91 km
+2025-06-03 09:27:48,737 - INFO -   Cloud-AS: 15726.09 km
+2025-06-03 09:27:48,737 - INFO - 
+Attempting to assign task Tuple-13823 to nearest fog node Fog-KC2 (1636.10 km)
+2025-06-03 09:27:48,738 - INFO - Task successfully assigned to fog node Fog-KC2
+2025-06-03 09:27:48,739 - INFO - 
+Task Completed: Tuple-1
+2025-06-03 09:27:48,739 - INFO -   Completed at: Fog-SG1
+2025-06-03 09:27:48,739 - INFO -   Transmission Time: 0.20s
+2025-06-03 09:27:48,739 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,739 - INFO -   Processing Time: 0.02s
+2025-06-03 09:27:48,739 - INFO -   Total Time: 0.22s
+2025-06-03 09:27:48,739 - INFO -   ------------------------------
+2025-06-03 09:27:48,743 - INFO - 
+Task Tuple-0 - Distance Calculations:
+2025-06-03 09:27:48,743 - INFO - Fog Node Distances:
+2025-06-03 09:27:48,743 - INFO -   Fog-KC2: 271.71 km
+2025-06-03 09:27:48,744 - INFO -   Fog-SG1: 14678.39 km
+2025-06-03 09:27:48,744 - INFO - Cloud Node Distances:
+2025-06-03 09:27:48,744 - INFO -   Cloud-NA: 1100.60 km
+2025-06-03 09:27:48,744 - INFO -   Cloud-AS: 14968.56 km
+2025-06-03 09:27:48,744 - INFO - 
+Task Tuple-0 is a cloud task - attempting cloud nodes directly
+2025-06-03 09:27:48,744 - INFO - Attempting to assign task to cloud node Cloud-NA (1100.60 km)
+2025-06-03 09:27:48,745 - INFO - Task successfully assigned to cloud node Cloud-NA
+2025-06-03 09:27:48,757 - INFO - 
+Task Completed: Tuple-11620
+2025-06-03 09:27:48,758 - INFO -   Completed at: Fog-SG1
+2025-06-03 09:27:48,758 - INFO -   Transmission Time: 0.36s
+2025-06-03 09:27:48,762 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,762 - INFO -   Processing Time: 0.04s
+2025-06-03 09:27:48,762 - INFO -   Total Time: 0.41s
+2025-06-03 09:27:48,762 - INFO -   ------------------------------
+2025-06-03 09:27:48,763 - INFO - 
+Task Completed: Tuple-5
+2025-06-03 09:27:48,763 - INFO -   Completed at: Fog-KC2
+2025-06-03 09:27:48,763 - INFO -   Transmission Time: 0.16s
+2025-06-03 09:27:48,763 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,763 - INFO -   Processing Time: 0.03s
+2025-06-03 09:27:48,763 - INFO -   Total Time: 0.20s
+2025-06-03 09:27:48,763 - INFO -   ------------------------------
+2025-06-03 09:27:48,780 - INFO - 
+Task Completed: Tuple-4
+2025-06-03 09:27:48,780 - INFO -   Completed at: Cloud-AS
+2025-06-03 09:27:48,780 - INFO -   Transmission Time: 0.57s
+2025-06-03 09:27:48,780 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,780 - INFO -   Processing Time: 0.15s
+2025-06-03 09:27:48,781 - INFO -   Total Time: 0.72s
+2025-06-03 09:27:48,781 - INFO -   ------------------------------
+2025-06-03 09:27:48,782 - INFO - 
+Task Completed: Tuple-13823
+2025-06-03 09:27:48,782 - INFO -   Completed at: Fog-KC2
+2025-06-03 09:27:48,782 - INFO -   Transmission Time: 0.20s
+2025-06-03 09:27:48,782 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,782 - INFO -   Processing Time: 0.04s
+2025-06-03 09:27:48,782 - INFO -   Total Time: 0.24s
+2025-06-03 09:27:48,783 - INFO -   ------------------------------
+2025-06-03 09:27:48,808 - INFO - 
+Task Completed: Tuple-3
+2025-06-03 09:27:48,808 - INFO -   Completed at: Fog-KC2
+2025-06-03 09:27:48,808 - INFO -   Transmission Time: 0.35s
+2025-06-03 09:27:48,808 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,808 - INFO -   Processing Time: 0.07s
+2025-06-03 09:27:48,808 - INFO -   Total Time: 0.43s
+2025-06-03 09:27:48,808 - INFO -   ------------------------------
+2025-06-03 09:27:48,818 - INFO - 
+Task Completed: Tuple-0
+2025-06-03 09:27:48,818 - INFO -   Completed at: Cloud-NA
+2025-06-03 09:27:48,818 - INFO -   Transmission Time: 0.59s
+2025-06-03 09:27:48,818 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,818 - INFO -   Processing Time: 0.07s
+2025-06-03 09:27:48,818 - INFO -   Total Time: 0.66s
+2025-06-03 09:27:48,818 - INFO -   ------------------------------
+2025-06-03 09:27:48,934 - INFO - 
+Task Completed: Tuple-1076
+2025-06-03 09:27:48,934 - INFO -   Completed at: Cloud-AS
+2025-06-03 09:27:48,934 - INFO -   Transmission Time: 0.66s
+2025-06-03 09:27:48,935 - INFO -   Queue Time: 0.12s
+2025-06-03 09:27:48,935 - INFO -   Processing Time: 0.15s
+2025-06-03 09:27:48,935 - INFO -   Total Time: 0.93s
+2025-06-03 09:27:48,935 - INFO -   ------------------------------
+2025-06-03 09:27:48,954 - INFO - 
+=== Task Completion Summary ===
+2025-06-03 09:27:48,954 - INFO - 
+Task Completed: Tuple-9
+2025-06-03 09:27:48,954 - INFO -   Completed at: Fog-SG1
+2025-06-03 09:27:48,955 - INFO -   Transmission Time: 0.29s
+2025-06-03 09:27:48,955 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,955 - INFO -   Processing Time: 0.03s
+2025-06-03 09:27:48,955 - INFO -   Total Time: 0.32s
+2025-06-03 09:27:48,955 - INFO -   ------------------------------
+2025-06-03 09:27:48,956 - INFO - 
+Task Completed: Tuple-7169
+2025-06-03 09:27:48,956 - INFO -   Completed at: Cloud-NA
+2025-06-03 09:27:48,956 - INFO -   Transmission Time: 0.40s
+2025-06-03 09:27:48,956 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,956 - INFO -   Processing Time: 0.04s
+2025-06-03 09:27:48,956 - INFO -   Total Time: 0.44s
+2025-06-03 09:27:48,957 - INFO -   ------------------------------
+2025-06-03 09:27:48,957 - INFO - 
+Task Completed: Tuple-1
+2025-06-03 09:27:48,957 - INFO -   Completed at: Fog-SG1
+2025-06-03 09:27:48,957 - INFO -   Transmission Time: 0.20s
+2025-06-03 09:27:48,957 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,958 - INFO -   Processing Time: 0.02s
+2025-06-03 09:27:48,958 - INFO -   Total Time: 0.22s
+2025-06-03 09:27:48,958 - INFO -   ------------------------------
+2025-06-03 09:27:48,958 - INFO - 
+Task Completed: Tuple-11620
+2025-06-03 09:27:48,958 - INFO -   Completed at: Fog-SG1
+2025-06-03 09:27:48,958 - INFO -   Transmission Time: 0.36s
+2025-06-03 09:27:48,959 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,959 - INFO -   Processing Time: 0.04s
+2025-06-03 09:27:48,959 - INFO -   Total Time: 0.41s
+2025-06-03 09:27:48,959 - INFO -   ------------------------------
+2025-06-03 09:27:48,959 - INFO - 
+Task Completed: Tuple-5
+2025-06-03 09:27:48,959 - INFO -   Completed at: Fog-KC2
+2025-06-03 09:27:48,960 - INFO -   Transmission Time: 0.16s
+2025-06-03 09:27:48,960 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,960 - INFO -   Processing Time: 0.03s
+2025-06-03 09:27:48,960 - INFO -   Total Time: 0.20s
+2025-06-03 09:27:48,960 - INFO -   ------------------------------
+2025-06-03 09:27:48,960 - INFO - 
+Task Completed: Tuple-4
+2025-06-03 09:27:48,961 - INFO -   Completed at: Cloud-AS
+2025-06-03 09:27:48,961 - INFO -   Transmission Time: 0.57s
+2025-06-03 09:27:48,961 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,961 - INFO -   Processing Time: 0.15s
+2025-06-03 09:27:48,961 - INFO -   Total Time: 0.72s
+2025-06-03 09:27:48,962 - INFO -   ------------------------------
+2025-06-03 09:27:48,962 - INFO - 
+Task Completed: Tuple-13823
+2025-06-03 09:27:48,962 - INFO -   Completed at: Fog-KC2
+2025-06-03 09:27:48,962 - INFO -   Transmission Time: 0.20s
+2025-06-03 09:27:48,962 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,962 - INFO -   Processing Time: 0.04s
+2025-06-03 09:27:48,963 - INFO -   Total Time: 0.24s
+2025-06-03 09:27:48,963 - INFO -   ------------------------------
+2025-06-03 09:27:48,963 - INFO - 
+Task Completed: Tuple-3
+2025-06-03 09:27:48,963 - INFO -   Completed at: Fog-KC2
+2025-06-03 09:27:48,963 - INFO -   Transmission Time: 0.35s
+2025-06-03 09:27:48,963 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,964 - INFO -   Processing Time: 0.07s
+2025-06-03 09:27:48,964 - INFO -   Total Time: 0.43s
+2025-06-03 09:27:48,964 - INFO -   ------------------------------
+2025-06-03 09:27:48,964 - INFO - 
+Task Completed: Tuple-0
+2025-06-03 09:27:48,964 - INFO -   Completed at: Cloud-NA
+2025-06-03 09:27:48,964 - INFO -   Transmission Time: 0.59s
+2025-06-03 09:27:48,964 - INFO -   Queue Time: 0.00s
+2025-06-03 09:27:48,965 - INFO -   Processing Time: 0.07s
+2025-06-03 09:27:48,965 - INFO -   Total Time: 0.66s
+2025-06-03 09:27:48,965 - INFO -   ------------------------------
+2025-06-03 09:27:48,965 - INFO - 
+Task Completed: Tuple-1076
+2025-06-03 09:27:48,965 - INFO -   Completed at: Cloud-AS
+2025-06-03 09:27:48,966 - INFO -   Transmission Time: 0.66s
+2025-06-03 09:27:48,966 - INFO -   Queue Time: 0.12s
+2025-06-03 09:27:48,966 - INFO -   Processing Time: 0.15s
+2025-06-03 09:27:48,966 - INFO -   Total Time: 0.93s
+2025-06-03 09:27:48,966 - INFO -   ------------------------------
+2025-06-03 09:27:48,966 - INFO - 
+=== Final Overall Statistics ===
+2025-06-03 09:27:48,967 - INFO - Total Tasks Completed: 10
+2025-06-03 09:27:48,967 - INFO -   Cloud Tasks: 4
+2025-06-03 09:27:48,967 - INFO -   Fog Tasks: 6
+2025-06-03 09:27:48,967 - INFO - Average Transmission Time: 0.38s
+2025-06-03 09:27:48,967 - INFO - Average Queue Time: 0.01s
+2025-06-03 09:27:48,968 - INFO - Average Processing Time: 0.07s
+2025-06-03 09:27:48,968 - INFO - Average Total Time: 0.46s

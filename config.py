@@ -28,17 +28,17 @@ CLOUD_SERVICES_CONFIG = [
     # North America
     {
         "name": "Cloud-NA",
-        "mips": 9000,  # Doubled MIPS for single server
+        "mips": 4000,  # Doubled MIPS for single server
         "bandwidth": 2000,  # 20 Gbps
-        "memory": 9024,  # Doubled memory
+        "memory": 1096,  # Doubled memory
         "location": {"lat": 39.0997, "lon": -94.5786},  # Kansas City (central USA)
     },
     # Asia
     {
         "name": "Cloud-AS",
-        "mips": 9000,  # Doubled MIPS for single server
-        "bandwidth": 9000,  # 20 Gbps
-        "memory": 9024,  # Doubled memory
+        "mips": 2000,  # Doubled MIPS for single server
+        "bandwidth": 2000,  # 20 Gbps
+        "memory": 2024,  # Doubled memory
         "location": {"lat": 1.3521, "lon": 103.8198},  # Singapore
     }
 ]
@@ -47,39 +47,39 @@ CLOUD_SERVICES_CONFIG = [
 FOG_NODES_CONFIG = [
     {
         "name": "Fog-SG1",
-        "mips": 1000,  # Lower than cloud but still powerful
-        "bandwidth": 1000,  # 1 Gbps
-        "memory": 2048,  # 8GB
+        "mips": 4000,  # Lower than cloud but still powerful
+        "bandwidth": 2000,  # 1 Gbps
+        "memory": 1096,  # 8GB
         "location": {
             "lat": 4.3521,
             "lon": 97.8198
         }
     },
-    {
-        "name": "Fog-SG2",
-        "mips": 4000,
-        "bandwidth": 800,
-        "memory": 6144,  # 6GB
-        "location": {
-            "lat": 10.3521,
-            "lon": 108.8198
-        }
-    },
-    {
-        "name": "Fog-KC1",
-        "mips": 5000,
-        "bandwidth": 1000,
-        "memory": 8192,
-        "location": {
-            "lat": 32.0997,
-            "lon": -98.5786
-        }
-    },
+    # {
+    #     "name": "Fog-SG2",
+    #     "mips": 10000,
+    #     "bandwidth": 40000,
+    #     "memory": 16144,  # 6GB
+    #     "location": {
+    #         "lat": 10.3521,
+    #         "lon": 108.8198
+    #     }
+    # },
+    # {
+    #     "name": "Fog-KC1",
+    #     "mips": 5000,
+    #     "bandwidth": 4000,
+    #     "memory": 8192,
+    #     "location": {
+    #         "lat": 32.0997,
+    #         "lon": -98.5786
+    #     }
+    # },
     {
         "name": "Fog-KC2",
         "mips": 4000,
-        "bandwidth": 800,
-        "memory": 6144,
+        "bandwidth": 4000,
+        "memory": 4144,
         "location": {
             "lat": 45.0997,
             "lon": -85.5786
@@ -94,3 +94,4 @@ TASK_MIPS_MIN = 1000
 TASK_MIPS_MAX = 5000
 TASK_MEMORY_MIN = 1000  
 TASK_MEMORY_MAX = 5000  
+

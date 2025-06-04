@@ -1,659 +1,370 @@
 """
-Fog Node implementation for processing time calculation with queuing.
+Fog Computing Node Implementation
+
+This module implements a fog computing node that can process tasks, manage resources,
+and handle task queuing. It includes functionality for task assignment, processing,
+and resource management with thread-safe operations.
 """
-import random
-import math
-import asyncio
-import time
-from collections import deque
-from datetime import datetime
-from config import (
-    PROCESSING_VARIATION_MIN,
-    PROCESSING_VARIATION_MAX,
-    FOG_NODES_CONFIG,
-    EARTH_RADIUS_KM,
-    TASK_MEMORY_MIN,
-    TASK_MEMORY_MAX
+
+from config import FOG_NODES_CONFIG
+from utility import (
+    calculate_processing_time,
+    calculate_transmission_time,
+    validate_location
 )
+import time
+import threading
+from queue import Queue
+from collections import deque
+from logger import setup_logger
 
 class FogNode:
-    """Represents a fog node for processing time calculation with queuing."""
+    """
+    Represents a fog computing node with processing capabilities and resource management.
     
-    def __init__(self, node_id):
-        """Initialize a fog node with configurations from config.py."""
-        self.node_id = node_id
+    Attributes:
+        name (str): Unique identifier for the fog node
+        mips (float): Million Instructions Per Second - processing power
+        bandwidth (float): Network bandwidth in Mbps
+        memory (float): Available memory in MB
+        location (dict): Geographic location with lat/lon coordinates
+        current_load (float): Current load percentage
+        available_mips (float): Available processing power
+        available_bandwidth (float): Available network bandwidth
+        available_memory (float): Available memory
+        assigned_tasks (list): Currently assigned tasks
+        processing_times (list): Historical processing times
+        transmission_times (list): Historical transmission times
+        completed_tasks (list): Successfully completed tasks
+        task_queue (deque): Queue for waiting tasks
+        processing (bool): Processing status flag
+        lock (threading.Lock): Thread lock for resource management
+        completion_callbacks (list): Callbacks for task completion events
+        logger (logging.Logger): Node-specific logger
+    """
+    def __init__(self, name, mips, bandwidth, memory, location):
+        self.name = name
+        self.mips = mips
+        self.bandwidth = bandwidth
+        self.memory = memory
+        self.location = validate_location(location)  # Validate location on initialization
+        self.current_load = 0
+        self.available_mips = mips
+        self.available_bandwidth = bandwidth
+        self.available_memory = memory
+        self.assigned_tasks = []
+        self.processing_times = []
+        self.transmission_times = []  # Track transmission times
+        self.completed_tasks = []
+        self.task_queue = deque()  # Queue for waiting tasks
+        self.processing = False
+        self.lock = threading.Lock()  # Lock for thread-safe resource management
+        self.completion_callbacks = []  # List to store completion callbacks
+        # Each fog node has its own logger
+        self.logger = setup_logger(f'fog_{name}', f'fog_{name}.log')
         
-        # Get node configuration from config.py
-        config = FOG_NODES_CONFIG[node_id]
-        self.name = config["name"]
-        self.mips = config["mips"]
-        self.bandwidth = config["bandwidth"]
-        self.memory = config["memory"]
-        self.location = config["location"]
-        
-        # Power consumption constants (in watts)
-        self.CPU_IDLE_POWER = 20  # Base power when CPU is idle
-        self.CPU_MAX_POWER = 100  # Maximum power when CPU is at 100%
-        self.MEMORY_IDLE_POWER = 10  # Base power for memory
-        self.MEMORY_MAX_POWER = 50  # Maximum power for memory at 100% utilization
-        self.NETWORK_IDLE_POWER = 5  # Base power for network
-        self.NETWORK_MAX_POWER = 25  # Maximum power for network at 100% utilization
-        
-        # Power tracking
-        self.total_power_consumption = 0
-        self.current_power = 0
-        self.power_history = []
-        self.last_power_update = time.time()
-        
-        # Resource tracking
-        self.available_mips = self.mips
-        self.available_memory = self.memory
-        self.available_bandwidth = self.bandwidth
-        
-        # Statistics tracking
-        self.total_processed = 0
-        self.total_processing_time = 0
-        self.total_transmission_time = 0
-        self.total_queue_time = 0
-        self.used_memory = 0
-        self.used_mips = 0
-        self.used_bandwidth = 0
-        
-        # Task tracking
-        self.task_queue = deque()
-        self.current_tasks = []
-        self.task_memory = {}
-        self.task_queue_times = {}
-        
-        # Initialize log file
-        self.log_file = open(f'fog_{self.name.lower()}.log', 'w', encoding='utf-8')
-        self._write_log_header()
-        
-    def calculate_power_consumption(self):
-        """Calculate current power consumption based on resource utilization."""
-        # Calculate utilization percentages
-        cpu_utilization = self.used_mips / self.mips if self.mips > 0 else 0
-        memory_utilization = self.used_memory / self.memory if self.memory > 0 else 0
-        network_utilization = self.used_bandwidth / self.bandwidth if self.bandwidth > 0 else 0
-        
-        # Calculate power for each component
-        cpu_power = self.CPU_IDLE_POWER + (self.CPU_MAX_POWER - self.CPU_IDLE_POWER) * cpu_utilization
-        memory_power = self.MEMORY_IDLE_POWER + (self.MEMORY_MAX_POWER - self.MEMORY_IDLE_POWER) * memory_utilization
-        network_power = self.NETWORK_IDLE_POWER + (self.NETWORK_MAX_POWER - self.NETWORK_IDLE_POWER) * network_utilization
-        
-        # Total power consumption
-        total_power = cpu_power + memory_power + network_power
-        
-        # Update power history
-        current_time = time.time()
-        time_delta = current_time - self.last_power_update
-        self.total_power_consumption += total_power * time_delta
-        self.current_power = total_power
-        self.power_history.append((current_time, total_power))
-        self.last_power_update = current_time
-        
-        return {
-            'total_power': total_power,
-            'cpu_power': cpu_power,
-            'memory_power': memory_power,
-            'network_power': network_power,
-            'cpu_utilization': cpu_utilization,
-            'memory_utilization': memory_utilization,
-            'network_utilization': network_utilization
-        }
-        
-    def _write_log_header(self):
-        """Write header to log file."""
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        header = f"""
-{'='*100}
-Fog Node Log - {self.name}
-Started at: {timestamp}
-Node Configuration:
-    MIPS: {self.mips}
-    Memory: {self.memory} MB
-    Bandwidth: {self.bandwidth} Mbps
-    Location: {self.location['lat']}, {self.location['lon']}
-{'='*100}
-"""
-        self.log_file.write(header)
-        self.log_file.flush()
-        
-    def _log_activity(self, message, task_id=None, task_info=None):
-        """Log activity to file with detailed information."""
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
-        
-        # Calculate current power consumption
-        power_info = self.calculate_power_consumption()
-        
-        # Base log entry
-        log_entry = f"\n[{timestamp}] {message}"
-        
-        # Add task details if provided
-        if task_id and task_info:
-            log_entry += f"\nTask Details:"
-            log_entry += f"\n    Task ID: {task_id}"
-            log_entry += f"\n    Node: {self.name}"
-            
-            # Timing Metrics Section
-            log_entry += f"\n    Timing Metrics:"
-            log_entry += f"\n        Total Time: {task_info.get('total_time', 0):.2f}ms"
-            log_entry += f"\n        Response Time: {task_info.get('response_time', 0):.2f}ms"
-            log_entry += f"\n        Processing Time: {task_info.get('processing_time', 0):.2f}ms"
-            log_entry += f"\n        Queue Time: {task_info.get('queue_time', 0):.2f}ms"
-            log_entry += f"\n        Transmission Time: {task_info.get('transmission_time', 0):.2f}ms"
-            
-            # Resource Usage Section
-            log_entry += f"\n    Resource Usage:"
-            log_entry += f"\n        Memory Used: {task_info.get('memory_used', 0)}MB"
-            log_entry += f"\n        Bandwidth Used: {task_info.get('bandwidth_used', 0)}Mbps"
-            log_entry += f"\n        RAM Required: {task_info.get('ram_required', 0)}MB"
-            log_entry += f"\n        Task Size: {task_info.get('task_size', 0)}MB"
-            
-            # Network Metrics Section
-            log_entry += f"\n    Network Metrics:"
-            log_entry += f"\n        Distance: {task_info.get('distance_km', 0):.2f}km"
-            log_entry += f"\n        Queue Size: {task_info.get('queue_size', 0)}"
-            
-            # System Load Section
-            log_entry += f"\n    System Load:"
-            log_entry += f"\n        System Load: {task_info.get('system_load', 0)*100:.1f}%"
-            log_entry += f"\n        Bandwidth Utilization: {task_info.get('bandwidth_utilization', 0)*100:.1f}%"
-            log_entry += f"\n        MIPS Utilization: {task_info.get('mips_utilization', 0)*100:.1f}%"
-        
-        # Add power consumption information
-        log_entry += f"\nPower Consumption:"
-        log_entry += f"\n    Total Power: {power_info['total_power']:.2f}W"
-        log_entry += f"\n    CPU Power: {power_info['cpu_power']:.2f}W ({power_info['cpu_utilization']*100:.1f}% utilization)"
-        log_entry += f"\n    Memory Power: {power_info['memory_power']:.2f}W ({power_info['memory_utilization']*100:.1f}% utilization)"
-        log_entry += f"\n    Network Power: {power_info['network_power']:.2f}W ({power_info['network_utilization']*100:.1f}% utilization)"
-        
-        # Add node metrics
-        log_entry += f"\nNode Metrics:"
-        log_entry += f"\n    Tasks Processed: {self.total_processed}"
-        log_entry += f"\n    Current Queue Size: {len(self.task_queue)}"
-        log_entry += f"\n    Active Tasks: {len(self.current_tasks)}"
-        
-        # Calculate throughput and task interval safely
-        if self.total_processed > 0 and self.total_processing_time > 0:
-            throughput = (self.total_processed / self.total_processing_time) * 1000
-            avg_interval = 1000 / throughput if throughput > 0 else 0
-            log_entry += f"\n    Throughput: {throughput:.2f} tasks/second"
-            log_entry += f"\n    Average Task Interval: {avg_interval:.2f}ms"
-        else:
-            log_entry += f"\n    Throughput: 0.00 tasks/second"
-            log_entry += f"\n    Average Task Interval: N/A"
-        
-        # Add resource utilization
-        memory_utilization = (self.used_memory / self.memory) * 100 if self.memory > 0 else 0
-        mips_utilization = (self.used_mips / self.mips) * 100 if self.mips > 0 else 0
-        bandwidth_utilization = (self.used_bandwidth / self.bandwidth) * 100 if self.bandwidth > 0 else 0
-        
-        log_entry += f"\nResource Utilization:"
-        log_entry += f"\n    Memory: {memory_utilization:.1f}%"
-        log_entry += f"\n    MIPS: {mips_utilization:.1f}%"
-        log_entry += f"\n    Bandwidth: {bandwidth_utilization:.1f}%"
-        
-        log_entry += "\n" + "-"*100
-        self.log_file.write(log_entry)
-        self.log_file.flush()
+        self.logger.info(f"Initialized Fog Node: {name}")
+        self.logger.info(f"Resources: MIPS={mips}, Memory={memory}, Bandwidth={bandwidth}")
+        self.logger.info(f"Location: {self.location}")
 
-    def calculate_processing_time(self, task):
-        """Calculate processing time based on task requirements."""
-        # Get task requirements with defaults
-        if isinstance(task, dict):
-            task_size = task.get('Size', 1.0)
-            ram_required = task.get('Memory', random.randint(TASK_MEMORY_MIN, TASK_MEMORY_MAX))
-            bandwidth_required = task.get('Bandwidth', 100)
-        else:
-            task_size = getattr(task, 'size', 1.0)
-            ram_required = getattr(task, 'ram_required', random.randint(TASK_MEMORY_MIN, TASK_MEMORY_MAX))
-            bandwidth_required = getattr(task, 'bandwidth_required', 100)
+    def add_completion_callback(self, callback):
+        """
+        Add a callback function to be called when a task is completed.
         
-        # Base processing time in milliseconds
-        base_time = 50  # 50ms base processing time
-        
-        # Calculate processing components
-        cpu_time = (task_size * 1000) / self.mips  # Convert to milliseconds
-        memory_time = (ram_required * 0.1) / (self.memory / 1000)  # Memory access time
-        network_time = (task_size * 8) / (self.bandwidth * 0.8)  # Network processing time
-        
-        # Add node-specific variations
-        if self.name.startswith("Fog-SG"):
-            # Singapore nodes have better processing for Asian tasks
-            cpu_factor = 0.9
-        else:
-            # Kansas City nodes have better processing for North American tasks
-            cpu_factor = 1.1
-        
-        # Calculate total processing time with variations
-        total_time = (base_time + cpu_time + memory_time + network_time) * cpu_factor
-        
-        # Add random variation
-        total_time *= random.uniform(0.9, 1.1)
-        
-        self._log_activity(f"Calculated processing time: {total_time:.2f}ms for task size {task_size}MB")
-        return total_time, ram_required, bandwidth_required
+        Args:
+            callback (function): Function to be called with task completion info
+        """
+        self.completion_callbacks.append(callback)
 
-    def can_process_task(self, ram_required, mips_required, bandwidth_required):
-        """Check if node has enough resources to process the task."""
-        can_process = (self.available_memory >= ram_required and 
-                      self.available_mips >= mips_required and
-                      self.available_bandwidth >= bandwidth_required)
-        self._log_activity(f"Resource check - Memory: {ram_required}MB/{self.available_memory}MB, "
-                          f"MIPS: {mips_required}/{self.available_mips}, "
-                          f"BW: {bandwidth_required}Mbps/{self.available_bandwidth}Mbps - "
-                          f"Can process: {can_process}")
-        return can_process
+    def _notify_completion(self, task_info):
+        """
+        Notify all registered callbacks about task completion.
+        
+        Args:
+            task_info (dict): Information about the completed task
+        """
+        for callback in self.completion_callbacks:
+            try:
+                callback(self.name, task_info)
+            except Exception as e:
+                self.logger.error(f"Error in completion callback: {str(e)}")
 
-    def allocate_resources(self, ram_required, mips_required, bandwidth_required):
-        """Allocate resources for task processing."""
-        self.available_memory -= ram_required
-        self.available_mips -= mips_required
-        self.available_bandwidth -= bandwidth_required
-        self._log_activity(f"Resources allocated - Memory: {ram_required}MB, "
-                          f"MIPS: {mips_required}, BW: {bandwidth_required}Mbps")
+    def can_handle_task(self, task):
+        """
+        Check if the fog node has sufficient resources to handle a task.
+        
+        Args:
+            task (dict): Task information including resource requirements
+            
+        Returns:
+            bool: True if node can handle the task, False otherwise
+        """
+        can_handle = (self.available_mips >= task['MIPS'] and
+                     self.available_memory >= task['RAM'] and
+                     self.available_bandwidth >= task['BW'])
+        
+        self.logger.info(f"Resource check for task {task['Name']} on {self.name}:")
+        self.logger.info(f"  Required MIPS: {task['MIPS']}, Available: {self.available_mips}")
+        self.logger.info(f"  Required Memory: {task['RAM']}, Available: {self.available_memory}")
+        self.logger.info(f"  Required Bandwidth: {task['BW']}, Available: {self.available_bandwidth}")
+        self.logger.info(f"  Can handle: {can_handle}")
+        
+        return can_handle
 
-    def release_resources(self, ram_required, mips_required, bandwidth_required):
-        """Release resources after task completion."""
-        self.available_memory += ram_required
-        self.available_mips += mips_required
-        self.available_bandwidth += bandwidth_required
-        self._log_activity(f"Resources released - Memory: {ram_required}MB, "
-                          f"MIPS: {mips_required}, BW: {bandwidth_required}Mbps")
-    
-    async def process_task(self, task):
-        """Process a task and return the processing time."""
-        # Get task location
-        if isinstance(task, dict):
-            # Handle dictionary input (JSON format)
-            if 'GeoLocation' in task:
-                source_location = {
-                    'lat': task['GeoLocation']['latitude'],
-                    'lon': task['GeoLocation']['longitude']
-                }
-            else:
-                source_location = None
-        else:
-            source_location = getattr(task, 'source_location', None) or getattr(task, 'location', None)
+    def assign_task(self, task):
+        """
+        Assign a task to this fog node or queue it if resources are not available.
         
-        # Calculate processing time and resource requirements
-        processing_time, ram_required, bandwidth_required = self.calculate_processing_time(task)
-        
-        # Calculate MIPS required based on processing time
-        mips_required = (processing_time * self.mips) / 1000  # Convert to MIPS
-        
-        # Generate task ID
-        task_id = id(task)
-        
-        # Record queue start time
-        queue_start_time = time.time()
-        
-        # Log task start with detailed information
-        task_info = {
-            'processing_time': processing_time,
-            'memory': ram_required,
-            'mips': mips_required,
-            'bandwidth': bandwidth_required,
-            'queue_start_time': queue_start_time
-        }
-        self._log_activity(f"Starting task processing", task_id, task_info)
-        
-        # Check if we have enough resources
-        if (self.used_memory + ram_required > self.memory or 
-            self.used_mips + mips_required > self.mips or 
-            self.used_bandwidth + bandwidth_required > self.bandwidth):
-            self._log_activity(f"Waiting for resources", task_id, task_info)
-            # If not enough resources, wait for some tasks to complete
-            await self._wait_for_resources(ram_required, mips_required, bandwidth_required)
-        
-        # Calculate queue time
-        queue_time = (time.time() - queue_start_time) * 1000  # Convert to milliseconds
-        self.total_queue_time += queue_time
-        self.task_queue_times[task_id] = queue_time
-        
-        # Allocate resources
-        self.used_memory += ram_required
-        self.used_mips += mips_required
-        self.used_bandwidth += bandwidth_required
-        self.task_memory[task_id] = ram_required
-        self.current_tasks.append({
-            'task_id': task_id,
-            'task': task,
-            'memory': ram_required,
-            'mips': mips_required,
-            'bandwidth': bandwidth_required,
-            'processing_time': processing_time,
-            'queue_time': queue_time,
-            'start_time': time.time()
-        })
-        
-        # Calculate distance and transmission delay
-        distance_km = self.calculate_distance(source_location)
-        task_size = getattr(task, 'size', 1.0) if not isinstance(task, dict) else task.get('Size', 1.0)
-        transmission_delay, bandwidth_used = self.calculate_transmission_delay(distance_km, task_size)
-        
-        # Total time includes transmission, queue, and processing
-        total_time = transmission_delay + queue_time + processing_time
-        
-        # Update statistics
-        self.total_processed += 1
-        self.total_processing_time += processing_time
-        self.total_transmission_time += transmission_delay
-        
-        # Create a task for processing
-        processing_task = asyncio.create_task(self._process_task_async(task_id, processing_time))
-        
-        # Wait for processing to complete
-        await processing_task
-        
-        # Log task completion with detailed information
-        self._log_activity(f"Task completed", task_id, {
-            'processing_time': processing_time,
-            'transmission_time': transmission_delay,
-            'queue_time': queue_time,
-            'total_time': total_time,
-            'distance_km': distance_km,
-            'memory': ram_required,
-            'mips': mips_required,
-            'bandwidth': bandwidth_used,
-            'queue_size': len(self.current_tasks)
-        })
-        
-        return {
-            'total_time': total_time,
-            'processing_time': processing_time,
-            'transmission_time': transmission_delay,
-            'queue_time': queue_time,
-            'distance_km': distance_km,
-            'memory_used': ram_required,
-            'bandwidth_used': bandwidth_used,
-            'mips_used': mips_required,
-            'ram_required': ram_required,
-            'task_size': task_size,
-            'queue_size': len(self.current_tasks)
-        }
-        
-    async def _process_task_async(self, task_id, processing_time):
-        """Process a task asynchronously."""
-        try:
-            # Log task start
-            self._log_activity(f"Task {task_id} started parallel processing. "
-                             f"Expected time: {processing_time:.2f}ms")
+        Args:
+            task (dict): Task information including resource requirements
             
-            # Simulate task processing time
-            await asyncio.sleep(processing_time / 1000)  # Convert to seconds
+        Returns:
+            tuple: (bool, float) - (success status, processing time)
+        """
+        with self.lock:
+            self.logger.info(f"Attempting to assign task {task['Name']} to {self.name}")
             
-            # Release resources after processing
-            if task_id in self.task_memory:
-                self.used_memory -= self.task_memory[task_id]
-                self.used_mips -= self.current_tasks[0]['mips']  # Get MIPS from current task
-                self.used_bandwidth -= self.current_tasks[0]['bandwidth']  # Get bandwidth from current task
-                del self.task_memory[task_id]
-                self.current_tasks = [t for t in self.current_tasks if t['task_id'] != task_id]
-            
-            # Log task completion with parallel processing info
-            active_tasks = len(self.current_tasks)
-            total_memory_used = sum(task['memory'] for task in self.current_tasks)
-            total_mips_used = sum(task['mips'] for task in self.current_tasks)
-            total_bandwidth_used = sum(task['bandwidth'] for task in self.current_tasks)
-            
-            self._log_activity(f"Task {task_id} completed parallel processing. "
-                             f"Processing time: {processing_time:.2f}ms. "
-                             f"Remaining active tasks: {active_tasks}, "
-                             f"Total Memory Used: {total_memory_used}MB/{self.memory}MB, "
-                             f"Total MIPS Used: {total_mips_used}/{self.mips}, "
-                             f"Total Bandwidth Used: {total_bandwidth_used}Mbps/{self.bandwidth}Mbps")
-        except Exception as e:
-            self._log_activity(f"Error in parallel processing of task {task_id}: {str(e)}")
-            # Release resources in case of error
-            if task_id in self.task_memory:
-                self.used_memory -= self.task_memory[task_id]
-                self.used_mips -= self.current_tasks[0]['mips']
-                self.used_bandwidth -= self.current_tasks[0]['bandwidth']
-                del self.task_memory[task_id]
-                self.current_tasks = [t for t in self.current_tasks if t['task_id'] != task_id]
-    
-    async def _wait_for_resources(self, required_memory, required_mips, required_bandwidth):
-        """Wait for enough resources to become available."""
-        while (self.used_memory + required_memory > self.memory or 
-               self.used_mips + required_mips > self.mips or 
-               self.used_bandwidth + required_bandwidth > self.bandwidth):
-            # Process some tasks to free up resources
-            completed_tasks = []
-            current_time = time.time()
-            
-            for task_info in self.current_tasks:
-                elapsed_time = (current_time - task_info['start_time']) * 1000  # Convert to milliseconds
-                if elapsed_time >= task_info['processing_time']:
-                    completed_tasks.append(task_info)
-                    task_id = task_info['task_id']
-                    if task_id in self.task_memory:
-                        self.used_memory -= self.task_memory[task_id]
-                        self.used_mips -= task_info['mips']
-                        self.used_bandwidth -= task_info['bandwidth']
-                        del self.task_memory[task_id]
-            
-            # Remove completed tasks
-            for task_info in completed_tasks:
-                self.current_tasks.remove(task_info)
-            
-            # Log waiting status
-            active_tasks = len(self.current_tasks)
-            total_memory_used = sum(task['memory'] for task in self.current_tasks)
-            total_mips_used = sum(task['mips'] for task in self.current_tasks)
-            total_bandwidth_used = sum(task['bandwidth'] for task in self.current_tasks)
-            
-            self._log_activity(f"Waiting for resources. Active tasks: {active_tasks}, "
-                             f"Total Memory Used: {total_memory_used}MB/{self.memory}MB, "
-                             f"Total MIPS Used: {total_mips_used}/{self.mips}, "
-                             f"Total Bandwidth Used: {total_bandwidth_used}Mbps/{self.bandwidth}Mbps")
-            
-            # Add a small delay to prevent busy waiting
-            await asyncio.sleep(0.001)
-
-    def update(self, elapsed_time):
-        """Update node state and process queued tasks."""
-        # Process current tasks
-        completed_tasks = []
-        current_time = time.time()
-        
-        for task_info in self.current_tasks:
-            task_elapsed_time = (current_time - task_info['start_time']) * 1000  # Convert to milliseconds
-            if task_elapsed_time >= task_info['processing_time']:
-                completed_tasks.append(task_info)
-                self.release_resources(
-                    task_info['ram_required'],
-                    task_info['mips_required'],
-                    task_info['bandwidth_required']
+            # Check if transmission time has already been calculated for this task
+            # This prevents recalculating transmission time if task is reassigned
+            if 'transmission_time' not in task:
+                transmission_time = calculate_transmission_time(
+                    task.get('location', {}),
+                    self.location,
+                    self,
+                    task.get('Size'),  # Pass actual task size
+                    self.logger
                 )
-                self._log_activity(f"Task completed. Processing time: {task_elapsed_time:.2f}ms")
-        
-        # Remove completed tasks
-        for task_info in completed_tasks:
-            self.current_tasks.remove(task_info)
-        
-        # Try to process queued tasks
-        while self.task_queue:
-            queued_task = self.task_queue[0]
-            if self.can_process_task(
-                queued_task['ram_required'],
-                queued_task['mips_required'],
-                queued_task['bandwidth_required']
-            ):
-                # Process the task
-                self.task_queue.popleft()
-                processing_time = self.process_task(queued_task['task'])
-                if processing_time is not None:
-                    self._log_activity(f"Queued task started processing. Expected time: {processing_time['processing_time']:.2f}ms")
-                    return processing_time
+                task['transmission_time'] = transmission_time
+                self.transmission_times.append(transmission_time)
+            
+            if self.can_handle_task(task):
+                # Calculate processing time for this task
+                processing_time = calculate_processing_time(task['Size'], self.mips)
+                self.processing_times.append(processing_time)
+                
+                # Add task with its processing time and transmission time
+                task_info = {
+                    'task': task,
+                    'processing_time': processing_time,
+                    'transmission_time': task['transmission_time'],
+                    'start_time': time.time(),
+                    'queue_time': 0  # No queuing time since task is processed immediately
+                }
+                self.assigned_tasks.append(task_info)
+                
+                # Allocate resources
+                self.available_mips -= task['MIPS']
+                self.available_memory -= task['RAM']
+                self.available_bandwidth -= task['BW']
+                self.current_load = (1 - (self.available_mips / self.mips)) * 100
+                
+                self.logger.info(f"Task {task['Name']} assigned to {self.name}")
+                self.logger.info(f"Processing time: {processing_time:.2f} seconds")
+                self.logger.info(f"Transmission time: {task['transmission_time']:.2f} seconds")
+                self.logger.info(f"Resources allocated: MIPS={task['MIPS']}, Memory={task['RAM']}, Bandwidth={task['BW']}")
+                self.logger.info(f"Current load: {self.current_load:.2f}%")
+                
+                # Start task processing in a new thread
+                processing_thread = threading.Thread(
+                    target=self._process_task,
+                    args=(task_info,)
+                )
+                processing_thread.start()
+                return True, processing_time
             else:
-                break
+                # Return False immediately if resources are not available
+                self.logger.warning(f"Insufficient resources on {self.name} for task {task['Name']}")
+                return False, 0
+
+    def _process_task(self, task_info):
+        """
+        Process a task and release resources after completion.
         
-        return None
+        Args:
+            task_info (dict): Information about the task to process
+        """
+        task = task_info['task']
+        processing_time = task_info['processing_time']
         
-    def __del__(self):
-        """Cleanup when object is destroyed."""
-        if hasattr(self, 'log_file'):
-            # Write summary before closing
-            if self.total_processed > 0:
-                power_info = self.calculate_power_consumption()
-                summary = f"""
-{'='*100}
-SUMMARY REPORT - {self.name}
-{'='*100}
-
-Task Processing Summary:
-    Total Tasks Processed: {self.total_processed}
-    Total Processing Time: {self.total_processing_time:.2f}ms
-    Total Queue Time: {self.total_queue_time:.2f}ms
-    Total Transmission Time: {self.total_transmission_time:.2f}ms
-
-Power Consumption Summary:
-    Total Energy Consumed: {self.total_power_consumption/3600:.2f} kWh
-    Average Power: {sum(p for _, p in self.power_history)/len(self.power_history) if self.power_history else 0:.2f}W
-    Peak Power: {max(p for _, p in self.power_history) if self.power_history else 0:.2f}W
-    Current Power: {power_info['total_power']:.2f}W
-    CPU Power: {power_info['cpu_power']:.2f}W
-    Memory Power: {power_info['memory_power']:.2f}W
-    Network Power: {power_info['network_power']:.2f}W
-
-Average Metrics:
-    Processing Time: {self.total_processing_time/self.total_processed:.2f}ms
-    Queue Time: {self.total_queue_time/self.total_processed:.2f}ms
-    Transmission Time: {self.total_transmission_time/self.total_processed:.2f}ms
-    Total Time per Task: {(self.total_processing_time + self.total_queue_time + self.total_transmission_time)/self.total_processed:.2f}ms
-
-Resource Utilization Summary:
-    Peak Memory Usage: {max(task['memory'] for task in self.current_tasks) if self.current_tasks else 0}MB
-    Peak MIPS Usage: {max(task['mips'] for task in self.current_tasks) if self.current_tasks else 0}
-    Peak Bandwidth Usage: {max(task['bandwidth'] for task in self.current_tasks) if self.current_tasks else 0}Mbps
-
-Performance Summary:
-    Average Memory per Task: {sum(task['memory'] for task in self.current_tasks)/len(self.current_tasks) if self.current_tasks else 0:.2f}MB
-    Average MIPS per Task: {sum(task['mips'] for task in self.current_tasks)/len(self.current_tasks) if self.current_tasks else 0:.2f}
-    Average Bandwidth per Task: {sum(task['bandwidth'] for task in self.current_tasks)/len(self.current_tasks) if self.current_tasks else 0:.2f}Mbps
-
-Queue Analysis:
-    Average Queue Size: {len(self.task_queue):.1f} tasks
-    Maximum Queue Size: {max(len(self.task_queue), 1)}
-    Queue Time Distribution:
-        Min Queue Time: {min(self.task_queue_times.values()) if self.task_queue_times else 0:.2f}ms
-        Max Queue Time: {max(self.task_queue_times.values()) if self.task_queue_times else 0:.2f}ms
-        Average Queue Time: {sum(self.task_queue_times.values())/len(self.task_queue_times) if self.task_queue_times else 0:.2f}ms
-
-{'='*100}
-"""
-                self.log_file.write(summary)
-                self.log_file.flush()
-            self.log_file.close()
-
-    def get_stats(self):
-        """Return statistics about this fog node."""
-        # Calculate current resource utilization based on active tasks
-        total_memory_used = sum(task['memory'] for task in self.current_tasks)
-        total_mips_used = sum(task['mips'] for task in self.current_tasks)
-        total_bandwidth_used = sum(task['bandwidth'] for task in self.current_tasks)
+        self.logger.info(f"Starting processing of task {task['Name']} on {self.name}")
+        self.logger.info(f"Expected processing time: {processing_time:.2f} seconds")
         
-        memory_utilization = total_memory_used / self.memory if self.memory > 0 else 0
-        mips_utilization = total_mips_used / self.mips if self.mips > 0 else 0
-        bandwidth_utilization = total_bandwidth_used / self.bandwidth if self.bandwidth > 0 else 0
+        # Simulate task processing
+        time.sleep(processing_time)
         
-        # Add power consumption statistics
-        power_info = self.calculate_power_consumption()
-        
-        return {
-            "node_id": self.node_id,
-            "name": self.name,
-            "total_processed": self.total_processed,
-            "avg_processing_time": self.total_processing_time / self.total_processed if self.total_processed > 0 else 0,
-            "avg_transmission_time": self.total_transmission_time / self.total_processed if self.total_processed > 0 else 0,
-            "avg_queue_time": self.total_queue_time / self.total_processed if self.total_processed > 0 else 0,
-            "memory_utilization": memory_utilization,
-            "mips_utilization": mips_utilization,
-            "bandwidth_utilization": bandwidth_utilization,
-            "current_tasks": len(self.current_tasks),
-            "queue_size": len(self.task_queue),
-            "system_load": max(memory_utilization, mips_utilization, bandwidth_utilization),
-            "used_memory": total_memory_used,
-            "used_mips": total_mips_used,
-            "used_bandwidth": total_bandwidth_used,
-            "available_memory": self.memory - total_memory_used,
-            "available_mips": self.mips - total_mips_used,
-            "available_bandwidth": self.bandwidth - total_bandwidth_used,
-            "power_consumption": {
-                "current_power": power_info['total_power'],
-                "cpu_power": power_info['cpu_power'],
-                "memory_power": power_info['memory_power'],
-                "network_power": power_info['network_power'],
-                "total_energy": self.total_power_consumption / 3600,  # Convert to kWh
-                "average_power": sum(p for _, p in self.power_history) / len(self.power_history) if self.power_history else 0,
-                "peak_power": max(p for _, p in self.power_history) if self.power_history else 0
+        with self.lock:
+            # Release resources
+            self.available_mips += task['MIPS']
+            self.available_memory += task['RAM']
+            self.available_bandwidth += task['BW']
+            
+            # Update current load
+            self.current_load = (1 - (self.available_mips / self.mips)) * 100
+            
+            # Move task to completed list with all its information
+            self.assigned_tasks.remove(task_info)
+            completion_info = {
+                'task': task,
+                'processing_time': processing_time,
+                'transmission_time': task_info['transmission_time'],
+                'completion_time': time.time(),
+                'queue_time': task_info['queue_time'],
+                'fog_node': self.name,
+                'total_time': processing_time + task_info['transmission_time'] + task_info['queue_time']
             }
-        }
+            self.completed_tasks.append(completion_info)
+            
+            self.logger.info(f"Task {task['Name']} completed on {self.name}")
+            self.logger.info(f"Resources released: MIPS={task['MIPS']}, Memory={task['RAM']}, Bandwidth={task['BW']}")
+            self.logger.info(f"Current load: {self.current_load:.2f}%")
+            self.logger.info(f"Completed tasks: {len(self.completed_tasks)}")
+            
+            # Notify about task completion
+            self._notify_completion(completion_info)
+            
+            # Check if any queued tasks can be processed
+            self._process_queued_tasks()
 
-    def calculate_distance(self, source_location):
-        """Calculate distance between source and fog node in kilometers using Haversine formula."""
-        if not source_location:
-            return 1000  # Default distance if location not provided
+    def _process_queued_tasks(self):
+        """
+        Process any queued tasks that can now be handled with available resources.
+        """
+        self.logger.info(f"Checking queued tasks on {self.name}")
+        self.logger.info(f"Current queue size: {len(self.task_queue)}")
         
-        if 'lat' not in source_location or 'lon' not in source_location:
-            return 1000  # Default distance if location not provided
+        while self.task_queue:
+            next_task = self.task_queue[0]  # Peek at the next task
+            if self.can_handle_task(next_task):
+                self.task_queue.popleft()  # Remove the task from queue
+                self.logger.info(f"Processing queued task {next_task['Name']} on {self.name}")
+                
+                # Calculate processing time for this task
+                processing_time = calculate_processing_time(next_task['Size'], self.mips)
+                self.processing_times.append(processing_time)
+                
+                # Calculate queuing time
+                queue_time = time.time() - next_task['queue_entry_time']
+                
+                # Add task with its processing time, transmission time and queue time
+                task_info = {
+                    'task': next_task,
+                    'processing_time': processing_time,
+                    'transmission_time': next_task['transmission_time'],
+                    'start_time': time.time(),
+                    'queue_time': queue_time
+                }
+                self.assigned_tasks.append(task_info)
+                
+                # Allocate resources
+                self.available_mips -= next_task['MIPS']
+                self.available_memory -= next_task['RAM']
+                self.available_bandwidth -= next_task['BW']
+                self.current_load = (1 - (self.available_mips / self.mips)) * 100
+                
+                self.logger.info(f"Task {next_task['Name']} assigned to {self.name}")
+                self.logger.info(f"Processing time: {processing_time:.2f} seconds")
+                self.logger.info(f"Transmission time: {next_task['transmission_time']:.2f} seconds")
+                self.logger.info(f"Queue time: {queue_time:.2f} seconds")
+                self.logger.info(f"Resources allocated: MIPS={next_task['MIPS']}, Memory={next_task['RAM']}, Bandwidth={next_task['BW']}")
+                self.logger.info(f"Current load: {self.current_load:.2f}%")
+                
+                # Start task processing in a new thread
+                processing_thread = threading.Thread(
+                    target=self._process_task,
+                    args=(task_info,)
+                )
+                processing_thread.start()
+            else:
+                self.logger.info(f"Next queued task {next_task['Name']} still cannot be processed")
+                break  # Stop if next task can't be processed
+
+    def get_status(self):
+        """
+        Get current status of the fog node including resource usage and performance metrics.
         
-        lat1 = math.radians(source_location['lat'])
-        lon1 = math.radians(source_location['lon'])
-        lat2 = math.radians(self.location['lat'])
-        lon2 = math.radians(self.location['lon'])
+        Returns:
+            dict: Current status information
+        """
+        avg_processing_time = sum(self.processing_times) / len(self.processing_times) if self.processing_times else 0
+        avg_queue_time = sum(task['queue_time'] for task in self.completed_tasks) / len(self.completed_tasks) if self.completed_tasks else 0
+        avg_transmission_time = sum(self.transmission_times) / len(self.transmission_times) if self.transmission_times else 0
         
-        dlon = lon2 - lon1
-        dlat = lat2 - lat1
+        status = {
+            'name': self.name,
+            'current_load': f"{self.current_load:.2f}%",
+            'available_mips': self.available_mips,
+            'available_memory': self.available_memory,
+            'available_bandwidth': self.available_bandwidth,
+            'assigned_tasks': len(self.assigned_tasks),
+            'queued_tasks': len(self.task_queue),
+            'completed_tasks': len(self.completed_tasks),
+            'average_processing_time': f"{avg_processing_time:.2f} seconds",
+            'average_queue_time': f"{avg_queue_time:.2f} seconds",
+            'average_transmission_time': f"{avg_transmission_time:.2f} seconds"
+        }
         
-        a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
-        c = 2 * math.asin(math.sqrt(a))
-        
-        distance = EARTH_RADIUS_KM * c
-        return distance
+        self.logger.debug(f"Status of {self.name}:")
+        for key, value in status.items():
+            self.logger.debug(f"  {key}: {value}")
+            
+        return status
+
+def create_fog_nodes():
+    """
+    Create fog nodes from configuration.
     
-    def calculate_transmission_delay(self, distance_km, task_size):
-        """Calculate transmission delay based on distance and task size."""
-        # Base network overhead in milliseconds
-        base_overhead = 20
+    Returns:
+        dict: Dictionary of fog nodes with names as keys
+    """
+    fog_nodes = {}
+    for node_config in FOG_NODES_CONFIG:
+        node = FogNode(
+            name=node_config['name'],
+            mips=node_config['mips'],
+            bandwidth=node_config['bandwidth'],
+            memory=node_config['memory'],
+            location=node_config['location']
+        )
+        fog_nodes[node_config['name']] = node
+    return fog_nodes
+
+# Create fog nodes when module is imported
+fog_nodes = create_fog_nodes()
+
+def get_fog_node(name):
+    """
+    Get a specific fog node by name.
+    
+    Args:
+        name (str): Name of the fog node
         
-        # Minimum theoretical delay based on speed of light
-        min_delay = distance_km / 300  # Light travels ~300,000 km/s
-        
-        # Distance-based network delay
-        distance_delay = distance_km / 50  # 1ms per 50km
-        
-        # Size-based delay
-        size_delay = task_size / 10  # 1ms per 10 units of size
-        
-        # Node-specific network conditions
-        if self.name.startswith("Fog-SG"):
-            # Singapore nodes have better connectivity in Asia
-            if distance_km < 5000:  # Within Asia
-                network_factor = 0.8
-            else:
-                network_factor = 1.2
-        else:
-            # Kansas City nodes have better connectivity in North America
-            if distance_km < 5000:  # Within North America
-                network_factor = 0.8
-            else:
-                network_factor = 1.2
-        
-        # Calculate final transmission delay
-        transmission_delay = (base_overhead + min_delay + distance_delay + size_delay) * network_factor
-        
-        # Add random variation
-        transmission_delay *= random.uniform(0.9, 1.1)
-        
-        # Calculate actual bandwidth used based on task size and transmission time
-        # Convert task size to bits and transmission delay to seconds
-        task_size_bits = task_size * 8 * 1024 * 1024  # Convert MB to bits
-        transmission_time_seconds = transmission_delay / 1000  # Convert ms to seconds
-        
-        # Calculate bandwidth in Mbps
-        bandwidth_used = (task_size_bits / transmission_time_seconds) / (1024 * 1024)  # Convert to Mbps
-        
-        return transmission_delay, bandwidth_used
+    Returns:
+        FogNode: The requested fog node or None if not found
+    """
+    return fog_nodes.get(name)
+
+def get_all_fog_nodes():
+    """
+    Get all fog nodes.
+    
+    Returns:
+        dict: Dictionary of all fog nodes
+    """
+    return fog_nodes
+
+def get_fog_node_status():
+    """
+    Get status of all fog nodes.
+    
+    Returns:
+        dict: Dictionary of fog node statuses
+    """
+    return {name: node.get_status() for name, node in fog_nodes.items()}
+
+if __name__ == "__main__":
+    # Test fog node creation and status
+    print("Fog Nodes Status:")
+    for name, status in get_fog_node_status().items():
+        print(f"\n{name}:")
+        for key, value in status.items():
+            print(f"  {key}: {value}")

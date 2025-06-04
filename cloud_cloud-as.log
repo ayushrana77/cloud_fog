@@ -1,182 +1,51 @@
-
-====================================================================================================
-Cloud Node Log - Cloud-AS
-Started at: 2025-05-26 14:19:50
-Node Configuration:
-    MIPS: 9000
-    Memory: 9024 MB
-    Bandwidth: 9000 Mbps
-    Location: 1.3521, 103.8198
-====================================================================================================
-
-[2025-05-26 14:19:50.495] Calculated processing time: 143.22ms for task size 300MB
-Power Consumption:
-    Total Power: 80.00W
-    CPU Power: 50.00W (0.0% utilization)
-    Memory Power: 20.00W (0.0% utilization)
-    Network Power: 10.00W (0.0% utilization)
-Node Metrics:
-    Tasks Processed: 0
-    Current Queue Size: 0
-    Active Tasks: 0
-    Throughput: 0.00 tasks/second
-    Average Task Interval: N/A
-Resource Utilization:
-    Memory: 0.0%
-    MIPS: 0.0%
-    Bandwidth: 0.0%
-----------------------------------------------------------------------------------------------------
-[2025-05-26 14:19:50.495] Starting task processing
-Task Details:
-    Task ID: 1431298777664
-    Node: Cloud-AS
-    Timing Metrics:
-        Total Time: 0.00ms
-        Response Time: 0.00ms
-        Processing Time: 143.22ms
-        Queue Time: 0.00ms
-        Transmission Time: 0.00ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 0.00km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 80.00W
-    CPU Power: 50.00W (0.0% utilization)
-    Memory Power: 20.00W (0.0% utilization)
-    Network Power: 10.00W (0.0% utilization)
-Node Metrics:
-    Tasks Processed: 0
-    Current Queue Size: 0
-    Active Tasks: 0
-    Throughput: 0.00 tasks/second
-    Average Task Interval: N/A
-Resource Utilization:
-    Memory: 0.0%
-    MIPS: 0.0%
-    Bandwidth: 0.0%
-----------------------------------------------------------------------------------------------------
-[2025-05-26 14:19:50.498] Task 1431298777664 started parallel processing. Expected time: 143.22ms
-Power Consumption:
-    Total Power: 134.89W
-    CPU Power: 71.48W (14.3% utilization)
-    Memory Power: 52.96W (41.2% utilization)
-    Network Power: 10.44W (1.1% utilization)
-Node Metrics:
-    Tasks Processed: 1
-    Current Queue Size: 1
-    Active Tasks: 1
-    Throughput: 6.98 tasks/second
-    Average Task Interval: 143.22ms
-Resource Utilization:
-    Memory: 41.2%
-    MIPS: 14.3%
-    Bandwidth: 1.1%
-----------------------------------------------------------------------------------------------------
-[2025-05-26 14:19:50.656] Task 1431298777664 completed parallel processing. Processing time: 143.22ms. Remaining active tasks: 0, Total Memory Used: 0MB/9024MB, Total MIPS Used: 0/9000, Total Bandwidth Used: 0Mbps/9000Mbps
-Power Consumption:
-    Total Power: 80.00W
-    CPU Power: 50.00W (0.0% utilization)
-    Memory Power: 20.00W (0.0% utilization)
-    Network Power: 10.00W (0.0% utilization)
-Node Metrics:
-    Tasks Processed: 1
-    Current Queue Size: 0
-    Active Tasks: 0
-    Throughput: 6.98 tasks/second
-    Average Task Interval: 143.22ms
-Resource Utilization:
-    Memory: 0.0%
-    MIPS: 0.0%
-    Bandwidth: 0.0%
-----------------------------------------------------------------------------------------------------
-[2025-05-26 14:19:50.657] Task completed
-Task Details:
-    Task ID: 1431298777664
-    Node: Cloud-AS
-    Timing Metrics:
-        Total Time: 274.02ms
-        Response Time: 0.00ms
-        Processing Time: 143.22ms
-        Queue Time: 0.05ms
-        Transmission Time: 130.75ms
-    Resource Usage:
-        Memory Used: 0MB
-        Bandwidth Used: 0Mbps
-        RAM Required: 0MB
-        Task Size: 0MB
-    Network Metrics:
-        Distance: 4817.13km
-        Queue Size: 0
-    System Load:
-        System Load: 0.0%
-        Bandwidth Utilization: 0.0%
-        MIPS Utilization: 0.0%
-Power Consumption:
-    Total Power: 80.00W
-    CPU Power: 50.00W (0.0% utilization)
-    Memory Power: 20.00W (0.0% utilization)
-    Network Power: 10.00W (0.0% utilization)
-Node Metrics:
-    Tasks Processed: 1
-    Current Queue Size: 0
-    Active Tasks: 0
-    Throughput: 6.98 tasks/second
-    Average Task Interval: 143.22ms
-Resource Utilization:
-    Memory: 0.0%
-    MIPS: 0.0%
-    Bandwidth: 0.0%
-----------------------------------------------------------------------------------------------------
-====================================================================================================
-SUMMARY REPORT - Cloud-AS
-====================================================================================================
-
-Task Processing Summary:
-    Total Tasks Processed: 1
-    Total Processing Time: 143.22ms
-    Total Queue Time: 0.05ms
-    Total Transmission Time: 130.75ms
-
-Power Consumption Summary:
-    Total Energy Consumed: 0.23 kWh
-    Average Power: 89.15W
-    Peak Power: 134.89W
-    Current Power: 80.00W
-    CPU Power: 50.00W
-    Memory Power: 20.00W
-    Network Power: 10.00W
-
-Average Metrics:
-    Processing Time: 143.22ms
-    Queue Time: 0.05ms
-    Transmission Time: 130.75ms
-    Total Time per Task: 274.02ms
-
-Resource Utilization Summary:
-    Peak Memory Usage: 0MB
-    Peak MIPS Usage: 0
-    Peak Bandwidth Usage: 0Mbps
-
-Performance Summary:
-    Average Memory per Task: 0.00MB
-    Average MIPS per Task: 0.00
-    Average Bandwidth per Task: 0.00Mbps
-
-Queue Analysis:
-    Average Queue Size: 0.0 tasks
-    Maximum Queue Size: 1
-    Queue Time Distribution:
-        Min Queue Time: 0.05ms
-        Max Queue Time: 0.05ms
-        Average Queue Time: 0.05ms
-
-====================================================================================================
+2025-06-03 09:27:48,604 - INFO - Initialized Cloud Node: Cloud-AS
+2025-06-03 09:27:48,604 - INFO - Resources: MIPS=2000, Memory=2024, Bandwidth=2000
+2025-06-03 09:27:48,604 - INFO - Location: {'lat': 1.3521, 'lon': 103.8198}
+2025-06-03 09:27:48,621 - INFO - Attempting to assign task Tuple-4 to Cloud-AS
+2025-06-03 09:27:48,622 - INFO - Resource check for task Tuple-4 on Cloud-AS:
+2025-06-03 09:27:48,623 - INFO -   Required MIPS: 1200.0, Available: 2000
+2025-06-03 09:27:48,623 - INFO -   Required Memory: 1024, Available: 2024
+2025-06-03 09:27:48,623 - INFO -   Required Bandwidth: 150, Available: 2000
+2025-06-03 09:27:48,623 - INFO -   Can handle: True
+2025-06-03 09:27:48,623 - INFO - Task Tuple-4 assigned to Cloud-AS
+2025-06-03 09:27:48,623 - INFO - Processing time: 0.15 seconds
+2025-06-03 09:27:48,623 - INFO - Transmission time: 0.57 seconds
+2025-06-03 09:27:48,623 - INFO - Resources allocated: MIPS=1200.0, Memory=1024, Bandwidth=150
+2025-06-03 09:27:48,623 - INFO - Current load: 60.00%
+2025-06-03 09:27:48,629 - INFO - Starting processing of task Tuple-4 on Cloud-AS
+2025-06-03 09:27:48,630 - INFO - Expected processing time: 0.15 seconds
+2025-06-03 09:27:48,657 - INFO - Attempting to assign task Tuple-1076 to Cloud-AS
+2025-06-03 09:27:48,657 - INFO - Resource check for task Tuple-1076 on Cloud-AS:
+2025-06-03 09:27:48,657 - INFO -   Required MIPS: 250.0, Available: 800.0
+2025-06-03 09:27:48,658 - INFO -   Required Memory: 1024, Available: 1000
+2025-06-03 09:27:48,658 - INFO -   Required Bandwidth: 150, Available: 1850
+2025-06-03 09:27:48,658 - INFO -   Can handle: False
+2025-06-03 09:27:48,658 - WARNING - Insufficient resources on Cloud-AS for task Tuple-1076
+2025-06-03 09:27:48,658 - INFO - Queueing task Tuple-1076 on Cloud-AS
+2025-06-03 09:27:48,658 - INFO - Current queue size: 1
+2025-06-03 09:27:48,780 - INFO - Task Tuple-4 completed on Cloud-AS
+2025-06-03 09:27:48,780 - INFO - Resources released: MIPS=1200.0, Memory=1024, Bandwidth=150
+2025-06-03 09:27:48,780 - INFO - Current load: 0.00%
+2025-06-03 09:27:48,780 - INFO - Completed tasks: 1
+2025-06-03 09:27:48,781 - INFO - Checking queued tasks on Cloud-AS
+2025-06-03 09:27:48,781 - INFO - Current queue size: 1
+2025-06-03 09:27:48,781 - INFO - Resource check for task Tuple-1076 on Cloud-AS:
+2025-06-03 09:27:48,781 - INFO -   Required MIPS: 250.0, Available: 2000.0
+2025-06-03 09:27:48,781 - INFO -   Required Memory: 1024, Available: 2024
+2025-06-03 09:27:48,781 - INFO -   Required Bandwidth: 150, Available: 2000
+2025-06-03 09:27:48,781 - INFO -   Can handle: True
+2025-06-03 09:27:48,781 - INFO - Processing queued task Tuple-1076 on Cloud-AS
+2025-06-03 09:27:48,781 - INFO - Task Tuple-1076 assigned to Cloud-AS
+2025-06-03 09:27:48,781 - INFO - Processing time: 0.15 seconds
+2025-06-03 09:27:48,781 - INFO - Transmission time: 0.66 seconds
+2025-06-03 09:27:48,781 - INFO - Queue time: 0.12 seconds
+2025-06-03 09:27:48,781 - INFO - Resources allocated: MIPS=250.0, Memory=1024, Bandwidth=150
+2025-06-03 09:27:48,781 - INFO - Current load: 12.50%
+2025-06-03 09:27:48,782 - INFO - Starting processing of task Tuple-1076 on Cloud-AS
+2025-06-03 09:27:48,782 - INFO - Expected processing time: 0.15 seconds
+2025-06-03 09:27:48,933 - INFO - Task Tuple-1076 completed on Cloud-AS
+2025-06-03 09:27:48,933 - INFO - Resources released: MIPS=250.0, Memory=1024, Bandwidth=150
+2025-06-03 09:27:48,934 - INFO - Current load: 0.00%
+2025-06-03 09:27:48,934 - INFO - Completed tasks: 2
+2025-06-03 09:27:48,935 - INFO - Checking queued tasks on Cloud-AS
+2025-06-03 09:27:48,935 - INFO - Current queue size: 0
