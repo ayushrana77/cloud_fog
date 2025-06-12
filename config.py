@@ -29,16 +29,16 @@ CLOUD_SERVICES_CONFIG = [
     {
         "name": "Cloud-NA",
         "mips": 4000,  # Doubled MIPS for single server
-        "bandwidth": 2000,  # 20 Gbps
-        "memory": 1096,  # Doubled memory
+        "bandwidth": 4000,  # 20 Gbps
+        "memory": 4096,  # Doubled memory
         "location": {"lat": 39.0997, "lon": -94.5786},  # Kansas City (central USA)
     },
     # Asia
     {
         "name": "Cloud-AS",
-        "mips": 2000,  # Doubled MIPS for single server
-        "bandwidth": 2000,  # 20 Gbps
-        "memory": 2024,  # Doubled memory
+        "mips": 4000,  # Doubled MIPS for single server
+        "bandwidth": 4000,  # 20 Gbps
+        "memory": 4024,  # Doubled memory
         "location": {"lat": 1.3521, "lon": 103.8198},  # Singapore
     }
 ]
@@ -51,38 +51,38 @@ FOG_NODES_CONFIG = [
         "bandwidth": 2000,  # 1 Gbps
         "memory": 1096,  # 8GB
         "location": {
-            "lat": 4.3521,
-            "lon": 97.8198
+            "lat": 1.3521,
+            "lon": 103.8198  # Singapore
         }
     },
-    # {
-    #     "name": "Fog-SG2",
-    #     "mips": 10000,
-    #     "bandwidth": 40000,
-    #     "memory": 16144,  # 6GB
-    #     "location": {
-    #         "lat": 10.3521,
-    #         "lon": 108.8198
-    #     }
-    # },
-    # {
-    #     "name": "Fog-KC1",
-    #     "mips": 5000,
-    #     "bandwidth": 4000,
-    #     "memory": 8192,
-    #     "location": {
-    #         "lat": 32.0997,
-    #         "lon": -98.5786
-    #     }
-    # },
+    {
+        "name": "Fog-SG2",
+        "mips": 1000,
+        "bandwidth": 4000,
+        "memory": 1614,  # 6GB
+        "location": {
+            "lat": 35.6762,
+            "lon": 139.6503  # Tokyo
+        }
+    },
+    {
+        "name": "Fog-KC1",
+        "mips": 2000,
+        "bandwidth": 4000,
+        "memory": 1192,
+        "location": {
+            "lat": 48.8566,
+            "lon": 2.3522  # Paris
+        }
+    },
     {
         "name": "Fog-KC2",
-        "mips": 4000,
-        "bandwidth": 4000,
-        "memory": 4144,
+        "mips": 2000,
+        "bandwidth": 2000,
+        "memory": 2144,
         "location": {
-            "lat": 45.0997,
-            "lon": -85.5786
+            "lat": 39.0997,
+            "lon": -94.5786  # Kansas City
         }
     }
 ]

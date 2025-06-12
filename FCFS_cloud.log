@@ -1,119 +1,173 @@
-2025-06-01 10:44:15,832 - INFO - Number of tasks received: 10
-2025-06-01 10:44:15,834 - INFO - Total Tasks to Process: 10
-2025-06-01 10:44:15,834 - INFO - Cloud node created: Cloud-NA (MIPS=4000, RAM=1096, BW=2000, Location={'lat': 39.0997, 'lon': -94.5786})
-2025-06-01 10:44:15,834 - INFO - Cloud node created: Cloud-AS (MIPS=2000, RAM=2024, BW=2000, Location={'lat': 1.3521, 'lon': 103.8198})
-2025-06-01 10:44:15,907 - INFO - 
-Task Completed: Tuple-9
-2025-06-01 10:44:15,907 - INFO -   Completed at: Cloud-AS
-2025-06-01 10:44:15,907 - INFO -   Transmission Time: 0.28s
-2025-06-01 10:44:15,907 - INFO -   Queue Time: 0.00s
-2025-06-01 10:44:15,908 - INFO -   Processing Time: 0.06s
-2025-06-01 10:44:15,908 - INFO -   Total Time: 0.35s
-2025-06-01 10:44:15,957 - INFO - 
-Task Completed: Tuple-7169
-2025-06-01 10:44:15,957 - INFO -   Completed at: Cloud-NA
-2025-06-01 10:44:15,958 - INFO -   Transmission Time: 0.37s
-2025-06-01 10:44:15,958 - INFO -   Queue Time: 0.00s
-2025-06-01 10:44:15,958 - INFO -   Processing Time: 0.04s
-2025-06-01 10:44:15,958 - INFO -   Total Time: 0.41s
-2025-06-01 10:44:16,006 - INFO - 
-Task Completed: Tuple-1
-2025-06-01 10:44:16,006 - INFO -   Completed at: Cloud-AS
-2025-06-01 10:44:16,006 - INFO -   Transmission Time: 0.20s
-2025-06-01 10:44:16,006 - INFO -   Queue Time: 0.00s
-2025-06-01 10:44:16,007 - INFO -   Processing Time: 0.04s
-2025-06-01 10:44:16,007 - INFO -   Total Time: 0.24s
-2025-06-01 10:44:16,018 - INFO - 
-Task Completed: Tuple-4
-2025-06-01 10:44:16,018 - INFO -   Completed at: Cloud-AS
-2025-06-01 10:44:16,018 - INFO -   Transmission Time: 0.58s
-2025-06-01 10:44:16,019 - INFO -   Queue Time: 0.00s
-2025-06-01 10:44:16,019 - INFO -   Processing Time: 0.15s
-2025-06-01 10:44:16,019 - INFO -   Total Time: 0.73s
-2025-06-01 10:44:16,023 - INFO - 
+2025-06-10 14:47:27,785 - INFO - Number of tasks received: 10
+2025-06-10 14:47:27,786 - INFO - Total Tasks to Process: 10
+2025-06-10 14:47:27,787 - INFO - Cloud node created: Cloud-NA (MIPS=4000, RAM=1096, BW=2000, Location={'lat': 39.0997, 'lon': -94.5786})
+2025-06-10 14:47:27,787 - INFO - Cloud node created: Cloud-AS (MIPS=2000, RAM=2024, BW=2000, Location={'lat': 1.3521, 'lon': 103.8198})
+2025-06-10 14:47:27,882 - INFO - 
 Task Completed: Tuple-5
-2025-06-01 10:44:16,023 - INFO -   Completed at: Cloud-NA
-2025-06-01 10:44:16,023 - INFO -   Transmission Time: 0.32s
-2025-06-01 10:44:16,024 - INFO -   Queue Time: 0.00s
-2025-06-01 10:44:16,024 - INFO - 
-Task Completed: Tuple-11620
-2025-06-01 10:44:16,024 - INFO -   Processing Time: 0.03s
-2025-06-01 10:44:16,025 - INFO -   Completed at: Cloud-AS
-2025-06-01 10:44:16,025 - INFO -   Total Time: 0.36s
-2025-06-01 10:44:16,025 - INFO -   Transmission Time: 0.42s
-2025-06-01 10:44:16,026 - INFO -   Queue Time: 0.00s
-2025-06-01 10:44:16,027 - INFO -   Processing Time: 0.09s
-2025-06-01 10:44:16,027 - INFO -   Total Time: 0.50s
-2025-06-01 10:44:16,059 - INFO - 
-=== Queued Tasks Summary ===
-2025-06-01 10:44:16,060 - INFO - 
-Queued Task: Tuple-1076
-2025-06-01 10:44:16,060 - INFO -   Queued at: Cloud-AS (distance=4818.10 km)
-2025-06-01 10:44:16,060 - INFO -   Queue Position: 1
-2025-06-01 10:44:16,060 - INFO -   Task Size: 300 MI
-2025-06-01 10:44:16,060 - INFO -   Required Resources:
-2025-06-01 10:44:16,060 - INFO -     MIPS: 250.0
-2025-06-01 10:44:16,060 - INFO -     RAM: 1024
-2025-06-01 10:44:16,060 - INFO -     Bandwidth: 150
-2025-06-01 10:44:16,060 - INFO - 
-Queued Task: Tuple-3
-2025-06-01 10:44:16,061 - INFO -   Queued at: Cloud-NA (distance=2019.22 km)
-2025-06-01 10:44:16,061 - INFO -   Queue Position: 1
-2025-06-01 10:44:16,061 - INFO -   Task Size: 300 MI
-2025-06-01 10:44:16,061 - INFO -   Required Resources:
-2025-06-01 10:44:16,061 - INFO -     MIPS: 120.0
-2025-06-01 10:44:16,061 - INFO -     RAM: 1024
-2025-06-01 10:44:16,061 - INFO -     Bandwidth: 150
-2025-06-01 10:44:16,061 - INFO - 
-Queued Task: Tuple-13823
-2025-06-01 10:44:16,061 - INFO -   Queued at: Cloud-NA (distance=729.91 km)
-2025-06-01 10:44:16,061 - INFO -   Queue Position: 1
-2025-06-01 10:44:16,062 - INFO -   Task Size: 170 MI
-2025-06-01 10:44:16,062 - INFO -   Required Resources:
-2025-06-01 10:44:16,062 - INFO -     MIPS: 100.0
-2025-06-01 10:44:16,062 - INFO -     RAM: 200
-2025-06-01 10:44:16,062 - INFO -     Bandwidth: 80
-2025-06-01 10:44:16,062 - INFO - 
-Queued Task: Tuple-0
-2025-06-01 10:44:16,062 - INFO -   Queued at: Cloud-NA (distance=1100.60 km)
-2025-06-01 10:44:16,062 - INFO -   Queue Position: 2
-2025-06-01 10:44:16,062 - INFO -   Task Size: 270 MI
-2025-06-01 10:44:16,062 - INFO -   Required Resources:
-2025-06-01 10:44:16,062 - INFO -     MIPS: 900.0
-2025-06-01 10:44:16,063 - INFO -     RAM: 500
-2025-06-01 10:44:16,063 - INFO -     Bandwidth: 100
-2025-06-01 10:44:16,106 - INFO - 
-Task Completed: Tuple-3
-2025-06-01 10:44:16,106 - INFO -   Completed at: Cloud-NA
-2025-06-01 10:44:16,106 - INFO -   Transmission Time: 0.67s
-2025-06-01 10:44:16,106 - INFO -   Queue Time: 0.02s
-2025-06-01 10:44:16,107 - INFO -   Processing Time: 0.07s
-2025-06-01 10:44:16,107 - INFO -   Total Time: 0.76s
-2025-06-01 10:44:16,153 - INFO - 
+2025-06-10 14:47:27,882 - INFO -   Completed at: Cloud-NA
+2025-06-10 14:47:27,882 - INFO -   Transmission Time: 0.42s
+2025-06-10 14:47:27,882 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:27,882 - INFO -   Processing Time: 0.05s
+2025-06-10 14:47:27,882 - INFO -   Total Time: 0.47s
+2025-06-10 14:47:27,884 - INFO -   ------------------------------
+2025-06-10 14:47:27,889 - INFO - 
+Task Completed: Tuple-7169
+2025-06-10 14:47:27,889 - INFO -   Completed at: Cloud-NA
+2025-06-10 14:47:27,889 - INFO -   Transmission Time: 0.52s
+2025-06-10 14:47:27,889 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:27,889 - INFO -   Processing Time: 0.08s
+2025-06-10 14:47:27,889 - INFO -   Total Time: 0.60s
+2025-06-10 14:47:27,889 - INFO -   ------------------------------
+2025-06-10 14:47:27,896 - INFO - 
+Task Completed: Tuple-1
+2025-06-10 14:47:27,896 - INFO -   Completed at: Cloud-AS
+2025-06-10 14:47:27,896 - INFO -   Transmission Time: 0.33s
+2025-06-10 14:47:27,896 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:27,896 - INFO -   Processing Time: 0.07s
+2025-06-10 14:47:27,896 - INFO -   Total Time: 0.40s
+2025-06-10 14:47:27,896 - INFO -   ------------------------------
+2025-06-10 14:47:27,918 - INFO - 
 Task Completed: Tuple-13823
-2025-06-01 10:44:16,153 - INFO -   Completed at: Cloud-NA
-2025-06-01 10:44:16,153 - INFO -   Transmission Time: 0.35s
-2025-06-01 10:44:16,153 - INFO -   Queue Time: 0.08s
-2025-06-01 10:44:16,153 - INFO -   Processing Time: 0.04s
-2025-06-01 10:44:16,154 - INFO -   Total Time: 0.47s
-2025-06-01 10:44:16,174 - INFO - 
-Task Completed: Tuple-1076
-2025-06-01 10:44:16,174 - INFO -   Completed at: Cloud-AS
-2025-06-01 10:44:16,174 - INFO -   Transmission Time: 0.60s
-2025-06-01 10:44:16,174 - INFO -   Queue Time: 0.13s
-2025-06-01 10:44:16,174 - INFO -   Processing Time: 0.15s
-2025-06-01 10:44:16,174 - INFO -   Total Time: 0.88s
-2025-06-01 10:44:16,178 - INFO - 
+2025-06-10 14:47:27,918 - INFO -   Completed at: Cloud-NA
+2025-06-10 14:47:27,918 - INFO -   Transmission Time: 0.48s
+2025-06-10 14:47:27,918 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:27,918 - INFO -   Processing Time: 0.07s
+2025-06-10 14:47:27,918 - INFO -   Total Time: 0.56s
+2025-06-10 14:47:27,918 - INFO -   ------------------------------
+2025-06-10 14:47:27,923 - INFO - 
+Task Completed: Tuple-9
+2025-06-10 14:47:27,923 - INFO -   Completed at: Cloud-AS
+2025-06-10 14:47:27,923 - INFO -   Transmission Time: 0.56s
+2025-06-10 14:47:27,923 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:27,923 - INFO -   Processing Time: 0.13s
+2025-06-10 14:47:27,923 - INFO -   Total Time: 0.69s
+2025-06-10 14:47:27,923 - INFO -   ------------------------------
+2025-06-10 14:47:27,991 - INFO - 
+Task Completed: Tuple-11620
+2025-06-10 14:47:27,991 - INFO -   Completed at: Cloud-AS
+2025-06-10 14:47:27,991 - INFO -   Transmission Time: 0.46s
+2025-06-10 14:47:27,991 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:27,991 - INFO -   Processing Time: 0.17s
+2025-06-10 14:47:27,991 - INFO -   Total Time: 0.63s
+2025-06-10 14:47:27,991 - INFO -   ------------------------------
+2025-06-10 14:47:28,087 - INFO - 
+Task Completed: Tuple-3
+2025-06-10 14:47:28,087 - INFO -   Completed at: Cloud-NA
+2025-06-10 14:47:28,088 - INFO -   Transmission Time: 1.13s
+2025-06-10 14:47:28,088 - INFO -   Queue Time: 0.08s
+2025-06-10 14:47:28,088 - INFO -   Processing Time: 0.17s
+2025-06-10 14:47:28,088 - INFO -   Total Time: 1.38s
+2025-06-10 14:47:28,088 - INFO -   ------------------------------
+2025-06-10 14:47:28,093 - INFO - 
+Task Completed: Tuple-4
+2025-06-10 14:47:28,093 - INFO -   Completed at: Cloud-AS
+2025-06-10 14:47:28,093 - INFO -   Transmission Time: 1.13s
+2025-06-10 14:47:28,094 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:28,094 - INFO -   Processing Time: 0.29s
+2025-06-10 14:47:28,094 - INFO -   Total Time: 1.42s
+2025-06-10 14:47:28,094 - INFO -   ------------------------------
+2025-06-10 14:47:28,219 - INFO - 
 Task Completed: Tuple-0
-2025-06-01 10:44:16,179 - INFO -   Completed at: Cloud-NA
-2025-06-01 10:44:16,179 - INFO -   Transmission Time: 0.62s
-2025-06-01 10:44:16,179 - INFO -   Queue Time: 0.06s
-2025-06-01 10:44:16,179 - INFO -   Processing Time: 0.07s
-2025-06-01 10:44:16,179 - INFO -   Total Time: 0.75s
-2025-06-01 10:44:16,264 - INFO - 
+2025-06-10 14:47:28,220 - INFO -   Completed at: Cloud-NA
+2025-06-10 14:47:28,220 - INFO -   Transmission Time: 0.94s
+2025-06-10 14:47:28,220 - INFO -   Queue Time: 0.24s
+2025-06-10 14:47:28,220 - INFO -   Processing Time: 0.12s
+2025-06-10 14:47:28,220 - INFO -   Total Time: 1.30s
+2025-06-10 14:47:28,221 - INFO -   ------------------------------
+2025-06-10 14:47:28,406 - INFO - 
+Task Completed: Tuple-1076
+2025-06-10 14:47:28,406 - INFO -   Completed at: Cloud-AS
+2025-06-10 14:47:28,406 - INFO -   Transmission Time: 0.85s
+2025-06-10 14:47:28,406 - INFO -   Queue Time: 0.29s
+2025-06-10 14:47:28,406 - INFO -   Processing Time: 0.31s
+2025-06-10 14:47:28,406 - INFO -   Total Time: 1.45s
+2025-06-10 14:47:28,407 - INFO -   ------------------------------
+2025-06-10 14:47:28,452 - INFO - 
+=== Task Completion Summary ===
+2025-06-10 14:47:28,453 - INFO - 
+Task Completed: Tuple-5
+2025-06-10 14:47:28,453 - INFO -   Completed at: Cloud-NA
+2025-06-10 14:47:28,453 - INFO -   Transmission Time: 0.42s
+2025-06-10 14:47:28,453 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:28,453 - INFO -   Processing Time: 0.05s
+2025-06-10 14:47:28,453 - INFO -   Total Time: 0.47s
+2025-06-10 14:47:28,453 - INFO -   ------------------------------
+2025-06-10 14:47:28,453 - INFO - 
+Task Completed: Tuple-7169
+2025-06-10 14:47:28,453 - INFO -   Completed at: Cloud-NA
+2025-06-10 14:47:28,453 - INFO -   Transmission Time: 0.52s
+2025-06-10 14:47:28,453 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:28,453 - INFO -   Processing Time: 0.08s
+2025-06-10 14:47:28,453 - INFO -   Total Time: 0.60s
+2025-06-10 14:47:28,453 - INFO -   ------------------------------
+2025-06-10 14:47:28,453 - INFO - 
+Task Completed: Tuple-1
+2025-06-10 14:47:28,453 - INFO -   Completed at: Cloud-AS
+2025-06-10 14:47:28,454 - INFO -   Transmission Time: 0.33s
+2025-06-10 14:47:28,454 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:28,454 - INFO -   Processing Time: 0.07s
+2025-06-10 14:47:28,454 - INFO -   Total Time: 0.40s
+2025-06-10 14:47:28,454 - INFO -   ------------------------------
+2025-06-10 14:47:28,454 - INFO - 
+Task Completed: Tuple-13823
+2025-06-10 14:47:28,454 - INFO -   Completed at: Cloud-NA
+2025-06-10 14:47:28,454 - INFO -   Transmission Time: 0.48s
+2025-06-10 14:47:28,454 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:28,454 - INFO -   Processing Time: 0.07s
+2025-06-10 14:47:28,454 - INFO -   Total Time: 0.56s
+2025-06-10 14:47:28,454 - INFO -   ------------------------------
+2025-06-10 14:47:28,454 - INFO - 
+Task Completed: Tuple-9
+2025-06-10 14:47:28,454 - INFO -   Completed at: Cloud-AS
+2025-06-10 14:47:28,454 - INFO -   Transmission Time: 0.56s
+2025-06-10 14:47:28,454 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:28,454 - INFO -   Processing Time: 0.13s
+2025-06-10 14:47:28,454 - INFO -   Total Time: 0.69s
+2025-06-10 14:47:28,454 - INFO -   ------------------------------
+2025-06-10 14:47:28,454 - INFO - 
+Task Completed: Tuple-11620
+2025-06-10 14:47:28,454 - INFO -   Completed at: Cloud-AS
+2025-06-10 14:47:28,454 - INFO -   Transmission Time: 0.46s
+2025-06-10 14:47:28,454 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:28,454 - INFO -   Processing Time: 0.17s
+2025-06-10 14:47:28,454 - INFO -   Total Time: 0.63s
+2025-06-10 14:47:28,454 - INFO -   ------------------------------
+2025-06-10 14:47:28,454 - INFO - 
+Task Completed: Tuple-3
+2025-06-10 14:47:28,455 - INFO -   Completed at: Cloud-NA
+2025-06-10 14:47:28,455 - INFO -   Transmission Time: 1.13s
+2025-06-10 14:47:28,455 - INFO -   Queue Time: 0.08s
+2025-06-10 14:47:28,455 - INFO -   Processing Time: 0.17s
+2025-06-10 14:47:28,455 - INFO -   Total Time: 1.38s
+2025-06-10 14:47:28,455 - INFO -   ------------------------------
+2025-06-10 14:47:28,455 - INFO - 
+Task Completed: Tuple-4
+2025-06-10 14:47:28,455 - INFO -   Completed at: Cloud-AS
+2025-06-10 14:47:28,455 - INFO -   Transmission Time: 1.13s
+2025-06-10 14:47:28,455 - INFO -   Queue Time: 0.00s
+2025-06-10 14:47:28,455 - INFO -   Processing Time: 0.29s
+2025-06-10 14:47:28,455 - INFO -   Total Time: 1.42s
+2025-06-10 14:47:28,455 - INFO -   ------------------------------
+2025-06-10 14:47:28,455 - INFO - 
+Task Completed: Tuple-0
+2025-06-10 14:47:28,455 - INFO -   Completed at: Cloud-NA
+2025-06-10 14:47:28,455 - INFO -   Transmission Time: 0.94s
+2025-06-10 14:47:28,455 - INFO -   Queue Time: 0.24s
+2025-06-10 14:47:28,455 - INFO -   Processing Time: 0.12s
+2025-06-10 14:47:28,455 - INFO -   Total Time: 1.30s
+2025-06-10 14:47:28,455 - INFO -   ------------------------------
+2025-06-10 14:47:28,455 - INFO - 
+Task Completed: Tuple-1076
+2025-06-10 14:47:28,455 - INFO -   Completed at: Cloud-AS
+2025-06-10 14:47:28,455 - INFO -   Transmission Time: 0.85s
+2025-06-10 14:47:28,455 - INFO -   Queue Time: 0.29s
+2025-06-10 14:47:28,455 - INFO -   Processing Time: 0.31s
+2025-06-10 14:47:28,455 - INFO -   Total Time: 1.45s
+2025-06-10 14:47:28,456 - INFO -   ------------------------------
+2025-06-10 14:47:28,456 - INFO - 
 === Final Overall Statistics ===
-2025-06-01 10:44:16,264 - INFO - Total Tasks Completed: 10
-2025-06-01 10:44:16,264 - INFO - Average Transmission Time: 0.44s
-2025-06-01 10:44:16,264 - INFO - Average Queue Time: 0.03s
-2025-06-01 10:44:16,264 - INFO - Average Processing Time: 0.07s
-2025-06-01 10:44:16,264 - INFO - Average Total Time: 0.54s
+2025-06-10 14:47:28,456 - INFO - Total Tasks Completed: 10
+2025-06-10 14:47:28,456 - INFO - Average Transmission Time: 0.68s
+2025-06-10 14:47:28,456 - INFO - Average Queue Time: 0.06s
+2025-06-10 14:47:28,456 - INFO - Average Processing Time: 0.15s
+2025-06-10 14:47:28,456 - INFO - Average Total Time: 0.89s

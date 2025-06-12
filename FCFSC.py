@@ -338,26 +338,16 @@ def process_fcfs(tasks):
     
     # Log final statistics
     if task_completion_info:
-        # Sort completions by time for consistent logging
-        sorted_completions = sorted(task_completion_info.items(), 
-                                  key=lambda x: x[1]['completion_time'])
-        
-        # Log completion details
-        fcfsc_logger.info("\n=== Task Completion Summary ===")
-        for task_name, info in sorted_completions:
-            fcfsc_logger.info(f"\nTask Completed: {task_name}")
-            fcfsc_logger.info(f"  Completed at: {info['node']}")
-            fcfsc_logger.info(f"  Transmission Time: {info['transmission_time']:.2f}s")
-            fcfsc_logger.info(f"  Queue Time: {info['queue_time']:.2f}s")
-            fcfsc_logger.info(f"  Processing Time: {info['processing_time']:.2f}s")
-            fcfsc_logger.info(f"  Total Time: {info['total_time']:.2f}s")
-            fcfsc_logger.info("  " + "-" * 30)
-        
         # Calculate and log performance metrics
-        avg_transmission = sum(info['transmission_time'] for info in task_completion_info.values()) / len(task_completion_info)
-        avg_queue = sum(info['queue_time'] for info in task_completion_info.values()) / len(task_completion_info)
-        avg_processing = sum(info['processing_time'] for info in task_completion_info.values()) / len(task_completion_info)
-        avg_total = sum(info['total_time'] for info in task_completion_info.values()) / len(task_completion_info)
+        total_transmission = sum(info['transmission_time'] for info in task_completion_info.values())
+        total_processing = sum(info['processing_time'] for info in task_completion_info.values())
+        total_queue = sum(info['queue_time'] for info in task_completion_info.values())
+        total_time = sum(info['total_time'] for info in task_completion_info.values())
+        
+        avg_transmission = total_transmission / len(task_completion_info)
+        avg_processing = total_processing / len(task_completion_info)
+        avg_queue = total_queue / len(task_completion_info)
+        avg_total = total_time / len(task_completion_info)
         
         # Calculate statistics by node type
         cloud_tasks = [info for info in task_completion_info.values() if info['node'] in cloud_nodes]
@@ -368,10 +358,18 @@ def process_fcfs(tasks):
         fcfsc_logger.info(f"Total Tasks Completed: {len(task_completion_info)}")
         fcfsc_logger.info(f"  Cloud Tasks: {len(cloud_tasks)}")
         fcfsc_logger.info(f"  Fog Tasks: {len(fog_tasks)}")
-        fcfsc_logger.info(f"Average Transmission Time: {avg_transmission:.2f}s")
-        fcfsc_logger.info(f"Average Queue Time: {avg_queue:.2f}s")
-        fcfsc_logger.info(f"Average Processing Time: {avg_processing:.2f}s")
-        fcfsc_logger.info(f"Average Total Time: {avg_total:.2f}s")
+        fcfsc_logger.info("\nTransmission Time:")
+        fcfsc_logger.info(f"  Total: {total_transmission*1000:.6f}ms")
+        fcfsc_logger.info(f"  Average: {avg_transmission*1000:.6f}ms")
+        fcfsc_logger.info("\nProcessing Time:")
+        fcfsc_logger.info(f"  Total: {total_processing*1000:.6f}ms")
+        fcfsc_logger.info(f"  Average: {avg_processing*1000:.6f}ms")
+        fcfsc_logger.info("\nQueue Time:")
+        fcfsc_logger.info(f"  Total: {total_queue*1000:.6f}ms")
+        fcfsc_logger.info(f"  Average: {avg_queue*1000:.6f}ms")
+        fcfsc_logger.info("\nTotal Time:")
+        fcfsc_logger.info(f"  Total: {total_time*1000:.6f}ms")
+        fcfsc_logger.info(f"  Average: {avg_total*1000:.6f}ms")
 
 if __name__ == "__main__":
     # Load tasks from input

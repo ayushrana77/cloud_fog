@@ -289,12 +289,20 @@ class FogNode:
         avg_queue_time = sum(task['queue_time'] for task in self.completed_tasks) / len(self.completed_tasks) if self.completed_tasks else 0
         avg_transmission_time = sum(self.transmission_times) / len(self.transmission_times) if self.transmission_times else 0
         
+        # Calculate used resources
+        mips_used = self.mips - self.available_mips
+        memory_used = self.memory - self.available_memory
+        bandwidth_used = self.bandwidth - self.available_bandwidth
+        
         status = {
             'name': self.name,
             'current_load': f"{self.current_load:.2f}%",
             'available_mips': self.available_mips,
             'available_memory': self.available_memory,
             'available_bandwidth': self.available_bandwidth,
+            'mips_used': mips_used,
+            'memory_used': memory_used,
+            'bandwidth_used': bandwidth_used,
             'assigned_tasks': len(self.assigned_tasks),
             'queued_tasks': len(self.task_queue),
             'completed_tasks': len(self.completed_tasks),
