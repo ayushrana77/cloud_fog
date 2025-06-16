@@ -31,6 +31,7 @@ CLOUD_SERVICES_CONFIG = [
         "mips": 4000,  # Doubled MIPS for single server
         "bandwidth": 4000,  # 20 Gbps
         "memory": 4096,  # Doubled memory
+        "storage": 10240,  # 10 TB storage
         "location": {"lat": 39.0997, "lon": -94.5786},  # Kansas City (central USA)
     },
     # Asia
@@ -39,59 +40,84 @@ CLOUD_SERVICES_CONFIG = [
         "mips": 4000,  # Doubled MIPS for single server
         "bandwidth": 4000,  # 20 Gbps
         "memory": 4024,  # Doubled memory
+        "storage": 10240,  # 10 TB storage
         "location": {"lat": 1.3521, "lon": 103.8198},  # Singapore
     }
 ]
 
 # Fog Nodes Configuration
 FOG_NODES_CONFIG = [
+    # Delhi Region
     {
-        "name": "Fog-SG1",
-        "mips": 4000,  # Lower than cloud but still powerful
-        "bandwidth": 2000,  # 1 Gbps
-        "memory": 1096,  # 8GB
-        "location": {
-            "lat": 1.3521,
-            "lon": 103.8198  # Singapore
-        }
-    },
-    {
-        "name": "Fog-SG2",
+        "name": "Fog-DL1",
         "mips": 1000,
-        "bandwidth": 4000,
-        "memory": 1614,  # 6GB
-        "location": {
-            "lat": 35.6762,
-            "lon": 139.6503  # Tokyo
-        }
-    },
-    {
-        "name": "Fog-KC1",
-        "mips": 2000,
-        "bandwidth": 4000,
-        "memory": 1192,
-        "location": {
-            "lat": 48.8566,
-            "lon": 2.3522  # Paris
-        }
-    },
-    {
-        "name": "Fog-KC2",
-        "mips": 2000,
         "bandwidth": 2000,
-        "memory": 2144,
+        "memory": 1024,
+        "storage": 1024,
         "location": {
-            "lat": 39.0997,
-            "lon": -94.5786  # Kansas City
+            "lat": 28.6139,
+            "lon": 77.2090
+        }
+    },
+    # Gurgaon
+    {
+        "name": "Fog-GN1",
+        "mips": 1000,
+        "bandwidth": 2000,
+        "memory": 1024,
+        "storage": 1024,
+        "location": {
+            "lat": 28.4595,
+            "lon": 77.0266
+        }
+    },
+    # Noida
+    {
+        "name": "Fog-ND1",
+        "mips": 1000,
+        "bandwidth": 2000,
+        "memory": 1024,
+        "storage": 1024,
+        "location": {
+            "lat": 28.5355,
+            "lon": 77.3910
+        }
+    },
+    # Bangalore Region
+    {
+        "name": "Fog-BL1",
+        "mips": 1000,
+        "bandwidth": 2000,
+        "memory": 1024,
+        "storage": 1024,
+        "location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+        }
+    },
+    # Electronic City
+    {
+        "name": "Fog-EC1",
+        "mips": 1000,
+        "bandwidth": 2000,
+        "memory": 1024,
+        "storage": 1024,
+        "location": {
+            "lat": 12.8458,
+            "lon": 77.6658
+        }
+    },
+    # Whitefield
+    {
+        "name": "Fog-WF1",
+        "mips": 1000,
+        "bandwidth": 2000,
+        "memory": 1024,
+        "storage": 1024,
+        "location": {
+            "lat": 12.9698,
+            "lon": 77.7499
         }
     }
 ]
-
-# Task parameters
-TASK_SIZE_MIN = 100  # KB
-TASK_SIZE_MAX = 1000  # KB
-TASK_MIPS_MIN = 1000
-TASK_MIPS_MAX = 5000
-TASK_MEMORY_MIN = 1000  
-TASK_MEMORY_MAX = 5000  
 

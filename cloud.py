@@ -22,7 +22,7 @@ class CloudNode:
     Cloud nodes have higher resource capacity compared to fog nodes.
     """
     
-    def __init__(self, name, mips, bandwidth, memory, location):
+    def __init__(self, name, mips, bandwidth, memory, storage, location):
         """
         Initialize a cloud computing node with specified resources.
         
@@ -31,17 +31,20 @@ class CloudNode:
             mips (float): Million Instructions Per Second capacity
             bandwidth (float): Network bandwidth in Mbps
             memory (float): Available memory in MB
+            storage (float): Available storage in GB
             location (dict): Geographic location with latitude and longitude
         """
         self.name = name
         self.mips = mips
         self.bandwidth = bandwidth
         self.memory = memory
+        self.storage = storage
         self.location = validate_location(location)  # Validate location on initialization
         self.current_load = 0
         self.available_mips = mips
         self.available_bandwidth = bandwidth
         self.available_memory = memory
+        self.available_storage = storage
         self.assigned_tasks = []
         self.processing_times = []
         self.transmission_times = []  # Track transmission times
@@ -51,10 +54,10 @@ class CloudNode:
         self.lock = threading.Lock()  # Lock for thread-safe resource management
         self.completion_callbacks = []  # List to store completion callbacks
         # Each cloud node has its own logger
-        self.logger = setup_logger(f'cloud_{name}', f'cloud_{name}.log')
+        self.logger = setup_logger(f'cloud_{name}', f'cloud_{name}.log', sub_directory='cloud')
         
         self.logger.info(f"Initialized Cloud Node: {name}")
-        self.logger.info(f"Resources: MIPS={mips}, Memory={memory}, Bandwidth={bandwidth}")
+        self.logger.info(f"Resources: MIPS={mips}, Memory={memory}, Bandwidth={bandwidth}, Storage={storage}")
         self.logger.info(f"Location: {self.location}")
 
     def add_completion_callback(self, callback):
@@ -92,12 +95,14 @@ class CloudNode:
         """
         can_handle = (self.available_mips >= task['MIPS'] and
                      self.available_memory >= task['RAM'] and
-                     self.available_bandwidth >= task['BW'])
+                     self.available_bandwidth >= task['BW'] and
+                     self.available_storage >= task.get('Storage', 0))
         
         self.logger.info(f"Resource check for task {task['Name']} on {self.name}:")
         self.logger.info(f"  Required MIPS: {task['MIPS']}, Available: {self.available_mips}")
         self.logger.info(f"  Required Memory: {task['RAM']}, Available: {self.available_memory}")
         self.logger.info(f"  Required Bandwidth: {task['BW']}, Available: {self.available_bandwidth}")
+        self.logger.info(f"  Required Storage: {task.get('Storage', 0)}, Available: {self.available_storage}")
         self.logger.info(f"  Can handle: {can_handle}")
         
         return can_handle
@@ -121,10 +126,11 @@ class CloudNode:
             # Calculate transmission time once when task is first received
             if 'transmission_time' not in task:
                 transmission_time = calculate_transmission_time(
-                    task.get('location', {}),
+                    task['GeoLocation'],
                     self.location,
                     self,
-                    task.get('Size'),  # Pass actual task size
+                    task.get('Size'),  # Keep Size for backward compatibility
+                    task.get('MIPS'),  # Add MIPS parameter
                     self.logger
                 )
                 task['transmission_time'] = transmission_time
@@ -149,12 +155,13 @@ class CloudNode:
                 self.available_mips -= task['MIPS']
                 self.available_memory -= task['RAM']
                 self.available_bandwidth -= task['BW']
+                self.available_storage -= task.get('Storage', 0)
                 self.current_load = (1 - (self.available_mips / self.mips)) * 100
                 
                 self.logger.info(f"Task {task['Name']} assigned to {self.name}")
                 self.logger.info(f"Processing time: {processing_time:.2f} seconds")
                 self.logger.info(f"Transmission time: {task['transmission_time']:.2f} seconds")
-                self.logger.info(f"Resources allocated: MIPS={task['MIPS']}, Memory={task['RAM']}, Bandwidth={task['BW']}")
+                self.logger.info(f"Resources allocated: MIPS={task['MIPS']}, Memory={task['RAM']}, Bandwidth={task['BW']}, Storage={task.get('Storage', 0)}")
                 self.logger.info(f"Current load: {self.current_load:.2f}%")
                 
                 # Start task processing in a new thread
@@ -196,6 +203,7 @@ class CloudNode:
             self.available_mips += task['MIPS']
             self.available_memory += task['RAM']
             self.available_bandwidth += task['BW']
+            self.available_storage += task.get('Storage', 0)
             
             # Update current load
             self.current_load = (1 - (self.available_mips / self.mips)) * 100
@@ -214,7 +222,7 @@ class CloudNode:
             self.completed_tasks.append(completion_info)
             
             self.logger.info(f"Task {task['Name']} completed on {self.name}")
-            self.logger.info(f"Resources released: MIPS={task['MIPS']}, Memory={task['RAM']}, Bandwidth={task['BW']}")
+            self.logger.info(f"Resources released: MIPS={task['MIPS']}, Memory={task['RAM']}, Bandwidth={task['BW']}, Storage={task.get('Storage', 0)}")
             self.logger.info(f"Current load: {self.current_load:.2f}%")
             self.logger.info(f"Completed tasks: {len(self.completed_tasks)}")
             
@@ -238,6 +246,18 @@ class CloudNode:
                 self.task_queue.popleft()  # Remove the task from queue
                 self.logger.info(f"Processing queued task {next_task['Name']} on {self.name}")
                 
+                # Recalculate transmission time for queued task
+                transmission_time = calculate_transmission_time(
+                    next_task['GeoLocation'],
+                    self.location,
+                    self,
+                    next_task.get('Size'),
+                    next_task.get('MIPS'),
+                    self.logger
+                )
+                next_task['transmission_time'] = transmission_time
+                self.transmission_times.append(transmission_time)
+                
                 # Calculate processing time for this task
                 processing_time = calculate_processing_time(next_task['Size'], self.mips)
                 self.processing_times.append(processing_time)
@@ -249,7 +269,7 @@ class CloudNode:
                 task_info = {
                     'task': next_task,
                     'processing_time': processing_time,
-                    'transmission_time': next_task['transmission_time'],
+                    'transmission_time': transmission_time,
                     'start_time': time.time(),
                     'queue_time': queue_time
                 }
@@ -259,13 +279,14 @@ class CloudNode:
                 self.available_mips -= next_task['MIPS']
                 self.available_memory -= next_task['RAM']
                 self.available_bandwidth -= next_task['BW']
+                self.available_storage -= next_task.get('Storage', 0)
                 self.current_load = (1 - (self.available_mips / self.mips)) * 100
                 
                 self.logger.info(f"Task {next_task['Name']} assigned to {self.name}")
                 self.logger.info(f"Processing time: {processing_time:.2f} seconds")
-                self.logger.info(f"Transmission time: {next_task['transmission_time']:.2f} seconds")
+                self.logger.info(f"Transmission time: {transmission_time:.2f} seconds")
                 self.logger.info(f"Queue time: {queue_time:.2f} seconds")
-                self.logger.info(f"Resources allocated: MIPS={next_task['MIPS']}, Memory={next_task['RAM']}, Bandwidth={next_task['BW']}")
+                self.logger.info(f"Resources allocated: MIPS={next_task['MIPS']}, Memory={next_task['RAM']}, Bandwidth={next_task['BW']}, Storage={next_task.get('Storage', 0)}")
                 self.logger.info(f"Current load: {self.current_load:.2f}%")
                 
                 # Start task processing in a new thread
@@ -290,12 +311,23 @@ class CloudNode:
         avg_queue_time = sum(task['queue_time'] for task in self.completed_tasks) / len(self.completed_tasks) if self.completed_tasks else 0
         avg_transmission_time = sum(self.transmission_times) / len(self.transmission_times) if self.transmission_times else 0
         
+        # Calculate used resources
+        mips_used = self.mips - self.available_mips
+        memory_used = self.memory - self.available_memory
+        bandwidth_used = self.bandwidth - self.available_bandwidth
+        storage_used = self.storage - self.available_storage
+        
         status = {
             'name': self.name,
             'current_load': f"{self.current_load:.2f}%",
             'available_mips': self.available_mips,
             'available_memory': self.available_memory,
             'available_bandwidth': self.available_bandwidth,
+            'available_storage': self.available_storage,
+            'mips_used': mips_used,
+            'memory_used': memory_used,
+            'bandwidth_used': bandwidth_used,
+            'storage_used': storage_used,
             'assigned_tasks': len(self.assigned_tasks),
             'queued_tasks': len(self.task_queue),
             'completed_tasks': len(self.completed_tasks),
@@ -324,6 +356,7 @@ def create_cloud_nodes():
             mips=node_config['mips'],
             bandwidth=node_config['bandwidth'],
             memory=node_config['memory'],
+            storage=node_config['storage'],
             location=node_config['location']
         )
         cloud_nodes[node_config['name']] = node

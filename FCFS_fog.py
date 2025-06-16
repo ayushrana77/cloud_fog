@@ -1,17 +1,29 @@
+"""
+FCFS (First Come First Serve) Fog Task Scheduling Implementation
+This module implements a fog-only task scheduling algorithm using the FCFS approach.
+Tasks are processed in the order they arrive, with consideration for fog resources.
+"""
+
 import json
 import time
 from task_load import read_and_log_tuples
 from config import FOG_NODES_CONFIG
-from utility import calculate_distance
+from utility import calculate_distance, calculate_storage_requirements
 from fog import get_fog_node, get_fog_node_status, get_all_fog_nodes
 from logger import setup_logger
 
-# Logger for FCFS Fog events
-fcfs_fog_logger = setup_logger('fcfs_fog', 'FCFS_fog.log')
+# Initialize logger for FCFS events
+fcfs_logger = setup_logger('fcfs_fog', 'fcfs_fog.log', sub_directory='algorithms')
 
 def calculate_task_distances(task):
     """
     Calculate distances from task to all fog nodes
+    
+    Args:
+        task (dict): Task information containing location data
+        
+    Returns:
+        dict: Dictionary mapping node names to their distances from the task
     """
     distances = {}
     task_location = {
@@ -19,57 +31,79 @@ def calculate_task_distances(task):
         'lon': task['GeoLocation']['longitude']
     }
     
-    for fog_node in FOG_NODES_CONFIG:
-        fog_location = fog_node['location']
-        distance = calculate_distance(task_location, fog_location)
-        distances[fog_node['name']] = distance
+    for node in FOG_NODES_CONFIG:
+        node_location = node['location']
+        distance = calculate_distance(task_location, node_location)
+        distances[node['name']] = distance
     
     return distances
 
 def process_fcfs_fog(tasks):
     """
-    Process tasks using FCFS algorithm with fog nodes
+    Process tasks using FCFS algorithm with fog-only approach
+    
+    This function implements the main FCFS scheduling logic:
+    1. Tasks are sorted by creation time
+    2. Each task is assigned to fog nodes based on storage requirements
+    3. Resources are allocated and tasks are processed
+    4. Performance metrics are tracked and logged
+    
+    Args:
+        tasks (list): List of tasks to be processed
     """
     if not tasks:
         print("No tasks to process")
-        fcfs_fog_logger.warning("No tasks to process.")
+        fcfs_logger.warning("No tasks to process.")
         return
         
     print("\n=== FCFS Fog Processing ===")
     print(f"Total Tasks to Process: {len(tasks)}")
-    fcfs_fog_logger.info(f"Total Tasks to Process: {len(tasks)}")
+    fcfs_logger.info(f"Total Tasks to Process: {len(tasks)}")
     
-    # Log fog node creation
+    # Initialize and log fog nodes
     fog_nodes = get_all_fog_nodes()
     for name, node in fog_nodes.items():
-        fcfs_fog_logger.info(f"Fog node created: {name} (MIPS={node.mips}, RAM={node.memory}, BW={node.bandwidth}, Location={node.location})")
+        fcfs_logger.info(f"Fog node created: {name} (MIPS={node.mips}, RAM={node.memory}, BW={node.bandwidth}, Storage={node.storage}GB)")
     
-    # Dictionary to store task information
-    task_completion_info = {}
-    queued_tasks_info = {}
+    # Initialize tracking variables
+    task_completion_info = {}  # Store completion details for each task
+    queued_tasks_info = {}     # Track tasks waiting in queue
+    completed_tasks_count = 0  # Counter for completed tasks
+    total_tasks = len(tasks)   # Total number of tasks to process
     
     def task_completion_callback(fog_name, completion_info):
-        """Callback function to handle task completion"""
+        """
+        Callback function to handle task completion events
+        
+        Args:
+            fog_name (str): Name of the fog node that completed the task
+            completion_info (dict): Information about the completed task
+        """
+        nonlocal completed_tasks_count
         task = completion_info['task']
         task_name = task['Name']
         
         # Store completion information
         task_completion_info[task_name] = {
-            'fog_node': fog_name,
+            'node': fog_name,
             'transmission_time': completion_info['transmission_time'],
             'queue_time': completion_info['queue_time'],
             'processing_time': completion_info['processing_time'],
             'total_time': completion_info['total_time'],
-            'completion_time': completion_info['completion_time']
+            'completion_time': completion_info['completion_time'],
+            'storage_used': task.get('Storage', 0)
         }
         
-        # Log completion immediately
-        fcfs_fog_logger.info(f"\nTask Completed: {task_name}")
-        fcfs_fog_logger.info(f"  Completed at: {fog_name}")
-        fcfs_fog_logger.info(f"  Transmission Time: {completion_info['transmission_time']:.2f}s")
-        fcfs_fog_logger.info(f"  Queue Time: {completion_info['queue_time']:.2f}s")
-        fcfs_fog_logger.info(f"  Processing Time: {completion_info['processing_time']:.2f}s")
-        fcfs_fog_logger.info(f"  Total Time: {completion_info['total_time']:.2f}s")
+        # Update completion counter and logging
+        completed_tasks_count += 1
+        fcfs_logger.info(f"\nTask Completed: {task_name}")
+        fcfs_logger.info(f"  Completed at: {fog_name}")
+        fcfs_logger.info(f"  Transmission Time: {completion_info['transmission_time']:.2f}s")
+        fcfs_logger.info(f"  Queue Time: {completion_info['queue_time']:.2f}s")
+        fcfs_logger.info(f"  Processing Time: {completion_info['processing_time']:.2f}s")
+        fcfs_logger.info(f"  Storage Used: {task.get('Storage', 0):.2f}GB")
+        fcfs_logger.info(f"  Total Time: {completion_info['total_time']:.2f}s")
+        fcfs_logger.info("  " + "-" * 30)
         
         # Remove from queued tasks if it was queued
         if task_name in queued_tasks_info:
@@ -79,10 +113,21 @@ def process_fcfs_fog(tasks):
     for node in fog_nodes.values():
         node.add_completion_callback(task_completion_callback)
     
-    # Process tasks in FCFS order (based on CreationTime)
+    # Sort tasks by creation time (FCFS order)
     sorted_tasks = sorted(tasks, key=lambda x: x['CreationTime'])
     
+    # Process each task in order
     for i, task in enumerate(sorted_tasks, 1):
+        # Calculate storage requirement for the task
+        task['Storage'] = calculate_storage_requirements(task['Size'])
+        
+        # Skip tasks that require more than 1TB storage (fog nodes can't handle)
+        if task['Storage'] > 1000:
+            fcfs_logger.warning(f"Skipping task {task['Name']} - requires {task['Storage']}GB storage (exceeds fog node capacity)")
+            print(f"\nSkipping task {task['Name']} - requires {task['Storage']}GB storage (exceeds fog node capacity)")
+            continue
+        
+        # Log task details
         print(f"\nProcessing Task {i}:")
         print(f"Task Name: {task['Name']}")
         print(f"Creation Time: {task['CreationTime']}")
@@ -90,27 +135,33 @@ def process_fcfs_fog(tasks):
         print(f"MIPS: {task['MIPS']}")
         print(f"RAM: {task['RAM']}")
         print(f"BW: {task['BW']}")
+        print(f"Storage: {task['Storage']}GB")
         print(f"DataType: {task['DataType']}")
         print(f"DeviceType: {task['DeviceType']}")
         
-        # Calculate and display distances to fog nodes
-        distances = calculate_task_distances(task)
-        print("\nDistances to Fog Nodes:")
-        for fog_name, distance in distances.items():
-            print(f"{fog_name}: {distance:.2f} km")
+        # Calculate distances to fog nodes
+        fog_distances = calculate_task_distances(task)
         
-        # Sort fog nodes by distance
-        sorted_fog_nodes = sorted(distances.items(), key=lambda x: x[1])
+        # Sort fog nodes by distance for optimal assignment
+        sorted_fog_nodes = sorted(fog_distances.items(), key=lambda x: x[1])
         
-        # Try to assign task to fog nodes in order of distance
+        # Log distance calculations
+        fcfs_logger.info(f"\nTask {task['Name']} - Distance Calculations:")
+        fcfs_logger.info("Fog Node Distances:")
+        for fog_name, distance in sorted_fog_nodes:
+            fcfs_logger.info(f"  {fog_name}: {distance:.2f} km")
+        
+        # Task assignment logic
         task_assigned = False
         for fog_name, distance in sorted_fog_nodes:
             fog_node = get_fog_node(fog_name)
             if fog_node:
-                # Try to assign the task
+                fcfs_logger.info(f"Attempting to assign task to fog node {fog_name} ({distance:.2f} km)")
                 success, processing_time = fog_node.assign_task(task)
                 if success:
-                    print(f"\nTask assigned to {fog_name} ({distance:.2f} km)")
+                    # Task successfully assigned to fog node
+                    fcfs_logger.info(f"Task successfully assigned to fog node {fog_name}")
+                    print(f"\nTask assigned to fog node {fog_name} ({distance:.2f} km)")
                     print(f"Estimated Processing Time: {processing_time:.2f} seconds")
                     print("Fog Node Status:")
                     status = fog_node.get_status()
@@ -119,78 +170,93 @@ def process_fcfs_fog(tasks):
                     task_assigned = True
                     break
                 else:
-                    # Task was queued at this fog node
-                    print(f"\nTask queued at {fog_name} ({distance:.2f} km)")
-                    # Store queued task information
+                    # Queue task at fog node
+                    fcfs_logger.info(f"Fog node {fog_name} cannot handle task immediately - queuing")
+                    print(f"\nTask queued at fog node {fog_name} ({distance:.2f} km)")
                     queued_tasks_info[task['Name']] = {
-                        'fog_node': fog_name,
+                        'node': fog_name,
+                        'node_type': 'Fog',
                         'distance': distance,
                         'queue_position': len(fog_node.task_queue),
                         'task_size': task['Size'],
                         'required_mips': task['MIPS'],
                         'required_ram': task['RAM'],
-                        'required_bw': task['BW']
+                        'required_bw': task['BW'],
+                        'required_storage': task['Storage']
                     }
                     task_assigned = True
                     break
         
+        # Log assignment failure if task couldn't be assigned
         if not task_assigned:
+            fcfs_logger.error(f"Failed to assign or queue task {task['Name']}")
             print(f"\nError: Could not assign or queue task {task['Name']}")
         
         print("-" * 40)
-        time.sleep(0.01)  # Small delay to allow for status updates
     
     # Wait for all tasks to complete
-    while True:
-        # Check if all tasks are either completed or queued
-        all_tasks_handled = all(task['Name'] in task_completion_info or task['Name'] in queued_tasks_info 
-                              for task in sorted_tasks)
-        if all_tasks_handled:
-            break
-        time.sleep(0.1)  # Wait a bit before checking again
+    while completed_tasks_count < total_tasks:
+        time.sleep(0.1)  # Small delay to prevent CPU overuse
     
     # Log queued tasks information
     if queued_tasks_info:
-        fcfs_fog_logger.info("\n=== Queued Tasks Summary ===")
+        fcfs_logger.info("\n=== Queued Tasks Summary ===")
         for task_name, info in queued_tasks_info.items():
-            fcfs_fog_logger.info(f"\nQueued Task: {task_name}")
-            fcfs_fog_logger.info(f"  Queued at: {info['fog_node']} (distance={info['distance']:.2f} km)")
-            fcfs_fog_logger.info(f"  Queue Position: {info['queue_position']}")
-            fcfs_fog_logger.info(f"  Task Size: {info['task_size']} MI")
-            fcfs_fog_logger.info(f"  Required Resources:")
-            fcfs_fog_logger.info(f"    MIPS: {info['required_mips']}")
-            fcfs_fog_logger.info(f"    RAM: {info['required_ram']}")
-            fcfs_fog_logger.info(f"    Bandwidth: {info['required_bw']}")
+            fcfs_logger.info(f"\nQueued Task: {task_name}")
+            fcfs_logger.info(f"  Queued at: {info['node']} ({info['node_type']}, distance={info['distance']:.2f} km)")
+            fcfs_logger.info(f"  Queue Position: {info['queue_position']}")
+            fcfs_logger.info(f"  Task Size: {info['task_size']} MI")
+            fcfs_logger.info(f"  Required Resources:")
+            fcfs_logger.info(f"    MIPS: {info['required_mips']}")
+            fcfs_logger.info(f"    RAM: {info['required_ram']}")
+            fcfs_logger.info(f"    Bandwidth: {info['required_bw']}")
+            fcfs_logger.info(f"    Storage: {info['required_storage']}GB")
     
-    # Wait for all queued tasks to complete
-    while queued_tasks_info:
-        time.sleep(0.1)  # Wait a bit before checking again
-    
-    # Log overall statistics after all tasks are completed
+    # Log final statistics
     if task_completion_info:
-        avg_transmission = sum(info['transmission_time'] for info in task_completion_info.values()) / len(task_completion_info)
-        avg_queue = sum(info['queue_time'] for info in task_completion_info.values()) / len(task_completion_info)
-        avg_processing = sum(info['processing_time'] for info in task_completion_info.values()) / len(task_completion_info)
-        avg_total = sum(info['total_time'] for info in task_completion_info.values()) / len(task_completion_info)
+        # Calculate and log performance metrics
+        total_transmission = sum(info['transmission_time'] for info in task_completion_info.values())
+        total_processing = sum(info['processing_time'] for info in task_completion_info.values())
+        total_queue = sum(info['queue_time'] for info in task_completion_info.values())
+        total_time = sum(info['total_time'] for info in task_completion_info.values())
+        total_storage = sum(info['storage_used'] for info in task_completion_info.values())
         
-        fcfs_fog_logger.info("\n=== Final Overall Statistics ===")
-        fcfs_fog_logger.info(f"Total Tasks Completed: {len(task_completion_info)}")
-        fcfs_fog_logger.info(f"Average Transmission Time: {avg_transmission:.2f}s")
-        fcfs_fog_logger.info(f"Average Queue Time: {avg_queue:.2f}s")
-        fcfs_fog_logger.info(f"Average Processing Time: {avg_processing:.2f}s")
-        fcfs_fog_logger.info(f"Average Total Time: {avg_total:.2f}s")
+        avg_transmission = total_transmission / len(task_completion_info)
+        avg_processing = total_processing / len(task_completion_info)
+        avg_queue = total_queue / len(task_completion_info)
+        avg_total = total_time / len(task_completion_info)
+        avg_storage = total_storage / len(task_completion_info)
+        
+        # Log final statistics
+        fcfs_logger.info("\n=== Final Overall Statistics ===")
+        fcfs_logger.info(f"Total Tasks Completed: {len(task_completion_info)}")
+        fcfs_logger.info("\nTransmission Time:")
+        fcfs_logger.info(f"  Total: {total_transmission*1000:.6f}ms")
+        fcfs_logger.info(f"  Average: {avg_transmission*1000:.6f}ms")
+        fcfs_logger.info("\nProcessing Time:")
+        fcfs_logger.info(f"  Total: {total_processing*1000:.6f}ms")
+        fcfs_logger.info(f"  Average: {avg_processing*1000:.6f}ms")
+        fcfs_logger.info("\nQueue Time:")
+        fcfs_logger.info(f"  Total: {total_queue*1000:.6f}ms")
+        fcfs_logger.info(f"  Average: {avg_queue*1000:.6f}ms")
+        fcfs_logger.info("\nStorage Usage:")
+        fcfs_logger.info(f"  Total: {total_storage:.2f}GB")
+        fcfs_logger.info(f"  Average: {avg_storage:.2f}GB")
+        fcfs_logger.info("\nTotal Time:")
+        fcfs_logger.info(f"  Total: {total_time*1000:.6f}ms")
+        fcfs_logger.info(f"  Average: {avg_total*1000:.6f}ms")
 
 if __name__ == "__main__":
-    # First load the tasks and get the task list
+    # Load tasks from input
     tasks = read_and_log_tuples()
     
     # Print debug information
     print(f"\nDebug: Number of tasks received: {len(tasks)}")
-    fcfs_fog_logger.info(f"Number of tasks received: {len(tasks)}")
+    fcfs_logger.info(f"Number of tasks received: {len(tasks)}")
     
-    # Process tasks using FCFS Fog
+    # Process tasks using FCFS algorithm
     if tasks:
         process_fcfs_fog(tasks)
     else:
         print("Error: No tasks were loaded")
-        fcfs_fog_logger.error("No tasks were loaded.") 
+        fcfs_logger.error("No tasks were loaded.") 

@@ -1,36 +1,74 @@
 """
-Logging Configuration Module
+Logger Configuration Module
 
 This module provides logging functionality for the fog computing system.
-It includes functions for setting up loggers and logging task/tuple details.
+Logs are organized in subfolders based on their type:
+- algorithms/: For MCT, FCFS, FCFSC algorithm logs
+- nodes/: For fog and cloud node logs (not directly implemented here, but implied by structure)
+- tasks/: For task-related logs (if implemented)
 """
 
 import logging
+import os
 from datetime import datetime
 
-def setup_logger(name='tuple_logger', log_file='task_load.log', level=logging.INFO):
+def setup_logger(name, log_file, sub_directory=None):
     """
-    Configure and return a logger instance that writes to the specified log file.
+    Set up a logger with the specified name and log file.
+    Logs are stored in appropriate subfolders with timestamp-based filenames.
     
     Args:
-        name (str): Name of the logger instance
-        log_file (str): Path to the log file
-        level (int): Logging level (default: logging.INFO)
+        name (str): Name of the logger
+        log_file (str): Name of the log file
+        sub_directory (str, optional): Subdirectory within 'logs' to store the log file.
+                                      e.g., 'cloud', 'fog', 'algorithms'.
+                                      If None, logs directly into 'logs/'.
         
     Returns:
         logging.Logger: Configured logger instance
     """
+    # Create base logs directory if it doesn't exist
+    base_logs_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logs')
+    if not os.path.exists(base_logs_dir):
+        os.makedirs(base_logs_dir)
+    
+    # Determine the target directory for the log file
+    if sub_directory:
+        target_logs_dir = os.path.join(base_logs_dir, sub_directory)
+    else:
+        target_logs_dir = base_logs_dir
+
+    # Create the target directory if it doesn't exist
+    if not os.path.exists(target_logs_dir):
+        os.makedirs(target_logs_dir)
+    
+    # Create a timestamp for the log file
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    log_filename = f"{os.path.splitext(log_file)[0]}_{timestamp}.log"
+    log_path = os.path.join(target_logs_dir, log_filename)
+    
+    # Create logger
     logger = logging.getLogger(name)
-    logger.setLevel(level)
-
-    # Avoid adding multiple handlers to the logger
+    logger.setLevel(logging.DEBUG)
+    
+    # Create file handler with UTF-8 encoding
+    file_handler = logging.FileHandler(log_path, encoding='utf-8')
+    file_handler.setLevel(logging.DEBUG)
+    
+    # Create console handler with UTF-8 encoding
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
+    
+    # Create formatter
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    file_handler.setFormatter(formatter)
+    console_handler.setFormatter(formatter)
+    
+    # Add handlers to logger (avoid duplicate handlers)
     if not logger.handlers:
-        file_handler = logging.FileHandler(log_file, mode='w')
-        file_handler.setLevel(level)
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)
-
+        logger.addHandler(console_handler)
+    
     return logger
 
 def log_tuple_details(logger, tuple_data):

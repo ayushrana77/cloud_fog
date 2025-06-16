@@ -6,6 +6,7 @@ This module provides utility functions for the fog computing system, including:
 - Location validation
 - Transmission time calculations
 - Processing time calculations
+- Storage calculations
 - System load and queue delay calculations
 """
 
@@ -55,27 +56,38 @@ def validate_location(location, default_location=None):
     if default_location is None:
         default_location = {'lat': 0, 'lon': 0}
         
-    if not location or 'lat' not in location or 'lon' not in location:
+    if not location:
         return default_location
-    return location
+        
+    # Handle both lat/lon and latitude/longitude keys
+    if 'lat' in location and 'lon' in location:
+        return location
+    elif 'latitude' in location and 'longitude' in location:
+        return {
+            'lat': location['latitude'],
+            'lon': location['longitude']
+        }
+    return default_location
 
-def calculate_transmission_time(task_location, fog_location, fog_node, task_size_mi=None, logger=None):
+def calculate_transmission_time(task_location, fog_location, fog_node, task_size_mi=None, task_mips=None, logger=None):
     """
     Calculate transmission time between task and fog node using:
-    1. Transmission Time (Tₜₓ) = File Size / Bandwidth
+    1. Transmission Time (Tₜₓ) = (Task MIPS * Distance) / (Bandwidth * 1000)
     2. Propagation Delay (Tₚᵣₒₚ) = Distance / Speed of Light
     
-    Random factors are added to simulate real-world network conditions:
-    - Network congestion (affects bandwidth)
-    - Signal degradation (affects propagation)
-    - Packet loss and retransmission
-    - Network jitter
+    Distance has a strong impact on transmission time through:
+    - Bandwidth reduction (more reduction for longer distances)
+    - Network congestion (more congestion for longer distances)
+    - Signal degradation (more degradation for longer distances)
+    - Packet loss (higher for longer distances)
+    - Distance penalty multiplier
     
     Args:
         task_location (dict): Task location data
         fog_location (dict): Fog node location data
         fog_node: Fog node object with bandwidth attribute
-        task_size_mi (float): Task size in Million Instructions (MI)
+        task_size_mi (float): Task size in Million Instructions (MI) - deprecated
+        task_mips (float): Task MIPS requirement
         logger: Optional logger for debug information
         
     Returns:
@@ -94,69 +106,145 @@ def calculate_transmission_time(task_location, fog_location, fog_node, task_size
     
     # Calculate base Propagation Delay (Tₚᵣₒₚ)
     speed_of_light = 200000  # km/s (speed of light in fiber optic cable)
-    base_propagation_delay = distance / speed_of_light  # in seconds
+    base_propagation_delay = distance / speed_of_light
     
-    # Add signal degradation factor based on distance
-    if distance <= 500:  # Within 500km
-        signal_factor = random.uniform(0.98, 1.02)  # Less degradation
-    elif distance <= 2000:  # Within 2000km
-        signal_factor = random.uniform(0.90, 1.20)  # Moderate degradation
-    else:  # Long distance
-        signal_factor = random.uniform(0.80, 1.40)  # More degradation
+    # Check if it's a cloud node
+    is_cloud = hasattr(fog_node, 'is_cloud') and fog_node.is_cloud
+    
+    # Add signal degradation factor based on distance - reduced variation
+    if is_cloud:
+        # Cloud nodes have higher base degradation
+        if distance <= 500:  # Within 500km
+            signal_factor = random.uniform(1.1, 1.2)  # Higher base degradation
+        elif distance <= 1000:  # Within 1000km
+            signal_factor = random.uniform(1.2, 1.3)
+        elif distance <= 2000:  # Within 2000km
+            signal_factor = random.uniform(1.3, 1.4)
+        else:  # Long distance
+            signal_factor = random.uniform(1.4, 1.5)
+    else:
+        # Fog nodes have lower base degradation
+        if distance <= 100:  # Within 100km
+            signal_factor = random.uniform(0.97, 1.03)  # Minimal degradation
+        elif distance <= 500:  # Within 500km
+            signal_factor = random.uniform(0.95, 1.05)  # Low degradation
+        elif distance <= 1000:  # Within 1000km
+            signal_factor = random.uniform(0.93, 1.07)  # Moderate degradation
+        elif distance <= 2000:  # Within 2000km
+            signal_factor = random.uniform(0.90, 1.10)  # High degradation
+        else:  # Long distance
+            signal_factor = random.uniform(0.87, 1.13)  # Very high degradation
     
     propagation_delay = base_propagation_delay * signal_factor
     
-    # Calculate base Transmission Time (Tₜₓ)
-    if task_size_mi is not None:
-        # Convert MI to bytes (assuming 1 instruction = 4 bytes)
-        task_size_bytes = task_size_mi * 1000000 * 4
-        base_bandwidth = fog_node.bandwidth * 1024 * 1024  # Convert Mbps to bytes per second
-        
-        # Apply distance-based bandwidth reduction
+    # Calculate base transmission time
+    transmission_time = (distance * task_size_mi) / (fog_node.bandwidth * 1000)  # Convert to seconds
+    
+    # Add distance-based penalties - reduced penalties
+    if is_cloud:
+        # Cloud nodes have higher distance penalties
         if distance <= 500:  # Within 500km
-            bandwidth_factor = random.uniform(0.95, 1.0)  # 5% max reduction
+            distance_penalty = 1.3
+        elif distance <= 1000:  # Within 1000km
+            distance_penalty = 1.5
         elif distance <= 2000:  # Within 2000km
-            bandwidth_factor = random.uniform(0.70, 0.85)  # 30% max reduction
+            distance_penalty = 1.7
         else:  # Long distance
-            bandwidth_factor = random.uniform(0.40, 0.60)  # 60% max reduction
-            
-        bandwidth = base_bandwidth * bandwidth_factor
-        
-        # Add network congestion factor based on distance
-        if distance <= 500:  # Within 500km
-            congestion_factor = random.uniform(0.95, 1.15)  # Less congestion
-        elif distance <= 2000:  # Within 2000km
-            congestion_factor = random.uniform(0.85, 1.35)  # Moderate congestion
-        else:  # Long distance
-            congestion_factor = random.uniform(0.75, 1.50)  # More congestion
-        
-        # Calculate packet loss probability based on distance
-        if distance <= 500:  # Within 500km
-            packet_loss_rate = random.uniform(0.0, 0.03)  # 0-3% packet loss
-        elif distance <= 2000:  # Within 2000km
-            packet_loss_rate = random.uniform(0.0, 0.08)  # 0-8% packet loss
-        else:  # Long distance
-            packet_loss_rate = random.uniform(0.0, 0.15)  # 0-15% packet loss
-        
-        # Calculate base transmission time with congestion
-        base_transmission_time = (task_size_bytes / bandwidth) * congestion_factor
-        
-        # Add retransmission overhead due to packet loss
-        retransmission_overhead = base_transmission_time * packet_loss_rate
-        
-        # Add network jitter (random delay variation)
-        if distance <= 500:  # Within 500km
-            jitter = random.uniform(-0.1, 0.1) * base_transmission_time
-        elif distance <= 2000:  # Within 2000km
-            jitter = random.uniform(-0.2, 0.2) * base_transmission_time
-        else:  # Long distance
-            jitter = random.uniform(-0.3, 0.3) * base_transmission_time
-        
-        transmission_time = base_transmission_time + retransmission_overhead + jitter
+            distance_penalty = 1.9
     else:
-        if logger:
-            logger.warning("Task size not provided, using minimum transmission time")
-        transmission_time = 0.001  # 1ms minimum transmission time
+        # Fog nodes have lower distance penalties
+        if distance <= 100:  # Within 100km
+            distance_penalty = 1.0
+        elif distance <= 500:  # Within 500km
+            distance_penalty = 1.2
+        elif distance <= 1000:  # Within 1000km
+            distance_penalty = 1.4
+        elif distance <= 2000:  # Within 2000km
+            distance_penalty = 1.6
+        else:  # Long distance
+            distance_penalty = 1.8
+    
+    # Apply distance penalty
+    transmission_time *= distance_penalty
+    
+    # Add network congestion factor based on distance - reduced variation
+    if is_cloud:
+        # Cloud nodes have higher congestion
+        if distance <= 500:  # Within 500km
+            congestion_factor = random.uniform(1.2, 1.3)  # Higher base congestion
+        elif distance <= 1000:  # Within 1000km
+            congestion_factor = random.uniform(1.3, 1.4)
+        elif distance <= 2000:  # Within 2000km
+            congestion_factor = random.uniform(1.4, 1.5)
+        else:  # Long distance
+            congestion_factor = random.uniform(1.5, 1.6)
+    else:
+        # Fog nodes have lower congestion
+        if distance <= 100:  # Within 100km
+            congestion_factor = random.uniform(1.0, 1.1)  # Low congestion
+        elif distance <= 500:  # Within 500km
+            congestion_factor = random.uniform(1.1, 1.2)  # Moderate congestion
+        elif distance <= 1000:  # Within 1000km
+            congestion_factor = random.uniform(1.2, 1.3)  # High congestion
+        elif distance <= 2000:  # Within 2000km
+            congestion_factor = random.uniform(1.3, 1.4)  # Very high congestion
+        else:  # Long distance
+            congestion_factor = random.uniform(1.4, 1.5)  # Extreme congestion
+    
+    transmission_time *= congestion_factor
+    
+    # Add packet loss factor based on distance - reduced packet loss
+    if is_cloud:
+        # Cloud nodes have higher packet loss
+        if distance <= 500:  # Within 500km
+            packet_loss = random.uniform(0.01, 0.02)  # 1-2% packet loss
+        elif distance <= 1000:  # Within 1000km
+            packet_loss = random.uniform(0.02, 0.03)  # 2-3% packet loss
+        elif distance <= 2000:  # Within 2000km
+            packet_loss = random.uniform(0.03, 0.04)  # 3-4% packet loss
+        else:  # Long distance
+            packet_loss = random.uniform(0.04, 0.05)  # 4-5% packet loss
+    else:
+        # Fog nodes have lower packet loss
+        if distance <= 100:  # Within 100km
+            packet_loss = random.uniform(0.0, 0.005)  # 0-0.5% packet loss
+        elif distance <= 500:  # Within 500km
+            packet_loss = random.uniform(0.005, 0.015)  # 0.5-1.5% packet loss
+        elif distance <= 1000:  # Within 1000km
+            packet_loss = random.uniform(0.015, 0.025)  # 1.5-2.5% packet loss
+        elif distance <= 2000:  # Within 2000km
+            packet_loss = random.uniform(0.025, 0.035)  # 2.5-3.5% packet loss
+        else:  # Long distance
+            packet_loss = random.uniform(0.035, 0.050)  # 3.5-5% packet loss
+    
+    # Add retransmission overhead based on packet loss
+    retransmission_overhead = transmission_time * (packet_loss / (1 - packet_loss))
+    
+    # Add network jitter (random delay variation) - reduced jitter
+    if is_cloud:
+        # Cloud nodes have higher jitter
+        if distance <= 500:  # Within 500km
+            jitter = random.uniform(0.1, 0.15) * base_propagation_delay
+        elif distance <= 1000:  # Within 1000km
+            jitter = random.uniform(0.15, 0.2) * base_propagation_delay
+        elif distance <= 2000:  # Within 2000km
+            jitter = random.uniform(0.2, 0.25) * base_propagation_delay
+        else:  # Long distance
+            jitter = random.uniform(0.25, 0.3) * base_propagation_delay
+    else:
+        # Fog nodes have lower jitter
+        if distance <= 100:  # Within 100km
+            jitter = random.uniform(0.0, 0.05) * base_propagation_delay
+        elif distance <= 500:  # Within 500km
+            jitter = random.uniform(0.0, 0.10) * base_propagation_delay
+        elif distance <= 1000:  # Within 1000km
+            jitter = random.uniform(0.0, 0.15) * base_propagation_delay
+        elif distance <= 2000:  # Within 2000km
+            jitter = random.uniform(0.0, 0.20) * base_propagation_delay
+        else:  # Long distance
+            jitter = random.uniform(0.0, 0.25) * base_propagation_delay
+    
+    transmission_time += retransmission_overhead + jitter
     
     # Total transmission time is sum of transmission time and propagation delay
     total_time = transmission_time + propagation_delay
@@ -167,16 +255,16 @@ def calculate_transmission_time(task_location, fog_location, fog_node, task_size
         logger.debug(f"  Task location: {task_location}")
         logger.debug(f"  Fog node location: {fog_location}")
         logger.debug(f"  Distance: {distance:.2f} km")
-        logger.debug(f"  Task size: {task_size_mi if task_size_mi is not None else 'unknown'} MI")
+        logger.debug(f"  Task MIPS: {task_mips if task_mips is not None else 'unknown'}")
         logger.debug(f"  Base Propagation Delay: {base_propagation_delay*1000:.2f} ms")
         logger.debug(f"  Signal Factor: {signal_factor:.2f}")
         logger.debug(f"  Final Propagation Delay (Tₚᵣₒₚ): {propagation_delay*1000:.2f} ms")
-        if task_size_mi is not None:
-            logger.debug(f"  Base Transmission Time: {base_transmission_time*1000:.2f} ms")
-            logger.debug(f"  Congestion Factor: {congestion_factor:.2f}")
-            logger.debug(f"  Packet Loss Rate: {packet_loss_rate*100:.2f}%")
-            logger.debug(f"  Retransmission Overhead: {retransmission_overhead*1000:.2f} ms")
-            logger.debug(f"  Network Jitter: {jitter*1000:.2f} ms")
+        logger.debug(f"  Base Transmission Time: {transmission_time*1000:.2f} ms")
+        logger.debug(f"  Congestion Factor: {congestion_factor:.2f}")
+        logger.debug(f"  Packet Loss: {packet_loss*100:.2f}%")
+        logger.debug(f"  Retransmission Overhead: {retransmission_overhead*1000:.2f} ms")
+        logger.debug(f"  Network Jitter: {jitter*1000:.2f} ms")
+        logger.debug(f"  Distance Penalty: {distance_penalty:.2f}x")
         logger.debug(f"  Final Transmission Time (Tₜₓ): {transmission_time*1000:.2f} ms")
         logger.debug(f"  Total transmission time: {total_time*1000:.2f} ms")
     
@@ -203,6 +291,39 @@ def calculate_geographic_latency(distance_km, node):
     if logger:
         logger.info(f"Geographic latency: {latency*1000:.2f}ms")
     return latency
+
+def calculate_storage_requirements(task_size):
+    """
+    Calculate storage requirements for a task based on its size.
+    
+    Args:
+        task_size (float): Size of the task in MI
+        
+    Returns:
+        float: Required storage in GB
+    """
+    # Storage is 10% of task size
+    storage_required = task_size * 0.1
+    return round(storage_required, 2)
+
+def calculate_storage_utilization(node):
+    """
+    Calculate storage utilization for a node.
+    
+    Args:
+        node: Node object with storage attributes
+        
+    Returns:
+        float: Storage utilization as a percentage
+    """
+    if not hasattr(node, 'storage') or not hasattr(node, 'available_storage'):
+        return 0.0
+        
+    total_storage = node.storage
+    available_storage = node.available_storage
+    used_storage = total_storage - available_storage
+    
+    return (used_storage / total_storage) * 100 if total_storage > 0 else 0.0
 
 def calculate_queue_delay(node_metrics, task_queues, node_name):
     """
@@ -265,27 +386,26 @@ def calculate_processing_time(task_size_mi, processing_power_mips):
     # Calculate base processing time
     base_time = task_size_mi / processing_power_mips
     
-    # Add CPU overhead with random variation (20-40% of base time)
-    cpu_overhead = base_time * random.uniform(0.2, 0.4)
+    # Add CPU overhead with reduced random variation (10-20% of base time)
+    cpu_overhead = base_time * random.uniform(0.1, 0.2)
     
-    # Add memory access time with random variation (15-30% of base time)
-    memory_access = base_time * random.uniform(0.15, 0.3)
+    # Add memory access time with reduced random variation (7-15% of base time)
+    memory_access = base_time * random.uniform(0.07, 0.15)
     
-    # Add system load factor with random variation (10-25% of base time)
-    system_load = base_time * random.uniform(0.1, 0.25)
+    # Add system load factor with reduced random variation (5-12% of base time)
+    system_load = base_time * random.uniform(0.05, 0.12)
     
-    # Add cache miss penalty with random variation (5-15% of base time)
-    cache_miss = base_time * random.uniform(0.05, 0.15)
+    # Add cache miss penalty with reduced random variation (2-8% of base time)
+    cache_miss = base_time * random.uniform(0.02, 0.08)
     
-    # Add I/O wait time with random variation (5-20% of base time)
-    io_wait = base_time * random.uniform(0.05, 0.2)
+    # Add I/O wait time with reduced random variation (3-10% of base time)
+    io_wait = base_time * random.uniform(0.03, 0.1)
     
     # Total processing time with all factors
     total_time = base_time + cpu_overhead + memory_access + system_load + cache_miss + io_wait
     
-    # Add some random variation (±15%) to make it more realistic
-    variation = random.uniform(0.85, 1.15)
+    # Add smaller random variation (±7%) to make it more realistic
+    variation = random.uniform(0.93, 1.07)
     total_time *= variation
-    
     
     return total_time

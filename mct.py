@@ -1,20 +1,46 @@
 """
 MCT (Minimum Completion Time) Task Scheduling Implementation
+
 This module implements a task scheduling algorithm that minimizes completion time
 by considering both fog and cloud resources with optimal resource allocation.
+
+Key Features:
+- Calculates optimal task assignments between fog and cloud nodes
+- Considers multiple factors including:
+  * Distance between task and nodes
+  * Resource availability (MIPS, Memory, Bandwidth, Storage)
+  * Processing and transmission times
+  * Queue times
+- Provides detailed scoring and analysis of node performance
+- Implements comprehensive logging of task execution and performance metrics
+
+The algorithm follows these main steps:
+1. Calculate scores for all available fog nodes
+2. Select the fog node with the highest score
+3. If fog node cannot handle the task, use cloud nodes with MCT approach
+4. Track and log all performance metrics
+
+Dependencies:
+- task_load: For reading and logging task tuples
+- config: For fog and cloud node configurations
+- utility: For distance calculations
+- fog: For fog node operations
+- cloud: For cloud node operations
+- logger: For logging functionality
 """
 
 import json
 import time
+import math
 from task_load import read_and_log_tuples
 from config import FOG_NODES_CONFIG, CLOUD_SERVICES_CONFIG
-from utility import calculate_distance
+from utility import calculate_distance, calculate_transmission_time
 from fog import get_fog_node, get_fog_node_status, get_all_fog_nodes
 from cloud import get_cloud_node, get_cloud_node_status, get_all_cloud_nodes
 from logger import setup_logger
 
 # Initialize logger for MCT events
-mct_logger = setup_logger('mct', 'MCT.log')
+mct_logger = setup_logger('mct', 'mct.log', sub_directory='algorithms')
 
 def calculate_task_distances(task, is_cloud=False):
     """
@@ -57,8 +83,15 @@ def calculate_fog_node_score(task, fog_node, distance):
     # Get node status
     status = fog_node.get_status()
     
-    # Calculate transmission time (based on distance and bandwidth)
-    transmission_time = (distance * task['Size']) / (fog_node.bandwidth * 1000)  # Convert to seconds
+    # Calculate transmission time using comprehensive implementation
+    transmission_time = calculate_transmission_time(
+        task['GeoLocation'],
+        fog_node.location,
+        fog_node,
+        task.get('Size'),
+        task.get('MIPS'),
+        mct_logger
+    )
     
     # Calculate processing time
     processing_time = task['Size'] / fog_node.mips
@@ -67,17 +100,36 @@ def calculate_fog_node_score(task, fog_node, distance):
     mips_availability = status.get('available_mips', fog_node.mips) / fog_node.mips
     memory_availability = status.get('available_memory', fog_node.memory) / fog_node.memory
     bandwidth_availability = status.get('available_bandwidth', fog_node.bandwidth) / fog_node.bandwidth
+    storage_availability = status.get('available_storage', fog_node.storage) / fog_node.storage
     
-    # Calculate overall resource availability score (0 to 1, where 1 is fully available)
-    resource_score = (mips_availability + memory_availability + bandwidth_availability) / 3
+    # Calculate weighted resource availability score
+    # Equal weights for all resources to ensure balanced consideration
+    resource_score = (0.25 * mips_availability + 
+                     0.25 * memory_availability + 
+                     0.25 * bandwidth_availability +
+                     0.25 * storage_availability)
     
-    # Calculate weighted components (inverted for transmission and processing - higher is better)
-    transmission_component = 0.4 * (1 / (1 + transmission_time))  # Inverted transmission time
-    processing_component = 0.3 * (1 / (1 + processing_time))      # Inverted processing time
-    resource_component = 0.3 * resource_score                     # Resource availability (already 0-1)
+    # Normalize transmission and processing times to 0-1 range
+    # Using inverse square root for better scaling
+    max_transmission_time = 5.0  # Maximum acceptable time in seconds
+    transmission_score = 1.0 / (1.0 + math.sqrt(transmission_time / max_transmission_time))
+    
+    max_processing_time = 5.0  # Maximum acceptable time in seconds
+    processing_score = 1.0 / (1.0 + math.sqrt(processing_time / max_processing_time))
+    
+    # Calculate weighted components
+    # Adjusted weights based on importance:
+    # - Resource availability is most important (40%)
+    # - Processing time is second (35%)
+    # - Transmission time is third (25%)
+    resource_component = 0.40 * resource_score
+    processing_component = 0.35 * processing_score
+    transmission_component = 0.25 * transmission_score
     
     # Final score calculation (higher is better)
-    score = transmission_component + processing_component + resource_component
+    score = (resource_component + 
+             processing_component + 
+             transmission_component)
     
     # Create detailed resource information
     resource_info = {
@@ -95,28 +147,34 @@ def calculate_fog_node_score(task, fog_node, distance):
             'available': status.get('available_bandwidth', fog_node.bandwidth),
             'total': fog_node.bandwidth,
             'availability': bandwidth_availability
+        },
+        'storage': {
+            'available': status.get('available_storage', fog_node.storage),
+            'total': fog_node.storage,
+            'availability': storage_availability
         }
     }
     
     # Create score breakdown
     score_breakdown = {
-        'transmission': {
-            'value': transmission_time,
-            'weighted': transmission_component
+        'resource_availability': {
+            'value': resource_score,
+            'weighted': resource_component
         },
         'processing': {
             'value': processing_time,
             'weighted': processing_component
         },
-        'resource_availability': {
-            'value': resource_score,
-            'weighted': resource_component
+        'transmission': {
+            'value': transmission_time,
+            'weighted': transmission_component,
+            'score': transmission_score
         }
     }
     
     return score, resource_info, score_breakdown
 
-def calculate_cloud_completion_time(task, cloud_node, distance):
+def calculate_cloud_completion_time(task, cloud_node, distance, task_queue_times):
     """
     Calculate completion time for a cloud node using MCT approach
     
@@ -124,6 +182,7 @@ def calculate_cloud_completion_time(task, cloud_node, distance):
         task (dict): Task information
         cloud_node: Cloud node object
         distance (float): Distance to the cloud node
+        task_queue_times (dict): Dictionary tracking task queue times
         
     Returns:
         float: Completion time
@@ -131,8 +190,15 @@ def calculate_cloud_completion_time(task, cloud_node, distance):
     # Get node status
     status = cloud_node.get_status()
     
-    # Calculate transmission time
-    transmission_time = (distance * task['Size']) / (cloud_node.bandwidth * 1000)
+    # Calculate transmission time using comprehensive implementation
+    transmission_time = calculate_transmission_time(
+        task['GeoLocation'],
+        cloud_node.location,
+        cloud_node,
+        task.get('Size'),
+        task.get('MIPS'),
+        mct_logger
+    )
     
     # Calculate execution time
     execution_time = task['Size'] / cloud_node.mips
@@ -140,78 +206,15 @@ def calculate_cloud_completion_time(task, cloud_node, distance):
     # Calculate ready time (time until node becomes available)
     ready_time = status.get('current_task_time', 0) if status.get('current_task_time', 0) > 0 else 0
     
-    # Calculate queue time
-    queue_time = len(cloud_node.task_queue) * (execution_time / (1 - (status.get('mips_used', 0) / cloud_node.mips)))
+    # Calculate queue time using FCFS approach
+    queue_time = 0
+    if task['Name'] in task_queue_times:
+        queue_time = time.time() - task_queue_times[task['Name']]
     
     # Total completion time
     completion_time = transmission_time + execution_time + ready_time + queue_time
     
     return completion_time
-
-def display_all_fog_scores():
-    """
-    Display scores and resource information for all fog nodes
-    """
-    print("\n=== Comprehensive Fog Node Analysis ===")
-    print("=" * 100)
-    
-    # Get all fog nodes
-    fog_nodes = [node for node in get_all_fog_nodes().values() if isinstance(node, FogNode)]
-    
-    # Calculate scores for each node
-    node_scores = []
-    for fog_node in fog_nodes:
-        # Use a sample task for comparison
-        sample_task = {
-            'Size': 1000,  # 1000 MI
-            'Memory': 512,  # 512 MB
-            'Bandwidth': 10  # 10 Mbps
-        }
-        
-        # Calculate distance (using a default distance for comparison)
-        distance = 5.0  # 5 km default distance
-        
-        # Calculate score
-        score, resource_info, score_breakdown = calculate_fog_node_score(
-            sample_task, fog_node, distance
-        )
-        
-        node_scores.append({
-            'name': fog_node.name,
-            'score': score,
-            'resource_info': resource_info,
-            'score_breakdown': score_breakdown
-        })
-    
-    # Sort nodes by score (higher is better)
-    node_scores.sort(key=lambda x: x['score'], reverse=True)
-    
-    # Display header
-    print(f"{'Node Name':<15} {'Score':<10}")
-    print("-" * 100)
-    
-    # Display each node's information
-    for node in node_scores:
-        print(f"{node['name']:<15} {node['score']:.2f}")
-    
-    print("\nDetailed Breakdown for Each Node:")
-    print("=" * 100)
-    
-    for node in node_scores:
-        print(f"\n{node['name']}:")
-        print("-" * 50)
-        print("Score Components:")
-        print(f"  Transmission Time: {node['score_breakdown']['transmission']['value']:.2f}s (weighted: {node['score_breakdown']['transmission']['weighted']:.2f})")
-        print(f"  Processing Time: {node['score_breakdown']['processing']['value']:.2f}s (weighted: {node['score_breakdown']['processing']['weighted']:.2f})")
-        print(f"  Resource Availability: {node['score_breakdown']['resource_availability']['value']:.2f} (weighted: {node['score_breakdown']['resource_availability']['weighted']:.2f})")
-        
-        print("\nResource Details:")
-        print(f"  MIPS: {node['resource_info']['mips']['available']:.2f}/{node['resource_info']['mips']['total']:.2f} ({node['resource_info']['mips']['availability']*100:.1f}%)")
-        print(f"  Memory: {node['resource_info']['memory']['available']:.2f}/{node['resource_info']['memory']['total']:.2f} ({node['resource_info']['memory']['availability']*100:.1f}%)")
-        print(f"  Bandwidth: {node['resource_info']['bandwidth']['available']:.2f}/{node['resource_info']['bandwidth']['total']:.2f} ({node['resource_info']['bandwidth']['availability']*100:.1f}%)")
-    
-    print("\nNote: Higher scores indicate better node performance")
-    print("=" * 100)
 
 def process_mct(tasks):
     """
@@ -238,18 +241,19 @@ def process_mct(tasks):
     # Initialize and log fog nodes
     fog_nodes = get_all_fog_nodes()
     for name, node in fog_nodes.items():
-        mct_logger.info(f"Fog node created: {name} (MIPS={node.mips}, RAM={node.memory}, BW={node.bandwidth}, Location={node.location})")
+        mct_logger.info(f"Fog node created: {name} (MIPS={node.mips}, RAM={node.memory}, BW={node.bandwidth}, Storage={node.storage}, Location={node.location})")
     
     # Initialize and log cloud nodes
     cloud_nodes = get_all_cloud_nodes()
     for name, node in cloud_nodes.items():
-        mct_logger.info(f"Cloud node created: {name} (MIPS={node.mips}, RAM={node.memory}, BW={node.bandwidth}, Location={node.location})")
+        mct_logger.info(f"Cloud node created: {name} (MIPS={node.mips}, RAM={node.memory}, BW={node.bandwidth}, Storage={node.storage}, Location={node.location})")
     
     # Initialize tracking variables
     task_completion_info = {}
     queued_tasks_info = {}
     completed_tasks_count = 0
     total_tasks = len(tasks)
+    task_queue_times = {}  # Initialize task queue times dictionary
     
     def task_completion_callback(node_name, completion_info):
         """Callback function to handle task completion events"""
@@ -257,23 +261,32 @@ def process_mct(tasks):
         task = completion_info['task']
         task_name = task['Name']
         
+        # Calculate queue time if task was queued
+        queue_time = 0
+        if task_name in task_queue_times:
+            queue_time = time.time() - task_queue_times[task_name]
+            del task_queue_times[task_name]
+        
         # Store completion information
         task_completion_info[task_name] = {
             'node': node_name,
-            'transmission_time': completion_info['transmission_time'],
-            'processing_time': completion_info['processing_time'],
-            'queue_time': completion_info['queue_time'],
-            'total_time': completion_info['total_time']
+            'transmission_time': completion_info.get('transmission_time', 0),
+            'processing_time': completion_info.get('processing_time', 0),
+            'queue_time': queue_time,
+            'total_time': completion_info.get('total_time', 0) + queue_time,
+            'completion_time': completion_info.get('completion_time', 0),
+            'storage_used': task.get('Storage', 0),
+            'task': task  # Store the complete task information
         }
         
         # Update completion counter and logging
         completed_tasks_count += 1
         mct_logger.info(f"\nTask Completed: {task_name}")
         mct_logger.info(f"  Completed at: {node_name}")
-        mct_logger.info(f"  Transmission Time: {completion_info['transmission_time']:.2f}s")
-        mct_logger.info(f"  Processing Time: {completion_info['processing_time']:.2f}s")
-        mct_logger.info(f"  Queue Time: {completion_info['queue_time']:.2f}s")
-        mct_logger.info(f"  Total Time: {completion_info['total_time']:.2f}s")
+        mct_logger.info(f"  Transmission Time: {completion_info.get('transmission_time', 0):.2f}s")
+        mct_logger.info(f"  Processing Time: {completion_info.get('processing_time', 0):.2f}s")
+        mct_logger.info(f"  Queue Time: {queue_time:.2f}s")
+        mct_logger.info(f"  Total Time: {task_completion_info[task_name]['total_time']:.2f}s")
         mct_logger.info("  " + "-" * 30)
         
         if task_name in queued_tasks_info:
@@ -293,66 +306,75 @@ def process_mct(tasks):
         print(f"MIPS: {task['MIPS']}")
         print(f"RAM: {task['RAM']}")
         print(f"BW: {task['BW']}")
+        print(f"Storage: {task.get('Storage', 0)} GB")
+        print(f"DataType: {task['DataType']}")
         
+        # Determine if it's a cloud-specific task
+        is_cloud_task = task['DataType'] in ['Bulk', 'Large']  # Removed storage condition
+        print(f"Task Type: {'Cloud' if is_cloud_task else 'Fog/General'}")
+
         # Calculate distances to all nodes
         fog_distances = calculate_task_distances(task, is_cloud=False)
         cloud_distances = calculate_task_distances(task, is_cloud=True)
         
-        # Calculate scores for all fog nodes
-        fog_scores = {}
-        print("\nFog Node Scores:")
-        print("-" * 80)
-        for fog_name, distance in fog_distances.items():
-            fog_node = get_fog_node(fog_name)
-            if fog_node:
-                score, resource_info, score_breakdown = calculate_fog_node_score(task, fog_node, distance)
-                fog_scores[fog_name] = {
-                    'score': score,
-                    'node': fog_node
-                }
-                print(f"{fog_name}:")
-                print(f"  Final Score: {score:.2f}")
-                print(f"  Distance: {distance:.2f} km")
-                
-                print("\n  Score Breakdown:")
-                print(f"    Transmission Time: {score_breakdown['transmission']['value']:.2f}s (weighted: {score_breakdown['transmission']['weighted']:.2f})")
-                print(f"    Processing Time: {score_breakdown['processing']['value']:.2f}s (weighted: {score_breakdown['processing']['weighted']:.2f})")
-                print(f"    Resource Availability: {score_breakdown['resource_availability']['value']:.2f} (weighted: {score_breakdown['resource_availability']['weighted']:.2f})")
-                
-                print("\n  Current Resource Availability:")
-                print(f"    MIPS: {resource_info['mips']['available']:.2f}/{resource_info['mips']['total']:.2f} ({resource_info['mips']['availability']*100:.1f}%)")
-                print(f"    Memory: {resource_info['memory']['available']:.2f}/{resource_info['memory']['total']:.2f} ({resource_info['memory']['availability']*100:.1f}%)")
-                print(f"    Bandwidth: {resource_info['bandwidth']['available']:.2f}/{resource_info['bandwidth']['total']:.2f} ({resource_info['bandwidth']['availability']*100:.1f}%)")
-                print("-" * 80)
-        
-        # Find best fog node (highest score)
-        best_fog = None
-        if fog_scores:
-            best_fog_name = max(fog_scores.items(), key=lambda x: x[1]['score'])[0]
-            best_fog = fog_scores[best_fog_name]
-        
-        # Try to assign to best fog node first
         task_assigned = False
-        if best_fog:
-            fog_node = best_fog['node']
-            mct_logger.info(f"\nAttempting to assign task {task['Name']} to fog node {fog_node.name}")
+
+        if not is_cloud_task:
+            # Calculate scores for all fog nodes
+            fog_scores = {}
+            print("\nFog Node Scores:")
+            print("-" * 80)
+            for fog_name, distance in fog_distances.items():
+                fog_node = get_fog_node(fog_name)
+                if fog_node:
+                    score, resource_info, score_breakdown = calculate_fog_node_score(task, fog_node, distance)
+                    fog_scores[fog_name] = {
+                        'score': score,
+                        'node': fog_node
+                    }
+                    print(f"{fog_name}:")
+                    print(f"  Final Score: {score:.2f}")
+                    print(f"  Distance: {distance:.2f} km")
+                    
+                    print("\n  Score Breakdown:")
+                    print(f"    Resource Availability: {score_breakdown['resource_availability']['value']:.2f} (weighted: {score_breakdown['resource_availability']['weighted']:.2f})")
+                    print(f"    Processing Time: {score_breakdown['processing']['value']:.2f}s (weighted: {score_breakdown['processing']['weighted']:.2f})")
+                    print(f"    Transmission Time: {score_breakdown['transmission']['value']:.2f}s (weighted: {score_breakdown['transmission']['weighted']:.2f})")
+                    
+                    print("\n  Current Resource Availability:")
+                    print(f"    MIPS: {resource_info['mips']['available']:.2f}/{resource_info['mips']['total']:.2f} ({resource_info['mips']['availability']*100:.1f}%)")
+                    print(f"    Memory: {resource_info['memory']['available']:.2f}/{resource_info['memory']['total']:.2f} ({resource_info['memory']['availability']*100:.1f}%)")
+                    print(f"    Bandwidth: {resource_info['bandwidth']['available']:.2f}/{resource_info['bandwidth']['total']:.2f} ({resource_info['bandwidth']['availability']*100:.1f}%)")
+                    print(f"    Storage: {resource_info['storage']['available']:.2f}/{resource_info['storage']['total']:.2f} ({resource_info['storage']['availability']*100:.1f}%)")
+                    print("-" * 80)
             
-            success, processing_time = fog_node.assign_task(task)
-            if success:
-                mct_logger.info(f"Task successfully assigned to fog node {fog_node.name}")
-                print(f"\nTask assigned to fog node {fog_node.name}")
-                task_assigned = True
-            else:
-                mct_logger.info(f"Fog node {fog_node.name} cannot handle task - attempting cloud")
-                print(f"\nFog node {fog_node.name} cannot handle task - attempting cloud")
+            # Find best fog node (highest score)
+            best_fog = None
+            if fog_scores:
+                best_fog_name = max(fog_scores.items(), key=lambda x: x[1]['score'])[0]
+                best_fog = fog_scores[best_fog_name]
+            
+            # Try to assign to best fog node first
+            if best_fog:
+                fog_node = best_fog['node']
+                mct_logger.info(f"\nAttempting to assign task {task['Name']} to fog node {fog_node.name}")
+                
+                success, processing_time = fog_node.assign_task(task)
+                if success:
+                    mct_logger.info(f"Task successfully assigned to fog node {fog_node.name}")
+                    print(f"\nTask assigned to fog node {fog_node.name}")
+                    task_assigned = True
+                else:
+                    mct_logger.info(f"Fog node {fog_node.name} cannot handle task - attempting cloud")
+                    print(f"\nFog node {fog_node.name} cannot handle task - attempting cloud")
         
-        # If fog assignment failed, try cloud nodes
+        # If not assigned to fog or if it's a cloud task, try cloud nodes
         if not task_assigned:
             cloud_completion_times = {}
             for cloud_name, distance in cloud_distances.items():
                 cloud_node = get_cloud_node(cloud_name)
                 if cloud_node:
-                    completion_time = calculate_cloud_completion_time(task, cloud_node, distance)
+                    completion_time = calculate_cloud_completion_time(task, cloud_node, distance, task_queue_times)
                     cloud_completion_times[cloud_name] = {
                         'completion_time': completion_time,
                         'node': cloud_node
@@ -396,26 +418,123 @@ def process_mct(tasks):
     
     # Log final statistics
     if task_completion_info:
-        # Calculate and log performance metrics
-        total_transmission = sum(info['transmission_time'] for info in task_completion_info.values())
-        total_processing = sum(info['processing_time'] for info in task_completion_info.values())
-        total_queue = sum(info['queue_time'] for info in task_completion_info.values())
-        total_time = sum(info['total_time'] for info in task_completion_info.values())
-        
-        avg_transmission = total_transmission / len(task_completion_info)
-        avg_processing = total_processing / len(task_completion_info)
-        avg_queue = total_queue / len(task_completion_info)
-        avg_total = total_time / len(task_completion_info)
-        
         # Calculate statistics by node type
         cloud_tasks = [info for info in task_completion_info.values() if info['node'] in cloud_nodes]
         fog_tasks = [info for info in task_completion_info.values() if info['node'] in fog_nodes]
         
-        # Log final statistics
-        mct_logger.info("\n=== Final Overall Statistics ===")
-        mct_logger.info(f"Total Tasks Completed: {len(task_completion_info)}")
+        # Calculate Overall Statistics
+        total_transmission = sum(info.get('transmission_time', 0) for info in task_completion_info.values())
+        total_processing = sum(info.get('processing_time', 0) for info in task_completion_info.values())
+        total_queue = sum(info.get('queue_time', 0) for info in task_completion_info.values())
+        total_time = sum(info.get('total_time', 0) for info in task_completion_info.values())
+        total_storage = sum(info.get('storage_used', 0) for info in task_completion_info.values())
+        
+        # Calculate total workload (MIPS * processing time for each task)
+        total_workload = sum(info['task']['MIPS'] * info.get('processing_time', 0) for info in task_completion_info.values())
+        
+        # Calculate total size and bandwidth
+        total_size = sum(info['task']['Size'] for info in task_completion_info.values())
+        total_bandwidth = sum(info['task']['BW'] for info in task_completion_info.values())
+        
+        # Calculate Cloud Statistics
+        if cloud_tasks:
+            cloud_transmission = sum(info.get('transmission_time', 0) for info in cloud_tasks)
+            cloud_processing = sum(info.get('processing_time', 0) for info in cloud_tasks)
+            cloud_queue = sum(info.get('queue_time', 0) for info in cloud_tasks)
+            cloud_total = sum(info.get('total_time', 0) for info in cloud_tasks)
+            cloud_storage = sum(info.get('storage_used', 0) for info in cloud_tasks)
+            cloud_workload = sum(info['task']['MIPS'] * info.get('processing_time', 0) for info in cloud_tasks)
+            cloud_size = sum(info['task']['Size'] for info in cloud_tasks)
+            cloud_bandwidth = sum(info['task']['BW'] for info in cloud_tasks)
+            
+            # Calculate workload per cloud node
+            cloud_node_workloads = {}
+            cloud_node_storage = {}
+            cloud_node_size = {}
+            cloud_node_bandwidth = {}
+            for info in cloud_tasks:
+                node_name = info['node']
+                if node_name not in cloud_node_workloads:
+                    cloud_node_workloads[node_name] = 0
+                    cloud_node_storage[node_name] = 0
+                    cloud_node_size[node_name] = 0
+                    cloud_node_bandwidth[node_name] = 0
+                cloud_node_workloads[node_name] += info['task']['MIPS'] * info.get('processing_time', 0)
+                cloud_node_storage[node_name] += info.get('storage_used', 0)
+                cloud_node_size[node_name] += info['task']['Size']
+                cloud_node_bandwidth[node_name] += info['task']['BW']
+            
+            avg_cloud_transmission = cloud_transmission / len(cloud_tasks)
+            avg_cloud_processing = cloud_processing / len(cloud_tasks)
+            avg_cloud_queue = cloud_queue / len(cloud_tasks)
+            avg_cloud_total = cloud_total / len(cloud_tasks)
+            avg_cloud_storage = cloud_storage / len(cloud_tasks)
+            avg_cloud_workload = cloud_workload / len(cloud_tasks)
+            avg_cloud_size = cloud_size / len(cloud_tasks)
+            avg_cloud_bandwidth = cloud_bandwidth / len(cloud_tasks)
+        
+        # Calculate Fog Statistics
+        if fog_tasks:
+            fog_transmission = sum(info.get('transmission_time', 0) for info in fog_tasks)
+            fog_processing = sum(info.get('processing_time', 0) for info in fog_tasks)
+            fog_queue = sum(info.get('queue_time', 0) for info in fog_tasks)
+            fog_total = sum(info.get('total_time', 0) for info in fog_tasks)
+            fog_storage = sum(info.get('storage_used', 0) for info in fog_tasks)
+            fog_workload = sum(info['task']['MIPS'] * info.get('processing_time', 0) for info in fog_tasks)
+            fog_size = sum(info['task']['Size'] for info in fog_tasks)
+            fog_bandwidth = sum(info['task']['BW'] for info in fog_tasks)
+            
+            # Calculate workload per fog node
+            fog_node_workloads = {}
+            fog_node_storage = {}
+            fog_node_size = {}
+            fog_node_bandwidth = {}
+            for info in fog_tasks:
+                node_name = info['node']
+                if node_name not in fog_node_workloads:
+                    fog_node_workloads[node_name] = 0
+                    fog_node_storage[node_name] = 0
+                    fog_node_size[node_name] = 0
+                    fog_node_bandwidth[node_name] = 0
+                fog_node_workloads[node_name] += info['task']['MIPS'] * info.get('processing_time', 0)
+                fog_node_storage[node_name] += info.get('storage_used', 0)
+                fog_node_size[node_name] += info['task']['Size']
+                fog_node_bandwidth[node_name] += info['task']['BW']
+            
+            avg_fog_transmission = fog_transmission / len(fog_tasks)
+            avg_fog_processing = fog_processing / len(fog_tasks)
+            avg_fog_queue = fog_queue / len(fog_tasks)
+            avg_fog_total = fog_total / len(fog_tasks)
+            avg_fog_storage = fog_storage / len(fog_tasks)
+            avg_fog_workload = fog_workload / len(fog_tasks)
+            avg_fog_size = fog_size / len(fog_tasks)
+            avg_fog_bandwidth = fog_bandwidth / len(fog_tasks)
+        
+        # Calculate averages for overall statistics
+        avg_transmission = total_transmission / len(task_completion_info) if task_completion_info else 0
+        avg_processing = total_processing / len(task_completion_info) if task_completion_info else 0
+        avg_queue = total_queue / len(task_completion_info) if task_completion_info else 0
+        avg_total = total_time / len(task_completion_info) if task_completion_info else 0
+        avg_storage = total_storage / len(task_completion_info) if task_completion_info else 0
+        avg_workload = total_workload / len(task_completion_info) if task_completion_info else 0
+        avg_size = total_size / len(task_completion_info) if task_completion_info else 0
+        avg_bandwidth = total_bandwidth / len(task_completion_info) if task_completion_info else 0
+        
+        # Log Overall Statistics
+        mct_logger.info("\n=== Overall Statistics ===")
+        mct_logger.info(f"Total Tasks: {len(task_completion_info)}")
         mct_logger.info(f"  Cloud Tasks: {len(cloud_tasks)}")
         mct_logger.info(f"  Fog Tasks: {len(fog_tasks)}")
+        mct_logger.info("\nWorkload:")
+        mct_logger.info(f"  Total System Workload: {total_workload:.2f} MIPS-seconds")
+        mct_logger.info(f"  Average Workload per Task: {avg_workload:.2f} MIPS-seconds")
+        mct_logger.info("\nResource Usage:")
+        mct_logger.info(f"  Total Storage Used: {total_storage:.2f} GB")
+        mct_logger.info(f"  Total Data Size: {total_size:.2f} MI")
+        mct_logger.info(f"  Total Bandwidth Used: {total_bandwidth:.2f} Mbps")
+        mct_logger.info(f"  Average Storage per Task: {avg_storage:.2f} GB")
+        mct_logger.info(f"  Average Size per Task: {avg_size:.2f} MI")
+        mct_logger.info(f"  Average Bandwidth per Task: {avg_bandwidth:.2f} Mbps")
         mct_logger.info("\nTransmission Time:")
         mct_logger.info(f"  Total: {total_transmission*1000:.6f}ms")
         mct_logger.info(f"  Average: {avg_transmission*1000:.6f}ms")
@@ -428,6 +547,74 @@ def process_mct(tasks):
         mct_logger.info("\nTotal Time:")
         mct_logger.info(f"  Total: {total_time*1000:.6f}ms")
         mct_logger.info(f"  Average: {avg_total*1000:.6f}ms")
+        
+        # Log Fog Statistics
+        if fog_tasks:
+            mct_logger.info("\n=== Overall Fog Statistics ===")
+            mct_logger.info(f"Total Fog Tasks: {len(fog_tasks)}")
+            mct_logger.info("\nWorkload:")
+            mct_logger.info(f"  Total Fog Workload: {fog_workload:.2f} MIPS-seconds")
+            mct_logger.info(f"  Average Workload per Fog Task: {avg_fog_workload:.2f} MIPS-seconds")
+            mct_logger.info("\nResource Usage:")
+            mct_logger.info(f"  Total Fog Storage: {fog_storage:.2f} GB")
+            mct_logger.info(f"  Total Fog Data Size: {fog_size:.2f} MI")
+            mct_logger.info(f"  Total Fog Bandwidth: {fog_bandwidth:.2f} Mbps")
+            mct_logger.info(f"  Average Storage per Fog Task: {avg_fog_storage:.2f} GB")
+            mct_logger.info(f"  Average Size per Fog Task: {avg_fog_size:.2f} MI")
+            mct_logger.info(f"  Average Bandwidth per Fog Task: {avg_fog_bandwidth:.2f} Mbps")
+            mct_logger.info("\nPer Node Statistics:")
+            for node_name in fog_node_workloads:
+                mct_logger.info(f"\n  {node_name}:")
+                mct_logger.info(f"    Workload: {fog_node_workloads[node_name]:.2f} MIPS-seconds")
+                mct_logger.info(f"    Storage Used: {fog_node_storage[node_name]:.2f} GB")
+                mct_logger.info(f"    Data Size: {fog_node_size[node_name]:.2f} MI")
+                mct_logger.info(f"    Bandwidth Used: {fog_node_bandwidth[node_name]:.2f} Mbps")
+            mct_logger.info("\nTransmission Time:")
+            mct_logger.info(f"  Total: {fog_transmission*1000:.6f}ms")
+            mct_logger.info(f"  Average: {avg_fog_transmission*1000:.6f}ms")
+            mct_logger.info("\nProcessing Time:")
+            mct_logger.info(f"  Total: {fog_processing*1000:.6f}ms")
+            mct_logger.info(f"  Average: {avg_fog_processing*1000:.6f}ms")
+            mct_logger.info("\nQueue Time:")
+            mct_logger.info(f"  Total: {fog_queue*1000:.6f}ms")
+            mct_logger.info(f"  Average: {avg_fog_queue*1000:.6f}ms")
+            mct_logger.info("\nTotal Time:")
+            mct_logger.info(f"  Total: {fog_total*1000:.6f}ms")
+            mct_logger.info(f"  Average: {avg_fog_total*1000:.6f}ms")
+        
+        # Log Cloud Statistics
+        if cloud_tasks:
+            mct_logger.info("\n=== Overall Cloud Statistics ===")
+            mct_logger.info(f"Total Cloud Tasks: {len(cloud_tasks)}")
+            mct_logger.info("\nWorkload:")
+            mct_logger.info(f"  Total Cloud Workload: {cloud_workload:.2f} MIPS-seconds")
+            mct_logger.info(f"  Average Workload per Cloud Task: {avg_cloud_workload:.2f} MIPS-seconds")
+            mct_logger.info("\nResource Usage:")
+            mct_logger.info(f"  Total Cloud Storage: {cloud_storage:.2f} GB")
+            mct_logger.info(f"  Total Cloud Data Size: {cloud_size:.2f} MI")
+            mct_logger.info(f"  Total Cloud Bandwidth: {cloud_bandwidth:.2f} Mbps")
+            mct_logger.info(f"  Average Storage per Cloud Task: {avg_cloud_storage:.2f} GB")
+            mct_logger.info(f"  Average Size per Cloud Task: {avg_cloud_size:.2f} MI")
+            mct_logger.info(f"  Average Bandwidth per Cloud Task: {avg_cloud_bandwidth:.2f} Mbps")
+            mct_logger.info("\nPer Node Statistics:")
+            for node_name in cloud_node_workloads:
+                mct_logger.info(f"\n  {node_name}:")
+                mct_logger.info(f"    Workload: {cloud_node_workloads[node_name]:.2f} MIPS-seconds")
+                mct_logger.info(f"    Storage Used: {cloud_node_storage[node_name]:.2f} GB")
+                mct_logger.info(f"    Data Size: {cloud_node_size[node_name]:.2f} MI")
+                mct_logger.info(f"    Bandwidth Used: {cloud_node_bandwidth[node_name]:.2f} Mbps")
+            mct_logger.info("\nTransmission Time:")
+            mct_logger.info(f"  Total: {cloud_transmission*1000:.6f}ms")
+            mct_logger.info(f"  Average: {avg_cloud_transmission*1000:.6f}ms")
+            mct_logger.info("\nProcessing Time:")
+            mct_logger.info(f"  Total: {cloud_processing*1000:.6f}ms")
+            mct_logger.info(f"  Average: {avg_cloud_processing*1000:.6f}ms")
+            mct_logger.info("\nQueue Time:")
+            mct_logger.info(f"  Total: {cloud_queue*1000:.6f}ms")
+            mct_logger.info(f"  Average: {avg_cloud_queue*1000:.6f}ms")
+            mct_logger.info("\nTotal Time:")
+            mct_logger.info(f"  Total: {cloud_total*1000:.6f}ms")
+            mct_logger.info(f"  Average: {avg_cloud_total*1000:.6f}ms")
 
 if __name__ == "__main__":
     # Load tasks from input
