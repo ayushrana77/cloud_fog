@@ -381,22 +381,67 @@ def process_mct(tasks):
                 fog_node = best_fog['node']
                 mct_logger.info(f"\nAttempting to assign task {task['Name']} to fog node {fog_node.name}")
                 
-                success, processing_time = fog_node.assign_task(task)
-                if success:
-                    mct_logger.info(f"Task successfully assigned to fog node {fog_node.name}")
-                    print(f"\nTask assigned to fog node {fog_node.name}")
-                    task_assigned = True
+                # Calculate completion times before any assignment
+                fog_completion_time = calculate_cloud_completion_time(task, fog_node, fog_distances[fog_node.name], task_queue_times)
+                
+                # Calculate cloud completion times
+                cloud_completion_times = {}
+                for cloud_name, distance in cloud_distances.items():
+                    cloud_node = get_cloud_node(cloud_name)
+                    if cloud_node:
+                        completion_time = calculate_cloud_completion_time(task, cloud_node, distance, task_queue_times)
+                        cloud_completion_times[cloud_name] = {
+                            'completion_time': completion_time,
+                            'node': cloud_node
+                        }
+                
+                # Find best cloud node (minimum completion time)
+                best_cloud = None
+                if cloud_completion_times:
+                    best_cloud_name = min(cloud_completion_times.items(), 
+                                        key=lambda x: x[1]['completion_time'])[0]
+                    best_cloud = cloud_completion_times[best_cloud_name]
+                
+                # Compare fog and cloud completion times
+                if best_cloud and best_cloud['completion_time'] < fog_completion_time:
+                    # Cloud is better, try cloud first
+                    cloud_node = best_cloud['node']
+                    success, processing_time = cloud_node.assign_task(task)
+                    if success:
+                        mct_logger.info(f"Task assigned to cloud node {cloud_node.name}")
+                        print(f"\nTask assigned to cloud node {cloud_node.name}")
+                        task_assigned = True
+                    else:
+                        # Queue at cloud
+                        mct_logger.info(f"Cloud node {cloud_node.name} cannot handle task immediately - queuing")
+                        print(f"\nTask queued at cloud node {cloud_node.name}")
+                        task_queue_times[task['Name']] = time.time()
+                        queued_tasks_info[task['Name']] = {
+                            'node': cloud_node.name,
+                            'node_type': 'Cloud',
+                            'completion_time': best_cloud['completion_time'],
+                            'queue_position': len(cloud_node.task_queue)
+                        }
+                        task_assigned = True
                 else:
-                    # Task was queued at fog node
-                    mct_logger.info(f"Task queued at fog node {fog_node.name}")
-                    print(f"\nTask queued at fog node {fog_node.name}")
-                    task_queue_times[task['Name']] = time.time()
-                    queued_tasks_info[task['Name']] = {
-                        'node': fog_node.name,
-                        'node_type': 'Fog',
-                        'queue_position': len(fog_node.task_queue)
-                    }
-                    task_assigned = True
+                    # Fog is better, try fog
+                    success, processing_time = fog_node.assign_task(task)
+                    if success:
+                        mct_logger.info(f"Task successfully assigned to fog node {fog_node.name}")
+                        print(f"\nTask assigned to fog node {fog_node.name}")
+                        task_assigned = True
+                    else:
+                        # Queue at fog
+                        mct_logger.info(f"Task queued at fog node {fog_node.name}")
+                        print(f"\nTask queued at fog node {fog_node.name}")
+                        task_queue_times[task['Name']] = time.time()
+                        queued_tasks_info[task['Name']] = {
+                            'node': fog_node.name,
+                            'node_type': 'Fog',
+                            'completion_time': fog_completion_time,
+                            'queue_position': len(fog_node.task_queue)
+                        }
+                        task_assigned = True
         
         # If not assigned to fog or if it's a cloud task, try cloud nodes
         if not task_assigned:
