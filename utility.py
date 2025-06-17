@@ -140,56 +140,56 @@ def calculate_transmission_time(task_location, fog_location, fog_node, task_size
     # Calculate base transmission time
     transmission_time = (distance * task_size_mi) / (fog_node.bandwidth * 1000)  # Convert to seconds
     
-    # Add distance-based penalties - reduced penalties
+    # Add distance-based penalties - increased penalties for long distances
     if is_cloud:
         # Cloud nodes have higher distance penalties
         if distance <= 500:  # Within 500km
-            distance_penalty = 1.3
+            distance_penalty = 1.5  # Increased from 1.3
         elif distance <= 1000:  # Within 1000km
-            distance_penalty = 1.5
+            distance_penalty = 2.0  # Increased from 1.5
         elif distance <= 2000:  # Within 2000km
-            distance_penalty = 1.7
+            distance_penalty = 2.5  # Increased from 1.7
         else:  # Long distance
-            distance_penalty = 1.9
+            distance_penalty = 3.0  # Increased from 1.9
     else:
         # Fog nodes have lower distance penalties
         if distance <= 100:  # Within 100km
-            distance_penalty = 1.0
+            distance_penalty = 1.2  # Increased from 1.0
         elif distance <= 500:  # Within 500km
-            distance_penalty = 1.2
+            distance_penalty = 1.5  # Increased from 1.2
         elif distance <= 1000:  # Within 1000km
-            distance_penalty = 1.4
+            distance_penalty = 2.0  # Increased from 1.4
         elif distance <= 2000:  # Within 2000km
-            distance_penalty = 1.6
+            distance_penalty = 2.5  # Increased from 1.6
         else:  # Long distance
-            distance_penalty = 1.8
+            distance_penalty = 3.0  # Increased from 1.8
     
     # Apply distance penalty
     transmission_time *= distance_penalty
     
-    # Add network congestion factor based on distance - reduced variation
+    # Add network congestion factor based on distance - increased variation
     if is_cloud:
         # Cloud nodes have higher congestion
         if distance <= 500:  # Within 500km
-            congestion_factor = random.uniform(1.2, 1.3)  # Higher base congestion
+            congestion_factor = random.uniform(1.3, 1.4)  # Increased from 1.2-1.3
         elif distance <= 1000:  # Within 1000km
-            congestion_factor = random.uniform(1.3, 1.4)
+            congestion_factor = random.uniform(1.5, 1.6)  # Increased from 1.3-1.4
         elif distance <= 2000:  # Within 2000km
-            congestion_factor = random.uniform(1.4, 1.5)
+            congestion_factor = random.uniform(1.7, 1.8)  # Increased from 1.4-1.5
         else:  # Long distance
-            congestion_factor = random.uniform(1.5, 1.6)
+            congestion_factor = random.uniform(2.0, 2.2)  # Increased from 1.5-1.6
     else:
         # Fog nodes have lower congestion
         if distance <= 100:  # Within 100km
-            congestion_factor = random.uniform(1.0, 1.1)  # Low congestion
+            congestion_factor = random.uniform(1.1, 1.2)  # Increased from 1.0-1.1
         elif distance <= 500:  # Within 500km
-            congestion_factor = random.uniform(1.1, 1.2)  # Moderate congestion
+            congestion_factor = random.uniform(1.2, 1.3)  # Increased from 1.1-1.2
         elif distance <= 1000:  # Within 1000km
-            congestion_factor = random.uniform(1.2, 1.3)  # High congestion
+            congestion_factor = random.uniform(1.4, 1.5)  # Increased from 1.2-1.3
         elif distance <= 2000:  # Within 2000km
-            congestion_factor = random.uniform(1.3, 1.4)  # Very high congestion
+            congestion_factor = random.uniform(1.6, 1.7)  # Increased from 1.3-1.4
         else:  # Long distance
-            congestion_factor = random.uniform(1.4, 1.5)  # Extreme congestion
+            congestion_factor = random.uniform(1.8, 2.0)  # Increased from 1.4-1.5
     
     transmission_time *= congestion_factor
     
@@ -248,6 +248,10 @@ def calculate_transmission_time(task_location, fog_location, fog_node, task_size
     
     # Total transmission time is sum of transmission time and propagation delay
     total_time = transmission_time + propagation_delay
+    
+    # Double the total time for cloud nodes
+    if is_cloud:
+        total_time *= 2
     
     # Log debug information if logger is provided
     if logger:
