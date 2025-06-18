@@ -8,7 +8,8 @@ from config import CLOUD_SERVICES_CONFIG
 from utility import (
     calculate_processing_time,
     calculate_transmission_time,
-    validate_location
+    validate_location,
+    calculate_power_consumption
 )
 import time
 import threading
@@ -53,6 +54,8 @@ class CloudNode:
         self.processing = False
         self.lock = threading.Lock()  # Lock for thread-safe resource management
         self.completion_callbacks = []  # List to store completion callbacks
+        self.is_cloud = True  # Flag to identify this as a cloud node
+        self.power_consumption_history = []  # Track power consumption history
         # Each cloud node has its own logger
         self.logger = setup_logger(f'cloud_{name}', f'cloud_{name}.log', sub_directory='cloud')
         
@@ -208,7 +211,24 @@ class CloudNode:
             # Update current load
             self.current_load = (1 - (self.available_mips / self.mips)) * 100
             
-            # Move task to completed list with all its information
+            # Calculate power consumption for this task
+            transmission_time = task_info['transmission_time']
+            load_factor = 1.0 - (self.available_mips / self.mips)  # Current load factor
+            power_info = calculate_power_consumption(
+                transmission_time, 
+                processing_time, 
+                'cloud', 
+                load_factor
+            )
+            
+            # Store power consumption in history
+            self.power_consumption_history.append({
+                'task_name': task['Name'],
+                'timestamp': time.time(),
+                'power_info': power_info
+            })
+            
+            # Move task to completed list with all its information including power consumption
             self.assigned_tasks.remove(task_info)
             completion_info = {
                 'task': task,
@@ -217,7 +237,8 @@ class CloudNode:
                 'completion_time': time.time(),
                 'queue_time': task_info['queue_time'],
                 'cloud_node': self.name,
-                'total_time': processing_time + task_info['transmission_time'] + task_info['queue_time']
+                'total_time': processing_time + task_info['transmission_time'] + task_info['queue_time'],
+                'power_consumption': power_info  # Add power consumption information
             }
             self.completed_tasks.append(completion_info)
             
@@ -225,6 +246,7 @@ class CloudNode:
             self.logger.info(f"Resources released: MIPS={task['MIPS']}, Memory={task['RAM']}, Bandwidth={task['BW']}, Storage={task.get('Storage', 0)}")
             self.logger.info(f"Current load: {self.current_load:.2f}%")
             self.logger.info(f"Completed tasks: {len(self.completed_tasks)}")
+            self.logger.info(f"Power consumption: {power_info['total_energy_wh']:.6f} Wh (Avg: {power_info['avg_power_watts']:.2f} W)")
             
             # Notify about task completion
             self._notify_completion(completion_info)
@@ -265,13 +287,23 @@ class CloudNode:
                 # Calculate queuing time
                 queue_time = time.time() - next_task['queue_entry_time']
                 
-                # Add task with its processing time, transmission time and queue time
+                # Calculate power consumption for this queued task
+                load_factor = 1.0 - (self.available_mips / self.mips)  # Current load factor
+                power_info = calculate_power_consumption(
+                    transmission_time, 
+                    processing_time, 
+                    'cloud', 
+                    load_factor
+                )
+                
+                # Add task with its processing time, transmission time, queue time and power consumption
                 task_info = {
                     'task': next_task,
                     'processing_time': processing_time,
                     'transmission_time': transmission_time,
                     'start_time': time.time(),
-                    'queue_time': queue_time
+                    'queue_time': queue_time,
+                    'power_info': power_info  # Add power consumption information
                 }
                 self.assigned_tasks.append(task_info)
                 
@@ -288,6 +320,7 @@ class CloudNode:
                 self.logger.info(f"Queue time: {queue_time:.2f} seconds")
                 self.logger.info(f"Resources allocated: MIPS={next_task['MIPS']}, Memory={next_task['RAM']}, Bandwidth={next_task['BW']}, Storage={next_task.get('Storage', 0)}")
                 self.logger.info(f"Current load: {self.current_load:.2f}%")
+                self.logger.info(f"Power consumption: {power_info['total_energy_wh']:.6f} Wh (Avg: {power_info['avg_power_watts']:.2f} W)")
                 
                 # Start task processing in a new thread
                 processing_thread = threading.Thread(
@@ -308,7 +341,7 @@ class CloudNode:
             dict: Current status information including resource usage and performance metrics
         """
         avg_processing_time = sum(self.processing_times) / len(self.processing_times) if self.processing_times else 0
-        avg_queue_time = sum(task['queue_time'] for task in self.completed_tasks) / len(self.completed_tasks) if self.completed_tasks else 0
+        avg_queue_time = sum(task['queue_time'] for task in self.completed_tasks) if self.completed_tasks else 0
         avg_transmission_time = sum(self.transmission_times) / len(self.transmission_times) if self.transmission_times else 0
         
         # Calculate used resources
@@ -316,6 +349,14 @@ class CloudNode:
         memory_used = self.memory - self.available_memory
         bandwidth_used = self.bandwidth - self.available_bandwidth
         storage_used = self.storage - self.available_storage
+        
+        # Calculate power consumption metrics
+        total_energy_wh = 0
+        avg_power_watts = 0
+        if self.completed_tasks:
+            total_energy_wh = sum(task.get('power_consumption', {}).get('total_energy_wh', 0) for task in self.completed_tasks)
+            total_time = sum(task.get('power_consumption', {}).get('total_time', 0) for task in self.completed_tasks)
+            avg_power_watts = (total_energy_wh * 3600) / total_time if total_time > 0 else 0
         
         # Calculate ready time based on assigned tasks
         ready_time = 0
@@ -350,7 +391,10 @@ class CloudNode:
             'average_processing_time': f"{avg_processing_time:.2f} seconds",
             'average_queue_time': f"{avg_queue_time:.2f} seconds",
             'average_transmission_time': f"{avg_transmission_time:.2f} seconds",
-            'ready_time': ready_time  # Add ready time to status
+            'ready_time': ready_time,  # Add ready time to status
+            'total_energy_consumed_wh': f"{total_energy_wh:.6f}",
+            'average_power_consumption_watts': f"{avg_power_watts:.2f}",
+            'energy_per_task_wh': f"{total_energy_wh / len(self.completed_tasks):.6f}" if self.completed_tasks else "0.000000"
         }
         
         self.logger.debug(f"Status of {self.name}:")

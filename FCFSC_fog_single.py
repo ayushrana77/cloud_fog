@@ -10,7 +10,7 @@ import time
 import random
 from task_load import read_and_log_tuples
 from config import FOG_NODES_CONFIG, CLOUD_SERVICES_CONFIG
-from utility import calculate_distance, calculate_storage_requirements, calculate_transmission_time
+from utility import calculate_distance, calculate_storage_requirements, calculate_transmission_time, calculate_power_consumption
 from fog_single import get_fog_node, get_fog_node_status, get_all_fog_nodes
 from cloud import get_cloud_node, get_cloud_node_status, get_all_cloud_nodes
 from logger import setup_logger
@@ -142,6 +142,9 @@ def process_fcfs(tasks):
             wait_time = time.time() - task_deferral_times[task_name]
             del task_deferral_times[task_name]
         
+        # Get power consumption information
+        power_info = completion_info.get('power_consumption', {})
+        
         # Store completion information
         task_completion_info[task_name] = {
             'node': node_name,
@@ -151,6 +154,7 @@ def process_fcfs(tasks):
             'total_time': completion_info.get('total_time', 0) + wait_time,
             'completion_time': completion_info.get('completion_time', 0),
             'storage_used': task.get('Storage', 0),
+            'power_consumption': power_info,  # Add power consumption information
             'task': task  # Store the complete task information
         }
         
@@ -163,6 +167,9 @@ def process_fcfs(tasks):
         fcfsc_logger.info(f"  Processing Time: {completion_info.get('processing_time', 0):.2f}s")
         fcfsc_logger.info(f"  Storage Used: {task.get('Storage', 0):.2f}GB")
         fcfsc_logger.info(f"  Total Time: {task_completion_info[task_name]['total_time']:.2f}s")
+        if power_info:
+            fcfsc_logger.info(f"  Power Consumption: {power_info.get('total_energy_wh', 0):.6f} Wh")
+            fcfsc_logger.info(f"  Average Power: {power_info.get('avg_power_watts', 0):.2f} W")
         fcfsc_logger.info("  " + "-" * 30)
         
         if task_name in deferred_tasks_info:
@@ -394,6 +401,10 @@ def process_fcfs(tasks):
         total_size = sum(info['task']['Size'] for info in task_completion_info.values())
         total_bandwidth = sum(info['task']['BW'] for info in task_completion_info.values())
         
+        # Calculate total power consumption
+        total_energy_wh = sum(info.get('power_consumption', {}).get('total_energy_wh', 0) for info in task_completion_info.values())
+        total_power_watts = sum(info.get('power_consumption', {}).get('avg_power_watts', 0) for info in task_completion_info.values())
+        
         # Calculate Overall Statistics
         total_transmission = sum(info.get('transmission_time', 0) for info in task_completion_info.values())
         total_processing = sum(info.get('processing_time', 0) for info in task_completion_info.values())
@@ -411,12 +422,16 @@ def process_fcfs(tasks):
             cloud_workload = sum(info['task']['MIPS'] * info.get('processing_time', 0) for info in cloud_tasks)
             cloud_size = sum(info['task']['Size'] for info in cloud_tasks)
             cloud_bandwidth = sum(info['task']['BW'] for info in cloud_tasks)
+            cloud_energy = sum(info.get('power_consumption', {}).get('total_energy_wh', 0) for info in cloud_tasks)
+            cloud_power = sum(info.get('power_consumption', {}).get('avg_power_watts', 0) for info in cloud_tasks)
             
             # Calculate workload per cloud node
             cloud_node_workloads = {}
             cloud_node_storage = {}
             cloud_node_size = {}
             cloud_node_bandwidth = {}
+            cloud_node_energy = {}
+            cloud_node_power = {}
             for info in cloud_tasks:
                 node_name = info['node']
                 if node_name not in cloud_node_workloads:
@@ -424,10 +439,14 @@ def process_fcfs(tasks):
                     cloud_node_storage[node_name] = 0
                     cloud_node_size[node_name] = 0
                     cloud_node_bandwidth[node_name] = 0
+                    cloud_node_energy[node_name] = 0
+                    cloud_node_power[node_name] = 0
                 cloud_node_workloads[node_name] += info['task']['MIPS'] * info.get('processing_time', 0)
                 cloud_node_storage[node_name] += info.get('storage_used', 0)
                 cloud_node_size[node_name] += info['task']['Size']
                 cloud_node_bandwidth[node_name] += info['task']['BW']
+                cloud_node_energy[node_name] += info.get('power_consumption', {}).get('total_energy_wh', 0)
+                cloud_node_power[node_name] += info.get('power_consumption', {}).get('avg_power_watts', 0)
             
             avg_cloud_transmission = cloud_transmission / len(cloud_tasks)
             avg_cloud_processing = cloud_processing / len(cloud_tasks)
@@ -437,6 +456,8 @@ def process_fcfs(tasks):
             avg_cloud_workload = cloud_workload / len(cloud_tasks)
             avg_cloud_size = cloud_size / len(cloud_tasks)
             avg_cloud_bandwidth = cloud_bandwidth / len(cloud_tasks)
+            avg_cloud_energy = cloud_energy / len(cloud_tasks)
+            avg_cloud_power = cloud_power / len(cloud_tasks)
         
         # Calculate Fog Statistics
         if fog_tasks:
@@ -448,12 +469,16 @@ def process_fcfs(tasks):
             fog_workload = sum(info['task']['MIPS'] * info.get('processing_time', 0) for info in fog_tasks)
             fog_size = sum(info['task']['Size'] for info in fog_tasks)
             fog_bandwidth = sum(info['task']['BW'] for info in fog_tasks)
+            fog_energy = sum(info.get('power_consumption', {}).get('total_energy_wh', 0) for info in fog_tasks)
+            fog_power = sum(info.get('power_consumption', {}).get('avg_power_watts', 0) for info in fog_tasks)
             
             # Calculate workload per fog node
             fog_node_workloads = {}
             fog_node_storage = {}
             fog_node_size = {}
             fog_node_bandwidth = {}
+            fog_node_energy = {}
+            fog_node_power = {}
             for info in fog_tasks:
                 node_name = info['node']
                 if node_name not in fog_node_workloads:
@@ -461,10 +486,14 @@ def process_fcfs(tasks):
                     fog_node_storage[node_name] = 0
                     fog_node_size[node_name] = 0
                     fog_node_bandwidth[node_name] = 0
+                    fog_node_energy[node_name] = 0
+                    fog_node_power[node_name] = 0
                 fog_node_workloads[node_name] += info['task']['MIPS'] * info.get('processing_time', 0)
                 fog_node_storage[node_name] += info.get('storage_used', 0)
                 fog_node_size[node_name] += info['task']['Size']
                 fog_node_bandwidth[node_name] += info['task']['BW']
+                fog_node_energy[node_name] += info.get('power_consumption', {}).get('total_energy_wh', 0)
+                fog_node_power[node_name] += info.get('power_consumption', {}).get('avg_power_watts', 0)
             
             avg_fog_transmission = fog_transmission / len(fog_tasks)
             avg_fog_processing = fog_processing / len(fog_tasks)
@@ -474,6 +503,8 @@ def process_fcfs(tasks):
             avg_fog_workload = fog_workload / len(fog_tasks)
             avg_fog_size = fog_size / len(fog_tasks)
             avg_fog_bandwidth = fog_bandwidth / len(fog_tasks)
+            avg_fog_energy = fog_energy / len(fog_tasks)
+            avg_fog_power = fog_power / len(fog_tasks)
         
         # Calculate averages for overall statistics
         avg_transmission = total_transmission / len(task_completion_info) if task_completion_info else 0
@@ -484,6 +515,8 @@ def process_fcfs(tasks):
         avg_workload = total_workload / len(task_completion_info) if task_completion_info else 0
         avg_size = total_size / len(task_completion_info) if task_completion_info else 0
         avg_bandwidth = total_bandwidth / len(task_completion_info) if task_completion_info else 0
+        avg_energy = total_energy_wh / len(task_completion_info) if task_completion_info else 0
+        avg_power = total_power_watts / len(task_completion_info) if task_completion_info else 0
         
         # Log Overall Statistics
         fcfsc_logger.info("\n=== Overall Statistics ===")
@@ -500,6 +533,11 @@ def process_fcfs(tasks):
         fcfsc_logger.info(f"  Average Storage per Task: {avg_storage:.2f} GB")
         fcfsc_logger.info(f"  Average Size per Task: {avg_size:.2f} MI")
         fcfsc_logger.info(f"  Average Bandwidth per Task: {avg_bandwidth:.2f} Mbps")
+        fcfsc_logger.info("\nPower Consumption:")
+        fcfsc_logger.info(f"  Total Energy Consumed: {total_energy_wh:.6f} Wh")
+        fcfsc_logger.info(f"  Total Power Used: {total_power_watts:.2f} W")
+        fcfsc_logger.info(f"  Average Energy per Task: {avg_energy:.6f} Wh")
+        fcfsc_logger.info(f"  Average Power per Task: {avg_power:.2f} W")
         fcfsc_logger.info("\nTransmission Time:")
         fcfsc_logger.info(f"  Total: {total_transmission*1000:.6f}ms")
         fcfsc_logger.info(f"  Average: {avg_transmission*1000:.6f}ms")
@@ -527,6 +565,11 @@ def process_fcfs(tasks):
             fcfsc_logger.info(f"  Average Storage per Fog Task: {avg_fog_storage:.2f} GB")
             fcfsc_logger.info(f"  Average Size per Fog Task: {avg_fog_size:.2f} MI")
             fcfsc_logger.info(f"  Average Bandwidth per Fog Task: {avg_fog_bandwidth:.2f} Mbps")
+            fcfsc_logger.info("\nPower Consumption:")
+            fcfsc_logger.info(f"  Total Fog Energy Consumed: {fog_energy:.6f} Wh")
+            fcfsc_logger.info(f"  Total Fog Power Used: {fog_power:.2f} W")
+            fcfsc_logger.info(f"  Average Energy per Fog Task: {avg_fog_energy:.6f} Wh")
+            fcfsc_logger.info(f"  Average Power per Fog Task: {avg_fog_power:.2f} W")
             fcfsc_logger.info("\nPer Node Statistics:")
             for node_name in fog_node_workloads:
                 fcfsc_logger.info(f"\n  {node_name}:")
@@ -534,6 +577,8 @@ def process_fcfs(tasks):
                 fcfsc_logger.info(f"    Storage Used: {fog_node_storage[node_name]:.2f} GB")
                 fcfsc_logger.info(f"    Data Size: {fog_node_size[node_name]:.2f} MI")
                 fcfsc_logger.info(f"    Bandwidth Used: {fog_node_bandwidth[node_name]:.2f} Mbps")
+                fcfsc_logger.info(f"    Energy Consumed: {fog_node_energy[node_name]:.6f} Wh")
+                fcfsc_logger.info(f"    Power Used: {fog_node_power[node_name]:.2f} W")
             fcfsc_logger.info("\nTransmission Time:")
             fcfsc_logger.info(f"  Total: {fog_transmission*1000:.6f}ms")
             fcfsc_logger.info(f"  Average: {avg_fog_transmission*1000:.6f}ms")
@@ -561,6 +606,11 @@ def process_fcfs(tasks):
             fcfsc_logger.info(f"  Average Storage per Cloud Task: {avg_cloud_storage:.2f} GB")
             fcfsc_logger.info(f"  Average Size per Cloud Task: {avg_cloud_size:.2f} MI")
             fcfsc_logger.info(f"  Average Bandwidth per Cloud Task: {avg_cloud_bandwidth:.2f} Mbps")
+            fcfsc_logger.info("\nPower Consumption:")
+            fcfsc_logger.info(f"  Total Cloud Energy Consumed: {cloud_energy:.6f} Wh")
+            fcfsc_logger.info(f"  Total Cloud Power Used: {cloud_power:.2f} W")
+            fcfsc_logger.info(f"  Average Energy per Cloud Task: {avg_cloud_energy:.6f} Wh")
+            fcfsc_logger.info(f"  Average Power per Cloud Task: {avg_cloud_power:.2f} W")
             fcfsc_logger.info("\nPer Node Statistics:")
             for node_name in cloud_node_workloads:
                 fcfsc_logger.info(f"\n  {node_name}:")
@@ -568,6 +618,8 @@ def process_fcfs(tasks):
                 fcfsc_logger.info(f"    Storage Used: {cloud_node_storage[node_name]:.2f} GB")
                 fcfsc_logger.info(f"    Data Size: {cloud_node_size[node_name]:.2f} MI")
                 fcfsc_logger.info(f"    Bandwidth Used: {cloud_node_bandwidth[node_name]:.2f} Mbps")
+                fcfsc_logger.info(f"    Energy Consumed: {cloud_node_energy[node_name]:.6f} Wh")
+                fcfsc_logger.info(f"    Power Used: {cloud_node_power[node_name]:.2f} W")
             fcfsc_logger.info("\nTransmission Time:")
             fcfsc_logger.info(f"  Total: {cloud_transmission*1000:.6f}ms")
             fcfsc_logger.info(f"  Average: {avg_cloud_transmission*1000:.6f}ms")

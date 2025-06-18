@@ -413,3 +413,122 @@ def calculate_processing_time(task_size_mi, processing_power_mips):
     total_time *= variation
     
     return total_time
+
+def calculate_power_consumption(transmission_time, processing_time, node_type='fog', load_factor=1.0):
+    """
+    Calculate power consumption for a task based on transmission and processing times.
+    
+    Args:
+        transmission_time (float): Time spent in transmission (seconds)
+        processing_time (float): Time spent in processing (seconds)
+        node_type (str): Type of node ('fog' or 'cloud')
+        load_factor (float): Current load factor (0.0 to 1.0) affecting power consumption
+        
+    Returns:
+        dict: Power consumption details including total energy in watt-hours
+    """
+    from config import (
+        FOG_NODE_IDLE_POWER, FOG_NODE_ACTIVE_POWER, FOG_NODE_TRANSMISSION_POWER, FOG_POWER_EFFICIENCY,
+        CLOUD_NODE_IDLE_POWER, CLOUD_NODE_ACTIVE_POWER, CLOUD_NODE_TRANSMISSION_POWER, CLOUD_POWER_EFFICIENCY
+    )
+    
+    if node_type.lower() == 'fog':
+        idle_power = FOG_NODE_IDLE_POWER
+        active_power = FOG_NODE_ACTIVE_POWER
+        transmission_power = FOG_NODE_TRANSMISSION_POWER
+        efficiency = FOG_POWER_EFFICIENCY
+    else:  # cloud
+        idle_power = CLOUD_NODE_IDLE_POWER
+        active_power = CLOUD_NODE_ACTIVE_POWER
+        transmission_power = CLOUD_NODE_TRANSMISSION_POWER
+        efficiency = CLOUD_POWER_EFFICIENCY
+    
+    # Calculate power consumption during different phases
+    # Transmission phase: idle power + transmission power
+    transmission_power_consumed = (idle_power + transmission_power) * load_factor / efficiency
+    
+    # Processing phase: idle power + active power
+    processing_power_consumed = (idle_power + active_power) * load_factor / efficiency
+    
+    # Calculate energy consumption (Power × Time = Energy)
+    transmission_energy = transmission_power_consumed * transmission_time  # watt-seconds
+    processing_energy = processing_power_consumed * processing_time  # watt-seconds
+    
+    # Convert to watt-hours for better readability
+    transmission_energy_wh = transmission_energy / 3600  # Convert seconds to hours
+    processing_energy_wh = processing_energy / 3600  # Convert seconds to hours
+    total_energy_wh = transmission_energy_wh + processing_energy_wh
+    
+    # Calculate average power consumption
+    total_time = transmission_time + processing_time
+    if total_time > 0:
+        avg_power = (transmission_energy + processing_energy) / total_time
+    else:
+        avg_power = 0
+    
+    return {
+        'transmission_power_watts': transmission_power_consumed,
+        'processing_power_watts': processing_power_consumed,
+        'transmission_energy_wh': transmission_energy_wh,
+        'processing_energy_wh': processing_energy_wh,
+        'total_energy_wh': total_energy_wh,
+        'total_energy_joules': transmission_energy + processing_energy,
+        'avg_power_watts': avg_power,
+        'transmission_time': transmission_time,
+        'processing_time': processing_time,
+        'total_time': total_time,
+        'node_type': node_type,
+        'load_factor': load_factor,
+        'efficiency': efficiency
+    }
+
+def calculate_node_power_metrics(node, completed_tasks):
+    """
+    Calculate power consumption metrics for a node based on completed tasks.
+    
+    Args:
+        node: Node object (fog or cloud)
+        completed_tasks (list): List of completed task information
+        
+    Returns:
+        dict: Power consumption metrics for the node
+    """
+    if not completed_tasks:
+        return {
+            'total_energy_wh': 0,
+            'avg_power_watts': 0,
+            'total_tasks': 0,
+            'energy_per_task_wh': 0
+        }
+    
+    node_type = 'fog' if hasattr(node, 'is_fog') and node.is_fog else 'cloud'
+    total_energy_wh = 0
+    total_time = 0
+    
+    for task_info in completed_tasks:
+        transmission_time = task_info.get('transmission_time', 0)
+        processing_time = task_info.get('processing_time', 0)
+        
+        # Calculate load factor based on current node utilization
+        load_factor = 1.0 - (node.available_mips / node.mips) if hasattr(node, 'available_mips') and hasattr(node, 'mips') else 1.0
+        
+        power_info = calculate_power_consumption(
+            transmission_time, 
+            processing_time, 
+            node_type, 
+            load_factor
+        )
+        
+        total_energy_wh += power_info['total_energy_wh']
+        total_time += power_info['total_time']
+    
+    avg_power_watts = (total_energy_wh * 3600) / total_time if total_time > 0 else 0
+    energy_per_task_wh = total_energy_wh / len(completed_tasks) if completed_tasks else 0
+    
+    return {
+        'total_energy_wh': total_energy_wh,
+        'avg_power_watts': avg_power_watts,
+        'total_tasks': len(completed_tasks),
+        'energy_per_task_wh': energy_per_task_wh,
+        'total_time': total_time
+    }

@@ -10,6 +10,19 @@ MAX_SIMULATION_TIME = 100  # seconds (100k tuples / 1000 per second = 100 second
 EARTH_RADIUS_KM = 6371.0  # Earth's radius in kilometers
 SPEED_OF_LIGHT = 200000  # Speed of light in fiber optic cable (km/s)
 
+# Power consumption parameters (in watts)
+FOG_NODE_IDLE_POWER = 50  # Fog node power consumption when idle
+FOG_NODE_ACTIVE_POWER = 150  # Fog node power consumption when processing
+FOG_NODE_TRANSMISSION_POWER = 25  # Fog node power consumption during transmission
+
+CLOUD_NODE_IDLE_POWER = 200  # Cloud node power consumption when idle
+CLOUD_NODE_ACTIVE_POWER = 800  # Cloud node power consumption when processing
+CLOUD_NODE_TRANSMISSION_POWER = 100  # Cloud node power consumption during transmission
+
+# Power efficiency factors
+FOG_POWER_EFFICIENCY = 0.85  # Fog nodes are more power efficient
+CLOUD_POWER_EFFICIENCY = 0.75  # Cloud nodes are less power efficient due to higher performance
+
 # Variability parameters
 NETWORK_CONGESTION_MIN = 0.6
 NETWORK_CONGESTION_MAX = 1.5
