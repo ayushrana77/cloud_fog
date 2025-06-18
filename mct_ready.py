@@ -425,23 +425,23 @@ def process_mct(tasks):
                         task_assigned = True
                 else:
                     # Fog is better, try fog
-                    success, processing_time = fog_node.assign_task(task)
-                    if success:
-                        mct_logger.info(f"Task successfully assigned to fog node {fog_node.name}")
-                        print(f"\nTask assigned to fog node {fog_node.name}")
-                        task_assigned = True
-                    else:
+                success, processing_time = fog_node.assign_task(task)
+                if success:
+                    mct_logger.info(f"Task successfully assigned to fog node {fog_node.name}")
+                    print(f"\nTask assigned to fog node {fog_node.name}")
+                    task_assigned = True
+                else:
                         # Queue at fog
-                        mct_logger.info(f"Task queued at fog node {fog_node.name}")
-                        print(f"\nTask queued at fog node {fog_node.name}")
-                        task_queue_times[task['Name']] = time.time()
-                        queued_tasks_info[task['Name']] = {
-                            'node': fog_node.name,
-                            'node_type': 'Fog',
+                    mct_logger.info(f"Task queued at fog node {fog_node.name}")
+                    print(f"\nTask queued at fog node {fog_node.name}")
+                    task_queue_times[task['Name']] = time.time()
+                    queued_tasks_info[task['Name']] = {
+                        'node': fog_node.name,
+                        'node_type': 'Fog',
                             'completion_time': fog_completion_time,
-                            'queue_position': len(fog_node.task_queue)
-                        }
-                        task_assigned = True
+                        'queue_position': len(fog_node.task_queue)
+                    }
+                    task_assigned = True
         
         # If not assigned to fog or if it's a cloud task, try cloud nodes
         if not task_assigned:

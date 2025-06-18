@@ -1,7 +1,8 @@
 """
-FCFS (First Come First Serve) Task Scheduling Implementation
+FCFS (First Come First Serve) Task Scheduling with Single-Task Fog Nodes
 This module implements a hybrid fog-cloud task scheduling algorithm using the FCFS approach.
 Tasks are processed in the order they arrive, with consideration for fog and cloud resources.
+This version uses single-task fog nodes that only process one task at a time with no queuing.
 """
 
 import json
