@@ -362,15 +362,20 @@ class CloudNode:
         ready_time = 0
         current_time = time.time()
         if self.assigned_tasks:
-            latest_completion = max(
-                task_info['start_time'] + task_info['processing_time']
-                for task_info in self.assigned_tasks
-            )
-            ready_time = max(0, latest_completion - current_time)
-            self.logger.info(f"Node {self.name} is busy with {len(self.assigned_tasks)} tasks")
-            self.logger.info(f"Latest task completion time: {latest_completion}")
-            self.logger.info(f"Current time: {current_time}")
-            self.logger.info(f"Calculated ready time: {ready_time*1000:.2f}ms")
+            try:
+                latest_completion = max(
+                    task_info['start_time'] + task_info['processing_time']
+                    for task_info in self.assigned_tasks
+                )
+                ready_time = max(0, latest_completion - current_time)
+                self.logger.info(f"Node {self.name} is busy with {len(self.assigned_tasks)} tasks")
+                self.logger.info(f"Latest task completion time: {latest_completion}")
+                self.logger.info(f"Current time: {current_time}")
+                self.logger.info(f"Calculated ready time: {ready_time*1000:.2f}ms")
+            except ValueError:
+                # Handle case where assigned_tasks list becomes empty during iteration
+                self.logger.info(f"Node {self.name} is idle (assigned_tasks became empty), ready time: 0ms")
+                ready_time = 0
         else:
             self.logger.info(f"Node {self.name} is idle, ready time: 0ms")
         

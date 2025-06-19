@@ -11,7 +11,7 @@ def read_and_log_tuples():
     
     try:
         # Read the JSON file and store in data structure
-        with open('Tuple5K_modified.json', 'r', encoding='utf-8-sig') as file:
+        with open('Tuple50K_modified.json', 'r', encoding='utf-8-sig') as file:
             task_list = json.load(file)
             print(f"Successfully loaded {len(task_list)} tasks")
             

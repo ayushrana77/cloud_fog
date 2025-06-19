@@ -274,6 +274,17 @@ class FogNode:
                 processing_time = calculate_processing_time(next_task['Size'], self.mips)
                 self.processing_times.append(processing_time)
                 
+                # Calculate transmission time for this queued task
+                transmission_time = calculate_transmission_time(
+                    next_task['GeoLocation'],
+                    self.location,
+                    self,
+                    next_task.get('Size'),
+                    next_task.get('MIPS'),
+                    self.logger
+                )
+                self.transmission_times.append(transmission_time)
+                
                 # Calculate queuing time
                 queue_time = time.time() - next_task['queue_entry_time']
                 

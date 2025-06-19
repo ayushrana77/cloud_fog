@@ -9,7 +9,8 @@ from config import FOG_NODES_CONFIG
 from utility import (
     calculate_processing_time,
     calculate_transmission_time,
-    validate_location
+    validate_location,
+    calculate_power_consumption
 )
 import time
 import threading
@@ -157,6 +158,15 @@ class SingleTaskFogNode:
             # Calculate total time
             completion_time = time.time()
             
+            # Calculate power consumption for this task
+            load_factor = 1.0  # Single-task mode, always at full load when processing
+            power_info = calculate_power_consumption(
+                transmission_time, 
+                processing_time, 
+                'fog', 
+                load_factor
+            )
+            
             # Prepare completion info
             completion_info = {
                 'task': task,
@@ -164,7 +174,8 @@ class SingleTaskFogNode:
                 'transmission_time': transmission_time,
                 'queue_time': 0,  # No queue in single-task mode
                 'completion_time': completion_time,
-                'total_time': processing_time + transmission_time
+                'total_time': processing_time + transmission_time,
+                'power_consumption': power_info  # Add power consumption information
             }
             
             # Notify completion
@@ -176,6 +187,7 @@ class SingleTaskFogNode:
             
             self.logger.info(f"Task {task['Name']} completed on {self.name}")
             self.logger.info(f"Total processing time: {processing_time:.2f} seconds")
+            self.logger.info(f"Power consumption: {power_info['total_energy_wh']:.6f} Wh (Avg: {power_info['avg_power_watts']:.2f} W)")
             
         except Exception as e:
             self.logger.error(f"Error processing task: {str(e)}")

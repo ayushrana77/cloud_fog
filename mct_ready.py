@@ -210,15 +210,20 @@ def calculate_cloud_completion_time(task, cloud_node, distance, task_queue_times
     # Check if node is busy with current tasks
     if cloud_node.assigned_tasks:
         # Find the latest completion time among current tasks
-        latest_completion = max(
-            task_info['start_time'] + task_info['processing_time']
-            for task_info in cloud_node.assigned_tasks
-        )
-        ready_time = max(0, latest_completion - current_time)
-        mct_logger.info(f"Node {cloud_node.name} is busy with {len(cloud_node.assigned_tasks)} tasks")
-        mct_logger.info(f"Latest task completion time: {latest_completion}")
-        mct_logger.info(f"Current time: {current_time}")
-        mct_logger.info(f"Calculated ready time: {ready_time*1000:.2f}ms")
+        try:
+            latest_completion = max(
+                task_info['start_time'] + task_info['processing_time']
+                for task_info in cloud_node.assigned_tasks
+            )
+            ready_time = max(0, latest_completion - current_time)
+            mct_logger.info(f"Node {cloud_node.name} is busy with {len(cloud_node.assigned_tasks)} tasks")
+            mct_logger.info(f"Latest task completion time: {latest_completion}")
+            mct_logger.info(f"Current time: {current_time}")
+            mct_logger.info(f"Calculated ready time: {ready_time*1000:.2f}ms")
+        except ValueError:
+            # Handle case where assigned_tasks list becomes empty during iteration
+            mct_logger.info(f"Node {cloud_node.name} is idle (assigned_tasks became empty), ready time: 0ms")
+            ready_time = 0
     else:
         mct_logger.info(f"Node {cloud_node.name} is idle, ready time: 0ms")
     
@@ -525,11 +530,15 @@ def process_mct(tasks):
                 ready_time = 0
                 current_time = time.time()
                 if cloud_node.assigned_tasks:
-                    latest_completion = max(
-                        task_info['start_time'] + task_info['processing_time']
-                        for task_info in cloud_node.assigned_tasks
-                    )
-                    ready_time = max(0, latest_completion - current_time)
+                    try:
+                        latest_completion = max(
+                            task_info['start_time'] + task_info['processing_time']
+                            for task_info in cloud_node.assigned_tasks
+                        )
+                        ready_time = max(0, latest_completion - current_time)
+                    except ValueError:
+                        # Handle case where assigned_tasks list becomes empty during iteration
+                        ready_time = 0
                 print(f"\nReady Time: {ready_time*1000:.2f}ms")
                 print(f"  - Current Load: {status.get('current_load', '0%')}")
                 print(f"  - Available MIPS: {status.get('available_mips', cloud_node.mips)}")
