@@ -213,10 +213,12 @@ class CloudNode:
             
             # Calculate power consumption for this task
             transmission_time = task_info['transmission_time']
+            queue_time = task_info.get('queue_time', 0)
             load_factor = 1.0 - (self.available_mips / self.mips)  # Current load factor
             power_info = calculate_power_consumption(
                 transmission_time, 
                 processing_time, 
+                queue_time,
                 'cloud', 
                 load_factor
             )
@@ -292,6 +294,7 @@ class CloudNode:
                 power_info = calculate_power_consumption(
                     transmission_time, 
                     processing_time, 
+                    queue_time,
                     'cloud', 
                     load_factor
                 )

@@ -414,13 +414,14 @@ def calculate_processing_time(task_size_mi, processing_power_mips):
     
     return total_time
 
-def calculate_power_consumption(transmission_time, processing_time, node_type='fog', load_factor=1.0):
+def calculate_power_consumption(transmission_time, processing_time, queue_time=0, node_type='fog', load_factor=1.0):
     """
-    Calculate power consumption for a task based on transmission and processing times.
+    Calculate power consumption for a task based on transmission, processing, and queue times.
     
     Args:
         transmission_time (float): Time spent in transmission (seconds)
         processing_time (float): Time spent in processing (seconds)
+        queue_time (float): Time spent in queue (seconds)
         node_type (str): Type of node ('fog' or 'cloud')
         load_factor (float): Current load factor (0.0 to 1.0) affecting power consumption
         
@@ -446,23 +447,26 @@ def calculate_power_consumption(transmission_time, processing_time, node_type='f
     # Calculate power consumption during different phases
     # Transmission phase: idle power + transmission power
     transmission_power_consumed = (idle_power + transmission_power) * load_factor / efficiency
-    
     # Processing phase: idle power + active power
     processing_power_consumed = (idle_power + active_power) * load_factor / efficiency
     
-    # Calculate energy consumption (Power × Time = Energy)
+    # Energy = Power × Time
     transmission_energy = transmission_power_consumed * transmission_time  # watt-seconds
     processing_energy = processing_power_consumed * processing_time  # watt-seconds
     
+    # Queue phase: idle power only (not affected by load factor)
+    queue_energy = idle_power * queue_time  # watt-seconds
+    
     # Convert to watt-hours for better readability
-    transmission_energy_wh = transmission_energy / 3600  # Convert seconds to hours
-    processing_energy_wh = processing_energy / 3600  # Convert seconds to hours
-    total_energy_wh = transmission_energy_wh + processing_energy_wh
+    transmission_energy_wh = transmission_energy / 3600
+    processing_energy_wh = processing_energy / 3600
+    queue_energy_wh = queue_energy / 3600
+    total_energy_wh = transmission_energy_wh + processing_energy_wh + queue_energy_wh
     
     # Calculate average power consumption
-    total_time = transmission_time + processing_time
+    total_time = transmission_time + processing_time + queue_time
     if total_time > 0:
-        avg_power = (transmission_energy + processing_energy) / total_time
+        avg_power = (transmission_energy + processing_energy + queue_energy) / total_time
     else:
         avg_power = 0
     
@@ -471,11 +475,13 @@ def calculate_power_consumption(transmission_time, processing_time, node_type='f
         'processing_power_watts': processing_power_consumed,
         'transmission_energy_wh': transmission_energy_wh,
         'processing_energy_wh': processing_energy_wh,
+        'queue_energy_wh': queue_energy_wh,
         'total_energy_wh': total_energy_wh,
-        'total_energy_joules': transmission_energy + processing_energy,
+        'total_energy_joules': transmission_energy + processing_energy + queue_energy,
         'avg_power_watts': avg_power,
         'transmission_time': transmission_time,
         'processing_time': processing_time,
+        'queue_time': queue_time,
         'total_time': total_time,
         'node_type': node_type,
         'load_factor': load_factor,
