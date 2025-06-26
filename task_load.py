@@ -1,17 +1,25 @@
 import json
 from logger import setup_logger
+import os
 
 # Global variable to store tasks
 task_list = []
+input_file = 'Tuple10.json'  # Default input file
+
+def set_input_file(filename):
+    global input_file
+    input_file = filename
+    print(f"Input file set to: {input_file}")
 
 def read_and_log_tuples():
-    global task_list
+    global task_list, input_file
     # Setup logger
     logger = setup_logger('task_load', 'task_load.log', sub_directory='tasks')
     
     try:
         # Read the JSON file and store in data structure
-        with open('Tuple10.json', 'r', encoding='utf-8-sig') as file:
+        print(f"Loading tasks from {input_file}...")
+        with open(input_file, 'r', encoding='utf-8-sig') as file:
             task_list = json.load(file)
             print(f"Successfully loaded {len(task_list)} tasks")
             
@@ -41,12 +49,12 @@ def read_and_log_tuples():
         return task_list
             
     except FileNotFoundError:
-        print("Error: Tuple50K_modified.json file not found")
-        logger.error("Tuple50K_modified.json file not found")
+        print(f"Error: {input_file} file not found")
+        logger.error(f"{input_file} file not found")
         return []
     except json.JSONDecodeError:
-        print("Error: Invalid JSON format in Tuple50K_modified.json")
-        logger.error("Error decoding JSON file")
+        print(f"Error: Invalid JSON format in {input_file}")
+        logger.error(f"Error decoding JSON file: {input_file}")
         return []
     except Exception as e:
         print(f"Error: {str(e)}")
