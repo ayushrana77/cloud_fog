@@ -63,7 +63,7 @@ FOG_NODES_CONFIG = [
     # Delhi Region
     {
         "name": "Fog-DL1",
-        "mips": 1000,
+        "mips": 1200,
         "bandwidth": 2000,
         "memory": 1024,
         "storage": 1024,
@@ -75,7 +75,7 @@ FOG_NODES_CONFIG = [
     # Gurgaon
     {
         "name": "Fog-GN1",
-        "mips": 1000,
+        "mips": 1200,
         "bandwidth": 2000,
         "memory": 1024,
         "storage": 1024,
@@ -87,7 +87,7 @@ FOG_NODES_CONFIG = [
     # Noida
     {
         "name": "Fog-ND1",
-        "mips": 1000,
+        "mips": 1200,
         "bandwidth": 2000,
         "memory": 1024,
         "storage": 1024,
@@ -99,7 +99,7 @@ FOG_NODES_CONFIG = [
     # Bangalore Region
     {
         "name": "Fog-BL1",
-        "mips": 1000,
+        "mips": 1200,
         "bandwidth": 2000,
         "memory": 1024,
         "storage": 1024,
