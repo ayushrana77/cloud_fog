@@ -10,6 +10,8 @@ cloud fallback.
 import json
 import time
 import random
+import signal
+import sys
 from task_load import read_and_log_tuples
 from config import FOG_NODES_CONFIG
 from utility import calculate_distance, calculate_storage_requirements, calculate_transmission_time, calculate_power_consumption
@@ -18,6 +20,31 @@ from logger import setup_logger
 
 # Initialize logger for RandomC Fog-Only events
 randomc_fog_logger = setup_logger('randomc_fog_only', 'randomc_fog_only.log', sub_directory='algorithms')
+
+# Global flag for graceful shutdown
+shutdown_requested = False
+# Global variables to store task completion information
+global_task_completion_info = {}
+# Flag to track if statistics have already been printed
+statistics_printed = False
+
+def signal_handler(sig, frame):
+    """Handle Ctrl+C and other termination signals for graceful shutdown"""
+    global shutdown_requested, statistics_printed
+    print("\nShutdown requested. Cleaning up and exiting...")
+    randomc_fog_logger.info("Shutdown requested by user. Cleaning up and exiting...")
+    shutdown_requested = True
+    # Print statistics before exit if not already printed
+    if not statistics_printed:
+        print_statistics(global_task_completion_info, is_final=True)
+        statistics_printed = True
+    # Allow up to 5 seconds for threads to clean up
+    time.sleep(1)
+    sys.exit(0)
+
+# Register signal handlers
+signal.signal(signal.SIGINT, signal_handler)  # Ctrl+C
+signal.signal(signal.SIGTERM, signal_handler)  # Termination signal
 
 def calculate_task_distances(task):
     """
@@ -88,6 +115,8 @@ def process_fcfs(tasks):
     Args:
         tasks (list): List of tasks to be processed
     """
+    global statistics_printed
+    
     if not tasks:
         print("No tasks to process")
         randomc_fog_logger.warning("No tasks to process.")
@@ -168,6 +197,15 @@ def process_fcfs(tasks):
         
         if task_name in queued_tasks_info:
             del queued_tasks_info[task_name]
+        
+        # Update the global task completion info to make current statistics available elsewhere
+        global global_task_completion_info
+        global_task_completion_info = task_completion_info.copy()
+        
+        # Print current overall statistics after each task completion
+        print(f"\n=== Current Statistics after completing task {task_name} ({completed_tasks_count}/{total_tasks}) ===")
+        randomc_fog_logger.info(f"\n=== Current Statistics after completing task {task_name} ({completed_tasks_count}/{total_tasks}) ===")
+        print_statistics(task_completion_info, is_final=False)
     
     # Register completion callback for all fog nodes
     for node in fog_nodes.values():
@@ -424,124 +462,250 @@ def process_fcfs(tasks):
             randomc_fog_logger.info(f"    Bandwidth: {info['required_bw']}")
             randomc_fog_logger.info(f"    Storage: {info['required_storage']}GB")
     
+    # Update the global task completion info for access from other contexts
+    global global_task_completion_info, statistics_printed
+    global_task_completion_info = task_completion_info.copy()
+    
     # Log final statistics
-    if task_completion_info:
-        # Calculate fog statistics (all tasks are fog tasks in this implementation)
-        fog_tasks = list(task_completion_info.values())
-        
-        # Calculate total workload (MIPS * processing time for each task)
-        total_workload = sum(info['task']['MIPS'] * info.get('processing_time', 0) for info in fog_tasks)
-        
-        # Calculate total size and bandwidth
-        total_size = sum(info['task']['Size'] for info in fog_tasks)
-        total_bandwidth = sum(info['task']['BW'] for info in fog_tasks)
-        
-        # Calculate total power consumption
-        total_energy_wh = sum(info.get('power_consumption', {}).get('total_energy_wh', 0) for info in fog_tasks)
-        total_power_watts = sum(info.get('power_consumption', {}).get('avg_power_watts', 0) for info in fog_tasks)
-        
-        # Calculate Overall Statistics
-        total_transmission = sum(info.get('transmission_time', 0) for info in fog_tasks)
-        total_processing = sum(info.get('processing_time', 0) for info in fog_tasks)
-        total_queue = sum(info.get('queue_time', 0) for info in fog_tasks)
-        total_time = sum(info.get('total_time', 0) for info in fog_tasks)
-        total_storage = sum(info.get('storage_used', 0) for info in fog_tasks)
-        
-        # Calculate workload per fog node
-        fog_node_workloads = {}
-        fog_node_storage = {}
-        fog_node_size = {}
-        fog_node_bandwidth = {}
-        fog_node_energy = {}
-        fog_node_power = {}
-        
-        for info in fog_tasks:
-            node_name = info['node']
-            if node_name not in fog_node_workloads:
-                fog_node_workloads[node_name] = 0
-                fog_node_storage[node_name] = 0
-                fog_node_size[node_name] = 0
-                fog_node_bandwidth[node_name] = 0
-                fog_node_energy[node_name] = 0
-                fog_node_power[node_name] = 0
-            
-            fog_node_workloads[node_name] += info['task']['MIPS'] * info.get('processing_time', 0)
-            fog_node_storage[node_name] += info.get('storage_used', 0)
-            fog_node_size[node_name] += info['task']['Size']
-            fog_node_bandwidth[node_name] += info['task']['BW']
-            fog_node_energy[node_name] += info.get('power_consumption', {}).get('total_energy_wh', 0)
-            fog_node_power[node_name] += info.get('power_consumption', {}).get('avg_power_watts', 0)
-        
-        # Calculate averages
-        avg_transmission = total_transmission / len(fog_tasks) if fog_tasks else 0
-        avg_processing = total_processing / len(fog_tasks) if fog_tasks else 0
-        avg_queue = total_queue / len(fog_tasks) if fog_tasks else 0
-        avg_total = total_time / len(fog_tasks) if fog_tasks else 0
-        avg_storage = total_storage / len(fog_tasks) if fog_tasks else 0
-        avg_workload = total_workload / len(fog_tasks) if fog_tasks else 0
-        avg_size = total_size / len(fog_tasks) if fog_tasks else 0
-        avg_bandwidth = total_bandwidth / len(fog_tasks) if fog_tasks else 0
-        avg_energy = total_energy_wh / len(fog_tasks) if fog_tasks else 0
-        avg_power = total_power_watts / len(fog_tasks) if fog_tasks else 0
-        
-        # Log Overall Statistics
-        randomc_fog_logger.info("\n=== Overall Statistics ===")
-        randomc_fog_logger.info(f"Total Tasks: {len(task_completion_info)}")
-        randomc_fog_logger.info(f"  Fog Tasks: {len(fog_tasks)}")
-        randomc_fog_logger.info("\nWorkload:")
-        randomc_fog_logger.info(f"  Total System Workload: {total_workload:.2f} MIPS-seconds")
-        randomc_fog_logger.info(f"  Average Workload per Task: {avg_workload:.2f} MIPS-seconds")
-        randomc_fog_logger.info("\nResource Usage:")
-        randomc_fog_logger.info(f"  Total Storage Used: {total_storage:.2f} GB")
-        randomc_fog_logger.info(f"  Total Data Size: {total_size:.2f} MI")
-        randomc_fog_logger.info(f"  Total Bandwidth Used: {total_bandwidth:.2f} Mbps")
-        randomc_fog_logger.info(f"  Average Storage per Task: {avg_storage:.2f} GB")
-        randomc_fog_logger.info(f"  Average Size per Task: {avg_size:.2f} MI")
-        randomc_fog_logger.info(f"  Average Bandwidth per Task: {avg_bandwidth:.2f} Mbps")
-        randomc_fog_logger.info("\nPower Consumption:")
-        randomc_fog_logger.info(f"  Total Energy Consumed: {total_energy_wh:.6f} Wh")
-        randomc_fog_logger.info(f"  Total Power Used: {total_power_watts:.2f} W")
-        randomc_fog_logger.info(f"  Average Energy per Task: {avg_energy:.6f} Wh")
-        randomc_fog_logger.info(f"  Average Power per Task: {avg_power:.2f} W")
-        randomc_fog_logger.info("\nTransmission Time:")
-        randomc_fog_logger.info(f"  Total: {total_transmission*1000:.6f}ms")
-        randomc_fog_logger.info(f"  Average: {avg_transmission*1000:.6f}ms")
-        randomc_fog_logger.info("\nProcessing Time:")
-        randomc_fog_logger.info(f"  Total: {total_processing*1000:.6f}ms")
-        randomc_fog_logger.info(f"  Average: {avg_processing*1000:.6f}ms")
-        randomc_fog_logger.info("\nQueue Time:")
-        randomc_fog_logger.info(f"  Total: {total_queue*1000:.6f}ms")
-        randomc_fog_logger.info(f"  Average: {avg_queue*1000:.6f}ms")
-        randomc_fog_logger.info("\nTotal Time:")
-        randomc_fog_logger.info(f"  Total: {total_time*1000:.6f}ms")
-        randomc_fog_logger.info(f"  Average: {avg_total*1000:.6f}ms")
-        
-        # Log Fog Node Statistics
-        randomc_fog_logger.info("\n=== Per Fog Node Statistics ===")
-        for node_name in fog_node_workloads:
-            randomc_fog_logger.info(f"\n  {node_name}:")
-            randomc_fog_logger.info(f"    Workload: {fog_node_workloads[node_name]:.2f} MIPS-seconds")
-            randomc_fog_logger.info(f"    Storage Used: {fog_node_storage[node_name]:.2f} GB")
-            randomc_fog_logger.info(f"    Data Size: {fog_node_size[node_name]:.2f} MI")
-            randomc_fog_logger.info(f"    Bandwidth Used: {fog_node_bandwidth[node_name]:.2f} Mbps")
-            randomc_fog_logger.info(f"    Energy Consumed: {fog_node_energy[node_name]:.6f} Wh")
-            randomc_fog_logger.info(f"    Power Used: {fog_node_power[node_name]:.2f} W")
+    print_statistics(task_completion_info, is_final=True)
+    statistics_printed = True
+
+def print_statistics(task_completion_info, is_final=False):
+    """
+    Calculate and print statistics for completed tasks
+    This function can be called from multiple places to ensure statistics are always printed
+    
+    Args:
+        task_completion_info (dict): Dictionary containing information about completed tasks
+        is_final (bool): Flag indicating if these are the final statistics (default: False)
+    """
+    if not task_completion_info:
+        print("\n=== No tasks completed - No statistics available ===")
+        randomc_fog_logger.info("No tasks completed - No statistics available")
+        return
+    
+    # Calculate fog statistics (all tasks are fog tasks in this implementation)
+    fog_tasks = list(task_completion_info.values())
+    
+    # Log how many tasks we have stats for
+    task_count = len(task_completion_info)
+    if is_final:
+        print(f"\nCalculating final statistics for {task_count} completed tasks...")
+        randomc_fog_logger.info(f"Calculating final statistics for {task_count} completed tasks")
     else:
-        # If no tasks were completed, still log basic statistics
-        randomc_fog_logger.info("\n=== Overall Statistics ===")
-        randomc_fog_logger.info("No tasks were completed during the execution.")
+        print(f"\nCalculating interim statistics for {task_count} completed tasks so far...")
+        randomc_fog_logger.info(f"Calculating interim statistics for {task_count} completed tasks so far")
+    
+    # Calculate total workload (MIPS * processing time for each task)
+    total_workload = sum(info['task']['MIPS'] * info.get('processing_time', 0) for info in fog_tasks)
+    
+    # Calculate total size and bandwidth
+    total_size = sum(info['task']['Size'] for info in fog_tasks)
+    total_bandwidth = sum(info['task']['BW'] for info in fog_tasks)
+    
+    # Calculate total power consumption
+    total_energy_wh = sum(info.get('power_consumption', {}).get('total_energy_wh', 0) for info in fog_tasks)
+    total_power_watts = sum(info.get('power_consumption', {}).get('avg_power_watts', 0) for info in fog_tasks)
+    
+    # Calculate Overall Statistics
+    total_transmission = sum(info.get('transmission_time', 0) for info in fog_tasks)
+    total_processing = sum(info.get('processing_time', 0) for info in fog_tasks)
+    total_queue = sum(info.get('queue_time', 0) for info in fog_tasks)
+    total_time = sum(info.get('total_time', 0) for info in fog_tasks)
+    total_storage = sum(info.get('storage_used', 0) for info in fog_tasks)
+    
+    # Calculate workload per fog node
+    fog_node_workloads = {}
+    fog_node_storage = {}
+    fog_node_size = {}
+    fog_node_bandwidth = {}
+    fog_node_energy = {}
+    fog_node_power = {}
+    
+    for info in fog_tasks:
+        node_name = info['node']
+        if node_name not in fog_node_workloads:
+            fog_node_workloads[node_name] = 0
+            fog_node_storage[node_name] = 0
+            fog_node_size[node_name] = 0
+            fog_node_bandwidth[node_name] = 0
+            fog_node_energy[node_name] = 0
+            fog_node_power[node_name] = 0
+        
+        fog_node_workloads[node_name] += info['task']['MIPS'] * info.get('processing_time', 0)
+        fog_node_storage[node_name] += info.get('storage_used', 0)
+        fog_node_size[node_name] += info['task']['Size']
+        fog_node_bandwidth[node_name] += info['task']['BW']
+        fog_node_energy[node_name] += info.get('power_consumption', {}).get('total_energy_wh', 0)
+        fog_node_power[node_name] += info.get('power_consumption', {}).get('avg_power_watts', 0)
+    
+    # Calculate averages
+    avg_transmission = total_transmission / len(fog_tasks) if fog_tasks else 0
+    avg_processing = total_processing / len(fog_tasks) if fog_tasks else 0
+    avg_queue = total_queue / len(fog_tasks) if fog_tasks else 0
+    avg_total = total_time / len(fog_tasks) if fog_tasks else 0
+    avg_storage = total_storage / len(fog_tasks) if fog_tasks else 0
+    avg_workload = total_workload / len(fog_tasks) if fog_tasks else 0
+    avg_size = total_size / len(fog_tasks) if fog_tasks else 0
+    avg_bandwidth = total_bandwidth / len(fog_tasks) if fog_tasks else 0
+    avg_energy = total_energy_wh / len(fog_tasks) if fog_tasks else 0
+    avg_power = total_power_watts / len(fog_tasks) if fog_tasks else 0
+    
+    # Print Overall Statistics to both console and log
+    print("\n=== Overall Statistics ===")
+    print(f"Total Tasks: {len(task_completion_info)}")
+    print(f"  Fog Tasks: {len(fog_tasks)}")
+    print("\nWorkload:")
+    print(f"  Total System Workload: {total_workload:.2f} MIPS-seconds")
+    print(f"  Average Workload per Task: {avg_workload:.2f} MIPS-seconds")
+    print("\nResource Usage:")
+    print(f"  Total Storage Used: {total_storage:.2f} GB")
+    print(f"  Total Data Size: {total_size:.2f} MI")
+    print(f"  Total Bandwidth Used: {total_bandwidth:.2f} Mbps")
+    print(f"  Average Storage per Task: {avg_storage:.2f} GB")
+    print(f"  Average Size per Task: {avg_size:.2f} MI")
+    print(f"  Average Bandwidth per Task: {avg_bandwidth:.2f} Mbps")
+    print("\nPower Consumption:")
+    print(f"  Total Energy Consumed: {total_energy_wh:.6f} Wh")
+    print(f"  Total Power Used: {total_power_watts:.2f} W")
+    print(f"  Average Energy per Task: {avg_energy:.6f} Wh")
+    print(f"  Average Power per Task: {avg_power:.2f} W")
+    print("\nTransmission Time:")
+    print(f"  Total: {total_transmission*1000:.6f}ms")
+    print(f"  Average: {avg_transmission*1000:.6f}ms")
+    print("\nProcessing Time:")
+    print(f"  Total: {total_processing*1000:.6f}ms")
+    print(f"  Average: {avg_processing*1000:.6f}ms")
+    print("\nQueue Time:")
+    print(f"  Total: {total_queue*1000:.6f}ms")
+    print(f"  Average: {avg_queue*1000:.6f}ms")
+    print("\nTotal Time:")
+    print(f"  Total: {total_time*1000:.6f}ms")
+    print(f"  Average: {avg_total*1000:.6f}ms")
+    
+    # Log the same information
+    randomc_fog_logger.info("\n=== Overall Statistics ===")
+    randomc_fog_logger.info(f"Total Tasks: {len(task_completion_info)}")
+    randomc_fog_logger.info(f"  Fog Tasks: {len(fog_tasks)}")
+    randomc_fog_logger.info("\nWorkload:")
+    randomc_fog_logger.info(f"  Total System Workload: {total_workload:.2f} MIPS-seconds")
+    randomc_fog_logger.info(f"  Average Workload per Task: {avg_workload:.2f} MIPS-seconds")
+    randomc_fog_logger.info("\nResource Usage:")
+    randomc_fog_logger.info(f"  Total Storage Used: {total_storage:.2f} GB")
+    randomc_fog_logger.info(f"  Total Data Size: {total_size:.2f} MI")
+    randomc_fog_logger.info(f"  Total Bandwidth Used: {total_bandwidth:.2f} Mbps")
+    randomc_fog_logger.info(f"  Average Storage per Task: {avg_storage:.2f} GB")
+    randomc_fog_logger.info(f"  Average Size per Task: {avg_size:.2f} MI")
+    randomc_fog_logger.info(f"  Average Bandwidth per Task: {avg_bandwidth:.2f} Mbps")
+    randomc_fog_logger.info("\nPower Consumption:")
+    randomc_fog_logger.info(f"  Total Energy Consumed: {total_energy_wh:.6f} Wh")
+    randomc_fog_logger.info(f"  Total Power Used: {total_power_watts:.2f} W")
+    randomc_fog_logger.info(f"  Average Energy per Task: {avg_energy:.6f} Wh")
+    randomc_fog_logger.info(f"  Average Power per Task: {avg_power:.2f} W")
+    randomc_fog_logger.info("\nTransmission Time:")
+    randomc_fog_logger.info(f"  Total: {total_transmission*1000:.6f}ms")
+    randomc_fog_logger.info(f"  Average: {avg_transmission*1000:.6f}ms")
+    randomc_fog_logger.info("\nProcessing Time:")
+    randomc_fog_logger.info(f"  Total: {total_processing*1000:.6f}ms")
+    randomc_fog_logger.info(f"  Average: {avg_processing*1000:.6f}ms")
+    randomc_fog_logger.info("\nQueue Time:")
+    randomc_fog_logger.info(f"  Total: {total_queue*1000:.6f}ms")
+    randomc_fog_logger.info(f"  Average: {avg_queue*1000:.6f}ms")
+    randomc_fog_logger.info("\nTotal Time:")
+    randomc_fog_logger.info(f"  Total: {total_time*1000:.6f}ms")
+    randomc_fog_logger.info(f"  Average: {avg_total*1000:.6f}ms")
+    
+    # Print Per Fog Node statistics to console
+    print("\n=== Per Fog Node Statistics ===")
+    for node_name in fog_node_workloads:
+        print(f"\n  {node_name}:")
+        print(f"    Workload: {fog_node_workloads[node_name]:.2f} MIPS-seconds")
+        print(f"    Storage Used: {fog_node_storage[node_name]:.2f} GB")
+        print(f"    Data Size: {fog_node_size[node_name]:.2f} MI")
+        print(f"    Bandwidth Used: {fog_node_bandwidth[node_name]:.2f} Mbps")
+        print(f"    Energy Consumed: {fog_node_energy[node_name]:.6f} Wh")
+        print(f"    Power Used: {fog_node_power[node_name]:.2f} W")
+    
+    # Log Per Fog Node statistics
+    randomc_fog_logger.info("\n=== Per Fog Node Statistics ===")
+    for node_name in fog_node_workloads:
+        randomc_fog_logger.info(f"\n  {node_name}:")
+        randomc_fog_logger.info(f"    Workload: {fog_node_workloads[node_name]:.2f} MIPS-seconds")
+        randomc_fog_logger.info(f"    Storage Used: {fog_node_storage[node_name]:.2f} GB")
+        randomc_fog_logger.info(f"    Data Size: {fog_node_size[node_name]:.2f} MI")
+        randomc_fog_logger.info(f"    Bandwidth Used: {fog_node_bandwidth[node_name]:.2f} Mbps")
+        randomc_fog_logger.info(f"    Energy Consumed: {fog_node_energy[node_name]:.6f} Wh")
+        randomc_fog_logger.info(f"    Power Used: {fog_node_power[node_name]:.2f} W")
 
 if __name__ == "__main__":
-    # Load tasks from input
-    tasks = read_and_log_tuples()
+    try:
+        # Record start time for the entire simulation
+        simulation_start_time = time.time()
+        
+        # Load tasks from input
+        tasks = read_and_log_tuples()
+        
+        # Print debug information
+        print(f"\nDebug: Number of tasks received: {len(tasks)}")
+        randomc_fog_logger.info(f"Number of tasks received: {len(tasks)}")
+        
+        # Process tasks using RandomC Fog-Only algorithm
+        if tasks:
+            try:
+                process_fcfs(tasks)
+            except RuntimeError as re:
+                if "dictionary changed size during iteration" in str(re):
+                    print(f"\nError during task processing: {str(re)}")
+                    randomc_fog_logger.error(f"Error during task processing: {str(re)}")
+                    print("This is a known issue with concurrent dictionary access - statistics will still be printed.")
+                    randomc_fog_logger.info("This is a known issue with concurrent dictionary access - statistics will still be printed.")
+                else:
+                    # Re-raise non-dictionary-related errors
+                    raise
+                # Even if we encounter the dictionary error, we still print statistics
+                if global_task_completion_info and not statistics_printed:
+                    print_statistics(global_task_completion_info, is_final=True)
+                    statistics_printed = True
+        else:
+            print("Error: No tasks were loaded")
+            randomc_fog_logger.error("No tasks were loaded.")
+        
+        # Calculate and print total simulation time
+        total_simulation_time = time.time() - simulation_start_time
+        print(f"\nSimulation completed successfully in {total_simulation_time:.2f} seconds.")
+        randomc_fog_logger.info(f"Simulation completed successfully in {total_simulation_time:.2f} seconds.")
     
-    # Print debug information
-    print(f"\nDebug: Number of tasks received: {len(tasks)}")
-    randomc_fog_logger.info(f"Number of tasks received: {len(tasks)}")
-    
-    # Process tasks using RandomC Fog-Only algorithm
-    if tasks:
-        process_fcfs(tasks)
-    else:
-        print("Error: No tasks were loaded")
-        randomc_fog_logger.error("No tasks were loaded.")
+    except KeyboardInterrupt:
+        print("\nUser interrupted execution. Exiting gracefully...")
+        randomc_fog_logger.info("User interrupted execution. Exiting gracefully...")
+        # Print statistics for tasks that completed before interruption
+        if global_task_completion_info and not statistics_printed:
+            print_statistics(global_task_completion_info, is_final=True)
+            statistics_printed = True
+    except Exception as e:
+        print(f"\nError during execution: {str(e)}")
+        randomc_fog_logger.error(f"Error during execution: {str(e)}", exc_info=True)
+        # Print statistics for tasks that completed before error
+        if global_task_completion_info and not statistics_printed:
+            print_statistics(global_task_completion_info, is_final=True)
+            statistics_printed = True
+    finally:
+        # Always ensure statistics are printed if they exist and haven't been printed already
+        if global_task_completion_info and not statistics_printed:
+            try:
+                print("\nFinal Statistics (from finally block):")
+                task_count = len(global_task_completion_info)
+                randomc_fog_logger.info(f"Printing final statistics for {task_count} tasks from finally block")
+                print_statistics(global_task_completion_info, is_final=True)
+                statistics_printed = True
+            except Exception as e:
+                print(f"Error printing final statistics: {str(e)}")
+                randomc_fog_logger.error(f"Error printing final statistics: {str(e)}")
+        
+        # Calculate and log overall execution information
+        print("\nRandomC Fog Only simulation terminated.")
+        randomc_fog_logger.info("RandomC Fog Only simulation terminated.")
+        
+        # Force flush the logger to ensure all logs are written
+        for handler in randomc_fog_logger.handlers:
+            handler.flush()

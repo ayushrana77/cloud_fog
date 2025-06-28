@@ -376,8 +376,10 @@ def calculate_system_load(node, node_metrics, task_queues):
     avg_processing_time = sum(recent_times) / len(recent_times)
     queue_size = len(task_queues[node.name])
     
-    node_stats = node.get_stats()
-    memory_utilization = node_stats.get('memory_utilization', 0)
+    # Use get_status() instead of get_stats() and calculate memory utilization
+    node_status = node.get_status()
+    # Calculate memory utilization based on whether node is busy
+    memory_utilization = 1.0 if node_status.get('busy', False) else 0.0
     
     cpu_load = (queue_size * avg_processing_time) / (node.mips * 1000)
     return max(cpu_load, memory_utilization)

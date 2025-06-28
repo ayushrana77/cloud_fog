@@ -226,11 +226,19 @@ class FogNode:
             self._process_queued_tasks()
 
     def _process_queued_tasks(self):
-        """Process any queued tasks that can now be handled"""
+        """Process any queued tasks that can now be handled
+        
+        This implementation strictly processes tasks in FIFO order (First-In-First-Out).
+        If the first task in the queue cannot be processed due to insufficient resources,
+        the function will return without processing any other tasks, even if they
+        could be processed with available resources. This ensures fair scheduling
+        and prevents task starvation.
+        """
         self.logger.info(f"Checking queued tasks on {self.name}")
         self.logger.info(f"Current queue size: {len(self.task_queue)}")
         
-        while self.task_queue:
+        # Only check the first task in the queue - strict FIFO order
+        if self.task_queue:
             next_task = self.task_queue[0]
             if self.can_handle_task(next_task):
                 self.task_queue.popleft()
@@ -292,8 +300,25 @@ class FogNode:
                 )
                 processing_thread.start()
             else:
-                self.logger.info(f"Next queued task {next_task['Name']} still cannot be processed")
-                break
+                # Check exactly which resources are missing
+                missing_resources = []
+                if self.available_mips < next_task['MIPS']:
+                    missing_resources.append(f"MIPS (need {next_task['MIPS']}, have {self.available_mips})")
+                if self.available_memory < next_task['RAM']:
+                    missing_resources.append(f"Memory (need {next_task['RAM']}, have {self.available_memory})")
+                if self.available_bandwidth < next_task['BW']:
+                    missing_resources.append(f"Bandwidth (need {next_task['BW']}, have {self.available_bandwidth})")
+                if self.available_storage < next_task.get('Storage', 0):
+                    missing_resources.append(f"Storage (need {next_task.get('Storage', 0)}, have {self.available_storage})")
+                
+                # Log detailed information about why task can't be processed
+                self.logger.info(f"Next queued task {next_task['Name']} still cannot be processed - waiting until resources are available")
+                self.logger.info(f"Missing resources: {', '.join(missing_resources)}")
+                self.logger.info(f"Current node load: {self.current_load:.2f}%")
+                self.logger.info(f"Remaining tasks in queue: {len(self.task_queue)}")
+                
+                # Don't break - instead return and wait for more resources
+                return
 
     def get_status(self):
         """Get current status of the fog node"""
