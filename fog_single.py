@@ -163,7 +163,8 @@ class SingleTaskFogNode:
             power_info = calculate_power_consumption(
                 transmission_time, 
                 processing_time, 
-                'fog', 
+                0,  # queue_time
+                'fog',  # node_type
                 load_factor
             )
             
